@@ -1,0 +1,378 @@
+General Terms of Use
+
+GENERAL TERMS AND CONDITIONS OF USE OF THE WEBSITE WWW.IGIA.COM
+Applicable since November 9, 2023
+
+Document accompanying the T&Cs
+The General Terms and Conditions of Use appearing on the website www.igia.com constitute a contract concluded between the
+Visitor/Client/Member/Investor on the one hand, and IGIA on the other hand, which governs their use of 
+the Website and its Services, and defines the rights and obligations of the Parties. It is important to read this contract.
+By clicking on "I certify that I have read and expressly accepted these General Terms and Conditions of Use"
+when registering, the Client/Member/Investor accepts and acknowledges that they are entering into a legally binding contract
+with IGIA and undertakes to comply with it.
+
+PREAMBLE
+The General Terms and Conditions of Use presented on the website www.igia.com apply to the use of said website and to all
+the services offered on the Website by IGIA in its role as a Crowdfunding and Inclusive 
+Crowdlending Service Provider (PSFP) for services related to the intermediation of 
+financing and loans through bonds, convertible bonds, loans, and shares with contributions 
+to shareholders' current accounts, forming the Services provided by the Website.
+
+The Service Provider is Infinity Global Investment & Aid (IGIA) with a capital of €300,000,000, 
+registered with the Utrecht Trade and Companies Register under SIREN number: KVB 805 168 860
+Intra-Community VAT identification number: NE 09805178860
+Registered office: 94 rue de la Victoria, 75009 Utrecht, Netherlands
+Email address: contact@igia.com
+Telephone: 01.82.83.97.52
+IGIA is approved as a PSFP by the AMF under PSFP number 2012-22.
+
+DEFINITIONS
+Unless otherwise stated, capitalized terms in the T&Cs have the following meanings:
+
+"Action": means actions as defined in Articles 212-1 et seq. of the French Monetary and Financial Code.
+"Premature Termination of the Offer": means any definitive termination of a Crowdfunding and Inclusive Crowdlending 
+Offer before its end that is not required by a legal or regulatory standard.
+"Client": means any person who has read and expressly accepted the General Terms of Use.
+"Collection": means the operation of collecting the funds necessary to finance a Project through the Site.
+"Bank Account": means any type of account (deposit account, current account, etc.) opened in the name of the Client/Member/Investor
+in the books of an institution authorized to hold such an account and allowing, at a minimum, the provision of the basic banking services
+mentioned in Articles L. 312-1 and D. 312-5 of the French Monetary and Financial Code.
+"Payment Account": means the account held in the name of the Client/Member/Investor/Project Owner and opened in the 
+books of the Payment Service Provider, used for the purpose of executing payment transactions occurring within the 
+framework of the Services. "General Terms of Use (GTU)": refers to this agreement governing, in particular, 
+(i) the use of the Site and the Services, (ii) the relationship between IGIA on the one hand and 
+Visitors/Clients/Members/Investors/Project Owners on the other hand, and (iii) the relationship between Clients/Members/Investors/Project Owners.
+"Content": refers to all text, graphics, Client interfaces, visual interfaces, photographs, trademarks, logos, sounds, music, 
+illustrations, and computer code, including the design, structure, selection, coordination, expression, look and feel, 
+presentation, and arrangement, appearing on the Site.
+"Application": refers to the funding application submitted by the Project Owner to IGIA for review with a view to a 
+Crowdfunding Offer. "Key Investment Information Sheet (KII)": refers to the information sheet provided to the 
+Client/Member/Investor prior to subscription and presenting each Crowdfunding Offer, in accordance with the KII 
+model provided for by Regulation (EU) 2020/1503.
+"Personal Area": ​​refers to the area accessible from the Website, personal to the Member/Investor, which they 
+can access with their username and password.
+"Project Owner Area": ​​refers to the area accessible from the Website, personal to the Project Owner, 
+which they can access with their username and password.
+"Force Majeure": means any fire, flood, natural elements or other natural disasters, any declaration or 
+progression of hostilities, war, riots or public disturbances, acts or omissions of the government or 
+competent authorities, breakdowns, blockages, failures or variations in telecommunications facilities or 
+networks, or any other causes similar or dissimilar to the causes mentioned above beyond the reasonable 
+control of a party to a contract and resulting in any failure or delay in the performance of its obligations under a contract.
+"Investment": means any Subscription made by an Investor on IGIA.
+"Investor": means a Member registered on the Site and having made an investment on IGIA.
+"Member": means a Client who has been accepted as such by IGIA, registered on the Site after having 
+read and expressly accepted the General Terms of Use, followed the progressive access and KYC 
+procedures, and provided IGIA with the information allowing them to access restricted access pages. 
+No Member shall be considered a "US Person" within the meaning of the US tax authorities.
+"Desired Amount": means the amount that the Project Owner wishes to obtain through 
+the Site in order to finance their Project. It may be modified during the Fundraising Period.
+"Amount Raised": means the amount raised as part of a Crowdfunding Offer.
+"Subscribed Amount": means the amount invested by an Investor as part of a Crowdfunding Offer.
+"Bonds": refers to bonds as defined by Article L.547-1 of the French Monetary and Financial Code, i.e., fixed-rate bonds.
+"Convertible Bonds": refers to bonds as defined by Articles L225-161 et seq. of the French Commercial Code.
+"Crowdfunding Offer": refers to the request submitted by a Project Owner on the Website, via the Project Page, 
+to obtain funds to finance their Project within the framework of the Services offered by IGIA, under conditions which, 
+for some of them, (i) are imposed on them, either by the Investor or by IGIA, and for others, (ii) may be freely determined by the Project Owner.
+"Subscription": refers to the commitment made by the Investor on the Website to invest a sum of money as part of a Crowdfunding Offer.
+"Funding Transaction": refers, for the financing of a given Project, to the securities or loans (including bonds, convertible bonds, 
+shares, and loans) issued by a Project Owner and subscribed to by the Investor(s) through the Website, their execution, and its consequences.
+"Fundraising Transaction": refers to the transactions carried out by the Project Owner on the Website 
+for the purpose of promoting their Project, soliciting financing for the Project from Investors, and concluding a Financing Transaction.
+"Project Page": refers to the web page available on the website www.igia.com relating to the Project Owner's Project. 
+"Party": means, as the case may be and the context requires, IGIA and/or any Client/Member/Investor and/or any Project Owner.
+"Fundraising Period": means the fundraising period, including any extensions decided by the Project Owner and IGIA, 
+during which the Investor may make Subscriptions on the Website for a Crowdfunding Offer.
+"Project Owner": means any IGIA Client whose Project has been selected by IGIA for a Financing Transaction offered to IGIA Members via the Website.
+“Payment Service Provider”: means ABN AMRO BANK NV — Company with capital of €2,418,772.22, 
+registered with the Amsterdam Trade and Companies Register, whose registered office is located at 94 rue de la Victoria, 
+75009 Utrecht, the Netherlands, registered with the Utrecht Trade and Companies Register under number 500 486 915. 
+ABN AMRO is a payment institution (interbank code NL99 ABNA 0123 3457 89) authorized on 24/12/2012 by 
+the Prudential Supervision and Resolution Authority (“ACPR”, the Netherlands, website https://www.abnamro.com/ 
+information verifiable at any time on the website http://www.afm.nl by entering “ABN AMRO”).
+"Loan": refers to any Amount Subscribed by an Investor for a Crowdfunding Offer in the form of a loan.
+"Project": refers to the project that a Project Owner wishes to finance through a Crowdfunding Offer.
+"Risk Questionnaire": refers to the standard warning and questions regarding the risks inherent in Crowdfunding Offers.
+"Site": refers to the infrastructure developed by IGIA using computer formats usable on the internet, including Content, 
+data of various types, including texts, sounds, still or animated images, videos, and databases, intended to be viewed 
+by Visitors or any Client/Member/Investor via the main address "www.igia.com". The Site is the property of IGIA.
+"Financed Company": refers to any company that has completed a Financing Transaction. "Knowledge Test": refers 
+to the form or document derived from said form completed by the Member after creating their account on IGIA in accordance with Regulation (EU) 2020/1503.
+"Security": refers to the Bonds, Shares, and Convertible Bonds offered on the Site.
+"Visitor": refers to any person who browses, reads, or consults the Site, the Content, 
+or the information contained therein before creating their account on the Site.
+
+INTERPRETATION
+
+Unless otherwise stated:
+The terms and expressions defined in the Terms of Use may be used, as appropriate, in the singular or plural;
+Any reference made in the General Terms of Use or in any other Content of the Site or in any 
+other document accessible on the Site to a legal, regulatory, or any other type of 
+legally binding provision shall be interpreted as referring to this provision as may be amended or replaced.
+
+AGREEMENT ON EVIDENCE
+
+The provisions of this article constitute an essential condition for accessing the Site's Services.
+
+The Client/Member/Investor acknowledges that electronic writing has the same probative force as paper writing.
+
+The Client/Member/Investor expressly acknowledges and accepts that proof of Investments 
+made on the Site may be provided by any durable medium. The Client/Member/Investor agrees 
+to recognize as durable media, in particular: paper, emails stored or copied by any means, 
+documents in PDF format, as well as any other instrument allowing the preservation of 
+information in a manner that allows easy future reference for a period appropriate 
+to the purposes for which the information is intended and that allows for identical reproduction of said information.
+
+Consequently, the Client/Member/Investor expressly acknowledges and accepts 
+that Investments may be established and stored on any durable media.
+
+The Client/Member/Investor expressly acknowledges and accepts:
+
+the recording of their browsing on the Site, and in particular their mouse or other device clicks, 
+as proof of Investments made via the Site;
+that these recordings have full probative value in their regard;
+that by clicking on "I certify that I have read and expressly accepted these General Terms of Use," 
+they enter into a legally binding contract with IGIA;
+that the validation of an Offer via a "click" constitutes an electronic signature;
+that any transaction carried out after authenticating with their password on the Site 
+is deemed to have been carried out by them;
+any document signed, accepted, or validated electronically via the Site and/or within 
+the framework of the Services constitutes proof of the content of said document, the identity 
+of the signatory, and their consent to the obligations arising from the electronically signed document.
+The Parties agree that the information and supporting documents provided by IGIA's 
+IT infrastructure are binding between them.
+
+REGISTRATION FOR SERVICES
+Access to and use of the Services implies acceptance, without restriction or reservation, of the Terms and 
+Conditions by Clients/Members/Investors.
+
+The following elements are available to all Visitors:
+
+The Invest, About Us, and Fundraising tabs, comprising the following sections: How it works, Our offers, 
+Taxation and fees, Testimonials, FAQs; Contact us; The team; Press review; IGIA in figures; 
+Approvals and security; Our vision; General conditions of use;
+In the footer, the user also has access to the Legal Notices, Complaints, and Confidentiality tabs;
+Projects presented as part of the Services;
+The risk warning;
+The "Create your account" and "Log in" tabs.
+
+KNOWLEDGE TEST
+
+In accordance with Regulation (EU) 2020/1503, IGIA will conduct a Knowledge Test prior to 
+the Investor's first Investment to verify whether the crowdfunding services offered are 
+appropriate for potential, non-sophisticated investors. If the Investor's answers are 
+deemed insufficient or incomplete by IGIA, a specific warning regarding the risk of 
+total loss of the invested capital will be presented to the Investor after completing 
+the Knowledge Test and prior to each investment.
+
+The questions in the Knowledge Test are used to assess the Member's investment 
+experience and objectives, as well as to define their financial standing. 
+Members may modify their answers, particularly if their circumstances change. 
+They will have access to a new Knowledge Test by simply requesting it by email 
+to IGIA (contact@igia.com), or via their personal account, and at least every two years.
+
+A summary of the answers to the Knowledge Test questions will be generated after the Test is completed. 
+The Member must complete this Test. The Knowledge Test will be available at any time in the Member's Personal Space.
+
+ACCESS TO SERVICES
+The Investor has access to the Services - it should be noted that all Investors must first be Members. 
+To use the Services, the Investor must (i) hold a Euro Bank Account, (ii) have a Personal Space, 
+(iii) successfully open a Payment Account with the Payment Service Provider, 
+and (iv) ensure that their Payment Account is credited with the Subscription amount. 
+As part of accessing the Services, the investor expressly agrees to subscribe to the IGIA newsletter. 
+They have the right to unsubscribe from this newsletter.
+
+ACCESS TO SERVICES
+IGIA provides the Services consisting of (i) connecting, through the Website, Project Owners and 
+Investors financing Projects, (ii) defining and organizing the terms and conditions of Project 
+Financing Transactions, and (iii) defining and organizing the terms and conditions for 
+monitoring and managing these Financing Transactions.
+
+IGIA does not provide payment services; these are provided entirely by the Payment Service Provider.
+
+Members/Investors have access to a detailed presentation of the Crowdfunding Offer for each 
+Project Owner as part of the Services, including:
+
+Details of the Crowdfunding Offer (the name of the Project Owner and a brief description of 
+their business, the amount sought, the closing date for subscriptions, the nominal amount, 
+the intended use of the loaned funds, etc.),
+a detailed description of the Project Owner's business and its outlook,
+information relating to the Project Owner's financial and legal situation and their outlook,
+information on the Project Owner's officers, directors, and shareholders/partners,
+where applicable, the Terms and Conditions, Memorandum, Shareholders' Agreement, 
+or Loan Agreement of the Crowdfunding Offer
+the FICI.
+This information is published by each Project Owner under their own responsibility. 
+In accordance with regulations, IGIA checks the consistency, clarity 
+(non-technical and unambiguous language), and balance of this information.
+
+IGIA supplements this information by integrating the following aspects into the FICI:
+
+the procedures for collecting and transmitting subscription or registration certificates,
+the risks inherent in a Crowdfunding Offer for the Investor.
+All Regulatory Documentation available on the Website will be downloadable, including 
+the texts in a printable and non-editable version. These will always correspond to 
+the latest version validated by the Project Owner.
+
+On each Project Page, a document entitled "FICI" allows the Member to view and download 
+the FICI relating to the Crowdfunding Offer. The Client/Member/Investor expressly 
+declares that they have read the FICI and fully agree to it prior to any Offer and 
+any Financing Transaction. If the Client/Member/Investor does not fully agree to 
+the provisions of the FICI, they must then refrain from making any Offer and participating in any Financing Transaction.
+
+COMPLETING THE SUBSCRIPTION BY THE INVESTOR
+Subscribing is reserved for Members/Investors. The process is, with some exceptions, 
+entirely electronic and supervised by a secure environment.
+
+The Investor can make a Subscription using a form located on the Project Page, 
+allowing them to choose the amount they wish to invest. They confirm this amount by clicking the "Validate" button.
+
+If the balance in their Payment Account is insufficient, the Investor will 
+be asked to make a transfer or credit by credit card to credit their 
+Payment Account with the amount corresponding to the Subscription. 
+The Investor can only lend the amounts credited to their Payment Account.
+
+The Investor will then be directed to a new page to confirm their choice. 
+This page summarizes the essential information related to their investment as follows:
+
+Amount;
+Gross annual interest rate (if applicable);
+Term (if applicable);
+Maturities (if applicable);
+
+Offer type.
+
+If the information provided corresponds to the investment the Investor wishes to make, the Investor clicks the "Confirm" button.
+
+This action also constitutes acceptance of the General Terms and Conditions of Use, 
+confirmation that the information about them contained in the Knowledge Test is still accurate, 
+and confirmation by the Investor that they have read the FICI's terms and conditions.
+
+By clicking "Confirm my investment," the Investor will receive an email containing 
+their Subscription information. This document is also available from their Personal Account.
+
+The Subscription made by the Investor is revocable for a period of four days 
+(the "Reflection Period"). Once this period has passed, the Investor may no longer 
+withdraw: they have irrevocably committed to investing under the terms set out in the Offer. 
+Only the decision by IGIA to cancel the Crowdfunding Offer and/or the Investor's 
+Offer may prevent the conclusion of the Financing Transaction.
+
+CHANGES TO REGULATORY DOCUMENTATION DURING THE FUNDRAISING PERIOD
+
+The Project Owner undertakes to notify IGIA of any changes to the information in order 
+to keep the FICI constantly up to date and for the entire duration of the Crowdfunding 
+Offer (the fundraising period). IGIA will immediately inform investors who have subscribed 
+or expressed interest in the crowdfunding offer of any material changes to the information 
+contained in the FICI that have been notified to it. This information will be sent by email 
+with the subject line: Changes to the key investment information sheet + identification of the project concerned.
+
+MODIFICATION IN THE EVENT OF AN INACCURACY, OMISSION, OR ERROR FOUND BY IGIA
+
+If IGIA detects an omission, error, or inaccuracy in the FICI that could have a substantial 
+impact on the expected return on investment, IGIA will promptly notify the Project Owner of 
+this omission, error, or inaccuracy, who will complete or correct the information in question as soon as possible.
+
+If such an addition or correction has not been made promptly, IGIA will suspend the 
+Crowdfunding Offer until the FICI has been completed or corrected, but within a period not exceeding thirty calendar days.
+
+IGIA will immediately inform investors who have made a Subscription or expressed interest 
+in the Crowdfunding Offer by email of such irregularities, of the measures taken and to 
+be taken by IGIA, and of their right to withdraw their investment offer or expression of interest in the Crowdfunding Offer.
+
+If, after thirty calendar days, the FICI has not been completed or corrected to rectify 
+all identified irregularities, the Crowdfunding Offer will be canceled.
+
+Unless the Investor submits a cancellation request within a reasonable timeframe, any Subscription will be deemed confirmed.
+
+END OF THE FUNDRAISING
+The Fundraising Period is determined by IGIA, which sets its start, end, and duration. 
+Once the Desired Amount is reached, IGIA will note the total amount of valid Subscriptions received at the end of the Fundraising Period.
+
+Investors will receive confirmation of the success of the Crowdfunding Offer and therefore 
+the allocation of Securities or Loans within a reasonable timeframe by means of a certificate accessible in their personal space.
+
+At the end of the Fundraising Period, if IGIA does not decide to extend it and if the 
+Desired Amount is not reached, Investors will receive an email confirming the 
+cancellation of their Subscription. The Subscribed Amounts will be returned in 
+full to the Investors' Payment Account within 5 business days by the Payment Service Provider, free of charge.
+
+In the event of Premature Termination of the Crowdfunding Offer or cancellation of the 
+Crowdfunding Offer due to Force Majeure, all Offers will be canceled, and within 5 business days, 
+an information email will be sent by IGIA to all affected Investors. The Subscribed Amounts 
+will then be returned in full to the Investors' Payment Account within the following 5 business days by the Payment Service Provider.
+
+If the Desired Amount is reached before the expiration of the Fundraising Period, 
+the online subscription will be interrupted. No additional Subscriptions will then be possible (except in the event of a computer error).
+
+IGIA will then note the total amount of valid Subscriptions received, as well as the early 
+closure of the Fundraising Period. Investors will receive confirmation of the success of the Crowdfunding Offer.
+
+IGIA is duly mandated by the Investor to release the Payment Service Provider 
+from its obligation to retain the Subscribed Amount at the end of the Collection 
+Period and to instruct it to pay said amount as follows:
+
+If, at the end of the Collection Period, the amount of Subscriptions and sums 
+received by the Payment Service Provider is equal to the Desired Amount, 
+the Desired Amount (net of any commissions charged by the Payment Service 
+Provider or by IGIA) will be paid to the Project Owner after providing IGIA 
+with proof of registration of the Securities in a register maintained by it or after validating the list of Investors;
+In the event of Premature Termination of the Crowdfunding Offer or if, 
+at the end of the Fundraising Period, the total amount of 
+Subscriptions and sums received by the Payment Service Provider 
+is strictly less than the Desired Amount, the Payment Service 
+Provider will reimburse the Investor(s) for the Subscribed Amount paid by the latter.
+
+RIGHT OF WITHDRAWAL
+
+Each Client/Member/Investor has a period of four (4) calendar days 
+from the date of completion of their Subscription to exercise their 
+right of withdrawal, without having to provide a reason or incur any penalties. 
+They can do so directly from their personal account.
+
+Information regarding the cooling-off period is provided in the 
+"Read before investing" pop-up in their Personal Account, as well as in the introduction to the FICI. 
+Investors receive information regarding the start of the cooling-off period immediately after their Subscription. 
+Investors who have completed a Subscription will have the option to cancel said Subscription from their dashboard. 
+During the four-calendar-day period, they will have access to a "Cooling-off period: cancel my offer" 
+link in the box dedicated to the financed project. By clicking this button, the Investor 
+immediately cancels their Subscription and will see a pop-up informing them that their 
+Subscription has been canceled. After the 4 calendar day period, the link is no longer visible.
+
+MEMBER AND INVESTOR OBLIGATIONS
+The Member/Investor is generally obligated to (i) comply with the Site's access conditions, 
+(ii) provide accurate and truthful information regarding their civil status and profile, 
+(iii) complete any form and sign any agreement presented as mandatory on the Site, 
+unless this immediately closes their Personal Space, (iv) behave fairly towards 
+IGIA and other Members, Investors, or Clients, (v) use the Services in accordance 
+with their intended purpose, (vi) not make any commitments for a third party, 
+and (vii) not disrupt or attempt to disrupt the operation of the Site.
+
+In the event of a violation of the rules above or those set out below, 
+IGIA reserves the right to suspend the Client/Investor/Member's access to 
+the Website or the Personal Space, or to restricted access pages or Services, and/or 
+to terminate this Agreement with respect to the Client/Member/Investor with immediate effect.
+
+IGIA'S COMPENSATION
+IGIA'S compensation is derived from fees charged to the Financed Companies. 
+This compensation is due to IGIA upon publication of the Project on the 
+Website and becomes payable upon transfer of funds to the Financed Company's bank account.
+
+The services provided to each Client/Member/Investor are free of charge. 
+IGIA, however, reserves the right to charge the Client/Member/Investor a 
+transaction fee in the following case: if a Client credits their Payment 
+Account on IGIA and then debits it without investing. In this case, 1% of the debited amount may be charged.
+
+DESCRIPTION OF THE INVESTOR COMPLAINTS PROCEDURE
+Description of the procedure for handling Member/Investor complaints, 
+including the timeframe within which a response will be provided to Members/Investors.
+
+IGIA has an efficient and transparent procedure for the prompt, fair, and consistent handling of customer complaints.
+
+IGIA publishes a description of this procedure on its website, accessible directly from the platform's homepage via the "Complaints" tab.
+
+Filing a complaint is free of charge.
+
+IGIA provides a standard complaint template at www.igia.com/infos/reclamation
+
+IGIA keeps a record of all complaints received, as well as the actions taken for each complaint. These records are retained by IGIA.
+
+The description of the procedure is available at: https://www.igia.com/infos/reclamations  

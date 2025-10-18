@@ -1,0 +1,371 @@
+
+
+Conditions générales d'utilisation 
+
+CONDITIONS GENERALES D’UTILISATION DU SITE WWW.IGIA.COM
+ Applicables depuis le 9 novembre 2023
+
+Document accompagnant les CGU
+Les Conditions Générales d'Utilisation qui figurent sur le site www.igia.com constituent un contrat conclu entre le 
+Visiteur/Client/Membre/Investisseur d'une part, et IGIA d'autre part, qui régit son utilisation du Site et de
+ses Services, et définit les droits et obligations des Parties. Il est important de prendre connaissance de ce contrat.
+En cliquant sur « Je certifie avoir pris connaissance et accepté expressément les présentes Conditions Générales d'Utilisation »
+au moment de son inscription, le Client/Membre/Investisseur accepte et reconnaît qu'il conclut un contrat ayant force obligatoire
+avec IGIA et s'engage à le respecter.
+
+PREAMBULE
+Les Conditions Générales d'Utilisation présentées sur le site www.igia.com s'appliquent à l'utilisation dudit site et à l'ensemble
+des services proposées sur le Site par IGIA en son rôle de Prestataire de Services de Financements Participatifs (PSFP) crowdfunding
+et inclusif crowdlending pour les services relatifs à l'intermédiation de financements et de prets au moyen d'obligations, d'obligations 
+convertibles,de prêts et d'actions avec apport en comptes courants d'associés, formant les Services délivrés par le Site.
+
+Le fournisseur des Services est la société Infinity Global Investment & Aid ( IGIA au capital de 300. 000. 000 €, immatriculée au
+RCS de Utrecht  sous le numéro Siren : KVB 805 168 860
+Numéro d'identification TVA intracommunautaire : NE 09805178860
+Siège social : 94 rue de la Victoria, 75009 Utrecht, Pays-Bas
+Adresse de courrier électronique : contact@igia.com
+Téléphone : 01.82.83.97.52
+IGIA est agréée en tant que PSFP par l’AMF au numero PSFP n°2012-22.
+
+DEFINITIONS
+A moins qu'une intention contraire n'apparaisse, les termes portant une majuscule dans les CGU ont la signification suivante :
+
+« Action » : désigne des actions telles que définies aux articles 212-1 et suivants du Code monétaire et financier.
+« Arrêt Prématuré de l'Offre » : désigne toute cessation définitive d'une Offre de Financement Participatif(crowdfunding)
+et inclusif(crowdlending) avant son terme qui n'est pas imposée par une norme légale ou réglementaire.
+« Client » : désigne toute personne ayant pris connaissance et accepté expressément les Conditions Générales d'Utilisation.
+« Collecte » : opération de collecte des fonds nécessaires au financement d'un Projet par l'intermédiaire du Site.
+« Compte bancaire » : désigne tout type de compte (compte de dépôt, compte courant, etc.) ouvert au nom du Client/Membre/Investisseur
+dans les livres d'un établissement autorisé à tenir un tel compte et permettant, a minima, la fourniture des services bancaires
+de base mentionnés aux articles L. 312-1 et D. 312-5 du Code monétaire et financier.
+« Compte de Paiement » : désigne le compte détenu au nom du Client/Membre/Investisseur/Porteur de projet et ouvert dans les livres du 
+Prestataire de Service de Paiement, utilisé aux fins de l'exécution des opérations de paiement intervenant dans le cadre des Services.
+« Conditions Générales d'Utilisation (CGU) » : désigne le présent contrat et régissant notamment (i) l'utilisation du Site, des Services, 
+(ii) les relations entre IGIA d'une part et les Visiteurs/Clients/Membre/Investisseurs/Porteurs de projet d'autre part et (iii) les relations 
+des Clients/Membre/Investisseurs/Porteurs de projet entre eux.
+« Contenu » : désigne l'ensemble des textes, graphiques, interfaces Client, interfaces visuelles, photographies, marques commerciales, logos, 
+sons, musiques, illustrations et codes informatiques, notamment le design, la structure, la sélection, la coordination, l'expression, l'aspect 
+et la convivialité, la présentation et l'agencement, figurant sur le Site.
+« Demande » : désigne la demande de financement soumise par le Porteur de projet à IGIA pour analyse en vue d'une Offre de financement participatif.
+« Fiche d'Informations Clés sur l'Investissement (FICI) » : désigne la fiche d'informations communiquée au Client/Membre/Investisseur avant la 
+souscription et présentant chaque Offre de Financement Participatif, conforme au modèle de FICI prévu par le réglement (UE) 2020/1503.
+« Espace Personnel » : désigne l'espace accessible depuis le Site, personnel au Membre/Investisseur, auquel il peut accéder avec ses identifiant 
+et mot de passe.
+« Espace Porteur de projet » : désigne l'espace accessible depuis le Site, personnel au Porteur de projet, auquel il peut accéder avec ses identifiant 
+et mot de passe.
+« Force Majeure » : désigne tous incendies, toutes inondations, éléments naturels ou autres catastrophes naturelles, toutes déclarations ou 
+progressions d'hostilités, guerres, émeutes ou troubles publics, actes ou omissions du gouvernement ou d'autorités compétentes, pannes, blocages, 
+défaillances ou variations des installations ou des réseaux de télécommunications, ou toutes autres causes similaires ou non aux causes mentionnées 
+ci-dessus échappant au contrôle raisonnable d'une partie à un contrat et entraînant tout manquement ou retard dans le cadre de l'exécution de 
+ses obligations au titre d'un contrat.
+« Investissement » : désigne toute Souscription effectuée par un Investisseur sur IGIA.
+« Investisseur » : désigne un Membre inscrit sur le Site et ayant procédé à un investissement sur IGIA.
+« Membre » : désigne un Client ayant été accepté comme tel par IGIA, inscrit sur le Site après avoir pris connaissance et accepté expressément 
+les Conditions Générales d'Utilisation, suivi les procédures d'accès progressif et de KYC, et communiqué à IGIA les informations lui permettant 
+d'avoir accès aux pages à accès restreint. Tout Membre ne doit pas être considéré comme une « US Person » au sens de l’administration fiscale américaine.
+« Montant Souhaité » : désigne le montant que souhaite obtenir le Porteur de projet par l'intermédiaire du Site afin de financer son Projet. 
+Il peut être modifié en cours de Période de levée de fonds.
+« Montant Collecté » : désigne la somme collectée dans le cadre d'une Offre de Financement Participatif.
+« Montant Souscrit » : désigne la somme investie par un Investisseur dans le cadre d'une Offre de Financement Participatif.
+« Obligations » : désigne des obligations telles que définies par l'article L.547-1 du Code monétaire et financier, c'est-à-dire des obligations 
+simples à taux fixe.
+« Obligations convertibles » : désigne des obligations telles que définies par les articles L225-161 et suivants du Code de commerce.
+« Offre de Financement Participatif » : désigne la demande présentée par un Porteur de projet sur le Site, via la Page du Projet, d'obtention de 
+fonds pour financer son Projet dans le cadre des Services proposés par IGIA, selon des conditions qui, pour certaines d'entre elles, (i) lui 
+sont imposées, soit par l'Investisseur, soit par IGIA, et pour d'autres, (ii) peuvent être librement déterminées par le Porteur de projet.
+« Souscription » : désigne l'engagement formulé par l'Investisseur sur le Site, d'investir une somme d'argent dans le cadre d'une Offre de 
+financement participatif.
+« Opération de financement » : désigne, pour le financement d'un Projet donné, le(s) titres ou prêts (étant inclus : les obligations, 
+les obligations convertibles, les actions, les prêts) émis par un Porteur de Projet et souscrits par le(s) Investisseur(s), 
+par l'intermédiaire du Site, leur exécution et ses suites.
+« Opération de levée de fonds » : désigne les opérations réalisées par le Porteur de projet sur le Site dans le but de promouvoir 
+son Projet, solliciter le financement du Projet par les Investisseurs et conclure une Opération de financement.
+« Page du projet » : désigne la page internet disponible sur le site www.igia.com relative au Projet du Porteur de projet.
+« Partie » : désigne, selon le cas et le contexte, IGIA et/ou tout Client/Membre/Investisseur et/ou tout Porteur de projet.
+« Période de levée de fonds » : désigne la période de collecte, y compris ses éventuelles prorogations décidées par le Porteur 
+de projet et par IGIA, pendant laquelle l'Investisseur peut formuler des Souscriptions sur le Site pour une Offre de Financement Participatif.
+« Porteur de projet » : désigne tout Client de IGIA dont le Projet a été retenu par IGIA en vue d'une Opération de financement 
+proposée aux Membres de IGIA par l'intermédiaire du Site.
+« Prestataire de Service de Paiement » : désigne ABN AMRO BANK NV — Société au capital de 2 418 772,22 €, immatriculée 
+au RCS d’Amsterdam, dont le siège social est situé 94 rue de la Victoria, 75009 Utrecht, Pays-Bas, immatriculée au registre 
+du commerce et des sociétés de Utrecht sous le numéro 500 486 915. ABN AMRO est un établissement de paiement 
+(code interbancaire NL99 ABNA 0123 3457 89) agréé en date du 24/12/2012 par l'Autorité de contrôle prudentiel et de 
+résolution (« ACPR », Pays-Bas, site internet https://www.abnamro.com/ information vérifiable à tout instant 
+sur le site http://www.afm.nl en entrant « ABN AMRO »).
+« Prêt » : désigne tout Montant Souscrit par un Investisseur et pour une Offre de Financement Participatif sous la forme de prêt.
+« Projet » : désigne le projet qu'un Porteur de projet souhaite faire financer par une Offre de Financement Participatif.
+« Questionnaire sur les Risques » : désigne le modèle type de mise en garde et de questions relatives aux risques inhérents 
+aux Offres de Financement Participatif.
+« Site » : désigne l'infrastructure développée par IGIA selon les formats informatiques utilisables sur l'internet comprenant 
+le Contenu, des données de différentes natures, et notamment des textes, sons, images fixes ou animées, vidéos, bases de données, 
+destinés à être consultés par les Visiteurs ou tout Client/Membre/Investisseur via l'adresse principale « www.igia.com ». 
+Le Site est la propriété de IGIA.
+« Société Financée » : désigne toute société ayant accompli une Opération de financement.
+« Test de Connaissances » : désigne le formulaire ou le document issu dudit formulaire effectué par le Membre à l'issue 
+de la création de son compte sur IGIA conformément au réglement (UE) 2020/1503.
+« Titre » : désigne indifféremment les Obligations, les Actions et les Obligations Convertibles proposés sur le Site.
+« Visiteur » : désigne toute personne qui navigue, prend connaissance ou consulte le Site, le Contenu ou les informations 
+qui y figurent avant la création de son compte sur le Site.
+
+INTERPRETATION
+A moins qu’une intention contraire n’apparaisse :
+Les termes et expressions définis dans les CGU pourront être employés, en tant que de besoin, au singulier ou au pluriel ;
+Toute référence faite, dans les Conditions Générales d'Utilisation ou dans tout autre Contenu du Site ou dans tout autre document 
+accessible sur le Site, à une disposition légale, réglementaire ou tout autre type de norme ayant force obligatoire, devra être 
+interprétée comme désignant cette disposition telle qu'éventuellement modifiée ou remplacée.
+
+CONVENTION SUR LA PREUVE
+Les dispositions du présent article constituent une condition essentielle de l'accès aux Services du Site.
+
+Le Client/Membre/Investisseur reconnaît à l'écrit sur support électronique la même force probante que l'écrit sur support papier.
+
+Le Client/Membre/Investisseur reconnaît expressément et accepte que la preuve des Investissements effectués sur le Site soit 
+rapportée par tout support durable. Le Client/Membre/Investisseur s'engage à reconnaître comme support durable, notamment : le papier, 
+les courriels conservés ou copiés par tous moyens, les documents en format PDF, ainsi que tout autre instrument permettant de conserver 
+les informations d'une manière qui permet de s'y reporter aisément à l'avenir pendant un laps de temps adapté aux fins auxquelles les 
+informations sont destinées et qui permet la reproduction identique desdites informations.
+
+En conséquence, le Client/Membre/Investisseur reconnaît et accepte expressément que les Investissements puissent être établis et 
+conservés sur tout support durable.
+
+Le Client/Membre/Investisseur reconnaît expressément et accepte :
+
+l'enregistrement de sa navigation sur le Site, et notamment ses « clics » de souris ou autre périphérique, comme mode de preuve des 
+Investissements effectués via le Site ;
+que ces enregistrements ont pleine valeur probante à son égard ;
+qu'en cliquant sur « Je certifie avoir pris connaissance et accepté expressément les présentes Conditions Générales d'Utilisation », 
+il conclut un contrat ayant force obligatoire avec IGIA ;
+que la validation d'une Offre via un « clic » vaut signature électronique ;
+que toute opération effectuée après s'être authentifié avec son mot de passe sur le Site est réputée effectuée par lui-même ;
+tout document signé ou accepté ou validé de manière dématérialisée par l'intermédiaire du Site et/ou dans le cadre des Services 
+vaut preuve du contenu dudit document, de l'identité du signataire et de son consentement aux obligations qui découlent du document 
+signé de manière dématérialisée.
+Les Parties conviennent que les informations et justificatifs délivrés par l'infrastructure informatique de IGIA font foi entre elles.
+
+INSCRIPTION AUX SERVICES
+L'accès aux Services et leur utilisation emporte l'acceptation, sans restriction ni réserves, des CGU par les Clients/Membres/Investisseurs.
+
+Les éléments suivants sont consultables pour tout Visiteur :
+
+Les onglets Investir, Qui sommes-nous et Lever des fonds, composés des rubriques suivantes : Comment ça marche, Nos offres, Fiscalité et tarifs, 
+Témoignages, questions fréquentes ; Nous contacter ; L'équipe ; Revue de presse ; IGIA en chiffres ; agréments et sécurité ; notre vision ; 
+conditions générales d'utilisation ;
+En pied de page, l'internaute a également accès aux onglets Mentions légales, Réclamations et Confidentialité ;
+Les Projets présentés dans le cadre des Services ;
+L'avertissement concernant les risques ;
+Les onglets « Créer son compte » et « Se connecter ».
+
+TEST DE CONNAISSANCES
+
+Conformément au réglement (UE) 2020/1503, IGIA procédera, préalablement au premier Investissement réalisé par l'Investisseur, 
+à un Test de Connaissances consistant à vérifier si les services de financement participatif proposés sont appropriés pour 
+les investisseurs potentiels non avertis. En cas de réponses jugées insuffisantes ou incomplètes par IGIA, un avertissement 
+spécifique sur le risque de perte totale du capital investi sera présenté à l’Investisseur à l’issue de la saisie de son 
+Test de Connaissances et préalablement à chaque investissement.
+
+Les questions composant le Test de Connaissances permettent de mesurer l'expérience et les objectifs du Membre en matière 
+d'investissement, ainsi que de définir sa surface financière. Le Membre pourra modifier ses réponses, notamment lors d'un 
+changement de situation. Il aura accès à un nouveau Test de Connaissances par simple demande formulée par email à IGIA 
+(contact@igia.com), ou via son espace personnel, et a minima tous les deux ans.
+
+Un récapitulatif des réponses aux questions du Test de Connaissances sera généré à l'issue de la saisie dudit Test. 
+Le Membre devra valider ce Test. Le Test de Connaissances sera disponible à tout moment dans l'Espace Personnel du Membre.
+
+ACCES AUX SERVICES
+L'Investisseur a accès aux Services - étant rappelé que tout Investisseur doit au préalable être Membre. 
+Pour pouvoir utiliser les Services, l'Investisseur doit (i) être titulaire d'un Compte bancaire en euros, 
+(ii) disposer d'un Espace Personnel, (iii) ouvrir avec succès un Compte de Paiement auprès du Prestataire 
+de Service de Paiement et, (iv) s'assurer que son Compte de Paiement est crédité du montant de la Souscription. 
+Dans le cadre de l'accès aux Services, l'investisseur accepte expressément d'être abonné à la newsletter de IGIA. 
+Il bénéficie d'un droit de désinscription à cette newsletter.
+
+ACCÈS AUX SERVICES
+IGIA fournit les Services consistant à (i) mettre en relation, au moyen du Site, les Porteurs de projet et les 
+Investisseurs finançant des Projets, (ii) définir et organiser les modalités des Opérations de financement des Projets, 
+et (iii) définir et organiser les modalités de suivi et de gestion de ces Opérations de financement.
+
+IGIA ne fournit pas de service de paiement, ces derniers étant intégralement fournis par le Prestataire de Service de Paiement.
+
+Le Membre/Investisseur a accès à une présentation détaillée de l'Offre de Financement Participatif pour chaque Porteur de 
+projet dans le cadre des Services, comprenant :
+
+le détail de l'Offre de Financement Participatif (le nom du Porteur de projet et bref descriptif de son activité, 
+montant recherché, date de clôture des souscriptions, montant nominal, indication de destination des sommes prêtées, etc.),
+la description détaillée de l'activité du Porteur de projet et ses perspectives,
+les informations relatives à la situation financière et juridique du Porteur de projet et leurs perspectives,
+les informations sur les dirigeants, les administrateurs et les actionnaires/associés du Porteur de projet,
+le cas échéant les Termes et Conditions, le Memorandum, le Pacte d'actionnaire ou le Contrat de Prêt de l'Offre de Financement Participatif
+le FICI.
+Ces informations sont éditées par chaque Porteur de projet sous sa propre responsabilité. Conformément à la réglementation, 
+IGIA réalise un contrôle de cohérence, de clarté (langage non technique et non équivoque) et d'équilibre de ces informations.
+
+IGIA complète ces informations en intégrant au FICI les aspects suivants :
+
+les modalités de recueil et de transmission des certificats de souscription ou d'inscription,
+les risques inhérents à une Offre de Financement Participatif pour l'Investisseur.
+L'ensemble de la Documentation Règlementaire disponible sur le Site sera téléchargeable, notamment les textes 
+en version imprimable et non modifiable. Ces derniers correspondront en permanence à la dernière version validée par le Porteur de projet.
+
+Sur chaque Page de Projet, un document intitulé « FICI » permet au Membre de consulter et de télécharger 
+la FICI relatif à l'Offre de Financement Participatif. Le Client/Membre/Investisseur déclare expressément 
+avoir pris connaissance du FICI et y adhérer en totalité préalablement à toute Offre et à toute Opération de 
+financement. Si le Client/Membre/Investisseur n'acquiesce pas en totalité aux stipulations du FICI, 
+il doit alors renoncer à effectuer toute Offre et à participer à toute Opération de financement.
+
+RÉALISATION DE LA SOUSCRIPTION PAR L'INVESTISSEUR
+La possibilité de réaliser une Souscription est réservée aux Membres/Investisseurs. Le processus est, sauf exception, 
+entièrement dématérialisé et encadré par un environnement sécurisé.
+
+L'Investisseur a la possibilité d'effectuer une Souscription à l'aide d'un formulaire situé sur la Page de Projet, 
+lui permettant de choisir le montant qu'il souhaite investir. Il valide ce montant en cliquant sur le bouton « Valider ».
+
+Si le solde de son Compte de Paiement n'est pas suffisant, il sera alors demandé à l'Investisseur de procéder 
+à un virement ou à un crédit par carte bancaire afin de créditer son Compte de Paiement de la somme correspondant 
+à la Souscription. L'Investisseur ne peut prêter que les sommes créditées sur son Compte de Paiement.
+
+Puis l'Investisseur est dirigé vers une nouvelle page afin de confirmer son choix. Cette page récapitule 
+les informations essentielles en lien avec son investissement comme suit :
+
+Montant ;
+Taux annuel brut (si applicable) ;
+Durée (si applicable) ;
+Echéances (si applicable) ;
+
+Type d'offre.
+
+Si les informations renseignées correspondent à l'investissement que souhaite réaliser l'Investisseur, 
+ce dernier clique sur le bouton « Confirmer ».
+
+Cette action emporte également l'acceptation des Conditions Générales d'Utilisation, la confirmation que 
+les informations à son sujet reprises dans le Test de Connaissances sont toujours exactes et la confirmation 
+par l'Investisseur qu'il a pris connaissance de la du FICI.
+
+En cliquant sur « Confirmer mon investissement », l'Investisseur reçoit par courrier électronique un 
+document qui reprend les informations de sa Souscription. Ce document est également disponible depuis son Espace Personnel.
+
+La Souscription formulée par l'Investisseur est révocable pendant une période de quatre jours 
+(le « Délai de Réflexion »). Une fois ce délai passé, l'Investisseur ne peut plus se rétracter : il 
+s'est engagé irrévocablement à investir dans les termes fixés par l’Offre. Seule la décision par 
+IGIA d'annuler l'Offre de Financement Participatif et/ou l'Offre de l'Investisseur peut faire 
+échec à la conclusion de l'Opération de financement.
+
+MODIFICATION DE LA DOCUMENTATION RÈGLEMENTAIRE PENDANT LA PÉRIODE DE LEVÉE DE FONDS
+
+Le Porteur de Projet s’engage à notifier à IGIA toute modification apportée aux informations 
+
+afin de tenir constamment à jour la FICI et pour toute la durée de l’Offre de Financement Participatif 
+(la période de collecte des fonds). IGIA informe immédiatement les investisseurs qui ont fait une 
+Souscription ou manifesté un intérêt pour l’offre de financement participatif de toute modification 
+importante apportée aux informations figurant dans la FICI qui lui a été notifiée. Cette information 
+est transmise par email ayant pour objet : Modification de la fiche d’informations clés sur 
+l’investissement + identification du projet concerné.
+
+MODIFICATION EN CAS D’INEXACTITUDE, OMISSION OU ERREUR RELEVEE PAR IGIA
+
+Si IGIA décèle, dans la FICI, une omission, une erreur ou une inexactitude qui pourrait avoir 
+une incidence substantielle sur le retour sur investissement attendu, IGIA signale cette omission, 
+cette erreur ou cette inexactitude dans les meilleurs délais au Porteur de Projet, qui complète ou 
+corrige les informations en question dans les meilleurs délais.
+
+Lorsqu’il n’a pas été procédé à un tel complément ou à une telle correction dans les meilleurs délais, 
+IGIA suspend l’Offre de Financement Participatif jusqu’à ce que la FICI ait été complétée ou corrigée, 
+mais dans un délai ne dépassant pas trente jours calendaires.
+
+IGIA informe immédiatement par email les investisseurs qui ont effectué une Souscription ou manifesté 
+un intérêt pour l’offre de financement participatif de telles irrégularités, des mesures prises et à 
+prendre par IGIA et de la possibilité dont ils disposent de retirer leur offre d’investissement ou leur 
+manifestation d’intérêt pour l’Offre de Financement Participatif(crowdfunding) et inclusif(crowdlending).
+
+Si, après trente jours calendaires, la FICI n’a pas été complétée ou corrigée pour rectifier toutes 
+les irrégularités identifiées, l’Offre de Financement Participatif est annulée.
+
+A défaut de demande d'annulation émise par l'Investisseur dans un délai raisonnable, toute Souscription sera réputée confirmée.
+
+FIN DE LA COLLECTE
+La Période de levée de fonds est déterminée par IGIA qui en fixe le début, la fin et la durée. Dès lors que le 
+Montant Souhaité est atteint, IGIA constatera à l'issue de la Période de Collecte le montant total des Souscriptions valables reçues.
+
+Les Investisseurs recevront dans un délai raisonnable une confirmation du succès de l'Offre de Financement Participatif 
+et donc de l'attribution des Titres ou Prêts au moyen d'un certificat accessible dans leur espace personnel.
+
+Au terme de la Période de levée de fonds, si IGIA ne décide pas de la prolonger et si le Montant Souhaité n'est pas atteint, 
+les Investisseurs reçoivent un e-mail confirmant l'annulation de leur Souscription. Les Montants Souscrits sont reversés 
+dans leur intégralité sur le Compte de Paiement des Investisseurs sous un délai de 5 jours ouvrés par le Prestataire de 
+Service de Paiement sans aucun frais.
+
+En cas d'Arrêt Prématuré de l'Offre de financement participatif ou en cas d'annulation de l'Offre de Financement Participatif 
+pour cause de Force Majeure, toutes les Offres seront annulées, et, sous un délai de 5 jours ouvrés, un e-mail d'information 
+sera adressé par IGIA à tous les Investisseurs concernés. Les Montants Souscrits sont alors reversés dans leur intégralité 
+sur le Compte de Paiement des Investisseurs sous un délai de 5 jours ouvrés suivant par le Prestataire de Service de Paiement.
+
+Dès lors que le Montant Souhaité est atteint avant l'expiration de la Période de levée de fonds, la souscription en ligne 
+est interrompue. Aucune Souscription complémentaire ne sera alors possible (sauf erreur informatique).
+
+IGIA constatera alors le montant total des Souscriptions valables reçues, ainsi que la clôture anticipée de la Période de 
+levée de fonds. Les Investisseurs recevront une confirmation du succès de l'Offre de Financement Participatif.
+
+IGIA est dûment mandatée par l'Investisseur en vue de donner mainlevée au Prestataire de Service de Paiement de son 
+obligation de conservation du Montant Souscrit à l'issue de la Période de Collecte et de lui donner instruction de verser ladite somme comme suit :
+
+Si à l'issue de la Période de Collecte, le montant des Souscriptions et des sommes reçues par le Prestataire de Service de Paiement 
+est égal au Montant Souhaité, le Montant Souhaité (net de commissions éventuellement prélevées par le Prestataire de Service de 
+Paiement ou par IGIA) sera versé au Porteur de projet après avoir fourni à IGIA la preuve de l'enregistrement des Titres dans 
+un registre qu'il tient ou après avoir validé la liste des Investisseurs ;
+En cas d'Arrêt Prématuré de l'Offre de financement participatif ou si, à l'issue de la Période de levée de fonds, le montant 
+total des Souscriptions et des sommes reçues par le Prestataire de Service de Paiement est strictement inférieur au Montant Souhaité, 
+le Prestataire de Service de Paiement remboursera au(x) Investisseur(s) le Montant Souscrit versé par ce(s) dernier(s).
+
+DROIT DE RÉTRACTATION
+
+Chaque Client/Membre/Investisseur dispose d'un délai de quatre (4) jours calendaires révolus à compter du jour de la conclusion de 
+sa Souscription pour exercer son droit de rétractation, et ce sans avoir à justifier de motif ni à supporter de pénalités, 
+alors il peut l'exercer directement depuis son espace personnel.
+
+Les informations concernant le délai de réflexion sont indiquées dans le « pop-up » « A lire avant d’investir » de son Espace Personnel, 
+ainsi qu’en introduction de la FICI. L’investisseur reçoit une information concernant le début du délai de réflexion immédiatement 
+après sa Souscription. L’investisseur qui aura effectué une Souscription aura la faculté d’annuler ladite Souscription depuis son 
+tableau de bord. Ainsi, pendant le délai de 4 jours calendaires, il aura accès à un lien « Délai de réflexion : annuler mon offre » 
+sur l’encart dédié au projet financé. En cliquant sur ce bouton, l’Investisseur annule immédiatement sa Souscription et voit 
+apparaître un pop-up l’informant que sa Souscription a bien été annulée. Passé le délai de 4 jours calendaires, le lien n’est plus visible.
+
+OBLIGATIONS DU MEMBRE ET DE L'INVESTISSEUR
+
+Le Membre/l'Investisseur a, de manière générale, pour obligations de (i) respecter les conditions d'accès au Site, 
+(ii) communiquer des données exactes et fidèles relativement à son état civil et son profil, (iii) renseigner tout 
+formulaire et signer toute convention présentés comme obligatoires sur le Site sauf à procéder à la fermeture immédiate de son Espace Personnel, 
+(iv) se comporter de façon loyale à l'égard de IGIA et des autres Membres ou Investisseurs ou Clients, (v) utiliser 
+les Services conformément à leur destination, (vi) ne prendre aucun engagement pour un tiers, et (vii) ne pas perturber 
+ou tenter de perturber le fonctionnement du Site.
+
+En cas de violation des règles ci-dessus ou de celles énoncées ci-dessous, IGIA se réserve le droit de suspendre l'accès du 
+Client/Investisseur/Membre au Site ou à l'Espace Personnel ou aux pages à accès restreint ou aux Services et/ou de résilier 
+les présentes à l'égard du Client/Membre/Investisseur avec effet immédiat.
+
+REMUNERATION DE IGIA
+
+La rémunération de IGIA provient des frais facturés aux Sociétés Financées. Cette rémunération est due à IGIA à partir de la 
+publication du Projet sur le Site et devient exigible au moment du transfert des fonds vers le compte bancaire de la Société Financée.
+
+Les prestations fournies à chaque Client/Membre/Investisseur est gratuite. IGIA se réserve toutefois la possibilité de facturer 
+au Client/Membre/Investisseur des frais de transaction, dans le cas suivant : si un Client crédite son Compte de Paiement sur 
+IGIA puis le débite sans investir. Dans ce cas, 1% de la somme débitée pourra être facturée.
+
+DESCRIPTION DE LA PROCEDURE DE RECLAMATION DES INVESTISSEURS
+
+Description de la procédure pour traiter les réclamations des Membres/Investisseurs, y compris le délai dans lequel une réponse 
+sera apportée au Membres/Investisseurs.
+
+IGIA dispose d’une procédure efficace et transparente pour le traitement rapide, équitable et cohérent des réclamations des clients.
+
+IGIA publie la description de cette procédure sur son site, accessible directement depuis la page d’accueil de la 
+plateforme via l’onglet « Réclamations ».
+
+Le dépôt d’une réclamation est gratuit.
+
+IGIA met à disposition un modèle de réclamation standard depuis la page www.igia.com/infos/reclamation
+
+IGIA conserve un enregistrement de toutes les réclamations reçues, ainsi que des mesures prises pour chacune d’entre elles. 
+Ces enregistrements sont conservés par IGIA.
+
+La description de la procédure est accessible sur la page : https://www.igia.com/infos/reclamations
+

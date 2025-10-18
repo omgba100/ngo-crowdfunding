@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="position-relative text-white" 
+         style="background: url('{% static "assets/img/about/hero-bg.jpg" %}') center/cover no-repeat; height: 320px;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" 
+       style="background: rgba(0,0,0,0.6);"></div>
+  <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="fw-bold display-5" data-aos="fade-down">{{ hero.title }}</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        {{ hero.subtitle }}
+      </p>
+  </div>
+</section>
+
+<!-- CONTENU -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">{% trans "Conditions Générales d’Utilisation du site IGIA" %}</h2>
+      <p class="text-muted">{{ last_update }}</p>
+    </div>
+
+    <div class="card shadow-sm border-0 p-4">
+      <div class="card-body">
+        <pre class="text-dark" style="white-space: pre-wrap;">{{ cgu_text }}</pre>
+      </div>
+    </div>
+
+    <div class="mt-4 text-center">
+      <p class="text-muted small">
+        {% trans "Pour toute question, contactez-nous à" %} 
+        <a href="mailto:{{ company.email }}">{{ company.email }}</a>
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

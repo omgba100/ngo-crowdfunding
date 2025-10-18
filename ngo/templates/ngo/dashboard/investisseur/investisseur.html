@@ -1,0 +1,159 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}Tableau de bord - Investisseur{% endblock %}
+
+{% block base_investisseur %}
+<div class="container-fluid mt-4">
+
+    <!-- ------------------- Header ------------------- -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>{% trans "Bienvenue" %}, {{ profile.user.full_name }}</h2>
+        <div>
+            <a href="{% url 'profile_investisseur' %}" class="btn btn-outline-primary">
+                <i class="bi bi-person-circle"></i> {% trans "Profile" %}
+            </a>
+        </div>
+    </div>
+
+    <!-- ------------------- Stats Cards ------------------- -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <h6 class="text-muted">{% trans "Capital disponible" %}</h6>
+                    <h3 class="text-success">{{ stats.capital_available|default:"0.00"|floatformat:2 }} XAF</h3>
+                    <i class="bi bi-wallet2 fs-1 text-success"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <h6 class="text-muted">{% trans "Total investi" %}</h6>
+                    <h3 class="text-primary">{{ stats.total_invested|floatformat:2 }} XAF</h3>
+                    <i class="bi bi-currency-dollar fs-1 text-primary"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <h6 class="text-muted">{% trans "Projets soutenus" %}</h6>
+                    <h3 class="text-warning">{{ stats.projects_supported_count }}</h3>
+                    <i class="bi bi-folder-check fs-1 text-warning"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <h6 class="text-muted">{% trans "Contributions" %}</h6>
+                    <h3 class="text-danger">{{ contributions.count }}</h3>
+                    <i class="bi bi-card-checklist fs-1 text-danger"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------- Projets Disponibles ------------------- -->
+    <div class="mb-4">
+        <h4>{% trans "Projets Disponibles" %}</h4>
+        <div class="row">
+            {% for project in projects_supported %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text text-truncate">{{ project.short_description }}</p>
+                        <div class="mt-auto">
+                            <div class="mb-2">
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ project.progress_percentage }}%;" aria-valuenow="{{ project.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">{{ project.progress_percentage }}%</div>
+                                </div>
+                            </div>
+                            <a href="{% url 'project_detail' project.slug %}" class="btn btn-sm btn-primary w-100">{% trans "Voir Détails" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-muted">{% trans "Aucun projet soutenu pour le moment." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- ------------------- Contributions Récentes ------------------- -->
+    <div class="mb-4">
+        <h4>{% trans "Contributions Récentes" %}</h4>
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>{% trans "Projet / Campagne" %}</th>
+                        <th>{% trans "Type" %}</th>
+                        <th>{% trans "Montant" %}</th>
+                        <th>{% trans "Status" %}</th>
+                        <th>{% trans "Date" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contribution in contributions %}
+                    <tr>
+                        <td>{{ contribution.project.title }}</td>
+                        <td>{{ contribution.get_contribution_type_display }}</td>
+                        <td>{{ contribution.amount|floatformat:2 }} XAF</td>
+                        <td>
+                            {% if contribution.is_paid %}
+                            <span class="badge bg-success">Payé</span>
+                            {% else %}
+                            <span class="badge bg-warning text-dark">{{ contribution.get_payment_status_display }}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ contribution.created_at|date:"d M Y" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">{% trans "Aucune contribution encore." %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ------------------- Campagnes de Prêt Actives ------------------- -->
+    <div class="mb-4">
+        <h4>{% trans "Campagnes de Prêt Actives" %}</h4>
+        <div class="row">
+            {% for loan in loan_campaigns %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="{{ loan.image.url }}" class="card-img-top" alt="{{ loan.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ loan.title }}</h5>
+                        <p class="card-text text-truncate">{{ loan.description }}</p>
+                        <div class="mt-auto">
+                            <div class="mb-2">
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: {{ loan.progress_percentage }}%;" aria-valuenow="{{ loan.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">{{ loan.progress_percentage }}%</div>
+                                </div>
+                            </div>
+                            <a href="{% url 'loan_campaign_detail' loan.pk %}" class="btn btn-sm btn-info w-100">{% trans "Voir Détails" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-muted">{% trans "Aucune campagne de prêt active." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock base_investisseur %}

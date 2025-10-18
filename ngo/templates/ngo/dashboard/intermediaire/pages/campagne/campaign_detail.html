@@ -1,0 +1,107 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Détails de la campagne" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+/* Style cartes et barre de progression */
+.campaign-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-bullseye-arrow me-2"></i> {{ campaign.title }}
+            </h2>
+            <p class="text-muted mb-0">
+                {% trans "Campagne du projet" %}: <strong>{{ project.title }}</strong> | 
+                {% trans "Entrepreneur" %}: <strong>{{ entrepreneur.full_name }}</strong>
+            </p>
+        </div>
+        <a href="{% url 'intermediaire_projects' %}" class="btn btn-outline-primary rounded-pill">
+            <i class="mdi mdi-arrow-left me-1"></i> {% trans "Retour aux projets" %}
+        </a>
+    </div>
+
+    <div class="card campaign-card shadow-sm border-0 rounded-4 p-4" data-aos="zoom-in" data-aos-duration="900">
+        <div class="mb-4">
+            <h5 class="fw-bold">{% trans "Objectif de la campagne" %}</h5>
+            <p class="text-muted mb-1">{{ goal_amount }} {{ campaign.currency.code|default:"XAF" }}</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: {{ completion_rate }}%;" aria-valuenow="{{ completion_rate }}" aria-valuemin="0" aria-valuemax="100">
+                    {{ completion_rate }}%
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h5 class="fw-bold">{% trans "Montant collecté" %}</h5>
+            <p class="text-success h5">{{ total_collected }} {{ campaign.currency.code|default:"XAF" }}</p>
+        </div>
+
+        <div class="mb-4">
+            <h5 class="fw-bold">{% trans "Description de la campagne" %}</h5>
+            <p class="text-muted">{{ campaign.description|default:_("Aucune description fournie.") }}</p>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-danger rounded-pill delete-btn" data-id="{{ campaign.id }}">
+                <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer la campagne" %}
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour confirmation -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteButton = document.querySelector('.delete-btn');
+    if(deleteButton){
+        deleteButton.addEventListener('click', function () {
+            const campaignId = this.getAttribute('data-id');
+            Swal.fire({
+                title: '{% trans "Confirmer la suppression ?" %}',
+                text: '{% trans "Cette action supprimera définitivement la campagne." %}',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: '{% trans "Oui, supprimer !" %}',
+                cancelButtonText: '{% trans "Annuler" %}'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirection vers la vue de suppression (à créer)
+                    window.location.href = "/dashboard/intermediaire/remove-campaign/" + campaignId + "/";
+                }
+            });
+        });
+    }
+});
+</script>
+{% endblock base_intermediaire %}

@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ category.name }} | {% trans "Détails Catégorie" %}{% endblock %}
+
+{% block content %}
+<style>
+/* ==================== VARIABLES ==================== */
+:root {
+  --bg-primary: #FFFAF0;
+  --bg-secondary: #17478E;
+  --bg-tertiary: #303C82;
+  --link-color:#090f1f;
+  --text-title:#131445;
+  --text-white:#fff;
+  --text-color:#5E5E61;
+  --accent:#EFD807;
+}
+
+/* ==================== HERO ==================== */
+.category-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  color: var(--text-white);
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.category-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(239,216,7,0.15), transparent 70%);
+  animation: rotateGlow 25s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.category-hero h1 {
+  position: relative;
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.category-hero p {
+  position: relative;
+  max-width: 750px;
+  margin: auto;
+  color: #e6e6e6;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* ==================== IMAGE ET DESCRIPTION ==================== */
+.category-detail {
+  background: var(--bg-primary);
+  padding: 80px 0;
+}
+
+.category-image {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.category-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.category-description {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.category-meta {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.category-meta a {
+  display: inline-block;
+  margin: 10px;
+  background: var(--accent);
+  color: var(--text-title);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.category-meta a:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(239,216,7,0.4);
+}
+
+/* ==================== PROJETS ASSOCIÉS ==================== */
+.related-projects {
+  background: linear-gradient(to bottom, var(--bg-primary), #fff);
+  padding: 60px 0 80px;
+}
+
+.related-projects h3 {
+  text-align: center;
+  font-weight: 800;
+  color: var(--text-title);
+  margin-bottom: 50px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all .4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-card-body h5 {
+  color: var(--bg-tertiary);
+  font-weight: 700;
+  margin-bottom: .7rem;
+}
+
+.project-card-body a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text-title);
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.project-card-body a:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-white);
+}
+
+</style>
+
+<!-- ==================== HERO ==================== -->
+<section class="category-hero">
+  <div class="container">
+    <h1>{{ category.name }}</h1>
+    <p>{% trans "Découvrez les projets et informations liés à cette catégorie." %}</p>
+  </div>
+</section>
+
+<!-- ==================== DETAILS CATÉGORIE ==================== -->
+<section class="category-detail">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        {% if category.image %}
+          <img src="{{ category.image.url }}" alt="{{ category.name }}" class="category-image img-fluid">
+        {% else %}
+          <img src="{% static 'assets/img/placeholder-category.jpg' %}" alt="Image catégorie" class="category-image img-fluid">
+        {% endif %}
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold text-uppercase" style="color:var(--bg-tertiary);">{{ category.name }}</h2>
+        <p class="category-description">{{ category.description|default:_("Aucune description disponible pour cette catégorie.") }}</p>
+        
+        <div class="category-meta">
+          <a href="{% url 'category_list' %}">← {% trans "Retour aux catégories" %}</a>
+          {% if country %}
+          <a href="{% url 'funded_categories_for_country' country_slug=country.slug %}?category={{ category.slug }}">
+            🌍 {% trans "Voir les projets financés" %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJETS LIÉS ==================== -->
+<section class="related-projects">
+  <div class="container">
+    <h3>{% trans "Projets associés à cette catégorie" %}</h3>
+    <div class="row g-4">
+      {% if category.project_set.all %}
+        {% for project in category.project_set.all|slice:":6" %}
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card">
+              {% if project.image %}
+                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+              {% else %}
+                <img src="{% static 'assets/img/placeholder-project.jpg' %}" alt="Projet">
+              {% endif %}
+              <div class="project-card-body">
+                <h5>{{ project.title }}</h5>
+                <p>{{ project.short_description|truncatewords:15 }}</p>
+                <a href="{% url 'ngo:campaign_detail' project.id %}">{% trans "Voir la campagne" %}</a>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <div class="col-12 text-center text-muted">
+            <p>{% trans "Aucun projet n’est actuellement associé à cette catégorie." %}</p>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,204 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Message" %}{% endblock %}
+
+{% block base_intermediaire %}
+
+<section class="card shadow-sm messages-card" style="max-width: 800px; margin: auto;">
+    <!-- Header message -->
+    <div class="card-header d-flex justify-content-between align-items-center bg-light">
+        <div>
+            <strong>{{ message.sender.display_name }}</strong>
+            &lt;{{ message.sender.email }}&gt;
+        </div>
+        <div class="d-flex align-items-center">
+            {% if not message.is_read %}
+                <span class="badge bg-warning ms-2">{% trans "Non lu" %}</span>
+            {% else %}
+                <span class="badge bg-secondary ms-2">{% trans "Lu" %}</span>
+            {% endif %}
+            <i class="bi bi-reply ms-3 action-icon" data-bs-toggle="modal" data-bs-target="#replyModal"></i>
+            <i class="bi bi-archive ms-2 action-icon" id="archive-btn"></i>
+            <i class="bi bi-trash ms-2 action-icon" id="delete-btn"></i>
+        </div>
+    </div>
+
+    <!-- Subject -->
+    <div class="card-body border-bottom">
+        <h5 class="card-title">{{ message.subject }}</h5>
+        <p class="text-muted small">{{ message.created_at|date:"d/m/Y H:i" }}</p>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+        <p>{{ message.body|linebreaksbr }}</p>
+    </div>
+</section>
+
+<!-- Modal Réponse -->
+<div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" class="reply-form" data-url="{% url 'reply_message' message.pk %}">
+                {% csrf_token %}
+                <div class="modal-header bg-decorax text-white">
+                    <h5 class="modal-title" id="replyModalLabel">{% trans "Répondre à" %} {{ message.sender.display_name }}</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="{% trans 'Fermer' %}"></button>
+                </div>
+                <div class="modal-body">
+                    {{ form|crispy }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Annuler" %}</button>
+                    <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Archiver le message
+    document.getElementById('archive-btn').addEventListener('click', () => {
+        fetch(`/messages/archive/{{ message.pk }}/`).then(() => {
+            alert('{% trans "Message archivé !" %}');
+            window.location.href = "{% url 'inbox' %}";
+        });
+    });
+
+    // Supprimer le message
+    document.getElementById('delete-btn').addEventListener('click', () => {
+        if(confirm('{% trans "Voulez-vous vraiment supprimer ce message ?" %}')) {
+            fetch(`/messages/delete/{{ message.pk }}/`).then(() => {
+                alert('{% trans "Message supprimé !" %}');
+                window.location.href = "{% url 'inbox' %}";
+            });
+        }
+    });
+
+    // Réponse AJAX
+    document.querySelector('.reply-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const url = e.target.dataset.url;
+        const data = new FormData(e.target);
+        fetch(url, { method: 'POST', body: data, headers: {'X-Requested-With':'XMLHttpRequest'} })
+            .then(r => r.json())
+            .then(res => {
+                if(res.success){
+                    bootstrap.Modal.getInstance(e.target.closest('.modal')).hide();
+                    alert('{% trans "Message envoyé !" %}');
+                } else {
+                    alert('{% trans "Erreur, vérifiez le formulaire." %}');
+                }
+            });
+    });
+});
+</script>
+<style>
+/*==============================
+  Messages Card - Détail style Gmail
+===============================*/
+
+/* Card container */
+.messages-card {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.messages-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.messages-card .card-header strong {
+    font-size: 1.05rem;
+}
+
+/* Badges Lu/Non lu */
+.messages-card .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.5em;
+}
+
+/* Body */
+.messages-card .card-body {
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* Sujet du message */
+.messages-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Date du message */
+.messages-card .text-muted {
+    font-size: 0.85rem;
+}
+
+/* Action icons */
+.action-icon {
+    cursor: pointer;
+    color: #495057;
+    transition: color 0.2s;
+}
+
+.action-icon:hover {
+    color: #0d6efd; /* couleur primaire bootstrap */
+}
+
+/* Modal header */
+.modal-header.bg-decorax {
+    background-color: var(--decorax);
+    color: var(--text-white);
+}
+
+/* Inputs forms */
+.modal-body input, .modal-body textarea {
+    border-radius: 6px;
+}
+
+/* Messages non lus */
+.unread {
+    background-color: rgba(239, 216, 7, 0.05);
+    font-weight: 600;
+}
+
+/* Scroll si contenu long */
+.messages-card .card-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .messages-card {
+        margin: 20px 10px;
+    }
+
+    .messages-card .card-header, 
+    .messages-card .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+</style>
+
+{% endblock base_intermediaire %}

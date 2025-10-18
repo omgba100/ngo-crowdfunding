@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n static %}
+
+{% block title %}{% trans "Projets réalisés | IGIA" %}{% endblock %}
+
+{% block content %}
+<!-- ============================= SLIDER PROJETS RECENTS ============================= -->
+<section class="py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4" style="color: var(--text-title);" data-aos="fade-up">{% trans "Projets Récents" %}</h2>
+
+    <!-- Swiper -->
+    <div class="swiper-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        {% for project in projects|slice:":10" %}
+        <div class="swiper-slide">
+          <div class="project-card-slide rounded-4 overflow-hidden shadow-lg position-relative">
+            {% if project.image %}
+            <div class="project-img-slide" style="background-image: url('{{ project.image.url }}');"></div>
+            {% else %}
+            <div class="project-img-slide" style="background-image: url('{% static 'assets/img/projects/default.jpg' %}');"></div>
+            {% endif %}
+            <div class="overlay-slide d-flex flex-column justify-content-end p-3">
+              <h5 class="fw-bold text-white mb-1">{{ project.title }}</h5>
+              <p class="small text-white mb-2">{{ project.short_description|truncatechars:50 }}</p>
+              <a href="{% url 'project_detail' project.slug %}" class="btn btn-sm" style="background-color: var(--accent); color: var(--text-title);">{% trans "Voir plus" %}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FILTRES ============================= -->
+<section class="py-4" style="background-color: #f7f7f7;">
+  <div class="container">
+    <form method="get" class="row g-3 justify-content-center mb-4">
+      <div class="col-auto">
+        <select name="country" class="form-select">
+          <option value="">{% trans "Tous les pays" %}</option>
+          {% for country in countries %}
+          <option value="{{ country.slug }}" {% if selected_country == country.slug %}selected{% endif %}>{{ country.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-auto">
+        <select name="category" class="form-select">
+          <option value="">{% trans "Toutes les catégories" %}</option>
+          {% for category in categories %}
+          <option value="{{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>{{ category.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn" style="background-color: var(--accent); color: var(--text-title);">{% trans "Filtrer" %}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============================= LISTE COMPLETE DES PROJETS ============================= -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" style="color: var(--text-title);" data-aos="fade-up">{% trans "Tous les projets" %}</h2>
+
+    <div class="row g-4">
+      {% for project in projects %}
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'50' }}">
+        <div class="card project-card border-0 shadow-lg rounded-4 overflow-hidden hover-scale">
+          {% if project.image %}
+          <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+          {% else %}
+          <img src="{% static 'assets/img/projects/default.jpg' %}" class="card-img-top" alt="{{ project.title }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title fw-bold" style="color: var(--bg-secondary);">{{ project.title }}</h5>
+            <p class="card-text text-muted small">{{ project.short_description|truncatechars:80 }}</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="badge" style="background-color: var(--accent); color: var(--text-title);">{{ project.status }}</span>
+              <a href="{% url 'project_detail' project.slug %}" class="btn btn-sm" style="background-color: var(--accent); color: var(--text-title);">{% trans "Voir plus" %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <p class="text-center">{% trans "Aucun projet trouvé." %}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SWIPER JS & CSS ============================= -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      576: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+      1200: { slidesPerView: 4 }
+    }
+  });
+</script>
+
+<!-- ============================= ANIMATIONS & STYLE ============================= -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, offset: 150, once: true });
+</script>
+
+<style>
+.hover-scale {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.project-card-slide {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: grab;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-card-slide:active { cursor: grabbing; }
+.project-card-slide:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.project-img-slide {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.project-card-slide:hover .project-img-slide { transform: scale(1.1); }
+.overlay-slide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(23,71,142,0.85));
+  padding: 12px;
+  transition: background 0.3s ease;
+}
+.project-card-slide:hover .overlay-slide { background: linear-gradient(transparent, rgba(23,71,142,0.95)); }
+.btn {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #EFD807cc;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base_user.html" %}
+{% load static %}
+{% block title %}Boîte de réception{% endblock %}
+
+{% block base_user %}
+<!-- Header Boîte de réception -->
+<section class="d-flex justify-content-between align-items-center p-2 border-bottom mb-4">
+    <div class="d-flex align-items-center">
+        <!-- Card header avec titre et bouton Nouveau message -->
+        <div class="card-header bg-decorax text-white d-flex justify-content-between align-items-center me-3">
+            <h5 class="mb-0">Boîte de réception</h5>
+            <button class="btn btn-outline-light btn-sm">Nouveau message</button>
+        </div>
+
+        <!-- Icônes de gauche : Sélection + rafraîchir + actions -->
+        <div class="d-flex align-items-center">
+            <!-- Dropdown Sélection -->
+            <div class="dropdown me-2">
+                <button class="btn btn-sm btn-light dropdown-toggle d-flex align-items-center" type="button" id="dropdownSelectAll" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-square me-1"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownSelectAll">
+                    <li><a class="dropdown-item" href="#">Sélectionner tout</a></li>
+                    <li><a class="dropdown-item" href="#">Désélectionner tout</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sélectionner les visibles</a></li>
+                </ul>
+            </div>
+
+            <!-- Rafraîchir -->
+            <button class="btn btn-sm btn-light me-2" title="Actualiser">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+
+            <!-- Plus d'actions -->
+            <button class="btn btn-sm btn-light" title="Plus d'actions">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Groupe droite : pagination -->
+    <div class="d-flex align-items-center">
+        <span class="text-muted me-2">1-50 sur 1886</span>
+        <button class="btn btn-sm btn-light me-1" title="Page précédente"><i class="bi bi-chevron-left"></i></button>
+        <button class="btn btn-sm btn-light" title="Page suivante"><i class="bi bi-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- Liste des messages -->
+<section class="card shadow-sm messages-card" style="max-width: 700px; margin: auto;">
+    <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+            <!-- Message 1 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center message-item unread">
+                <div class="d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox">
+                    <div>
+                        <strong>André Janvier</strong> - Projet IGIA
+                        <p class="mb-0 text-muted small">Salut, je voulais te parler du projet…</p>
+                    </div>
+                </div>
+                <div class="text-end message-actions">
+                    <small class="text-muted">10:45 AM</small>
+                    <span class="badge bg-warning ms-2">Non lu</span>
+                    <i class="bi bi-reply ms-2 action-icon"></i>
+                    <i class="bi bi-archive ms-2 action-icon"></i>
+                    <i class="bi bi-trash ms-2 action-icon"></i>
+                </div>
+            </li>
+
+            <!-- Message 2 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center message-item">
+                <div class="d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox">
+                    <div>
+                        <strong>IGIA Support</strong> - Confirmation
+                        <p class="mb-0 text-muted small">Votre projet a été approuvé !</p>
+                    </div>
+                </div>
+                <div class="text-end message-actions">
+                    <small class="text-muted">Hier</small>
+                    <i class="bi bi-reply ms-2 action-icon"></i>
+                    <i class="bi bi-archive ms-2 action-icon"></i>
+                    <i class="bi bi-trash ms-2 action-icon"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+{% endblock base_user %}

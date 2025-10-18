@@ -1,0 +1,192 @@
+{% extends "base_intermediaire.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Tableau de bord - Intermédiaire{% endblock %}
+
+{% block base_intermediaire %}
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+/* ---------------------- */
+/* Styles Dashboard Intermédiaire */
+/* ---------------------- */
+/*body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}*/
+
+.card-stat {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+}
+
+.card-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.7rem;
+}
+
+.image-thumb {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-thumb:hover {
+    transform: scale(1.05);
+}
+
+.list-group-item {
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+</style>
+
+<div class="container-fluid py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Bonjour, {{ full_name }} 👋</h2>
+        <div class="d-flex align-items-center">
+            <div class="position-relative me-3">
+                <img src="{{ avatar }}" alt="Avatar" class="avatar">
+            </div>
+            <div class="position-relative me-3">
+                <i class="bi bi-bell fs-4 text-secondary"></i>
+                {% if unread_count > 0 %}
+                <span class="badge bg-danger notification-badge">{{ unread_count }}</span>
+                {% endif %}
+            </div>
+            <div class="position-relative">
+                <i class="bi bi-envelope fs-4 text-secondary"></i>
+                {% if unread_messages_count > 0 %}
+                <span class="badge bg-success notification-badge">{{ unread_messages_count }}</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistiques -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card card-stat p-3 shadow-sm text-center">
+                <h5>Projets</h5>
+                <h3>{{ stats.total_projects }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-stat p-3 shadow-sm text-center">
+                <h5>Collecté</h5>
+                <h3>${{ stats.total_collected }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-stat p-3 shadow-sm text-center">
+                <h5>Campagnes actives</h5>
+                <h3>{{ stats.active_campaigns }}</h3>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-stat p-3 shadow-sm text-center">
+                <h5>Contributions</h5>
+                <h3>{{ stats.total_contributions }}</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images récentes -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <h5>Projets récents</h5>
+            <div class="row g-2">
+                {% for img in projects_images %}
+                <div class="col-6">
+                    <img src="{{ img }}" class="image-thumb">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h5>Entrepreneurs</h5>
+            <div class="row g-2">
+                {% for img in entrepreneurs_images %}
+                <div class="col-6">
+                    <img src="{{ img }}" class="image-thumb">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h5>Contributions récentes</h5>
+            <div class="row g-2">
+                {% for img in contributions_images %}
+                <div class="col-6">
+                    <img src="{{ img }}" class="image-thumb">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Liste des projets récents -->
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3">Projets récents</h4>
+            <div class="list-group">
+                {% for project in projects %}
+                <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center shadow-sm mb-2">
+                    <div>
+                        <h6>{{ project.name }}</h6>
+                        <small class="text-muted">{{ project.created_at|date:"d M Y" }}</small>
+                    </div>
+                    <span class="badge bg-primary rounded-pill">${{ project.collected_amount }}</span>
+                </div>
+                {% empty %}
+                <p class="text-muted">Aucun projet disponible.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Afficher les messages Django avec SweetAlert
+    {% if messages %}
+        {% for message in messages %}
+        Swal.fire({
+            icon: "{% if message.tags == 'warning' %}warning{% elif message.tags == 'error' %}error{% else %}success{% endif %}",
+            title: "{{ message }}",
+            timer: 3000,
+            timerProgressBar: true,
+            showConfirmButton: false
+        });
+        {% endfor %}
+    {% endif %}
+</script>
+{% endblock base_intermediaire %}

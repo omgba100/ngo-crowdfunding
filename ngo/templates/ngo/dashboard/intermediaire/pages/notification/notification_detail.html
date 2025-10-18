@@ -1,0 +1,86 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Détail de la notification" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+.notification-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.notification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-bell-outline me-2"></i> {% trans "Notification" %}
+            </h2>
+            <p class="text-muted mb-0">{% trans "Détails de la notification reçue." %}</p>
+        </div>
+        <a href="{% url 'notification_intermediaire' %}" class="btn btn-outline-secondary rounded-pill">
+            <i class="mdi mdi-arrow-left me-1"></i> {% trans "Retour aux notifications" %}
+        </a>
+    </div>
+
+    <div class="card notification-card shadow-sm border-0 rounded-4 p-4" data-aos="fade-up" data-aos-duration="800">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold">{{ notification.title }}</h5>
+            {% if not notification.is_read %}
+            <span class="badge bg-warning text-dark">{% trans "Non lue" %}</span>
+            {% else %}
+            <span class="badge bg-success">{% trans "Lue" %}</span>
+            {% endif %}
+        </div>
+        <p class="text-muted">{{ notification.message|linebreaksbr }}</p>
+        <small class="text-secondary">{% trans "Reçue le" %} {{ notification.created_at|date:"d M Y, H:i" }}</small>
+    </div>
+
+    <div class="mt-4 text-end">
+        <button id="delete-notif" class="btn btn-sm btn-outline-danger rounded-pill">
+            <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer cette notification" %}
+        </button>
+    </div>
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour suppression -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteBtn = document.getElementById('delete-notif');
+    deleteBtn.addEventListener('click', function () {
+        Swal.fire({
+            title: '{% trans "Confirmer la suppression ?" %}',
+            text: '{% trans "Cette action est irréversible." %}',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: '{% trans "Oui, supprimer !" %}',
+            cancelButtonText: '{% trans "Annuler" %}'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirection vers la vue de suppression
+                window.location.href = "{% url 'intermediaire_notification_delete' notification.id %}";
+            }
+        });
+    });
+});
+</script>
+{% endblock base_intermediaire %}

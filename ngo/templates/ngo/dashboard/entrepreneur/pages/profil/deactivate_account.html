@@ -1,0 +1,20 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n %}
+{% block base_entrepreneur %}
+<div class="container py-5 text-center">
+  <div class="card shadow-lg p-4 mx-auto" style="max-width: 600px;">
+    <h3 class="mb-3 text-danger"><i class="bi bi-exclamation-triangle"></i> {% trans "Désactivation du compte" %}</h3>
+    <p class="text-muted">{% trans "Votre compte sera temporairement désactivé. Vous pourrez le réactiver plus tard en contactant le support." %}</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger btn-lg mt-3">
+        <i class="bi bi-power"></i> {% trans "Désactiver mon compte" %}
+      </button>
+      <a href="{% url 'update_entrepreneur_profile' %}" class="btn btn-secondary btn-lg mt-3">
+        {% trans "Annuler" %}
+      </a>
+    </form>
+  </div>
+</div>
+{% endblock base_entrepreneur %}

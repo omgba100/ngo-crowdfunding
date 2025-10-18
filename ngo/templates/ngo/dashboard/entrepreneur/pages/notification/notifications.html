@@ -1,0 +1,70 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n %}
+
+{% block base_entrepreneur %}
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold">{{ title }}</h3>
+        <a href="?mark_all_read=1" class="btn btn-sm btn-primary shadow-sm">
+            <i class="mdi mdi-check-all me-1"></i> {% trans "Marquer toutes comme lues" %}
+        </a>
+    </div>
+
+    <ul class="list-group">
+        {% for notif in notifications %}
+        <a href="{% url 'notification_detail' notif.pk %}" class="list-group-item d-flex justify-content-between align-items-center 
+                   {% if not notif.is_read %}list-group-item-warning shadow-sm{% else %}bg-white{% endif %} 
+                   border-0 mb-2 rounded animate__animated animate__fadeInUp text-decoration-none text-dark"
+                   style="transition: transform 0.2s;">
+            <div class="d-flex align-items-start">
+                <div class="icon-wrapper bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:45px; height:45px; flex-shrink:0;">
+                    <i class="mdi {{ notif.icon|default:'mdi-bell' }} fs-5"></i>
+                </div>
+                <div>
+                    <strong class="d-block">{{ notif.title }}</strong>
+                    <span class="text-muted d-block small">{{ notif.message|truncatechars:80 }}</span>
+                </div>
+            </div>
+            <div class="text-end">
+                <small class="text-muted">{{ notif.time_since }} ago</small>
+            </div>
+        </a>
+        {% empty %}
+        <li class="list-group-item text-center text-muted py-4">
+            <i class="mdi mdi-bell-off fs-1 mb-2"></i><br>
+            {% trans "Aucune notification" %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if notifications %}
+    <div class="text-center mt-4">
+        <a href="{% url 'notification_entrepreneur' %}" class="btn btn-outline-primary btn-sm">
+            {% trans "Voir toutes les notifications" %} <i class="mdi mdi-arrow-right ms-1"></i>
+        </a>
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- Animation library (Animate.css) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.icon-wrapper {
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover .icon-wrapper {
+    transform: scale(1.2);
+    background-color: #0d6efd !important;
+}
+</style>
+{% endblock base_entrepreneur %}

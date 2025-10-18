@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Politique de Confidentialité - IGIA" %}{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="position-relative text-white" 
+         style="background: url('{% static "assets/img/about/hero-bg.jpg" %}') center/cover no-repeat; height: 320px;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.6);"></div>
+  <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="fw-bold display-5" data-aos="fade-down">{% trans "Politique de Confidentialité" %}</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Protection des données et respect de votre vie privée sur la plateforme IGIA." %}
+      </p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="fade-up">
+      <div class="col-lg-10">
+        {% for section in sections %}
+        <div class="card mb-4 shadow-sm border-0" style="border-radius: 1rem;">
+          <div class="card-body p-4">
+            <h4 class="fw-semibold mb-3" style="color: var(--bg-secondary);">
+              {{ section.title }}
+            </h4>
+            <p class="text-muted" style="text-align: justify;">
+              {{ section.content }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="text-center mt-5" data-aos="fade-up">
+      <h5 class="fw-semibold">{% trans "Contact" %}</h5>
+      <p>
+        {% trans "Pour toute demande relative à la confidentialité ou à la gestion de vos données :" %}
+        <br />
+        <a href="mailto:{{ contact_email }}" class="fw-bold text-decoration-none" style="color: var(--bg-secondary);">
+          {{ contact_email }}
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<!-- BANDEAU INFO -->
+<section class="py-4 mt-4 text-center" style="background-color: var(--bg-secondary); color: var(--text-white);">
+  <div class="container">
+    <p class="mb-0">
+      {% trans "IGIA s’engage à respecter la vie privée de ses investisseurs, partenaires et porteurs de projets conformément aux lois internationales de protection des données." %}
+    </p>
+  </div>
+</section>
+
+<!-- Animation AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true
+    });
+  });
+</script>
+{% endblock %}

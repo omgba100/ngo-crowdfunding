@@ -1,0 +1,102 @@
+{% extends "base_entrepreneur.html" %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Mettre le Projet à Jour" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container py-5">
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">
+            <i class="bi bi-pencil-square"></i> {% trans "Mettre à jour le projet" %}
+        </h2>
+        <p class="text-muted">
+            {% trans "Vous pouvez modifier les informations de votre projet et visualiser les changements ci-dessous." %}
+        </p>
+    </div>
+
+    <!-- Carte principale -->
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-4 p-md-5">
+            <form method="POST" enctype="multipart/form-data" id="project-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+
+                <!-- ✅ Aperçu image actuelle -->
+                {% if form.instance.image %}
+                <div class="mb-4 text-center">
+                    <label class="form-label fw-bold">{% trans "Image actuelle du projet" %}</label><br>
+                    <img src="{{ form.instance.image.url }}" id="current-image" 
+                         alt="Image du projet" class="img-thumbnail rounded shadow-sm" 
+                         style="max-width: 300px; height: auto;">
+                </div>
+                {% endif %}
+
+                <!-- ✅ Nouvelle image preview -->
+                <div class="mb-4 text-center">
+                    <label for="id_image" class="form-label fw-bold">{% trans "Nouvelle image (optionnelle)" %}</label><br>
+                    <input type="file" name="image" id="id_image" accept="image/*" class="form-control w-50 mx-auto">
+                    <div class="mt-3">
+                        <img id="image-preview" class="d-none img-thumbnail rounded shadow-sm"
+                             style="max-width: 300px; height: auto;">
+                    </div>
+                </div>
+
+                <!-- Boutons -->
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="{% url 'dashboard_entrepreneur' %}" class="btn btn-outline-secondary px-4 py-2">
+                        <i class="bi bi-arrow-left"></i> {% trans "Annuler" %}
+                    </a>
+                    <button type="submit" class="btn btn-primary px-5 py-2">
+                        <i class="bi bi-save"></i> {% trans "Enregistrer les modifications" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ Script de prévisualisation image -->
+<script>
+document.getElementById('id_image').addEventListener('change', function(event) {
+    const preview = document.getElementById('image-preview');
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.classList.remove('d-none');
+        };
+        reader.readAsDataURL(file);
+    } else {
+        preview.classList.add('d-none');
+    }
+});
+</script>
+
+<!-- ✅ Styles -->
+<style>
+.card {
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+h2 i {
+    color: #0d6efd;
+}
+.btn-primary {
+    background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+    border: none;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0b5ed7, #084298);
+}
+img.img-thumbnail {
+    border-radius: 12px;
+}
+</style>
+{% endblock base_entrepreneur %}

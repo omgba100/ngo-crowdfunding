@@ -1,0 +1,189 @@
+{% load static %}
+{% load i18n %}
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'assets/img/logo/FP1.png' %}" class="logo-FP" alt="Logo">
+      </a>
+
+      <!-- Bouton responsive -->
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1"></i> 
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">{% trans "Accueil" %}</a></li>
+          <li class="nav-item dropdown">
+          	<a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          		{% trans "Découvrir" %}
+          	</a>
+          	<ul class="dropdown-menu p-3 mega-dropdown" aria-labelledby="menuDropdown">
+
+          		<!-- Qui sommes-nous -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'about_us' %}">
+          		  	<img src="{% static 'assets/img/logo/logo-white.png' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Qui sommes-nous?" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Agreement et Securite -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'que_faisons_nous' %}">
+          		  	<img src="{% static 'assets/img/news/financement.png' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Que faisons-nous?" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Que faisons-nous -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'agrement_securite' %}">
+          		  	<img src="{% static 'assets/img/news/securite.jpg' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Agreement et Securite" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Financement Participatif en chiffre -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'financement_igia' %}">
+          		  	<img src="{% static 'assets/img/news/help.png' %}" alt="lever" class="menu-img">
+          		  	<span class="ms-2"> {% trans "Financement IGIA" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Actualité -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'actualite_list' %}">
+          		  	<img src="{% static 'assets/img/news/guide.png' %}" alt="actualite" class="menu-img">
+          		  	<span class="ms-2">{% trans "Actualité" %}</span>
+          		  </a>
+          		</li>
+
+          	</ul>
+          </li>
+          <li class="nav-item dropdown">
+          	<a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          		{% trans "Projets" %}
+          	</a>
+          	<ul class="dropdown-menu p-3 mega-dropdown" aria-labelledby="menuDropdown">
+
+          		<!-- Agreement et Securite -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'project_list' %}">
+          		  	<img src="{% static 'assets/img/news/projet.png' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Liste des projets" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Financement Participatif en chiffre -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'guide_utilisation' %}">
+          		  	<img src="{% static 'assets/img/news/guide.png' %}" alt="lever" class="menu-img">
+          		  	<span class="ms-2">{% trans "Guide d'utilisation" %}</span>
+          		  </a>
+          		</li>
+
+          	</ul>
+          </li>
+          <li class="nav-item dropdown">
+          	<a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          		{% trans "Campagnes" %}
+          	</a>
+          	<ul class="dropdown-menu p-3 mega-dropdown" aria-labelledby="menuDropdown">
+
+          		<!-- Qui sommes-nous -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'campaign_list' %}">
+          		  	<img src="{% static 'assets/img/news/camp2.jpg' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Campagnes paticipatives" %}</span>
+          		  </a>
+          		</li>
+
+          		<!-- Agreement et Securite -->
+          		<li>
+          		  <a class="dropdown-item d-flex align-items-center" href="{% url 'campaign_liste' %}">
+          		  	<img src="{% static 'assets/img/news/camp1.jpg' %}" alt="logo" class="menu-img">
+          		  	<span class="ms-2">{% trans "Campagnes inclusives" %}</span>
+          		  </a>
+          		</li>
+
+          	</ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'country_list' %}"> {% trans "Représentativité" %}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {% trans "Connexion" %}
+            </a>
+            <ul class="dropdown-menu p-3 mega-dropdown" aria-labelledby="menuDropdown">
+
+              <!-- Qui sommes-nous -->
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="{% url 'login_entrepreneur' %}">
+                  <img src="{% static 'assets/img/news/entrepreneur.png' %}" alt="logo" class="menu-img">
+                  <span class="ms-2">{% trans "Entrepreneur" %}</span>
+                </a>
+              </li>
+
+              <!-- Agreement et Securite -->
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="{% url 'login_investisseur' %}">
+                  <img src="{% static 'assets/img/news/investisseur.png' %}" alt="logo" class="menu-img">
+                  <span class="ms-2">{% trans "Investisseur" %}</span>
+                </a>
+              </li>
+
+              <!-- Financement Participatif en chiffre -->
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="{% url 'login_intermediaire' %}">
+                  <img src="{% static 'assets/img/news/intermediaire.png' %}" alt="lever" class="menu-img">
+                  <span class="ms-2">{% trans "Intermediaire" %}</span>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dropdown Langues -->
+      <div class="dropdown lang-dropdown">
+        <button class="btn btn-lang dropdown-toggle border-0 rounded-3 px-3 py-2"
+           type="button" data-bs-toggle="dropdown" aria-expanded="false"
+           style="background-color: var(--bg-secondary); color: var(--text-white);"
+        >
+          🌐 {{ request.LANGUAGE_CODE|upper }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3">
+          {% for lang in languages %}
+            <li>
+              <form action="{% url 'set_language' %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="{{ lang.code }}">
+                <button type="submit" class="dropdown-item d-flex align-items-center gap-2">
+                  <span>{{ lang.flag }}</span> {{ lang.name }}
+                </button>
+              </form>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Bouton responsive -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+  </nav>
+  
+ 
+</header>

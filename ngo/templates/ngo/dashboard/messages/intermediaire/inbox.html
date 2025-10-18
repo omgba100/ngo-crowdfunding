@@ -1,0 +1,219 @@
+{% extends "base_intermediaire.html" %}
+{% load i18n static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Boîte de réception" %}{% endblock %}
+
+{% block base_intermediaire %}
+
+<!-- Styles personnalisés -->
+<style>
+    /* Couleurs principales */
+    :root {
+        --primary-color: #4a90e2;
+        --secondary-color: #f5f7fa;
+        --accent-color: #f39c12;
+        --danger-color: #e74c3c;
+    }
+
+    /* Card header */
+    .card-header.bg-decorax {
+        background-color: var(--primary-color) !important;
+    }
+
+    /* Boutons */
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    .btn-primary:hover {
+        background-color: #357ab8;
+        border-color: #357ab8;
+    }
+    .btn-secondary {
+        background-color: var(--secondary-color);
+        color: #333;
+    }
+
+    /* Messages non lus */
+    .message-item.unread {
+        background-color: #eef6ff;
+        font-weight: 500;
+    }
+
+    /* Badges */
+    .text-warning {
+        color: var(--accent-color) !important;
+    }
+    .text-danger {
+        color: var(--danger-color) !important;
+    }
+
+    /* Modales */
+    .modal-header.bg-decorax {
+        background-color: var(--primary-color);
+    }
+</style>
+
+<!-- Affichage du profil -->
+<div class="d-flex align-items-center mb-3">
+    <img src="{{ avatar }}" class="rounded-circle me-2" width="40" height="40" alt="{{ full_name }}">
+    <strong>{{ full_name }}</strong>
+</div>
+
+<section class="d-flex justify-content-between align-items-center p-2 border-bottom mb-4">
+    <div class="d-flex align-items-center">
+        <!-- Card header avec titre et bouton Nouveau message -->
+        <div class="card-header bg-decorax text-white d-flex justify-content-between align-items-center me-3">
+            <h5 class="mb-0">{% trans "Boîte de réception" %}</h5>
+            <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#newMessageModal">{% trans "Nouveau message" %}</button>
+        </div>
+
+        <!-- Icônes de gauche : Sélection + rafraîchir + actions -->
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-2">
+                <button class="btn btn-sm btn-light dropdown-toggle d-flex align-items-center" type="button" id="dropdownSelectAll" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="mdi mdi-checkbox-blank-outline me-1"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownSelectAll">
+                    <li><a class="dropdown-item" href="#">{% trans "Sélectionner tout" %}</a></li>
+                    <li><a class="dropdown-item" href="#">{% trans "Désélectionner tout" %}</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">{% trans "Sélectionner les visibles" %}</a></li>
+                </ul>
+            </div>
+
+            <button class="btn btn-sm btn-light me-2" title="{% trans 'Actualiser' %}">
+                <i class="mdi mdi-refresh"></i>
+            </button>
+
+            <button class="btn btn-sm btn-light" title="{% trans 'Plus d\'actions' %}">
+                <i class="mdi mdi-dots-vertical"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <span class="text-muted me-2">1-50 sur {{ messages.count }}</span>
+        <button class="btn btn-sm btn-light me-1" title="{% trans 'Page précédente' %}"><i class="mdi mdi-chevron-left"></i></button>
+        <button class="btn btn-sm btn-light" title="{% trans 'Page suivante' %}"><i class="mdi mdi-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- Liste des messages -->
+<section class="card shadow-sm messages-card" style="max-width: 700px; margin: auto;">
+    <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+            {% for msg in messages %}
+            <li class="list-group-item d-flex justify-content-between align-items-center message-item {% if not msg.read %}unread{% endif %}" data-pk="{{ msg.pk }}">
+                <div class="d-flex align-items-center">
+                    <input class="form-check-input me-3" type="checkbox">
+                    <div>
+                        <strong>{{ msg.sender.display_name }}</strong> - {{ msg.subject }}
+                        <p class="mb-0 text-muted small">{{ msg.body|truncatechars:50 }}</p>
+                    </div>
+                </div>
+                <div class="text-end message-actions">
+                    <small class="text-muted">{{ msg.created_at|date:"d/m/Y H:i" }}</small>
+                    {% if not msg.read %}
+                        <i class="mdi mdi-email-alert text-warning ms-2"></i>
+                    {% endif %}
+                    <i class="mdi mdi-reply ms-2 action-icon" data-bs-toggle="modal" data-bs-target="#replyModal{{ msg.pk }}"></i>
+                    <i class="mdi mdi-archive ms-2 action-icon"></i>
+                    <i class="mdi mdi-delete ms-2 action-icon"></i>
+                </div>
+            </li>
+
+            <!-- Modal Réponse -->
+            <div class="modal fade" id="replyModal{{ msg.pk }}" tabindex="-1" aria-labelledby="replyModalLabel{{ msg.pk }}" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <form method="post" class="reply-form" data-url="{% url 'reply_message' msg.pk %}">
+                    {% csrf_token %}
+                    <div class="modal-header bg-decorax text-white">
+                      <h5 class="modal-title" id="replyModalLabel{{ msg.pk }}">{% blocktrans %}Répondre à {{ msg.sender.display_name }}{% endblocktrans %}</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="{% trans 'Fermer' %}"></button>
+                    </div>
+                    <div class="modal-body">
+                      {% crispy form %}
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Annuler" %}</button>
+                      <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<!-- Modal Nouveau message -->
+<div class="modal fade" id="newMessageModal" tabindex="-1" aria-labelledby="newMessageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form method="post" action="{% url 'send_message' %}">
+        {% csrf_token %}
+        <div class="modal-header bg-decorax text-white">
+          <h5 class="modal-title" id="newMessageModalLabel">{% trans "Nouveau message" %}</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="{% trans 'Fermer' %}"></button>
+        </div>
+        <div class="modal-body">
+          {{ form|crispy }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Annuler" %}</button>
+          <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% if role == 'entrepreneur' %}
+    <p>{% trans "Affichage spécifique entrepreneur" %}</p>
+{% elif role == 'investisseur' %}
+    <p>{% trans "Affichage spécifique investisseur" %}</p>
+{% elif role == 'intermediaire' %}
+    <p>{% trans "Affichage spécifique intermédiaire" %}</p>
+{% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.action-icon.mdi-archive').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const li = btn.closest('li');
+            fetch(`/messages/archive/${li.dataset.pk}/`).then(() => li.remove());
+        });
+    });
+
+    document.querySelectorAll('.action-icon.mdi-delete').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const li = btn.closest('li');
+            fetch(`/messages/delete/${li.dataset.pk}/`).then(() => li.remove());
+        });
+    });
+
+    document.querySelectorAll('.reply-form').forEach(form => {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const url = form.dataset.url;
+            const data = new FormData(form);
+            fetch(url, { method: 'POST', body: data, headers: {'X-Requested-With':'XMLHttpRequest'} })
+            .then(r => r.json())
+            .then(res => {
+                if(res.success){
+                    bootstrap.Modal.getInstance(form.closest('.modal')).hide();
+                    alert('{% trans "Message envoyé !" %}');
+                } else {
+                    alert('{% trans "Erreur, vérifiez le formulaire." %}');
+                }
+            });
+        });
+    });
+});
+</script>
+
+{% endblock base_intermediaire %}

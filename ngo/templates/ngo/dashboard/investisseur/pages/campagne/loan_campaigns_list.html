@@ -1,0 +1,173 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}🌐 Campagnes de Prêt Actives{% endblock %}
+
+{% block base_investisseur %}
+
+<!-- Animation & Styles -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+  /* --- Animations et design modernes --- */
+  .campaign-card {
+    transition: all 0.35s ease-in-out;
+    border: none;
+    background: var(--bs-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .campaign-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .campaign-card img {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .campaign-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 2;
+  }
+
+  .progress {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+  }
+
+  .progress-bar {
+    background: linear-gradient(90deg, #007bff, #00c4ff);
+    transition: width 1s ease-in-out;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #007bff 0%, #00c4ff 100%);
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0062ff 0%, #0099ff 100%);
+  }
+
+  .floating-shape {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 174, 255, 0.08);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  .floating-shape:nth-child(1) {
+    top: -30px;
+    left: -30px;
+    animation-delay: 1s;
+  }
+
+  .floating-shape:nth-child(2) {
+    bottom: -30px;
+    right: -30px;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+  }
+</style>
+
+<div class="container mt-5 mb-5" data-aos="fade-up" data-aos-duration="1000">
+  <!-- Header Section -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold text-gradient">
+      <i class="bi bi-graph-up-arrow text-primary"></i>
+      {% trans "Campagnes de Prêt Actives" %}
+    </h2>
+    <a href="{% url 'projects_available_investisseur' %}" class="btn btn-outline-primary rounded-pill px-4">
+      <i class="bi bi-layers"></i> {% trans "Tous les projets" %}
+    </a>
+  </div>
+
+  <!-- Campaign Cards -->
+  {% if loan_campaigns %}
+  <div class="row g-4">
+    {% for campaign in loan_campaigns %}
+    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:'100' }}">
+      <div class="card campaign-card rounded-4 shadow-sm h-100">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+
+        <img src="{{ campaign.project.image.url }}" alt="{{ campaign.title }}" class="card-img-top">
+
+        <div class="card-body d-flex flex-column p-4">
+          <h5 class="card-title fw-bold text-dark mb-1">{{ campaign.title }}</h5>
+          <p class="text-muted small mb-2">
+            <i class="bi bi-building"></i> {{ campaign.project.title }}
+          </p>
+          <p class="mb-3 text-secondary">{{ campaign.description|truncatewords:18 }}</p>
+
+          <div class="progress mb-3">
+            <div class="progress-bar" style="width: {{ campaign.progress }}%;" role="progressbar"></div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-semibold text-primary">{{ campaign.collected_amount|floatformat:0 }} XAF</span>
+            <small class="text-muted">/ {{ campaign.target_amount|floatformat:0 }} XAF</small>
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+            <span class="badge bg-light text-dark shadow-sm">
+              <i class="bi bi-calendar-event"></i> {{ campaign.end_date|date:"d M Y" }}
+            </span>
+            {% if campaign.interest_rate %}
+            <span class="badge bg-success text-light shadow-sm">
+              <i class="bi bi-percent"></i> {{ campaign.interest_rate }}%
+            </span>
+            {% endif %}
+          </div>
+
+          <div class="mt-auto">
+            <a href="{% url 'loan_campaign_detail_investisseur' campaign.id %}" 
+               class="btn btn-primary w-100 rounded-pill mb-2">
+              <i class="bi bi-info-circle"></i> {% trans "Détails" %}
+            </a>
+            <a href="{% url 'project_detail_investisseur' campaign.project.slug %}" 
+               class="btn btn-outline-primary w-100 rounded-pill">
+              <i class="bi bi-cash-coin"></i> {% trans "Investir" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% else %}
+  <div class="alert alert-light border shadow-sm text-center p-5" data-aos="fade-up">
+    <i class="bi bi-info-circle fs-3 text-muted"></i>
+    <p class="mt-3 mb-0 fs-5 text-secondary">{% trans "Aucune campagne de prêt active pour le moment." %}</p>
+    <a href="{% url 'projects_available_investisseur' %}" class="btn btn-primary mt-4 rounded-pill px-4">
+      {% trans "Découvrir d'autres projets" %}
+    </a>
+  </div>
+  {% endif %}
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{% endblock base_investisseur %}

@@ -1,0 +1,97 @@
+{% extends "base_intermediaire.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Suppression définitive du compte" %}{% endblock %}
+
+{% block extra_head %}
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-9">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-danger text-white rounded-top-4 d-flex align-items-center">
+          <i class="mdi mdi-alert-circle-outline fs-3 me-2"></i>
+          <h5 class="mb-0 fw-bold">{% trans "Suppression définitive du compte" %}</h5>
+        </div>
+
+        <div class="card-body p-4">
+          <div class="alert alert-danger border-0 rounded-3 shadow-sm mb-4">
+            <i class="mdi mdi-alert fs-4 me-2"></i>
+            {% trans "Attention ! Cette action est irréversible. Toutes vos données seront supprimées définitivement et ne pourront pas être récupérées." %}
+          </div>
+
+          <form id="delete-account-form" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <div class="d-flex justify-content-between mt-4">
+              <a href="{% url 'intermediaire_dashboard' %}" class="btn btn-light border rounded-pill px-4">
+                <i class="mdi mdi-arrow-left"></i> {% trans "Annuler" %}
+              </a>
+              <button type="button" id="delete-btn" class="btn btn-danger rounded-pill px-4">
+                <i class="mdi mdi-delete-forever"></i> {% trans "Supprimer définitivement" %}
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer text-center bg-light rounded-bottom-4">
+          <small class="text-muted">
+            {% trans "Merci d’avoir fait partie de notre réseau. Vous pourrez toujours recréer un compte plus tard." %}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 confirmation -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const deleteBtn = document.getElementById("delete-btn");
+  const form = document.getElementById("delete-account-form");
+
+  deleteBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    Swal.fire({
+      title: "{% trans 'Êtes-vous sûr ?' %}",
+      text: "{% trans 'Cette action est irréversible et supprimera toutes vos données.' %}",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#6c757d",
+      confirmButtonText: "{% trans 'Oui, supprimer mon compte' %}",
+      cancelButtonText: "{% trans 'Annuler' %}",
+      reverseButtons: true,
+      customClass: {
+        popup: 'rounded-4 shadow-lg',
+        confirmButton: 'rounded-pill px-4 py-2',
+        cancelButton: 'rounded-pill px-4 py-2'
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "{% trans 'Suppression en cours…' %}",
+          text: "{% trans 'Veuillez patienter pendant la suppression de votre compte.' %}",
+          icon: "info",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+            form.submit();
+          }
+        });
+      }
+    });
+  });
+});
+</script>
+{% endblock base_intermediaire %}
+

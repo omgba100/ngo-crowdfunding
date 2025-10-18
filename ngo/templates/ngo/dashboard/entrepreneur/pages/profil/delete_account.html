@@ -1,0 +1,71 @@
+{% extends "base_entrepreneur.html" %}
+{% load i18n %}
+
+{% block title %}{{ _("Supprimer mon compte") }}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card border-0 shadow-lg rounded-4">
+        <div class="card-header bg-danger bg-gradient text-white text-center py-3 rounded-top-4">
+          <h4 class="fw-bold mb-0">
+            <i class="bi bi-exclamation-triangle-fill"></i> {% trans "Suppression du compte" %}
+          </h4>
+        </div>
+        <div class="card-body text-center p-5">
+          <p class="lead mb-4">
+            ⚠️ {% trans "Cette action est irréversible. Toutes vos données (projets, contributions, retraits) seront définitivement supprimées." %}
+          </p>
+          <form method="post" id="deleteAccountForm">
+            {% csrf_token %}
+            <button type="button" id="confirmDelete" class="btn btn-danger btn-lg px-4 py-2 rounded-3">
+              <i class="bi bi-trash3-fill"></i> {% trans "Supprimer définitivement mon compte" %}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const deleteBtn = document.getElementById("confirmDelete");
+  const form = document.getElementById("deleteAccountForm");
+
+  deleteBtn.addEventListener("click", function() {
+    Swal.fire({
+      title: "{% trans 'Êtes-vous sûr ?' %}",
+      text: "{% trans 'Cette action supprimera définitivement votre compte.' %}",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "{% trans 'Oui, supprimer mon compte' %}",
+      cancelButtonText: "{% trans 'Annuler' %}",
+      reverseButtons: true,
+      background: "#fff",
+      customClass: { popup: "rounded-4 shadow-lg" }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.submit();
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+</style>
+{% endblock base_entrepreneur %}

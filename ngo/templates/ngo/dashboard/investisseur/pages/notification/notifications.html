@@ -1,0 +1,109 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block base_investisseur %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold">{{ title }}</h3>
+        <a href="?mark_all_read=1" class="btn btn-primary btn-sm shadow-sm">{% trans "Tout marquer comme lu" %}</a>
+    </div>
+
+    {% if notifications %}
+    <div class="list-group notification-list">
+        {% for notif in notifications %}
+        <a href="{% url 'notification_detail_investisseur' notif.id %}" class="list-group-item list-group-item-action mb-2 shadow-sm rounded 
+            {% if not notif.is_read %}bg-light-warning{% endif %}">
+            <div class="d-flex align-items-start">
+                {% if notif.icon %}
+                <span class="badge {{ notif.bg_color }} me-3 fs-5 rounded-circle d-flex align-items-center justify-content-center" style="width:40px; height:40px;">
+                    <i class="mdi mdi-{{ notif.icon }} text-white"></i>
+                </span>
+                {% endif %}
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6 class="mb-1 fw-semibold">{{ notif.title }}</h6>
+                        {% if not notif.is_read %}
+                        <button class="btn btn-sm btn-success mark-read-btn" data-id="{{ notif.id }}">
+                            <i class="mdi mdi-check"></i>
+                        </button>
+                        {% endif %}
+                    </div>
+                    <p class="mb-1 text-muted">{{ notif.short_message }}</p>
+                    <small class="text-secondary">{{ notif.created_at|date:"d/m/Y H:i" }}</small>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info text-center py-4 shadow-sm rounded">
+        <i class="mdi mdi-bell-off mdi-48px mb-2"></i><br>
+        {% trans "Aucune notification pour le moment." %}
+    </div>
+    {% endif %}
+</div>
+
+<!-- JS pour marquer individuellement comme lu -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.mark-read-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const notifId = this.dataset.id;
+            fetch(`/notifications/mark_read/${notifId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            }).then(res => res.json())
+              .then(data => {
+                  if (data.success) {
+                      this.closest('a.list-group-item').classList.remove('bg-light-warning');
+                      this.remove();
+                  }
+              });
+        });
+    });
+});
+</script>
+
+<!-- Styles modernes -->
+<style>
+.notification-list .list-group-item {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.notification-list .list-group-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.bg-light-warning {
+    background-color: #fff3cd !important;
+}
+.badge {
+    font-size: 1rem;
+}
+.mark-read-btn {
+    border: none;
+    background: #28a745;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.mark-read-btn:hover {
+    background: #218838;
+}
+</style>
+
+<!-- Icônes Material Design -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+{% endblock base_investisseur %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n static %}
+
+{% block title %}{% trans "Que faisons-nous ? | IGIA" %}{% endblock %}
+
+{% block content %}
+<!-- ============================= HERO ============================= -->
+<section class="wwd-hero" style="background: linear-gradient(rgba(23,71,142,0.7), rgba(23,71,142,0.7)), url('{% static "assets/img/about/hero-bg.jpg" %}') center/cover no-repeat;">
+  <div>
+    <h1 class="fw-bold display-4 mb-3" data-aos="fade-up" data-aos-duration="1000" style="color: var(--accent);">{% trans "Que faisons-nous ?" %}</h1>
+    <p class="lead mx-auto wwd-text-muted" style="max-width:700px;" data-aos="fade-up" data-aos-delay="200">
+      {% trans "Découvrez comment IGIA transforme les idées en projets concrets grâce à un accompagnement structuré et des domaines d’intervention variés." %}
+    </p>
+  </div>
+</section>
+
+<!-- ============================= SECTION 1 : PROCESSUS ============================= -->
+<section class="wwd-section" style="background-color: var(--bg-primary);">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold text-uppercase mb-3 wwd-title" style="color: var(--text-title);" data-aos="fade-up">{% trans "Étapes de Validation d’un Projet" %}</h2>
+    <p class="wwd-text-muted" data-aos="fade-up" data-aos-delay="150">
+      {% trans "Chaque projet suit un parcours rigoureux pour garantir sa faisabilité, sa conformité et son impact." %}
+    </p>
+  </div>
+
+  <div class="row g-4">
+    {% for step in steps %}
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:'100' }}">
+      <div class="wwd-card h-100 border-0 shadow-lg rounded-4 overflow-hidden hover-scale position-relative">
+        <img src="{% static step.image %}" class="wwd-card-img" alt="{{ step.title }}">
+        <div class="wwd-card-body text-start p-4">
+          <h5 class="fw-bold" style="color: var(--bg-secondary);">{{ step.title }}</h5>
+          <p class="small text-muted mb-1 wwd-text-muted"><strong>{% trans "Acteurs" %} :</strong> {{ step.actors }}</p>
+          <p class="card-text text-dark small">{{ step.desc }}</p>
+        </div>
+        <div class="wwd-card-step">{% trans "Étape" %} {{ forloop.counter }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================= SECTION 2 : DOMAINES ============================= -->
+<section class="wwd-section">
+  <div class="container text-center mb-5">
+    <h2 class="fw-bold text-uppercase mb-3 wwd-title" style="color: var(--text-title);" data-aos="fade-up">{% trans "Nos Domaines d’Intervention" %}</h2>
+    <p class="wwd-text-muted" data-aos="fade-up" data-aos-delay="150">
+      {% trans "Nous intervenons dans des secteurs stratégiques pour promouvoir l’entrepreneuriat, l’innovation et le développement durable." %}
+    </p>
+  </div>
+
+  <div class="row g-4">
+    {% for domaine in domaines %}
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'100' }}">
+      <div class="wwd-card h-100 border-0 shadow rounded-4 overflow-hidden hover-scale" style="background: linear-gradient(135deg, var(--bg-primary), #fff);">
+        <img src="{% static domaine.image %}" class="wwd-card-img" alt="{{ domaine.title }}">
+        <div class="wwd-card-body text-start p-4">
+          <h5 class="fw-bold" style="color: var(--bg-tertiary);">{{ domaine.title }}</h5>
+          <p class="text-muted small mb-3">{{ domaine.subtitle }}</p>
+          <ul class="wwd-list small text-dark">
+            {% for point in domaine.points %}
+            <li> {{ point }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============================= FOOTER VISION ============================= -->
+<section class="wwd-footer-vision komba mb-4" style="background: linear-gradient(rgba(19,20,69,0.85), rgba(19,20,69,0.85)), url('{% static "assets/img/about/vision-bg.png" %}') center/cover no-repeat;">
+  <div data-aos="fade-up">
+    <h2 class="fw-bold display-6 mb-3" style="color: var(--accent);">{% trans "Notre Vision" %}</h2>
+    <p class="lead mx-auto wwd-text-muted" style="max-width:700px;">
+      {% blocktrans %}Accompagner, financer et propulser les porteurs de projets vers un succès durable,
+      au service du développement local et de la jeunesse.{% endblocktrans %}
+    </p>
+  </div>
+</section>
+
+<!-- Animation script -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    offset: 150,
+    once: true
+  });
+</script>
+
+<style>
+  .hover-scale {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+</style>
+{% endblock %}

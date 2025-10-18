@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Agrément et Sécurité - IGIA" %}{% endblock %}
+
+{% block content %}
+
+<!-- ======================= HEADER / BANNIÈRE ======================= -->
+<header class="hero-banner text-white d-flex align-items-center justify-content-center text-center" data-aos="fade-down">
+  <div class="overlay"></div>
+  <div class="container position-relative z-2">
+    <h1 class="fw-bold display-5 mb-3" data-aos="zoom-in" data-aos-delay="200">
+      {% trans "Agrément et Sécurité" %}
+    </h1>
+    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="400">
+      {% trans "IGIA garantit la transparence, la sécurité et la conformité pour tous vos investissements." %}
+    </p>
+    <a href="{% url 'home' %}" class="btn btn-lg fw-semibold px-5 py-3"
+       style="background-color: var(--accent); color: var(--link-color); border-radius: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: 0.3s;">
+      {% trans "Découvrir IGIA" %}
+    </a>
+  </div>
+</header>
+
+<!-- ======================= SECTION PRINCIPALE ======================= -->
+<section class="py-5" style="background-color: var(--bg-primary); color: var(--text-color);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-uppercase" style="color: var(--text-title);">{% trans "Confiance, sécurité et transparence" %}</h2>
+      <p class="text-muted">{% trans "Les fondements d’un environnement fiable pour les utilisateurs de notre plateforme." %}</p>
+    </div>
+
+    <!-- ============ AGRÉMENT IGIA ============ -->
+    <div class="row align-items-center mb-5" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="{% static 'assets/img/lever/agrement.png' %}" class="img-fluid rounded-4 shadow-lg" alt="agrément IGIA">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-3" style="color: var(--bg-secondary);">
+          {% trans "IGIA, plateforme agréée De Nederlandsche Bank" %}
+        </h3>
+        <p>{% trans "IGIA opère en conformité avec la réglementation financière en vigueur et est enregistrée auprès des autorités compétentes." %}</p>
+        <p>{% trans "La plateforme est agréée par l’Autorité des Marchés Financiers comme Prestataire de Services de Financement Participatif, sous le numéro FP 2012-22." %}</p>
+      </div>
+    </div>
+
+    <!-- ============ LABEL CROISSANCE VERTE ============ -->
+    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-6">
+        <img src="{% static 'assets/img/lever/ABN-AMRO.png' %}" class="img-fluid rounded-4 shadow-lg" alt="Label croissance verte">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-3" style="color: var(--bg-secondary);">
+          {% trans "Label Financement Participatif pour la Croissance Verte" %}
+        </h3>
+        <p>{% trans "IGIA est labellisée depuis 2012, en reconnaissance de son engagement envers la durabilité et la transparence des financements proposés." %}</p>
+        <p>{% trans "Ce label, créé par le ministère de la Transition Écologique et la FPP, distingue les projets à impact environnemental positif." %}</p>
+      </div>
+    </div>
+
+    <!-- ============ SÉCURITÉ DES DONNÉES ============ -->
+    <div class="text-center my-5" data-aos="zoom-in">
+      <h3 class="fw-bold mb-4" style="color: var(--bg-tertiary);">{% trans "Sécurité des données" %}</h3>
+      <p class="lead mb-5">{% trans "La sécurité de vos données personnelles et financières est une priorité absolue pour IGIA." %}</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="card h-100 shadow border-0 rounded-4">
+          <div class="card-body text-center p-4">
+            <h5 class="fw-bold mb-3" style="color: var(--bg-secondary);">{% trans "Environnement sécurisé" %}</h5>
+            <p>{% trans "Le site IGIA est entièrement protégé via un protocole HTTPS, garantissant la confidentialité de vos données." %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow border-0 rounded-4">
+          <div class="card-body text-center p-4">
+            <h5 class="fw-bold mb-3" style="color: var(--bg-secondary);">{% trans "Transactions sécurisées" %}</h5>
+            <p>{% trans "Toutes les opérations bancaires sont protégées par des protocoles de paiement semi-automatiques contre le piratage." %}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow border-0 rounded-4">
+          <div class="card-body text-center p-4">
+            <h5 class="fw-bold mb-3" style="color: var(--bg-secondary);">{% trans "Accès crypté" %}</h5>
+            <p>{% trans "Vos mots de passe sont strictement personnels et vos données ne sont jamais partagées par IGIA." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PARTENAIRES ============ -->
+    <div class="row align-items-center mt-5" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-md-6">
+        <img src="{% static 'assets/img/lever/dok.png' %}" class="img-fluid rounded-4 shadow-lg" alt="dok igia">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-3" style="color: var(--bg-secondary);">
+          {% trans "Protection des transactions" %}
+        </h3>
+        <p>{% trans "IGIA collabore avec ses partenaires bancaires et opérateurs de paiement agréés pour assurer la sécurité des transactions dans le monde entier." %}</p>
+        <p>{% trans "Les fonds sont gérés par ABN AMRO, sous la supervision de l’ACPRB, garantissant la conformité et la fiabilité des opérations." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= STYLES + SCRIPT ======================= -->
+<style>
+  .hero-banner {
+    position: relative;
+    min-height: 70vh;
+    background: url("{% static 'assets/img/about/hero-bg.jpg' %}") center center / cover no-repeat fixed;
+    overflow: hidden;
+  }
+
+  .hero-banner .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.6);
+    backdrop-filter: blur(2px);
+  }
+
+  .hero-banner h1, .hero-banner p {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+  }
+</style>
+
+<script>
+  document.addEventListener("scroll", () => {
+    const banner = document.querySelector(".hero-banner");
+    const scrollY = window.scrollY;
+    banner.style.backgroundPositionY = `${scrollY * 0.4}px`;
+    banner.style.transform = `scale(${1 + scrollY / 3000})`;
+  });
+</script>
+
+{% endblock %}

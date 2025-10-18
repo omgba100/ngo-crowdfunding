@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static crispy_forms_tags %}
+
+{% block title %}{% trans "Créer un compte Entrepreneur" %}{% endblock %}
+
+{% block content %}
+<section class="d-flex align-items-center justify-content-center mb-4" style="min-height: 100vh; background: linear-gradient(120deg, var(--bg-primary) 60%, var(--bg-secondary) 40%);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card shadow-lg border-0 p-4" style="background-color: var(--bg-primary); border-radius: 15px;">
+          <div class="text-center mb-4">
+            <img src="{% static 'assets/img/logo/logo-white.png' %}" alt="Logo" style="width: 80px; background-color: var(--bg-secondary); border-radius: 50%; padding: 10px;">
+            <h3 class="mt-3 fw-bold" style="color: var(--bg-secondary);">{% trans "Créer un compte Entrepreneur" %}</h3>
+            <p class="text-muted">{% trans "Rejoignez la plateforme et lancez votre projet" %}</p>
+          </div>
+
+          <form method="post" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {% crispy form %}
+            
+          </form>
+
+          <p class="text-center mt-3 mb-0" style="color: var(--text-color);">
+            {% trans "Déjà un compte ?" %}
+            <a href="{% url 'login_entrepreneur' %}" style="color: var(--accent); text-decoration: none; font-weight: 600;">{% trans "Connectez-vous" %}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

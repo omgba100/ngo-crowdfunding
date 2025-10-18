@@ -1,0 +1,107 @@
+{% extends "base_entrepreneur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Validation du projet - Étape finale" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container my-5">
+    <!-- Étapes du processus -->
+    <div class="d-flex justify-content-center mb-5">
+        <div class="step-indicator d-flex align-items-center">
+            <div class="step completed text-center me-3">
+                <div class="circle bg-success text-white fw-bold">1</div>
+                <p class="small mt-2 mb-0">{% trans "Soumission" %}</p>
+            </div>
+            <div class="line flex-grow-1 bg-success"></div>
+            <div class="step completed text-center mx-3">
+                <div class="circle bg-success text-white fw-bold">2</div>
+                <p class="small mt-2 mb-0">{% trans "Révision" %}</p>
+            </div>
+            <div class="line flex-grow-1 bg-success"></div>
+            <div class="step active text-center ms-3">
+                <div class="circle bg-primary text-white fw-bold">3</div>
+                <p class="small mt-2 mb-0">{% trans "Validation" %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carte principale -->
+    <div class="card shadow-lg rounded-4 border-0">
+        <div class="card-body text-center py-5 px-4">
+            <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+            <h2 class="text-success fw-bold mt-3 mb-2">
+                {% trans "Félicitations !" %}
+            </h2>
+            <p class="lead mb-5">
+                {% blocktrans with title=project.title %}
+                Le projet "<strong>{{ title }}</strong>" a été validé avec succès 🎉<br>
+                Une notification a été envoyée à l’entrepreneur pour l’en informer.
+                {% endblocktrans %}
+            </p>
+
+            <!-- Détails du projet -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 col-lg-6">
+                    <ul class="list-group shadow-sm">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong>{% trans "Titre du projet :" %}</strong>
+                            <span>{{ project.title }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong>{% trans "Catégorie :" %}</strong>
+                            <span>{{ project.category.name }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong>{% trans "Porteur du projet :" %}</strong>
+                            <span>{{ project.entrepreneur.get_full_name }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong>{% trans "Montant demandé :" %}</strong>
+                            <span>{{ project.target_amount|floatformat:0 }} {{ project.currency }}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <strong>{% trans "Date de validation :" %}</strong>
+                            <span>{{ project.updated_at|date:"d/m/Y à H:i" }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Liens d'action -->
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="#" class="btn btn-outline-secondary px-4">
+                    <i class="bi bi-arrow-left"></i> {% trans "Retour à la liste" %}
+                </a>
+                <a href="#" target="_blank" class="btn btn-success px-4">
+                    <i class="bi bi-box-arrow-up-right"></i> {% trans "Voir la page publique du projet" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Style interne -->
+<style>
+.step-indicator .circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.step-indicator .line {
+    height: 4px;
+    border-radius: 2px;
+    background-color: #dee2e6;
+}
+.step.completed .circle {
+    background-color: #28a745 !important;
+}
+.step.active .circle {
+    background-color: #0d6efd !important;
+}
+</style>
+{% endblock base_entrepreneur %}

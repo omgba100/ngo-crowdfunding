@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Guide d'utilisation" %}{% endblock %}
+
+{% block content %}
+<!-- Header avec image -->
+<header class="bg-dark text-white position-relative" style="height: 300px; background: url('{% static "assets/img/about/hero-bg.jpg" %}') no-repeat center center/cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-4 fw-bold">{% trans "Guide d'utilisation IGIA" %}</h1>
+        <p class="lead mt-3">{% trans "Découvrez comment utiliser la plateforme selon votre profil." %}</p>
+    </div>
+</header>
+
+<!-- Bloc d'avertissement (déplacé ici, juste après le header) -->
+<section class="container my-4">
+    <div class="alert alert-warning shadow-sm text-dark text-center" role="alert" style="border-radius: 12px;">
+        <strong>{% trans "Note de sécurité :" %}</strong><br>
+        {% for msg in security.message %}
+            {{ msg }}<br>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Contenu principal -->
+<main class="container my-5">
+    {% for profile in profiles %}
+    <div class="card mb-5 shadow-sm border-0" style="border-radius: 15px;">
+        <div class="card-body">
+            <h2 class="card-title text-primary">{{ profile.role }}</h2>
+            
+            <h5 class="mt-3">{% trans "Étapes à suivre :" %}</h5>
+            <ol class="ms-3">
+                {% for step in profile.steps %}
+                <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+
+            {% if profile.note %}
+            <div class="alert alert-info mt-3" role="alert">
+                <strong>{% trans "Notes importantes :" %}</strong>
+                <ul class="mb-0">
+                    {% for note in profile.note %}
+                    <li>{{ note }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if profile.warnings %}
+            <div class="alert alert-danger mt-3" role="alert">
+                <strong>{% trans "Avertissements :" %}</strong>
+                <ul class="mb-0">
+                    {% for warning in profile.warnings %}
+                    <li>{{ warning }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if profile.reason %}
+            <div class="alert alert-secondary mt-3" role="alert">
+                <strong>{% trans "Pourquoi :" %}</strong>
+                <ul class="mb-0">
+                    {% for r in profile.reason %}
+                    <li>{{ r }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Contact -->
+    <div class="card text-center shadow-sm border-0 bg-primary text-white p-4" style="border-radius: 15px;">
+        <h3>{% trans "Contactez IGIA" %}</h3>
+        <p>Email : <strong>{{ contact_info.email }}</strong></p>
+        <p>Téléphone : <strong>{{ contact_info.phone }}</strong></p>
+        <p>{% trans "Notre équipe vous accompagne à chaque étape." %}</p>
+    </div>
+</main>
+{% endblock %}

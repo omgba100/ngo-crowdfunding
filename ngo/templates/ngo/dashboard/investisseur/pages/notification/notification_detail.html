@@ -1,0 +1,81 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ notification.title }}{% endblock %}
+
+{% block base_investisseur %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <a href="{% url 'notification_investisseur' %}" class="btn btn-outline-secondary btn-sm shadow-sm">
+            <i class="mdi mdi-arrow-left"></i> {% trans "Retour aux notifications" %}
+        </a>
+        {% if not notification.is_read %}
+        <button id="mark-read-btn" class="btn btn-success btn-sm shadow-sm">
+            <i class="mdi mdi-check"></i> {% trans "Marquer comme lu" %}
+        </button>
+        {% endif %}
+    </div>
+
+    <div class="card shadow-sm rounded p-4 mb-4">
+        <div class="d-flex align-items-center mb-3">
+            {% if notification.icon %}
+            <span class="badge {{ notification.bg_color }} me-3 fs-5 rounded-circle d-flex align-items-center justify-content-center" style="width:50px; height:50px;">
+                <i class="mdi mdi-{{ notification.icon }} text-white"></i>
+            </span>
+            {% endif %}
+            <h4 class="mb-0 fw-bold">{{ notification.title }}</h4>
+        </div>
+
+        <p class="text-muted mb-1"><small>{{ notification.created_at|date:"d/m/Y H:i" }}</small></p>
+        <hr>
+        <div class="notification-content">
+            <p>{{ notification.message|linebreaks }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- JS pour marquer comme lu -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mark-read-btn');
+    if (btn) {
+        btn.addEventListener('click', function() {
+            fetch(`/notifications/mark_read/{{ notification.id }}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            }).then(res => res.json())
+              .then(data => {
+                  if (data.success) {
+                      btn.remove();
+                  }
+              });
+        });
+    }
+});
+</script>
+
+<!-- Styles modernes -->
+<style>
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+.badge {
+    font-size: 1.2rem;
+}
+.notification-content p {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+</style>
+
+<!-- Icônes Material Design -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+{% endblock base_investisseur %}

@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Mentions légales - IGIA" %}{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="position-relative text-white" 
+         style="background: url('{% static "assets/img/about/hero-bg.jpg" %}') center/cover no-repeat; height: 320px;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.6);"></div>
+  <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="fw-bold display-5" data-aos="fade-down">{% trans "Mentions légales" %}</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">{% trans "Transparence, sécurité et confiance dans chaque projet IGIA." %}</p>
+  </div>
+</section>
+
+<main class="container my-5" data-aos="fade-up">
+  <!-- INFOS GÉNÉRALES -->
+  <div class="card shadow-sm border-0 mb-4" data-aos="zoom-in">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3">{% trans "1️. Informations générales" %}</h3>
+      <p><strong>Infinity Global Investment & Aid (IGIA NV)</strong> — {% trans "Société anonyme au capital de" %} 300 000 000 €, 
+      {% trans "immatriculée au RCS de Utrecht (n° KVB 805 168 860)." %}</p>
+      <ul class="list-unstyled">
+        <li><strong>{% trans "Siège social :" %}</strong> 94 rue de la Victoria, 75009 Utrecht, Pays-Bas</li>
+        <li><strong>{% trans "Téléphone :" %}</strong> +33 1 82 83 97 52</li>
+        <li><strong>{% trans "Email :" %}</strong> contact@igia.com</li>
+        <li><strong>{% trans "Directeur :" %}</strong> M. Amaury Blais</li>
+      </ul>
+      <p class="mb-0"><em>{% trans "IGIA est agréée par l’AMF (PSFP n°2012-22)." %}</em></p>
+    </div>
+  </div>
+
+  <!-- PRESTATAIRE DE PAIEMENT -->
+  <div class="card shadow-sm border-0 mb-4" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3">{% trans "2️. Prestataire de paiement" %}</h3>
+      <p><strong>ABN AMRO BANK NV</strong> — {% trans "Société au capital de 2 418 772,22 €, immatriculée au RCS d’Amsterdam." %}</p>
+      <ul class="list-unstyled">
+        <li><strong>{% trans "Adresse :" %}</strong> Gustav Mahlerlaan 10, 1082 PP Amsterdam</li>
+        <li><strong>{% trans "Agrément ACPR :" %}</strong> {% trans "depuis le 1er avril 2018" %}</li>
+        <li><strong>{% trans "Contact :" %}</strong> customercare@be.abnamro.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HÉBERGEMENT -->
+  <div class="card shadow-sm border-0 mb-4" data-aos="fade-right">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3">{% trans "3️. Hébergement" %}</h3>
+      <p><strong>Heroku, Inc.</strong> — {% trans "650 7th Street, San Francisco, CA 94103" %}</p>
+      <a href="https://www.heroku.com/contact" target="_blank" class="link-primary">heroku.com/contact</a> |
+      <a href="https://www.heroku.com/policy/security" target="_blank" class="link-primary">{% trans "Politique de sécurité" %}</a>
+    </div>
+  </div>
+
+  <!-- RÉCLAMATIONS -->
+  <div class="card shadow-sm border-0 mb-4" data-aos="fade-left">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3">{% trans "4️. Réclamations" %}</h3>
+      <p>{% trans "IGIA veille à la satisfaction de ses investisseurs. En cas de problème, contactez-nous :" %}</p>
+      <a href="{% url 'contact' %}" class="btn btn-outline-primary mt-2">{% trans "Accéder au formulaire de contact" %}</a>
+    </div>
+  </div>
+
+  <!-- RISQUES -->
+  <div class="card shadow-sm border-0 mb-4" data-aos="zoom-in">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3">{% trans "5️. Risques liés à l’investissement" %}</h3>
+      <p>{% trans "Tout investissement comporte un risque de perte partielle ou totale. Ces placements ne bénéficient pas d'une garantie de l’État ni des dispositifs européens d’indemnisation." %}</p>
+      <div class="alert alert-warning mt-3">
+        <strong>{% trans "Conseil :" %}</strong> {% trans "Ne pas investir plus de 10 % de votre patrimoine dans des projets participatifs." %}
+      </div>
+    </div>
+  </div>
+
+  <!-- GESTION DES RISQUES INTERNATIONAUX -->
+  <div class="card shadow-sm border-0" data-aos="fade-up">
+    <div class="card-body">
+      <h3 class="text-primary fw-bold mb-3 text-center">{% trans "6️. Gestion internationale des risques" %}</h3>
+      <p class="text-center">{% trans "Depuis plus de 15 ans, IGIA opère en Asie, Amérique du Sud et Afrique, avec une approche proactive de gestion des risques." %}</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+        {% comment %} — 6 cartes colorées avec animation — {% endcomment %}
+        {% for item in categories %}
+        <div class="col" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:100 }}">
+          <div class="card text-white shadow-sm h-100 border-0"
+               style="background: linear-gradient(135deg, 
+               {% if item == 'politique' %}#003366,#0056b3
+               {% elif item == 'economique' %}#6f42c1,#9b59b6
+               {% elif item == 'infrastructures' %}#16a085,#1abc9c
+               {% elif item == 'social' %}#e67e22,#f39c12
+               {% elif item == 'environnement' %}#27ae60,#2ecc71
+               {% else %}#c0392b,#e74c3c{% endif %});">
+            <div class="card-body">
+              {% if item == 'politique' %}
+                <h5 class="fw-bold"><i class="bi bi-balance-scale"></i> {% trans "Politique & Juridique" %}</h5>
+                <ul class="small"><li>Assurances MIGA</li><li>Arbitrage international</li><li>Partenaires certifiés</li></ul>
+              {% elif item == 'economique' %}
+                <h5 class="fw-bold"><i class="bi bi-currency-exchange"></i> {% trans "Économique & Monétaire" %}</h5>
+                <ul class="small"><li>Couverture de change</li><li>Devises fortes</li><li>Diversification</li></ul>
+              {% elif item == 'infrastructures' %}
+                <h5 class="fw-bold"><i class="bi bi-gear"></i> {% trans "Infrastructures & Logistique" %}</h5>
+                <ul class="small"><li>Plan logistique</li><li>Zones spéciales</li><li>Technologies vertes</li></ul>
+              {% elif item == 'social' %}
+                <h5 class="fw-bold"><i class="bi bi-people"></i> {% trans "Social & Culturel" %}</h5>
+                <ul class="small"><li>Dialogue local</li><li>Formation</li><li>RSE</li></ul>
+              {% elif item == 'environnement' %}
+                <h5 class="fw-bold"><i class="bi bi-tree"></i> {% trans "Environnement & Climat" %}</h5>
+                <ul class="small"><li>Études d’impact</li><li>Technologies durables</li><li>Plans de résilience</li></ul>
+              {% else %}
+                <h5 class="fw-bold"><i class="bi bi-shield-lock"></i> {% trans "Gouvernance & Transparence" %}</h5>
+                <ul class="small"><li>Audit externe</li><li>Suivi digital IGIA</li><li>Normes ISO</li></ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <blockquote class="blockquote mt-5 text-center" data-aos="fade-up" data-aos-delay="200">
+        <p class="mb-0 fw-semibold fst-italic text-dark">
+          {% trans "« L’investissement dans le tiers monde n’est pas une aventure risquée, mais une opportunité maîtrisée et durable. »" %}
+        </p>
+        <footer class="blockquote-footer mt-2 text-muted">
+          {% trans "IGIA, le partenaire de la finance inclusive et responsable." %}
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</main>
+
+<!-- ===== Animation AOS ===== -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true
+    });
+  });
+</script>
+{% endblock %}

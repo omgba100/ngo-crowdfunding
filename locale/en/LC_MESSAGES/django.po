@@ -1,0 +1,3214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 13:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\crowdfunding\settings.py:133
+msgid "Français"
+msgstr "Francais"
+
+#: .\crowdfunding\settings.py:134
+msgid "English"
+msgstr "English"
+
+#: .\crowdfunding\settings.py:135
+msgid "Nederlands"
+msgstr "Dutch"
+
+#: .\crowdfunding\settings.py:136
+msgid "Español"
+msgstr "Spanish"
+
+#: .\ngo\admin.py:31
+msgid "Informations personnelles"
+msgstr "Personal Information"
+
+#: .\ngo\admin.py:37
+msgid "Rôle et permissions"
+msgstr "Role and permissions"
+
+#: .\ngo\admin.py:40
+msgid "Dates importantes"
+msgstr "Important dates"
+
+# ---------- Payment model ----------
+#: .\ngo\models.py:92 .\ngo\models.py:119 .\ngo\models.py:148
+#: .\ngo\models.py:264 .\ngo\templates\ngo\index.html:461
+msgid "Utilisateur"
+msgstr "User"
+
+# ---------- EntrepreneurProfile model ----------
+#: .\ngo\models.py:97
+msgid "Nom de l'entreprise"
+msgstr "Company Name"
+
+#: .\ngo\models.py:103
+msgid "Expérience"
+msgstr "Experience"
+
+#: .\ngo\models.py:109
+msgid "Profil entrepreneur"
+msgstr "Entrepreneur Profile"
+
+#: .\ngo\models.py:110
+msgid "Profils entrepreneurs"
+msgstr "Entrepreneur Profiles"
+
+#: .\ngo\models.py:113
+msgid "Profil entrepreneur de"
+msgstr "Entrepreneur Profile of"
+
+# ---------- InvestisseurProfile model ----------
+#: .\ngo\models.py:124
+msgid "Entreprise"
+msgstr "Company"
+
+#: .\ngo\models.py:130
+msgid "Capital disponible"
+msgstr "Available Capital"
+
+#: .\ngo\models.py:138
+msgid "Profil investisseur"
+msgstr "Investor Profile"
+
+#: .\ngo\models.py:139
+msgid "Profils investisseurs"
+msgstr "Investor Profiles"
+
+#: .\ngo\models.py:142
+msgid "Profil investisseur de"
+msgstr "Investor Profile of"
+
+# ---------- IntermediaireProfile model ----------
+#: .\ngo\models.py:153
+msgid "Organisation"
+msgstr "Organization"
+
+#: .\ngo\models.py:158
+msgid "Vérifié"
+msgstr "Verified"
+
+#: .\ngo\models.py:159
+msgid "Abonnement payé"
+msgstr "Paid Subscription"
+
+#: .\ngo\models.py:160
+msgid "Date d'abonnement"
+msgstr "Subscription Date"
+
+#: .\ngo\models.py:163
+msgid "Profil intermédiaire"
+msgstr "Intermediary Profile"
+
+#: .\ngo\models.py:164
+msgid "Profils intermédiaires"
+msgstr "Intermediary Profiles"
+
+#: .\ngo\models.py:167
+msgid "Profil intermédiaire de"
+msgstr "Intermediary Profile of"
+
+# ---------- Country model ----------
+#: .\ngo\models.py:174 .\ngo\models.py:223
+msgid "Code"
+msgstr "Code"
+
+# ---------- Region model ----------
+#: .\ngo\models.py:175 .\ngo\models.py:193 .\ngo\models.py:222
+#: .\ngo\models.py:288 .\ngo\models.py:569 .\ngo\models.py:622
+#: .\ngo\models.py:753 .\ngo\models.py:773
+msgid "Nom"
+msgstr "Name"
+
+#: .\ngo\models.py:176
+msgid "Symbole"
+msgstr "Symbol"
+
+#: .\ngo\models.py:177
+msgid "Taux de change USD"
+msgstr "USD exchange rate"
+
+#: .\ngo\models.py:178 .\ngo\models.py:195 .\ngo\models.py:226
+#: .\ngo\models.py:577 .\ngo\templates\ngo\country\country_list.html:36
+msgid "Actif"
+msgstr "Active"
+
+#: .\ngo\models.py:181 .\ngo\models.py:815
+msgid "Devise"
+msgstr "Currency"
+
+#: .\ngo\models.py:182
+msgid "Devises"
+msgstr "Currencies"
+
+#: .\ngo\models.py:194 .\ngo\models.py:225 .\ngo\models.py:291
+#: .\ngo\models.py:328 .\ngo\models.py:570 .\ngo\models.py:774
+msgid "Slug"
+msgstr "Slug"
+
+#: .\ngo\models.py:198 .\ngo\models.py:220
+msgid "Région"
+msgstr "Region"
+
+#: .\ngo\models.py:199
+msgid "Régions"
+msgstr "Regions"
+
+#: .\ngo\models.py:224
+msgid "Drapeau"
+msgstr "Flag"
+
+#: .\ngo\models.py:231 .\ngo\models.py:267
+msgid "Monnaie"
+msgstr "Currency"
+
+#: .\ngo\models.py:233
+msgid "Frais de soumission de projet"
+msgstr "Project submission fee"
+
+#: .\ngo\models.py:234
+msgid "Frais intermédiaire"
+msgstr "Intermediary fee"
+
+#: .\ngo\models.py:235
+msgid "Taux de commission"
+msgstr "Commission rate"
+
+#: .\ngo\models.py:238 .\ngo\models.py:239 .\ngo\models.py:268
+#: .\ngo\models.py:331 .\ngo\templates\ngo\projet\project_detail.html:30
+msgid "Pays"
+msgstr "Country"
+
+#: .\ngo\models.py:255
+msgid "Soumission de projet"
+msgstr "Project submission"
+
+#: .\ngo\models.py:256
+msgid "Abonnement intermédiaire"
+msgstr "Intermediary subscription"
+
+#: .\ngo\models.py:259
+msgid "Mobile Money"
+msgstr "Mobile Money"
+
+#: .\ngo\models.py:260 .\ngo\models.py:472
+msgid "Stripe"
+msgstr "Stripe"
+
+#: .\ngo\models.py:261 .\ngo\models.py:473
+msgid "PayPal"
+msgstr "PayPal"
+
+#: .\ngo\models.py:265 .\ngo\models.py:350 .\ngo\models.py:386
+#: .\ngo\models.py:417 .\ngo\models.py:633 .\ngo\models.py:698
+msgid "Projet"
+msgstr "Project"
+
+#: .\ngo\models.py:266 .\ngo\models.py:512 .\ngo\models.py:812
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:286
+msgid "Montant"
+msgstr "Amount"
+
+#: .\ngo\models.py:269
+msgid "Type de paiement"
+msgstr "Payment type"
+
+#: .\ngo\models.py:270 .\ngo\models.py:514
+msgid "Méthode de paiement"
+msgstr "Payment method"
+
+#: .\ngo\models.py:271
+msgid "Code de transaction"
+msgstr "Transaction code"
+
+#: .\ngo\models.py:272
+msgid "Preuve de paiement"
+msgstr "Payment proof"
+
+#: .\ngo\models.py:273
+msgid "Réussi"
+msgstr "Successful"
+
+#: .\ngo\models.py:274 .\ngo\models.py:337 .\ngo\models.py:392
+#: .\ngo\models.py:437 .\ngo\models.py:517 .\ngo\models.py:578
+#: .\ngo\models.py:607 .\ngo\models.py:640 .\ngo\models.py:719
+#: .\ngo\models.py:758 .\ngo\models.py:831
+msgid "Créé le"
+msgstr "Created on"
+
+#: .\ngo\models.py:277
+msgid "Paiement"
+msgstr "Payment"
+
+#: .\ngo\models.py:278
+msgid "Paiements"
+msgstr "Payments"
+
+# ---------- Category model ----------
+#: .\ngo\models.py:289 .\ngo\models.py:330 .\ngo\models.py:430
+#: .\ngo\models.py:576 .\ngo\models.py:661 .\ngo\models.py:710
+msgid "Description"
+msgstr "Description"
+
+#: .\ngo\models.py:290 .\ngo\models.py:339 .\ngo\models.py:390
+#: .\ngo\models.py:436 .\ngo\models.py:606 .\ngo\models.py:664
+#: .\ngo\models.py:718
+msgid "Image"
+msgstr "Image"
+
+#: .\ngo\models.py:294
+msgid "Catégorie"
+msgstr "Category"
+
+#: .\ngo\models.py:295 .\ngo\models.py:332
+#: .\ngo\templates\ngo\projet\project_detail.html:31
+msgid "Catégories"
+msgstr "Categories"
+
+#: .\ngo\models.py:311
+msgid "En attente de validation"
+msgstr "Pending approval"
+
+#: .\ngo\models.py:312 .\ngo\models.py:639
+msgid "Approuvé"
+msgstr "Approved"
+
+#: .\ngo\models.py:313
+msgid "Rejeté"
+msgstr "Rejected"
+
+#: .\ngo\models.py:314
+msgid "Clôturé"
+msgstr "Closed"
+
+#: .\ngo\models.py:319 .\ngo\templates\ngo\partials\navigation.html:131
+#: .\ngo\templates\ngo\projet\project_detail.html:29 .\ngo\views.py:874
+msgid "Entrepreneur"
+msgstr "Entrepreneur"
+
+# ---------- Project model ----------
+#: .\ngo\models.py:327 .\ngo\models.py:429 .\ngo\models.py:604
+#: .\ngo\models.py:660 .\ngo\models.py:709
+msgid "Titre"
+msgstr "Title"
+
+#: .\ngo\models.py:329
+msgid "Description courte"
+msgstr "Short description"
+
+#: .\ngo\models.py:334 .\ngo\models.py:711
+#: .\ngo\templates\ngo\projet\project_detail.html:36
+msgid "Montant cible"
+msgstr "Target amount"
+
+#: .\ngo\models.py:335 .\ngo\models.py:432 .\ngo\models.py:712
+#: .\ngo\templates\ngo\projet\project_detail.html:37
+msgid "Montant collecté"
+msgstr "Collected amount"
+
+#: .\ngo\models.py:336 .\ngo\models.py:433 .\ngo\models.py:715
+#: .\ngo\models.py:826
+msgid "Statut"
+msgstr "Status"
+
+#: .\ngo\models.py:338 .\ngo\templates\ngo\projet\project_detail.html:39
+msgid "Date limite"
+msgstr "Deadline"
+
+#: .\ngo\models.py:342
+msgid "Soumis par"
+msgstr "Submitted by"
+
+#: .\ngo\models.py:351 .\ngo\templates\ngo\partials\footer.html:36
+#: .\ngo\templates\ngo\partials\navigation.html:72
+msgid "Projets"
+msgstr "Projects"
+
+# ---------- ProjectPhoto model ----------
+#: .\ngo\models.py:391
+msgid "Légende"
+msgstr "Caption"
+
+#: .\ngo\models.py:395
+msgid "Photo de projet"
+msgstr "Project photo"
+
+#: .\ngo\models.py:396
+msgid "Photos de projet"
+msgstr "Project photos"
+
+#: .\ngo\models.py:400 .\ngo\models.py:624 .\ngo\models.py:777
+msgid "Photo"
+msgstr "Photo"
+
+#: .\ngo\models.py:408 .\ngo\models.py:689
+msgid "Brouillon"
+msgstr "Draft"
+
+#: .\ngo\models.py:409 .\ngo\models.py:690
+msgid "Active"
+msgstr "Active"
+
+#: .\ngo\models.py:410 .\ngo\models.py:691
+msgid "En pause"
+msgstr "Paused"
+
+#: .\ngo\models.py:411 .\ngo\models.py:692
+msgid "Terminée"
+msgstr "Completed"
+
+#: .\ngo\models.py:412 .\ngo\models.py:693
+msgid "Échouée"
+msgstr "Failed"
+
+# ---------- Campaign model ----------
+#: .\ngo\models.py:423 .\ngo\models.py:704
+msgid "Créé par"
+msgstr "Created by"
+
+#: .\ngo\models.py:431
+msgid "Objectif financier"
+msgstr "Financial goal"
+
+#: .\ngo\models.py:434 .\ngo\models.py:716
+msgid "Date de début"
+msgstr "Start date"
+
+#: .\ngo\models.py:435 .\ngo\models.py:717
+msgid "Date de fin"
+msgstr "End date"
+
+#: .\ngo\models.py:440 .\ngo\models.py:445 .\ngo\models.py:495
+#: .\ngo\models.py:600 .\ngo\models.py:656
+msgid "Campagne"
+msgstr "Campaign"
+
+#: .\ngo\models.py:441 .\ngo\templates\ngo\partials\navigation.html:96
+msgid "Campagnes"
+msgstr "Campaigns"
+
+#: .\ngo\models.py:445 .\ngo\models.py:527
+msgid "pour"
+msgstr "for"
+
+#: .\ngo\models.py:468
+msgid "Don"
+msgstr "Donation"
+
+#: .\ngo\models.py:469 .\ngo\models.py:727
+msgid "Prêt"
+msgstr "Loan"
+
+#: .\ngo\models.py:474
+msgid "MTN Mobile Money"
+msgstr "MTN Mobile Money"
+
+#: .\ngo\models.py:475
+msgid "Orange Mobile Money"
+msgstr "Orange Mobile Money"
+
+#: .\ngo\models.py:476 .\ngo\models.py:566
+#: .\ngo\templates\ngo\partner\partner_list.html:45
+msgid "Autre"
+msgstr "Other"
+
+#: .\ngo\models.py:479 .\ngo\models.py:802
+msgid "En attente"
+msgstr "Pending"
+
+#: .\ngo\models.py:480
+msgid "Complété"
+msgstr "Completed"
+
+#: .\ngo\models.py:481
+msgid "Échoué"
+msgstr "Failed"
+
+# ---------- Contribution model ----------
+#: .\ngo\models.py:486 .\ngo\templates\ngo\partials\navigation.html:139
+#: .\ngo\views.py:894
+msgid "Investisseur"
+msgstr "Investor"
+
+#: .\ngo\models.py:503 .\ngo\models.py:722
+msgid "Campagne de prêt"
+msgstr "Loan campaign"
+
+#: .\ngo\models.py:510
+msgid "Nom du contributeur"
+msgstr "Contributor name"
+
+#: .\ngo\models.py:511
+msgid "Email du contributeur"
+msgstr "Contributor email"
+
+#: .\ngo\models.py:513
+msgid "Type de contribution"
+msgstr "Contribution type"
+
+#: .\ngo\models.py:515
+msgid "ID de transaction"
+msgstr "Transaction ID"
+
+#: .\ngo\models.py:516
+msgid "Statut du paiement"
+msgstr "Payment status"
+
+#: .\ngo\models.py:520
+msgid "Contribution"
+msgstr "Contribution"
+
+#: .\ngo\models.py:521
+msgid "Contributions"
+msgstr "Contributions"
+
+#: .\ngo\models.py:525
+msgid "Anonyme"
+msgstr "Anonymous"
+
+#: .\ngo\models.py:526
+msgid "Aucune campagne"
+msgstr "No campaign"
+
+#: .\ngo\models.py:531
+msgid ""
+"Une contribution ne peut pas être liée à la fois à une campagne de don et à "
+"une campagne de prêt."
+msgstr ""
+"A contribution cannot be linked to both a donation campaign and a loan "
+"campaign."
+
+#: .\ngo\models.py:533
+msgid "Une contribution doit être liée à une campagne (don ou prêt)."
+msgstr "A contribution must be linked to a campaign (donation or loan)."
+
+#: .\ngo\models.py:535
+msgid ""
+"Les contributions à une campagne de don doivent avoir le type 'donation'."
+msgstr "Contributions to a donation campaign must have the type 'donation'."
+
+#: .\ngo\models.py:537
+msgid "Les contributions à une campagne de prêt doivent avoir le type 'loan'."
+msgstr "Contributions to a loan campaign must have the type 'loan'."
+
+#: .\ngo\models.py:562 .\ngo\templates\ngo\partner\partner_list.html:41
+msgid "ONG / Association"
+msgstr "NGO / Association"
+
+#: .\ngo\models.py:563 .\ngo\templates\ngo\partner\partner_list.html:42
+msgid "Entreprise privée"
+msgstr "Private company"
+
+#: .\ngo\models.py:564 .\ngo\templates\ngo\partner\partner_list.html:43
+msgid "Institution publique"
+msgstr "Public institution"
+
+#: .\ngo\models.py:565 .\ngo\templates\ngo\partner\partner_list.html:44
+msgid "Partenaire individuel"
+msgstr "Individual partner"
+
+# ---------- Partner model ----------
+#: .\ngo\models.py:571
+msgid "Type de partenaire"
+msgstr "Partner type"
+
+#: .\ngo\models.py:572
+msgid "Logo"
+msgstr "Logo"
+
+#: .\ngo\models.py:573 .\ngo\templates\ngo\contact\contact.html:33
+msgid "Site web"
+msgstr "Website"
+
+#: .\ngo\models.py:574 .\ngo\models.py:754 .\ngo\models.py:778
+#: .\ngo\templates\ngo\contact\contact.html:31
+msgid "Email"
+msgstr "Email"
+
+#: .\ngo\models.py:575 .\ngo\templates\ngo\contact\contact.html:30
+msgid "Téléphone"
+msgstr "Phone"
+
+#: .\ngo\models.py:581
+msgid "Partenaire"
+msgstr "Partner"
+
+#: .\ngo\models.py:582
+msgid "Partenaires"
+msgstr "Partners"
+
+#: .\ngo\models.py:605
+msgid "Contenu"
+msgstr "Content"
+
+#: .\ngo\models.py:610 .\ngo\models.py:615
+msgid "Mise à jour"
+msgstr "Update"
+
+#: .\ngo\models.py:611
+msgid "Mises à jour"
+msgstr "Updates"
+
+# ---------- Testimonial model ----------
+#: .\ngo\models.py:628
+msgid "Photo du contributeur ou de la personne donnant le témoignage"
+msgstr "Photo of the contributor or person giving the testimonial"
+
+#: .\ngo\models.py:630 .\ngo\models.py:756
+msgid "Message"
+msgstr "Message"
+
+#: .\ngo\models.py:643
+msgid "Témoignage"
+msgstr "Testimonial"
+
+#: .\ngo\models.py:644 .\ngo\templates\ngo\index.html:440
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:5
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:15
+msgid "Témoignages"
+msgstr "Testimonials"
+
+#: .\ngo\models.py:648
+msgid "Témoignage de"
+msgstr "Testimonial by"
+
+# ---------- Reward model ----------
+#: .\ngo\models.py:662
+msgid "Montant minimum"
+msgstr "Minimum amount"
+
+#: .\ngo\models.py:668
+msgid "Image représentative de la récompense (facultative)"
+msgstr "Representative image of the reward (optional)"
+
+#: .\ngo\models.py:672
+msgid "Récompense"
+msgstr "Reward"
+
+#: .\ngo\models.py:673 .\ngo\templates\ngo\campaign\campaign_detail.html:257
+msgid "Récompenses"
+msgstr "Rewards"
+
+#: .\ngo\models.py:677
+msgid "min"
+msgstr "min"
+
+# ---------- LoanCampaign model ----------
+#: .\ngo\models.py:713
+msgid "Taux d'intérêt (%)"
+msgstr "Interest rate (%)"
+
+#: .\ngo\models.py:714
+msgid "Durée de remboursement (mois)"
+msgstr "Repayment duration (months)"
+
+#: .\ngo\models.py:714
+msgid "Durée du remboursement en mois"
+msgstr "Repayment duration in months"
+
+#: .\ngo\models.py:723
+msgid "Campagnes de prêt"
+msgstr "Loan campaigns"
+
+#: .\ngo\models.py:755
+msgid "Sujet"
+msgstr "Subject"
+
+#: .\ngo\models.py:757
+msgid "Lu"
+msgstr "Read"
+
+#: .\ngo\models.py:761
+msgid "Message de contact"
+msgstr "Contact message"
+
+#: .\ngo\models.py:762
+msgid "Messages de contact"
+msgstr "Contact messages"
+
+#: .\ngo\models.py:766
+msgid "Message de"
+msgstr "Message from"
+
+# ---------- TeamMember model ----------
+#: .\ngo\models.py:775
+msgid "Rôle"
+msgstr "Role"
+
+#: .\ngo\models.py:776
+msgid "Biographie"
+msgstr "Biography"
+
+#: .\ngo\models.py:779
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: .\ngo\models.py:780
+msgid "Twitter"
+msgstr "Twitter"
+
+#: .\ngo\models.py:781
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\ngo\models.py:782
+msgid "Ordre"
+msgstr "Order"
+
+#: .\ngo\models.py:786
+msgid "Membre de l'équipe"
+msgstr "Team member"
+
+#: .\ngo\models.py:787
+msgid "Membres de l'équipe"
+msgstr "Team members"
+
+# ---------- IntermediairePayment model ----------
+#: .\ngo\models.py:803
+msgid "Validé"
+msgstr "Validated"
+
+#: .\ngo\models.py:808 .\ngo\views.py:917
+msgid "Intermédiaire"
+msgstr "Intermediary"
+
+#: .\ngo\models.py:820
+msgid "Preuve"
+msgstr "Proof"
+
+#: .\ngo\models.py:834
+msgid "Paiement intermédiaire"
+msgstr "Intermediary payment"
+
+#: .\ngo\models.py:835
+msgid "Paiements intermédiaires"
+msgstr "Intermediary payments"
+
+#: .\ngo\templates\base.html:9
+msgid "Financement Participatif"
+msgstr "Crowdfunding"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:5
+msgid "Détails de la campagne"
+msgstr "Campaign Details"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:204
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Objectif"
+msgstr "Financial goal"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:215
+#: .\ngo\templates\ngo\campaign\campaign_list.html:177
+msgid "jours restants"
+msgstr "days remaining"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:217
+#, fuzzy
+#| msgid "Date limite"
+msgid "Durée illimitée"
+msgstr "Deadline"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:223
+#, fuzzy
+#| msgid "Contribution"
+msgid "Contribuer maintenant"
+msgstr "Contribution"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:235
+#, fuzzy
+#| msgid "Mises à jour"
+msgid "Mises à jour de la campagne"
+msgstr "Updates"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:266
+msgid "Choisir cette récompense"
+msgstr "Choose this reward"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:280
+#, fuzzy
+#| msgid "Type de contribution"
+msgid "Dernières contributions"
+msgstr "Contribution type"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:285
+#, fuzzy
+#| msgid "Contribution"
+msgid "Contributeur"
+msgstr "Contribution"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:287
+msgid "Date"
+msgstr ""
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:5
+msgid "Liste des Campagnes de Collecte de Fonds"
+msgstr "List of Fundraising Campaigns"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:155
+#: .\ngo\templates\ngo\index.html:233
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes Actives"
+msgstr "Campaigns"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:177
+msgid "Illimitée"
+msgstr "Unlimited"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:182
+msgid "Voir détails"
+msgstr "See details"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:189
+#: .\ngo\templates\ngo\index.html:276
+msgid "Aucune campagne active pour le moment."
+msgstr "No active campaigns at the moment."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:5
+#, fuzzy
+#| msgid "Catégorie"
+msgid "Détails Catégorie"
+msgstr "Category"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:175
+msgid "Découvrez les projets et informations liés à cette catégorie."
+msgstr "Discover projects and information related to this category."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:192
+msgid "Aucune description disponible pour cette catégorie."
+msgstr "No description available for this category."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:195
+#, fuzzy
+#| msgid "Catégories"
+msgid "Retour aux catégories"
+msgstr "Categories"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:197
+msgid "Voir les projets financés"
+msgstr "See funded projects"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:208
+msgid "Projets associés à cette catégorie"
+msgstr "Projects associated with this category"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:222
+msgid "Voir la campagne"
+msgstr "See the campaign"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:228
+msgid "Aucun projet n’est actuellement associé à cette catégorie."
+msgstr "There are currently no projects associated with this category."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:5
+#: .\ngo\templates\ngo\categorie\categorie_list.html:149
+#, fuzzy
+#| msgid "Catégories"
+msgid "Catégories de Projets"
+msgstr "Categories"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:150
+msgid ""
+"Découvrez les différentes catégories de projets disponibles pour le "
+"financement participatif en Afrique."
+msgstr "crowdfunding and crowdlending in Africa."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:170
+#: .\ngo\templates\ngo\country\funded_categories.html:61
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Voir les projets"
+msgstr "Project photo"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:177
+#: .\ngo\templates\ngo\index.html:323
+msgid "Aucune catégorie disponible pour le moment."
+msgstr "No categories available at the moment."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:187
+msgid "Vous souhaitez proposer une nouvelle catégorie ?"
+msgstr "Would you like to suggest a new category?"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:188
+msgid ""
+"Contactez-nous pour suggérer une catégorie de projet à ajouter à la "
+"plateforme."
+msgstr "Contact us to suggest a project category to add to the platform."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:190
+#: .\ngo\templates\ngo\country\country_list.html:58
+#: .\ngo\templates\ngo\info\about_us.html:165
+msgid "Nous Contacter"
+msgstr "Contact-us"
+
+#: .\ngo\templates\ngo\contact\contact.html:13
+#: .\ngo\templates\ngo\partials\footer.html:14
+#, fuzzy
+#| msgid "Contenu"
+msgid "Contactez-nous"
+msgstr "Content"
+
+#: .\ngo\templates\ngo\contact\contact.html:14
+msgid "Une question ? Un projet ? Nous serons ravis d’échanger avec vous."
+msgstr ""
+
+#: .\ngo\templates\ngo\contact\contact.html:25
+msgid "Nos coordonnées"
+msgstr ""
+
+#: .\ngo\templates\ngo\contact\contact.html:27
+msgid ""
+"Notre équipe est disponible pour répondre à toutes vos questions sur nos "
+"services, nos programmes et nos projets."
+msgstr ""
+
+#: .\ngo\templates\ngo\contact\contact.html:32
+msgid "Adresse"
+msgstr ""
+
+#: .\ngo\templates\ngo\contact\contact.html:44
+msgid "Envoyez-nous un message"
+msgstr ""
+
+#: .\ngo\templates\ngo\contact\contact.html:45
+msgid ""
+"Remplissez le formulaire ci-dessous, et nous vous répondrons dans les plus "
+"brefs délais."
+msgstr ""
+
+#: .\ngo\templates\ngo\country\country_list.html:5
+msgid "Infinity Global Investment & Aid ( IGIA) - Financement Participatif"
+msgstr "Infinity Global Investment & Aid (IGIA) - Crowdfunding"
+
+#: .\ngo\templates\ngo\country\country_list.html:12
+msgid "Liste des pays dans auxquels IGIA participe au financement participatif"
+msgstr "List of countries in which IGIA participates in crowdfunding"
+
+# ---------- Country model ----------
+#: .\ngo\templates\ngo\country\country_list.html:31
+#, fuzzy
+#| msgid "Code"
+msgid "Code ISO"
+msgstr "Code"
+
+#: .\ngo\templates\ngo\country\country_list.html:40
+#, fuzzy
+#| msgid "Actif"
+msgid "Inactif"
+msgstr "Active"
+
+#: .\ngo\templates\ngo\country\country_list.html:45
+#: .\ngo\templates\ngo\index.html:317
+msgid "Explorer"
+msgstr "Explore"
+
+#: .\ngo\templates\ngo\country\country_list.html:50
+msgid "Aucun pays disponible pour le moment."
+msgstr "No countries available at the moment."
+
+#: .\ngo\templates\ngo\country\country_list.html:55
+msgid "Votre pays ne figure pas dans la liste ?"
+msgstr "Is your country not listed?"
+
+#: .\ngo\templates\ngo\country\country_list.html:56
+msgid ""
+"Contactez-nous pour que nous puissions étudier votre demande et vous "
+"accompagner."
+msgstr "Contact us so that we can study your request andassist you."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:5
+#: .\ngo\templates\ngo\country\funded_categories.html:23
+#, fuzzy
+#| msgid "Catégories"
+msgid "Catégories financées"
+msgstr "Categories"
+
+#: .\ngo\templates\ngo\country\funded_categories.html:15
+msgid "Découvrez les catégories de projets financés dans ce pays."
+msgstr "Discover the categories of projects funded in this country."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:26
+msgid ""
+"Les secteurs suivants bénéficient d’un soutien financier grâce à nos "
+"investisseurs et partenaires."
+msgstr ""
+"The following sectors receive financial support from our  investors and "
+"partners."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:48
+msgid "Aucune description disponible."
+msgstr "No description available."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:54
+msgid "Total financé"
+msgstr "Total financed"
+
+#: .\ngo\templates\ngo\country\funded_categories.html:69
+msgid "Aucune catégorie financée trouvée pour ce pays."
+msgstr "No funded categories found for this country."
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:5
+#: .\ngo\templates\ngo\country\projects_by_category.html:23
+msgid "Projets financés"
+msgstr "Funded projects"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:14
+msgid "Projets financés dans la catégorie"
+msgstr "Projects funded in the category"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:59
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Voir le projet"
+msgstr "Project photo"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:66
+msgid "Aucun projet financé trouvé dans cette catégorie pour ce pays."
+msgstr "No funded projects found in this category for this country."
+
+#: .\ngo\templates\ngo\index.html:5
+msgid "Accueil - Financement Participatif"
+msgstr "Home - Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\index.html:32
+msgid "Bienvenue sur notre plateforme"
+msgstr "Welcome to our platform"
+
+#: .\ngo\templates\ngo\index.html:33
+msgid "Un nouveau souffle pour vos projets"
+msgstr "A new lease of life for your projects"
+
+#: .\ngo\templates\ngo\index.html:40
+msgid "Financement participatif"
+msgstr "Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\index.html:41
+msgid "Construisons l’avenir ensemble"
+msgstr "Let's build the future together"
+
+#: .\ngo\templates\ngo\index.html:48
+msgid "Des projets innovants"
+msgstr "Innovative projects"
+
+#: .\ngo\templates\ngo\index.html:49
+msgid "Donnez vie à vos idées"
+msgstr "Bring your ideas to life"
+
+#: .\ngo\templates\ngo\index.html:56
+msgid "Petits Commerces"
+msgstr "Small businesses"
+
+#: .\ngo\templates\ngo\index.html:57
+#, fuzzy
+#| msgid "Profils entrepreneurs"
+msgid "Vous aussi êtes des entrepreneurs"
+msgstr "Entrepreneur Profiles"
+
+#: .\ngo\templates\ngo\index.html:64
+msgid "Presentez vos projets"
+msgstr "Present your projects"
+
+#: .\ngo\templates\ngo\index.html:65
+#, fuzzy
+#| msgid "Suivi et Evaluation"
+msgid "Suivit et Evaluation"
+msgstr "Monitoring and Evaluation"
+
+#: .\ngo\templates\ngo\index.html:72
+msgid "Collecte de fonds"
+msgstr "Fundraising"
+
+#: .\ngo\templates\ngo\index.html:73
+msgid "Organiser par des Campagnes"
+msgstr "Organize by Campaigns"
+
+#: .\ngo\templates\ngo\index.html:80
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Suivit des projets"
+msgstr "Project submission"
+
+#: .\ngo\templates\ngo\index.html:81
+msgid "Par notre Communaute active"
+msgstr "By our active Community"
+
+#: .\ngo\templates\ngo\index.html:88
+msgid "Formation a la gestion"
+msgstr "Management training"
+
+#: .\ngo\templates\ngo\index.html:89
+msgid "Pour permettre l'autonomie"
+msgstr "To enable autonomy"
+
+#: .\ngo\templates\ngo\index.html:96
+msgid "Conseils et Astuces"
+msgstr "Tips and Tricks"
+
+#: .\ngo\templates\ngo\index.html:97
+msgid "Pour reussir dans votre activité"
+msgstr "To succeed in your business"
+
+#: .\ngo\templates\ngo\index.html:104
+msgid "Rejoignez la communauté"
+msgstr "Join the community"
+
+#: .\ngo\templates\ngo\index.html:105
+msgid "Investissez dans l’avenir"
+msgstr "Invest in the future"
+
+#: .\ngo\templates\ngo\index.html:141
+#: .\ngo\templates\ngo\partials\footer.html:24
+msgid "Qui sommes-nous ?"
+msgstr "Who are we ?"
+
+#: .\ngo\templates\ngo\index.html:143
+msgid ""
+"Nous accordons une grande valeur aux petits métiers et à l’entrepreneuriat\n"
+"                par Un placement qui a du sens"
+msgstr ""
+"We place great value on small businesses and entrepreneurship\n"
+"                by An investment that makes sense"
+
+#: .\ngo\templates\ngo\index.html:147
+msgid ""
+"Infinity Global Investment & Aid ( IGIA) est expert du financement "
+"participatif dédié \n"
+"                et adaptés à l’écosystème Afrique, Asie, Europe et Amerique "
+"en valorisant les jeunes et en les accompagnant dans la mise en place de "
+"leur projet."
+msgstr ""
+"Infinity Global Investment & Aid (IGIA) is an expert in "
+"dedicatedCrowdfunding & Crowdlending \n"
+"                 and adapted to the ecosystem of Africa, Asia, Europe and "
+"Americaby promoting young people and supporting them in setting uptheir "
+"project"
+
+#: .\ngo\templates\ngo\index.html:160
+msgid "projets financés"
+msgstr "funded projects"
+
+#: .\ngo\templates\ngo\index.html:170
+msgid "collectes réussies"
+msgstr "successful collections"
+
+# ---------- Reward model ----------
+#: .\ngo\templates\ngo\index.html:180
+#, fuzzy
+#| msgid "Montant minimum"
+msgid "Montant investi"
+msgstr "Minimum amount"
+
+#: .\ngo\templates\ngo\index.html:187
+msgid "En savoir plus"
+msgstr "Learn more"
+
+#: .\ngo\templates\ngo\index.html:201
+#: .\ngo\templates\ngo\projet\project_list.html:11
+#, fuzzy
+#| msgid "Projets"
+msgid "Projets Récents"
+msgstr "Projects"
+
+#: .\ngo\templates\ngo\index.html:219
+#: .\ngo\templates\ngo\projet\project_detail.html:16
+#, fuzzy
+#| msgid "Montant collecté"
+msgid "collecté"
+msgstr "Collected amount"
+
+#: .\ngo\templates\ngo\index.html:235
+msgid "Découvrez les campagnes de financement en cours."
+msgstr ""
+
+#: .\ngo\templates\ngo\index.html:270
+msgid "Voir les détails"
+msgstr "See details"
+
+#: .\ngo\templates\ngo\index.html:282
+msgid "Voir toutes les campagnes"
+msgstr "See all campaigns"
+
+#: .\ngo\templates\ngo\index.html:292
+#, fuzzy
+#| msgid "Méthode de paiement"
+msgid "Catégories de Financement"
+msgstr "Payment method"
+
+#: .\ngo\templates\ngo\index.html:294
+msgid "Explorez les domaines dans lesquels vous pouvez soutenir un projet."
+msgstr "Explore areas where you can support a project."
+
+#: .\ngo\templates\ngo\index.html:329
+msgid "Voir toutes les catégories"
+msgstr "See all categories"
+
+#: .\ngo\templates\ngo\index.html:376
+#: .\ngo\templates\ngo\team\team_list.html:11
+msgid "Notre Équipe"
+msgstr "Our Team"
+
+#: .\ngo\templates\ngo\index.html:379
+msgid "Découvrez les passionnés qui font vivre notre mission chaque jour."
+msgstr ""
+"Discover the passionate people who bring our mission to life every day."
+
+#: .\ngo\templates\ngo\index.html:398
+msgid "Voir Profil"
+msgstr "View Profile"
+
+#: .\ngo\templates\ngo\index.html:428
+msgid "L’équipe sera bientôt présentée."
+msgstr "The team will be introduced soon."
+
+#: .\ngo\templates\ngo\index.html:443
+msgid ""
+"Ils partagent leur expérience avec notre plateforme de financement "
+"participatif."
+msgstr ""
+"They share their experience with our crowdfunding & crowdlending platform."
+
+#: .\ngo\templates\ngo\index.html:475
+msgid "Voir le projet lié"
+msgstr "See the related project"
+
+#: .\ngo\templates\ngo\index.html:484
+msgid "Aucun témoignage pour le moment."
+msgstr "No testimonials yet."
+
+#: .\ngo\templates\ngo\index.html:491
+#: .\ngo\templates\ngo\projet\project_detail.html:62
+msgid "Précédent"
+msgstr "Previous"
+
+#: .\ngo\templates\ngo\index.html:495
+#: .\ngo\templates\ngo\projet\project_detail.html:66
+msgid "Suivant"
+msgstr "Next"
+
+#: .\ngo\templates\ngo\info\about_us.html:5
+msgid "À propos de nous"
+msgstr "About Us"
+
+#: .\ngo\templates\ngo\info\about_us.html:15
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "🌍 IGIA — L’expert du financement participatif"
+msgstr "Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\info\about_us.html:18
+msgid ""
+"Dédiée à la valorisation des jeunes et au développement local depuis 2012"
+msgstr ""
+"Dedicated to the development of young people and local development since 2012"
+
+#: .\ngo\templates\ngo\info\about_us.html:28
+msgid ""
+"est une plateforme de financement participatif dédiée à la \n"
+"          <strong>valorisation des jeunes et au développement local </"
+"strong>.  \n"
+"          Depuis 2012, elle permet d’investir dans des projets <strong> "
+"rigoureusement sélectionnés </strong> \n"
+"          pour leur solidité économique, leurs bénéfices concrets et leur "
+"ancrage territorial."
+msgstr ""
+"is a dedicated platform of Crowdfundind & Crowdlending \n"
+"          <strong>promotion of young people and local development </"
+"strong>.  \n"
+"          Since 2012, it has enabled investment in projects <strong> "
+"rigorously selected </strong> \n"
+"          for their economic strength, their concrete benefits and their "
+"territorial anchoring."
+
+#: .\ngo\templates\ngo\info\about_us.html:34
+msgid ""
+"Grâce à IGIA, les investisseurs peuvent  <strong> orienter et verdir "
+"directement leurs investissements</strong> \n"
+"         tout en constituant un  <strong> portefeuille diversifié et stable"
+msgstr ""
+"Through IGIA, investors can  <strong> orient and green directly their "
+"investments</strong> \n"
+"         while constituting a  <strong> diversified and stable portfolio"
+
+#: .\ngo\templates\ngo\info\about_us.html:43
+msgid "Présence internationale"
+msgstr "International presence"
+
+#: .\ngo\templates\ngo\info\about_us.html:45
+msgid ""
+"IGIA est aujourd’hui présent sur <strong>3 continents</strong> et couvre "
+"<strong>54 pays</strong>, \n"
+"        soutenant les initiatives locales partout où les jeunes veulent "
+"entreprendre."
+msgstr ""
+"IGIA is now present on <strong>3 continents</strong> and covers <strong>54 "
+"countries</strong>, \n"
+"        supporting local initiatives wherever young people want undertake."
+
+#: .\ngo\templates\ngo\info\about_us.html:53
+msgid "Notre mission"
+msgstr "Our mission"
+
+#: .\ngo\templates\ngo\info\about_us.html:55
+msgid ""
+"Forts de notre expérience, nous offrons aux jeunes des <strong>solutions "
+"financières fiables et accessibles</strong> \n"
+"          en alternative au circuit bancaire traditionnel."
+msgstr ""
+"With our experience, we offer young people <strong>solutions reliable and "
+"accessible financial</strong> \n"
+"          as an alternative to the traditional banking system."
+
+#: .\ngo\templates\ngo\info\about_us.html:59
+msgid ""
+"Notre approche simplifie les procédures et supprime les barrières liées "
+"aux \n"
+"          <strong>garanties ou hypothèques</strong>, souvent inaccessibles "
+"pour les jeunes entrepreneurs."
+msgstr ""
+"Our approach simplifies procedures and removes barriers related to \n"
+"          <strong>guarantees or mortgages</strong>, often inaccessible for "
+"young entrepreneurs."
+
+#: .\ngo\templates\ngo\info\about_us.html:72
+msgid "Notre approche de proximité"
+msgstr "Our local approach"
+
+#: .\ngo\templates\ngo\info\about_us.html:74
+msgid ""
+"Nous croyons en une approche <strong>humaine et décentralisée</strong>, "
+"fondée sur la \n"
+"        <strong>proximité avec les populations locales</strong>.  \n"
+"        Cette stratégie nous permet de proposer une <strong>gamme variée de "
+"services</strong> adaptés à chaque écosystème."
+msgstr ""
+"We believe in a <strong>human and decentralized</strong> approach, based on "
+"the \n"
+"        <strong>proximity to local populations</strong>.  \n"
+"        This strategy allows us to offer <strong>a varied range of services</"
+"strong> adapted to each ecosystem."
+
+#: .\ngo\templates\ngo\info\about_us.html:82
+msgid "Petits emplois"
+msgstr "Small jobs"
+
+#: .\ngo\templates\ngo\info\about_us.html:88
+#, fuzzy
+#| msgid "Profils intermédiaires"
+msgid "Emplois intermédiaires"
+msgstr "Intermediary Profiles"
+
+#: .\ngo\templates\ngo\info\about_us.html:89
+msgid "PME et commerces agricoles, de gros et de détail."
+msgstr "LLC and agricultural, wholesale and retail businesses."
+
+#: .\ngo\templates\ngo\info\about_us.html:94
+msgid "Agriculture & Élevage"
+msgstr "Agriculture and Livestock"
+
+#: .\ngo\templates\ngo\info\about_us.html:95
+msgid "Accompagnement vers une modernisation durable."
+msgstr "Support towards sustainable modernization."
+
+#: .\ngo\templates\ngo\info\about_us.html:100
+msgid "Agro-industrie & Startups"
+msgstr "Agro-industry & Startups"
+
+#: .\ngo\templates\ngo\info\about_us.html:101
+msgid ""
+"Financement de projets innovants dans la transformation et les technologies."
+msgstr "Financing innovative projects in transformation and technologies."
+
+#: .\ngo\templates\ngo\info\about_us.html:110
+msgid "Notre engagement"
+msgstr "Our commitment"
+
+#: .\ngo\templates\ngo\info\about_us.html:112
+msgid ""
+"IGIA s’engage à rendre le financement accessible à tous, à stimuler la "
+"création d’emplois \n"
+"        et à favoriser un développement inclusif et durable.  \n"
+"        Chaque projet soutenu est une <strong>opportunité de transformation "
+"économique et sociale"
+msgstr ""
+"IGIA is committed to making financing accessible to all, to stimulating the "
+"job creation \n"
+"        and to promote inclusive and sustainable development.  \n"
+"        Each project supported is a <strong>transformation opportunity "
+"economic and social"
+
+#: .\ngo\templates\ngo\info\about_us.html:122
+msgid "Notre Vision & Nos Objectifs"
+msgstr "Our Vision and Our Objectives"
+
+#: .\ngo\templates\ngo\info\about_us.html:125
+msgid ""
+"Nous croyons en un monde fort, innovant et solidaire.  \n"
+"        Notre mission est de soutenir les jeunes entrepreneurs, artisans et "
+"porteurs de projets \n"
+"        grâce au financement participatif, à la formation et à la mise en "
+"réseau."
+msgstr ""
+"We believe in a strong, innovative and united world.  \n"
+"        Our mission is to support young entrepreneurs, artisans and project "
+"leaders \n"
+"        through crowdfunding & crowdlending, training and implementation "
+"network."
+
+#: .\ngo\templates\ngo\info\about_us.html:130
+msgid ""
+"Nous favorisons l’autonomie économique et valorisons les talents à travers "
+"le monde."
+msgstr "We promote economic autonomy and value talent across the world."
+
+#: .\ngo\templates\ngo\info\about_us.html:139
+msgid "Nos Engagements"
+msgstr "Our Commitments"
+
+#: .\ngo\templates\ngo\info\about_us.html:144 .\ngo\views.py:844
+msgid "Transparence"
+msgstr "Transparency"
+
+#: .\ngo\templates\ngo\info\about_us.html:145
+msgid ""
+"Chaque projet est suivi avec rigueur pour garantir la confiance entre "
+"contributeurs et bénéficiaires."
+msgstr ""
+"Each project is rigorously monitored to ensure trust between contributors "
+"and beneficiaries."
+
+#: .\ngo\templates\ngo\info\about_us.html:151
+msgid "Innovation Sociale"
+msgstr "Social Innovation"
+
+#: .\ngo\templates\ngo\info\about_us.html:152
+msgid ""
+"Nous misons sur des solutions modernes et inclusives pour favoriser le "
+"développement communautaire."
+msgstr ""
+"We rely on modern and inclusive solutions to promote the community "
+"development."
+
+#: .\ngo\templates\ngo\info\about_us.html:158
+msgid "Impact Durable"
+msgstr "Sustainable Impact"
+
+#: .\ngo\templates\ngo\info\about_us.html:159
+msgid ""
+"Nos actions contribuent à un changement réel et mesurable dans les "
+"communautés africaines."
+msgstr ""
+"Our actions contribute to real and measurable change in African communities."
+
+#: .\ngo\templates\ngo\info\actualite.html:5
+msgid "Actualités"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:13 .\ngo\views.py:1220
+msgid "Actualités IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:14
+msgid "Restez informé sur nos dernières actions et projets."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:22
+#, fuzzy
+#| msgid "Type de contribution"
+msgid "Dernières Actualités"
+msgstr "Contribution type"
+
+#: .\ngo\templates\ngo\info\actualite.html:32
+msgid "Lancement de notre nouvelle campagne de financement"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:34
+msgid ""
+"IGIA a lancé une campagne de financement participatif pour soutenir les "
+"entrepreneurs locaux et renforcer les projets solidaires."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:37
+#: .\ngo\templates\ngo\info\actualite.html:53
+#: .\ngo\templates\ngo\info\actualite.html:69
+#, fuzzy
+#| msgid "Voir plus"
+msgid "Lire plus"
+msgstr "See more"
+
+#: .\ngo\templates\ngo\info\actualite.html:48
+msgid "Partenariat avec des institutions locales"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:50
+msgid ""
+"IGIA collabore désormais avec plusieurs institutions locales pour améliorer "
+"l'accès aux micro-prêts et soutenir les initiatives solidaires."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:64
+msgid "Rapport annuel IGIA 2025"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\actualite.html:66
+msgid ""
+"Découvrez notre rapport annuel présentant l'impact de nos actions et la "
+"progression de nos projets financés."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:5
+msgid "Agrément et Sécurité - IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:14
+msgid "Agrément et Sécurité"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:17
+msgid ""
+"IGIA garantit la transparence, la sécurité et la conformité pour tous vos "
+"investissements."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:21
+msgid "Découvrir IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:30
+msgid "Confiance, sécurité et transparence"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:31
+msgid ""
+"Les fondements d’un environnement fiable pour les utilisateurs de notre "
+"plateforme."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:41
+msgid "IGIA, plateforme agréée De Nederlandsche Bank"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:43
+msgid ""
+"IGIA opère en conformité avec la réglementation financière en vigueur et est "
+"enregistrée auprès des autorités compétentes."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:44
+msgid ""
+"La plateforme est agréée par l’Autorité des Marchés Financiers comme "
+"Prestataire de Services de Financement Participatif, sous le numéro FP "
+"2012-22."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:55
+#, fuzzy
+#| msgid "Financement Participatif"
+msgid "Label Financement Participatif pour la Croissance Verte"
+msgstr "Crowdfunding"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:57
+msgid ""
+"IGIA est labellisée depuis 2012, en reconnaissance de son engagement envers "
+"la durabilité et la transparence des financements proposés."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:58
+msgid ""
+"Ce label, créé par le ministère de la Transition Écologique et la FPP, "
+"distingue les projets à impact environnemental positif."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:64
+msgid "Sécurité des données"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:65
+msgid ""
+"La sécurité de vos données personnelles et financières est une priorité "
+"absolue pour IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:72 .\ngo\views.py:707
+msgid "Environnement sécurisé"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:73
+msgid ""
+"Le site IGIA est entièrement protégé via un protocole HTTPS, garantissant la "
+"confidentialité de vos données."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:81 .\ngo\views.py:709
+msgid "Transactions sécurisées"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:82
+msgid ""
+"Toutes les opérations bancaires sont protégées par des protocoles de "
+"paiement semi-automatiques contre le piratage."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:90 .\ngo\views.py:711
+msgid "Accès crypté"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:91
+msgid ""
+"Vos mots de passe sont strictement personnels et vos données ne sont jamais "
+"partagées par IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:104 .\ngo\views.py:713
+#, fuzzy
+#| msgid "Code de transaction"
+msgid "Protection des transactions"
+msgstr "Transaction code"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:106
+msgid ""
+"IGIA collabore avec ses partenaires bancaires et opérateurs de paiement "
+"agréés pour assurer la sécurité des transactions dans le monde entier."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:107
+msgid ""
+"Les fonds sont gérés par ABN AMRO, sous la supervision de l’ACPRB, "
+"garantissant la conformité et la fiabilité des opérations."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\conditions_generales_utilisation.html:24
+msgid "Conditions Générales d’Utilisation du site IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\conditions_generales_utilisation.html:36
+msgid "Pour toute question, contactez-nous à"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\confidentialite.html:5
+msgid "Politique de Confidentialité - IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\confidentialite.html:13
+msgid "Politique de Confidentialité"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\confidentialite.html:15
+msgid ""
+"Protection des données et respect de votre vie privée sur la plateforme IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\confidentialite.html:42
+#: .\ngo\templates\ngo\partials\footer.html:13
+#, fuzzy
+#| msgid "Montant"
+msgid "Contact"
+msgstr "Amount"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:44
+msgid ""
+"Pour toute demande relative à la confidentialité ou à la gestion de vos "
+"données :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\confidentialite.html:58
+msgid ""
+"IGIA s’engage à respecter la vie privée de ses investisseurs, partenaires et "
+"porteurs de projets conformément aux lois internationales de protection des "
+"données."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:27
+msgid "Politique de Protection des Données Personnelles"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:42
+msgid "Consulter les Conditions Générales d’Utilisation"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:45
+#, fuzzy
+#| msgid "Nous Contacter"
+msgid "Contacter IGIA"
+msgstr "Contact-us"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:5
+#: .\ngo\templates\ngo\partials\navigation.html:56
+#, fuzzy
+#| msgid "Financement de startups"
+msgid "Financement IGIA"
+msgstr "Startup financing"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:19
+msgid "Financer une idée quand on n’a pas d’argent"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:22
+msgid ""
+"Des solutions simples et concrètes pour les auto-entrepreneurs, jeunes "
+"porteurs d’idées et travailleurs informels."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:26
+msgid "Soumettre mon idée"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:32
+#, fuzzy
+#| msgid "Notre Vision"
+msgid "Notre devise"
+msgstr "Our Vision"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:34 .\ngo\views.py:852
+msgid ""
+"IGIA combine mobilisation collective et financement solidaire (Crowdlending) "
+"et financement participatif (Crowdfunding) pour que chaque idée, qu’elle "
+"vienne d’un entrepreneur avec ou sans capital, ait une chance de devenir "
+"réalité."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:42
+msgid "Le défi"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:44
+msgid "Pas d'accès au crédit bancaire (pas de garanties ni d’historique)."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:45
+msgid "Trop petits ou trop risqués pour les investisseurs classiques."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:46
+msgid "Pas (ou peu) d’épargne personnelle pour démarrer."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:52
+msgid "Ce qu’ils ont malgré tout"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:54
+msgid "Une idée utile et un savoir-faire."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:55
+msgid "Une forte motivation."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:56
+msgid "Souvent un réseau local (famille, amis, diaspora)."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:68
+#, fuzzy
+#| msgid "Accueil - Financement Participatif"
+msgid "Qu’est-ce que le financement participatif ?"
+msgstr "Home - Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:69
+msgid ""
+"Le financement participatif (crowdfunding) permet à tout le monde de "
+"contribuer à un projet. Les contributeurs peuvent être des particuliers ou "
+"des investisseurs qui croient au projet."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:71
+msgid "Collecte de fonds auprès du grand public"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:72
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Suivi et transparence du projet"
+msgstr "Project submission"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:73
+msgid "Possibilité de dons, récompenses ou parts dans le projet"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:82
+msgid "Qu’est-ce que le financement inclusif ?"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:83
+msgid ""
+"Le financement inclusif (crowdlending ou micro-prêts solidaires) cible ceux "
+"qui n’ont pas accès aux banques ou investisseurs classiques. Il combine "
+"financement, mentorat et accompagnement."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:85
+msgid "Micro-prêts solidaires pour démarrer des projets"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:86
+#, fuzzy
+#| msgid "Accompagnement vers une modernisation durable."
+msgid "Accompagnement et suivi personnalisé"
+msgstr "Support towards sustainable modernization."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:87
+#, fuzzy
+#| msgid "Centres communautaires"
+msgid "Garanties communautaires ou symboliques"
+msgstr "Community centers"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:96
+msgid "Modèles de financement inclusif IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\financement_igia.html:112
+msgid "Avantages pour les porteurs de projet"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:5
+#: .\ngo\templates\ngo\partials\navigation.html:88
+msgid "Guide d'utilisation"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:12
+msgid "Guide d'utilisation IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:13
+msgid "Découvrez comment utiliser la plateforme selon votre profil."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:20
+#, fuzzy
+#| msgid "Cybersécurité"
+msgid "Note de sécurité :"
+msgstr "Cybersecurity"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:34
+msgid "Étapes à suivre :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:43
+#, fuzzy
+#| msgid "Dates importantes"
+msgid "Notes importantes :"
+msgstr "Important dates"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:54
+msgid "Avertissements :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:65
+msgid "Pourquoi :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:79
+msgid "Contactez IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:82
+msgid "Notre équipe vous accompagne à chaque étape."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:5
+#, fuzzy
+#| msgid "Projets réalisés | IGIA"
+msgid "Mentions légales - IGIA"
+msgstr "Completed projects | IGIA"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:13
+#: .\ngo\templates\ngo\partials\footer.html:46
+msgid "Mentions légales"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:14
+msgid "Transparence, sécurité et confiance dans chaque projet IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:22
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "1️. Informations générales"
+msgstr "Personal Information"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:23
+msgid "Société anonyme au capital de"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:24
+msgid "immatriculée au RCS de Utrecht (n° KVB 805 168 860)."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:26
+msgid "Siège social :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:27
+#: .\ngo\templates\ngo\info\reclamations.html:28
+#: .\ngo\templates\ngo\info\reclamations.html:55
+#, fuzzy
+#| msgid "Téléphone"
+msgid "Téléphone :"
+msgstr "Phone"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:28
+#: .\ngo\templates\ngo\info\reclamations.html:26
+#, fuzzy
+#| msgid "Email"
+msgid "Email :"
+msgstr "Email"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:29
+msgid "Directeur :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:31
+msgid "IGIA est agréée par l’AMF (PSFP n°2012-22)."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:38
+#, fuzzy
+#| msgid "Preuve de paiement"
+msgid "2️. Prestataire de paiement"
+msgstr "Payment proof"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:39
+msgid "Société au capital de 2 418 772,22 €, immatriculée au RCS d’Amsterdam."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:41
+#: .\ngo\templates\ngo\info\reclamations.html:27
+#: .\ngo\templates\ngo\info\reclamations.html:56
+msgid "Adresse :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:42
+msgid "Agrément ACPR :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:42
+msgid "depuis le 1er avril 2018"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:43
+#, fuzzy
+#| msgid "Montant"
+msgid "Contact :"
+msgstr "Amount"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:51
+msgid "3️. Hébergement"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:52
+msgid "650 7th Street, San Francisco, CA 94103"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:54
+msgid "Politique de sécurité"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:61
+msgid "4️. Réclamations"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:62
+msgid ""
+"IGIA veille à la satisfaction de ses investisseurs. En cas de problème, "
+"contactez-nous :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:63
+msgid "Accéder au formulaire de contact"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:70
+#, fuzzy
+#| msgid "Comité d’investissement"
+msgid "5️. Risques liés à l’investissement"
+msgstr "Investment Committee"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:71
+msgid ""
+"Tout investissement comporte un risque de perte partielle ou totale. Ces "
+"placements ne bénéficient pas d'une garantie de l’État ni des dispositifs "
+"européens d’indemnisation."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:73
+msgid "Conseil :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:73
+#, python-format
+msgid ""
+"Ne pas investir plus de 10 %% de votre patrimoine dans des projets "
+"participatifs."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:81
+msgid "6️. Gestion internationale des risques"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:82
+msgid ""
+"Depuis plus de 15 ans, IGIA opère en Asie, Amérique du Sud et Afrique, avec "
+"une approche proactive de gestion des risques."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:99 .\ngo\views.py:1005
+msgid "Politique & Juridique"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:102 .\ngo\views.py:1006
+msgid "Économique & Monétaire"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:105 .\ngo\views.py:1007
+msgid "Infrastructures & Logistique"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:108 .\ngo\views.py:1008
+msgid "Social & Culturel"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:111 .\ngo\views.py:1009
+msgid "Environnement & Climat"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:114 .\ngo\views.py:1010
+#, fuzzy
+#| msgid "Transparence"
+msgid "Gouvernance & Transparence"
+msgstr "Transparency"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:125
+msgid ""
+"« L’investissement dans le tiers monde n’est pas une aventure risquée, mais "
+"une opportunité maîtrisée et durable. »"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:128
+msgid "IGIA, le partenaire de la finance inclusive et responsable."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:5
+msgid "Réclamations - IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:13
+#: .\ngo\templates\ngo\partials\footer.html:48
+#, fuzzy
+#| msgid "Régions"
+msgid "Réclamations"
+msgstr "Regions"
+
+#: .\ngo\templates\ngo\info\reclamations.html:15
+msgid ""
+"Procédure transparente pour le traitement équitable des réclamations IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:23
+msgid "1. Dépôt et réception de la réclamation"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:24
+msgid ""
+"Les réclamations peuvent être déposées par email, courrier ou via le modèle "
+"PDF disponible sur le site. Un accusé de réception est envoyé sous 10 jours "
+"ouvrables."
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:50 .\ngo\views.py:1093
+msgid "Médiation"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\reclamations.html:51
+msgid "En cas d’insatisfaction, vous pouvez contacter le médiateur agréé :"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\what_we_do.html:5
+msgid "Que faisons-nous ? | IGIA"
+msgstr "What do we do? | IGIA"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:11
+msgid "Que faisons-nous ?"
+msgstr "What do we do?"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:13
+msgid ""
+"Découvrez comment IGIA transforme les idées en projets concrets grâce à un "
+"accompagnement structuré et des domaines d’intervention variés."
+msgstr ""
+"Discover how IGIA transforms ideas into concrete projects thanks to "
+"structured support and varied areas of intervention."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:21
+msgid "Étapes de Validation d’un Projet"
+msgstr "Stages of Project Validation"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:23
+msgid ""
+"Chaque projet suit un parcours rigoureux pour garantir sa faisabilité, sa "
+"conformité et son impact."
+msgstr ""
+"Each project follows a rigorous process to ensure its feasibility, "
+"compliance and impact."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:34
+msgid "Acteurs"
+msgstr "Actors"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:37
+msgid "Étape"
+msgstr ""
+
+#: .\ngo\templates\ngo\info\what_we_do.html:47
+msgid "Nos Domaines d’Intervention"
+msgstr "Our Areas of Intervention"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:49
+msgid ""
+"Nous intervenons dans des secteurs stratégiques pour promouvoir "
+"l’entrepreneuriat, l’innovation et le développement durable."
+msgstr ""
+"We operate in strategic sectors to promote entrepreneurship, innovation and "
+"sustainable development."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:76
+msgid "Notre Vision"
+msgstr "Our Vision"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:78
+msgid ""
+"Accompagner, financer et propulser les porteurs de projets vers un succès "
+"durable,\n"
+"      au service du développement local et de la jeunesse."
+msgstr ""
+"Support, finance and propel project leaders towards success sustainable,\n"
+"      serving local development and youth."
+
+#: .\ngo\templates\ngo\partials\footer.html:21
+msgid "Découvrez IGIA"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\footer.html:23
+#, fuzzy
+#| msgid "Notre Équipe"
+msgid "Notre Equipe"
+msgstr "Our Team"
+
+#: .\ngo\templates\ngo\partials\footer.html:26
+#, fuzzy
+#| msgid "Partenaire"
+msgid "Nos Partenaire"
+msgstr "Partner"
+
+#: .\ngo\templates\ngo\partials\footer.html:27
+#, fuzzy
+#| msgid "Témoignages"
+msgid "Temoignages"
+msgstr "Testimonials"
+
+#: .\ngo\templates\ngo\partials\footer.html:33
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Projets & Campagnes"
+msgstr "Campaigns"
+
+#: .\ngo\templates\ngo\partials\footer.html:35
+#, fuzzy
+#| msgid "Catégorie"
+msgid "Categorie"
+msgstr "Category"
+
+#: .\ngo\templates\ngo\partials\footer.html:37
+msgid "Campagnes Crowdfunding"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\footer.html:38
+#, fuzzy
+#| msgid "Campagnes de prêt"
+msgid "Campagnes Crowdlending"
+msgstr "Loan campaigns"
+
+#: .\ngo\templates\ngo\partials\footer.html:44
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "Informations légales"
+msgstr "Personal Information"
+
+#: .\ngo\templates\ngo\partials\footer.html:47
+msgid "Confidentialité"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\footer.html:49
+msgid "Conditions générales d'utilisation"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\footer.html:50 .\ngo\views.py:1203
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "Données personnelles"
+msgstr "Personal Information"
+
+#: .\ngo\templates\ngo\partials\footer.html:58
+msgid "Tous droits réservés."
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\footer.html:60
+msgid ""
+"La plateforme active et participative pour rechercher des financements : "
+"adhésion, dons, crowdfunding,crowdlending, boutique en ligne, billetterie… "
+"Lancez-vous !"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:21
+msgid "Accueil"
+msgstr "Home"
+
+#: .\ngo\templates\ngo\partials\navigation.html:24
+msgid "Découvrir"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:32
+#, fuzzy
+#| msgid "Qui sommes-nous ?"
+msgid "Qui sommes-nous?"
+msgstr "Who are we ?"
+
+#: .\ngo\templates\ngo\partials\navigation.html:40
+#, fuzzy
+#| msgid "Que faisons-nous ?"
+msgid "Que faisons-nous?"
+msgstr "What do we do?"
+
+#: .\ngo\templates\ngo\partials\navigation.html:48
+msgid "Agreement et Securite"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:64
+msgid "Actualité"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:80
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Liste des projets"
+msgstr "Project submission"
+
+#: .\ngo\templates\ngo\partials\navigation.html:104
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes paticipatives"
+msgstr "Campaigns"
+
+#: .\ngo\templates\ngo\partials\navigation.html:112
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes inclusives"
+msgstr "Campaigns"
+
+#: .\ngo\templates\ngo\partials\navigation.html:119
+msgid "Représentativité"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:123
+msgid "Connexion"
+msgstr ""
+
+#: .\ngo\templates\ngo\partials\navigation.html:147
+#, fuzzy
+#| msgid "Intermédiaire"
+msgid "Intermediaire"
+msgstr "Intermediary"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:5
+#: .\ngo\templates\ngo\partner\partner_list.html:16
+#, fuzzy
+#| msgid "Partenaires"
+msgid "Nos Partenaires"
+msgstr "Partners"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:18
+msgid ""
+"Découvrez les organisations qui collaborent avec IGIA pour un impact global."
+msgstr ""
+
+#: .\ngo\templates\ngo\partner\partner_list.html:31
+#, fuzzy
+#| msgid "Partenaires"
+msgid "Nos partenaires actifs"
+msgstr "Partners"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:33
+msgid ""
+"Filtrez les partenaires selon leur type et découvrez la diversité de notre "
+"réseau."
+msgstr ""
+
+#: .\ngo\templates\ngo\partner\partner_list.html:40
+msgid "Tous"
+msgstr ""
+
+#: .\ngo\templates\ngo\partner\partner_list.html:73
+msgid "Visiter le site"
+msgstr ""
+
+#: .\ngo\templates\ngo\partner\partner_list.html:90
+#, fuzzy
+#| msgid "Aucune campagne active pour le moment."
+msgid "Aucun partenaire actif pour le moment."
+msgstr "No active campaigns at the moment."
+
+#: .\ngo\templates\ngo\projet\project_detail.html:26
+#, fuzzy
+#| msgid "Photos de projet"
+msgid "Détails du projet"
+msgstr "Project photos"
+
+#: .\ngo\templates\ngo\projet\project_list.html:5
+msgid "Projets réalisés | IGIA"
+msgstr "Completed projects | IGIA"
+
+#: .\ngo\templates\ngo\projet\project_list.html:27
+#: .\ngo\templates\ngo\projet\project_list.html:88
+msgid "Voir plus"
+msgstr "See more"
+
+#: .\ngo\templates\ngo\projet\project_list.html:48
+msgid "Tous les pays"
+msgstr "All Countries"
+
+#: .\ngo\templates\ngo\projet\project_list.html:56
+#, fuzzy
+#| msgid "Catégories"
+msgid "Toutes les catégories"
+msgstr "All Categories"
+
+#: .\ngo\templates\ngo\projet\project_list.html:63
+msgid "Filtrer"
+msgstr "Filter"
+
+#: .\ngo\templates\ngo\projet\project_list.html:72
+#, fuzzy
+#| msgid "Photos de projet"
+msgid "Tous les projets"
+msgstr "Project photos"
+
+#: .\ngo\templates\ngo\projet\project_list.html:94
+msgid "Aucun projet trouvé."
+msgstr "No projects found."
+
+#: .\ngo\templates\ngo\team\team_list.html:12
+msgid "Rencontrez les talents qui font battre le cœur de notre organisation"
+msgstr ""
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:16
+msgid "Découvrez des entrepreneurs qui nous disent leur gratitude."
+msgstr ""
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:27
+#, fuzzy
+#| msgid "Profils entrepreneurs"
+msgid "Ce que disent nos entrepreneurs"
+msgstr "Entrepreneur Profiles"
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:28
+msgid "Chaque témoignage raconte une expérience unique avec IGIA."
+msgstr ""
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:61
+#, fuzzy
+#| msgid "Aucune catégorie disponible pour le moment."
+msgid "Aucun témoignage disponible pour le moment."
+msgstr "No categories available at the moment."
+
+#: .\ngo\views.py:623
+msgid "Dépôt du dossier de projet"
+msgstr "Submission of the project file"
+
+#: .\ngo\views.py:624
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Porteur de projet"
+msgstr "Project photo"
+
+#: .\ngo\views.py:625
+msgid ""
+"Soumission du projet avec business plan, besoin de financement et pièces "
+"administratives."
+msgstr ""
+"Submission of the project with business plan, financing requirements and "
+"administrative documents"
+
+#: .\ngo\views.py:627
+msgid "Étude de recevabilité"
+msgstr "Admissibility study"
+
+#: .\ngo\views.py:628
+msgid "Cabinet d’accompagnement"
+msgstr "Support office"
+
+#: .\ngo\views.py:629
+msgid "Analyse de la complétude et cohérence du dossier avant instruction."
+msgstr ""
+"Analysis of the completeness and consistency of the file before instruction."
+
+#: .\ngo\views.py:631
+msgid "Analyse technique et économique"
+msgstr "Technical and economic analysis"
+
+#: .\ngo\views.py:632
+msgid "Experts IGIA"
+msgstr "Experts IGIA"
+
+#: .\ngo\views.py:633
+msgid "Étude du modèle économique et de la faisabilité du projet."
+msgstr "Study of the economic model and feasibility of the project."
+
+#: .\ngo\views.py:635
+msgid "Contrôle de conformité légale"
+msgstr "Legal compliance control"
+
+#: .\ngo\views.py:636
+msgid "Cabinet juridique"
+msgstr "Law firm"
+
+#: .\ngo\views.py:637
+msgid "Vérification de la conformité réglementaire et administrative."
+msgstr "Verification of regulatory and administrative compliance."
+
+#: .\ngo\views.py:639
+msgid "Validation financière"
+msgstr "Financial validation"
+
+#: .\ngo\views.py:640
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Comité financier"
+msgstr "Financial goal"
+
+#: .\ngo\views.py:641
+msgid "Évaluation financière et recommandation du mode de financement."
+msgstr "Financial assessment and recommendation of financing method."
+
+#: .\ngo\views.py:643
+msgid "Comité d’agrément"
+msgstr "Approval Committee"
+
+#: .\ngo\views.py:644
+msgid "Comité d’investissement"
+msgstr "Investment Committee"
+
+#: .\ngo\views.py:645
+msgid "Décision finale sur le financement du projet."
+msgstr "Final decision on project funding."
+
+#: .\ngo\views.py:647
+msgid "Mise en ligne sur IGIA"
+msgstr "Online IGIA web Platform"
+
+#: .\ngo\views.py:648
+msgid "Équipe IT & Com"
+msgstr "IT & Com Team"
+
+#: .\ngo\views.py:649
+msgid "Publication du projet sur la plateforme pour levée de fonds."
+msgstr "Publication of the project on the platform for fundraising."
+
+#: .\ngo\views.py:651
+msgid "Suivi post-validation"
+msgstr "Post-validation monitoring"
+
+#: .\ngo\views.py:652
+msgid "Cabinet de suivi"
+msgstr "Monitoring office"
+
+#: .\ngo\views.py:653
+msgid "Accompagnement et évaluation trimestrielle du projet."
+msgstr "Support and quarterly evaluation of the project."
+
+#: .\ngo\views.py:658
+#, fuzzy
+#| msgid "Entrepreneur"
+msgid "Entrepreneuriat & Innovation"
+msgstr "Entrepreneur & Innovation"
+
+#: .\ngo\views.py:659
+msgid "Soutenir les jeunes et startups à fort potentiel."
+msgstr "Supporting young people and startups with high potential."
+
+#: .\ngo\views.py:661
+msgid "Financement de startups"
+msgstr "Startup financing"
+
+#: .\ngo\views.py:661
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Incubation de projets"
+msgstr "Project submission"
+
+#: .\ngo\views.py:661
+msgid "Création de TPE/PME"
+msgstr "Creation of VSE/SME"
+
+#: .\ngo\views.py:661
+msgid "Innovation sociale"
+msgstr "Social innovation"
+
+#: .\ngo\views.py:662
+msgid "Agriculture & Développement rural"
+msgstr "Agriculture and Rural Development"
+
+#: .\ngo\views.py:663
+msgid "Appuyer la sécurité alimentaire et l’économie verte."
+msgstr "Support food security and the green economy."
+
+#: .\ngo\views.py:665
+msgid "Agriculture durable"
+msgstr "Sustainable agriculture"
+
+#: .\ngo\views.py:665
+msgid "Élevage et pisciculture"
+msgstr "Livestock and fish farming"
+
+#: .\ngo\views.py:665
+msgid "Transformation agroalimentaire"
+msgstr "Food processing"
+
+#: .\ngo\views.py:666
+msgid "Technologie & Numérique"
+msgstr "Technology & Digital"
+
+#: .\ngo\views.py:667
+msgid "Encourager l’innovation technologique."
+msgstr "Encourage technological innovation."
+
+#: .\ngo\views.py:669
+msgid "Startups tech"
+msgstr "Tech startups"
+
+#: .\ngo\views.py:669
+msgid "Solutions fintech"
+msgstr "Fintech solutions"
+
+#: .\ngo\views.py:669
+msgid "Cybersécurité"
+msgstr "Cybersecurity"
+
+#: .\ngo\views.py:669
+msgid "E-learning"
+msgstr "E-learning"
+
+#: .\ngo\views.py:670
+msgid "Éducation & Emploi"
+msgstr "Education and Employment"
+
+#: .\ngo\views.py:671
+msgid "Former et insérer les jeunes."
+msgstr "Train and integrate young people."
+
+#: .\ngo\views.py:673
+msgid "Formation professionnelle"
+msgstr "Vocational training"
+
+#: .\ngo\views.py:673
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Éducation financière"
+msgstr "Financial goal"
+
+#: .\ngo\views.py:673
+msgid "Mentorat"
+msgstr "Mentoring"
+
+#: .\ngo\views.py:674
+msgid "Énergie & Environnement"
+msgstr "Energy & Environment"
+
+#: .\ngo\views.py:675
+msgid "Favoriser la transition écologique."
+msgstr "Promote ecological transition."
+
+#: .\ngo\views.py:677
+msgid "Énergies renouvelables"
+msgstr "Renewable energies"
+
+#: .\ngo\views.py:677
+msgid "Recyclage"
+msgstr "Recycling"
+
+#: .\ngo\views.py:677
+#, fuzzy
+#| msgid "Paiement"
+msgid "Reboisement"
+msgstr "Payment"
+
+#: .\ngo\views.py:678
+msgid "Santé & Bien-être"
+msgstr "Health & Wellness"
+
+#: .\ngo\views.py:679
+msgid "Promouvoir l’accès équitable à la santé."
+msgstr "Promote equitable access to health."
+
+#: .\ngo\views.py:681
+msgid "Centres communautaires"
+msgstr "Community centers"
+
+#: .\ngo\views.py:681
+msgid "Télé-médecine"
+msgstr "Telemedicine"
+
+#: .\ngo\views.py:681
+#, fuzzy
+#| msgid "Contribution"
+msgid "Nutrition"
+msgstr "Contribution"
+
+#: .\ngo\views.py:682
+msgid "Transport & Petits Métiers"
+msgstr "Transport & Small Trades"
+
+#: .\ngo\views.py:683
+msgid "Soutenir les acteurs du quotidien et les petits entrepreneurs."
+msgstr "Support everyday actors and small entrepreneurs."
+
+#: .\ngo\views.py:685
+msgid "Moto-taxi, taxi, transport local"
+msgstr "Motorcycle taxi, taxi, local transport"
+
+#: .\ngo\views.py:685
+msgid "Call-box et salons de coiffure"
+msgstr "Call boxes and hair salons"
+
+#: .\ngo\views.py:685
+msgid "Bars, cafés et petits commerces"
+msgstr "Bars, cafes and small shops"
+
+#: .\ngo\views.py:685
+msgid "Artisanat et ateliers mécaniques"
+msgstr "Crafts and mechanical workshops"
+
+#: .\ngo\views.py:695
+msgid "Plateforme agréée DNB"
+msgstr ""
+
+#: .\ngo\views.py:696
+msgid ""
+"IGIA est enregistrée auprès des autorités financières et agréée par "
+"l’Autorité des Marchés Financiers."
+msgstr ""
+
+#: .\ngo\views.py:698
+msgid "Label Croissance Verte"
+msgstr ""
+
+#: .\ngo\views.py:699
+msgid ""
+"IGIA est reconnue pour son engagement envers la durabilité et la "
+"transparence des financements."
+msgstr ""
+
+#: .\ngo\views.py:701
+msgid "Confiance et transparence"
+msgstr ""
+
+#: .\ngo\views.py:702
+msgid ""
+"Nous veillons à ce que chaque projet respecte les exigences éthiques et "
+"environnementales."
+msgstr ""
+
+#: .\ngo\views.py:708
+msgid ""
+"L’ensemble du site IGIA est protégé par le protocole HTTPS pour garantir la "
+"sécurité des échanges."
+msgstr ""
+
+#: .\ngo\views.py:710
+msgid ""
+"Les opérations sont gérées via des protocoles de paiement semi-automatiques "
+"pour éviter tout risque de fraude."
+msgstr ""
+
+#: .\ngo\views.py:712
+msgid ""
+"Votre mot de passe reste confidentiel et vos données ne sont jamais "
+"partagées avec des tiers."
+msgstr ""
+
+#: .\ngo\views.py:714
+msgid ""
+"Nos partenaires bancaires et opérateurs assurent la continuité et la "
+"sécurité des opérations même en cas d’incident."
+msgstr ""
+
+#: .\ngo\views.py:735
+msgid "Financement Corporate / Bridge / Mezzanine"
+msgstr ""
+
+#: .\ngo\views.py:737
+msgid ""
+"IGIA structure des financements participatifs allant jusqu'à 10 M€, en "
+"associant notre plateforme et nos partenaires financiers. Nous adaptons les "
+"solutions corporate, bridge ou mezzanine selon le stade de développement des "
+"projets."
+msgstr ""
+
+#: .\ngo\views.py:744
+msgid "Financements à vocation territoriale"
+msgstr ""
+
+#: .\ngo\views.py:746
+msgid ""
+"IGIA favorise l’adhésion des citoyens dès la phase de développement des "
+"projets. Nous proposons des modalités sur-mesure et une communication "
+"spécifique pour les territoires et riverains."
+msgstr ""
+
+#: .\ngo\views.py:752
+msgid "Financements liés aux AO / AMI"
+msgstr ""
+
+#: .\ngo\views.py:754
+msgid ""
+"Pour les appels d’offres nationaux et territoriaux, IGIA accompagne les "
+"projets afin d’optimiser leur sélection grâce à l’expertise en financement "
+"participatif et à la structuration de dossiers complets."
+msgstr ""
+
+#: .\ngo\views.py:762
+msgid "Analyse financière complète du projet"
+msgstr ""
+
+#: .\ngo\views.py:763
+msgid "Rédaction et vérification de la documentation contractuelle"
+msgstr ""
+
+#: .\ngo\views.py:764
+msgid "Présentation du projet à notre communauté d'investisseurs"
+msgstr ""
+
+#: .\ngo\views.py:765
+msgid "Communication adaptée avant, pendant et après la collecte"
+msgstr ""
+
+#: .\ngo\views.py:766
+msgid "Suivi des souscriptions et clôture de l’opération"
+msgstr ""
+
+#: .\ngo\views.py:767
+msgid "Suivi des transactions et reporting aux investisseurs"
+msgstr ""
+
+#: .\ngo\views.py:771
+msgid "IGIA ne prélève aucun frais aux investisseurs."
+msgstr ""
+
+#: .\ngo\views.py:772
+#, python-format
+msgid ""
+"Pour chaque levée de fonds réussie, un pourcentage compris entre 2 %% et 6 "
+"%% du montant collecté est facturé au porteur de projet."
+msgstr ""
+
+#: .\ngo\views.py:773
+msgid "Frais de mise en ligne détaillés par devis selon le projet."
+msgstr ""
+
+#: .\ngo\views.py:774
+msgid "Frais de communication éventuels, également détaillés par devis."
+msgstr ""
+
+#: .\ngo\views.py:779
+msgid "Opérations à enjeu local"
+msgstr ""
+
+#: .\ngo\views.py:781
+#, python-format
+msgid ""
+"IGIA associe les citoyens et riverains au financement des projets, créant "
+"une appropriation locale et favorisant le développement territorial. Nous "
+"atteignons jusqu'à 100%% des objectifs de collecte grâce aux investisseurs "
+"locaux."
+msgstr ""
+
+#: .\ngo\views.py:788
+msgid "Opérations d’envergure jusqu’à 10 M€"
+msgstr ""
+
+#: .\ngo\views.py:790
+msgid ""
+"Avec notre communauté d’investisseurs et nos partenaires financiers, IGIA "
+"structure des financements jusqu'à 10 M€. Nous accompagnons chaque projet "
+"dans la structuration, la documentation contractuelle et la visibilité de "
+"l’opération."
+msgstr ""
+
+#: .\ngo\views.py:802
+msgid "Financement d’Amorçage Solidaire"
+msgstr ""
+
+#: .\ngo\views.py:804
+msgid ""
+"Ce modèle s’adresse aux porteurs d’idées ou micro-projets à fort impact "
+"local. Il permet de recevoir un micro-capital (0 à 2 000 €) grâce à des dons "
+"ou micro-investissements, débloqués progressivement selon l’avancement du "
+"projet. L’entrepreneur bénéficie d’un accompagnement obligatoire par un "
+"mentor IGIA."
+msgstr ""
+
+#: .\ngo\views.py:812
+#, fuzzy
+#| msgid "Financement Participatif"
+msgid "Financement Communautaire Garanti"
+msgstr "Crowdfunding"
+
+#: .\ngo\views.py:814
+msgid ""
+"Le porteur de projet mobilise son entourage ou sa communauté (amis, famille, "
+"diaspora) pour garantir symboliquement son projet. Une fois un seuil "
+"atteint, IGIA ou un partenaire complète le montant restant. C’est un modèle "
+"de solidarité encadrée, où la réussite du projet profite à tous."
+msgstr ""
+
+#: .\ngo\views.py:822
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "Financement par Mise à Disposition d’Actif"
+msgstr "Crowdfunding & Crowdlending"
+
+#: .\ngo\views.py:824
+msgid ""
+"IGIA ou un investisseur achète un bien productif (voiture, moto, fauteuil, "
+"matériel). Le bénéficiaire l’utilise via une location avec option d’achat ou "
+"un micro-crédit souple. Les revenus générés servent à rembourser l’actif, "
+"menant à une autonomie complète en 12 à 36 mois."
+msgstr ""
+
+#: .\ngo\views.py:831
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "Financement par Tiers de Confiance"
+msgstr "Crowdfunding & Crowdlending"
+
+#: .\ngo\views.py:833
+msgid ""
+"IGIA collabore avec des intermédiaires locaux agréés (ONG, incubateurs, "
+"coopératives). Ces partenaires reçoivent les fonds et accompagnent les "
+"porteurs de projets sur le terrain. Ce modèle réduit les risques et garantit "
+"un suivi éthique et durable."
+msgstr ""
+
+#: .\ngo\views.py:842
+msgid "Accessibilité"
+msgstr ""
+
+#: .\ngo\views.py:842
+msgid "Ouvert à tous les porteurs d’idées, même sans capital initial."
+msgstr ""
+
+#: .\ngo\views.py:843
+#, fuzzy
+#| msgid "Paiement"
+msgid "Encadrement"
+msgstr "Payment"
+
+#: .\ngo\views.py:843
+msgid ""
+"Chaque bénéficiaire est accompagné par un mentor ou un partenaire agréé."
+msgstr ""
+
+#: .\ngo\views.py:844
+msgid "Les fonds sont débloqués étape par étape, selon les résultats concrets."
+msgstr ""
+
+# ---------- IntermediaireProfile model ----------
+#: .\ngo\views.py:845
+#, fuzzy
+#| msgid "Organisation"
+msgid "Autonomisation"
+msgstr "Organization"
+
+#: .\ngo\views.py:845
+msgid ""
+"Les modèles visent à créer de véritables propriétaires et entrepreneurs."
+msgstr ""
+
+#: .\ngo\views.py:876 .\ngo\views.py:896 .\ngo\views.py:919
+msgid "Connectez-vous au Dashboard."
+msgstr ""
+
+#: .\ngo\views.py:877
+msgid "Cliquez sur 'Créer un projet'."
+msgstr ""
+
+#: .\ngo\views.py:878
+msgid ""
+"Remplissez le formulaire : titre, description, montant, durée, type de "
+"financement (crowdfunding/crowdlending), contreparties."
+msgstr ""
+
+#: .\ngo\views.py:879
+msgid "Acquittez-vous des frais de soumission."
+msgstr ""
+
+#: .\ngo\views.py:880
+msgid "Après approbation, votre projet sera visible sur la plateforme."
+msgstr ""
+
+#: .\ngo\views.py:883
+msgid ""
+"Facilités de paiement disponibles selon votre région et votre pays de "
+"résidence."
+msgstr ""
+
+#: .\ngo\views.py:884
+msgid "Crowdfunding : contrepartie ou produit."
+msgstr ""
+
+#: .\ngo\views.py:885
+msgid "Crowdlending : remboursement avec intérêts."
+msgstr ""
+
+#: .\ngo\views.py:888
+msgid ""
+"Projets visibles uniquement après validation : tous les projets doivent être "
+"soumis et validés par IGIA avant de pouvoir recevoir des fonds."
+msgstr ""
+
+#: .\ngo\views.py:889
+msgid ""
+"Recevoir des fonds directement d’investisseurs en dehors de la plateforme "
+"peut entraîner la suspension du projet et l'exclusion définitive."
+msgstr ""
+
+#: .\ngo\views.py:890
+msgid ""
+"La plateforme ne pourra pas gérer les remboursements ni calculer les "
+"intérêts si c’est fait en dehors du site."
+msgstr ""
+
+#: .\ngo\views.py:897
+msgid "Cliquez sur 'Explorer les projets'."
+msgstr ""
+
+#: .\ngo\views.py:898
+msgid ""
+"Filtrez selon vos critères : montant minimal, type de financement, durée, "
+"secteur."
+msgstr ""
+
+#: .\ngo\views.py:899
+msgid ""
+"Consultez la page détaillée : taux, durée, montant minimum, risques, "
+"modalités de remboursement."
+msgstr ""
+
+#: .\ngo\views.py:900
+msgid ""
+"Cliquez sur 'Investir maintenant', choisissez le montant et confirmez le "
+"paiement."
+msgstr ""
+
+#: .\ngo\views.py:903
+msgid "Crowdfunding : soutien et contrepartie."
+msgstr ""
+
+#: .\ngo\views.py:904
+msgid "Crowdlending : prêt avec intérêts."
+msgstr ""
+
+#: .\ngo\views.py:907
+msgid ""
+"Toujours passer par la plateforme IGIA : les investissements doivent être "
+"effectués via le site."
+msgstr ""
+
+#: .\ngo\views.py:908
+msgid ""
+"Ne jamais verser directement de l’argent à l’entrepreneur sans passer par la "
+"plateforme."
+msgstr ""
+
+#: .\ngo\views.py:911
+#, fuzzy
+#| msgid "Code de transaction"
+msgid "Sécurisation des transactions."
+msgstr "Transaction code"
+
+#: .\ngo\views.py:912
+msgid "Suivi des remboursements et intérêts dans le cadre du crowdlending."
+msgstr ""
+
+#: .\ngo\views.py:913
+msgid "Garantie de conformité aux conditions de financement."
+msgstr ""
+
+#: .\ngo\views.py:920
+#, fuzzy
+#| msgid "Paiements intermédiaires"
+msgid "Cliquez sur 'Mes Intermédiaires'."
+msgstr "Intermediary payments"
+
+#: .\ngo\views.py:921
+msgid ""
+"Ajoutez les projets que vous représentez et les entrepreneurs que vous "
+"accompagnez."
+msgstr ""
+
+#: .\ngo\views.py:922
+msgid "Soumettez les projets pour le compte de l’entrepreneur si nécessaire."
+msgstr ""
+
+#: .\ngo\views.py:923
+msgid ""
+"Suivez l’avancement des investissements et recevez vos commissions "
+"automatiquement."
+msgstr ""
+
+#: .\ngo\views.py:926
+msgid ""
+"Facilite la collecte de fonds et simplifie le processus pour les "
+"entrepreneurs et investisseurs."
+msgstr ""
+
+#: .\ngo\views.py:929
+msgid ""
+"Respect strict du processus IGIA : les intermédiaires ne doivent pas "
+"contourner la plateforme."
+msgstr ""
+
+#: .\ngo\views.py:930
+msgid "Toutes les transactions doivent passer par IGIA."
+msgstr ""
+
+#: .\ngo\views.py:931
+msgid ""
+"Les commissions sont calculées uniquement sur les investissements effectués "
+"via la plateforme."
+msgstr ""
+
+#: .\ngo\views.py:938
+msgid "Protection contre les emails frauduleux"
+msgstr ""
+
+#: .\ngo\views.py:940
+msgid "Tous les emails officiels IGIA proviennent du domaine @igia.com."
+msgstr ""
+
+#: .\ngo\views.py:941
+msgid ""
+"Tout email venant d’une adresse différente doit être considéré comme suspect."
+msgstr ""
+
+#: .\ngo\views.py:942
+msgid ""
+"IGIA ne demande jamais de transférer de l’argent en dehors de la plateforme "
+"ni vos identifiants de compte par email."
+msgstr ""
+
+#: .\ngo\views.py:943
+msgid ""
+"Suivant chaque région et pays IGIA ne fait des transactions qu'avec ses "
+"partenaires agréés et ses partenaires sont communiqués lors des paiements."
+msgstr ""
+
+#: .\ngo\views.py:944
+msgid ""
+"Vérifiez toujours le Dashboard IGIA pour confirmer toute demande "
+"d’investissement ou transaction."
+msgstr ""
+
+#: .\ngo\views.py:945
+msgid ""
+"Ne transférez jamais d’argent ni ne communiquez vos identifiants en dehors "
+"de la plateforme."
+msgstr ""
+
+#: .\ngo\views.py:946
+msgid ""
+"Ne cliquez jamais sur des liens ou téléchargez des fichiers provenant de "
+"sources inconnues."
+msgstr ""
+
+#: .\ngo\views.py:947
+msgid "En cas de suspicion, signalez immédiatement l'email à contact@igia.com."
+msgstr ""
+
+#: .\ngo\views.py:948
+msgid ""
+"Vérifiez toujours votre Dashboard IGIA avant de confirmer toute transaction."
+msgstr ""
+
+#: .\ngo\views.py:1005
+msgid "Assurances MIGA, arbitrage international, partenaires certifiés."
+msgstr ""
+
+#: .\ngo\views.py:1006
+msgid "Couverture de change, diversification, devises fortes."
+msgstr ""
+
+#: .\ngo\views.py:1007
+msgid "Plan logistique, zones viabilisées, technologie verte."
+msgstr ""
+
+#: .\ngo\views.py:1008
+msgid "Dialogue communautaire, emploi local, RSE."
+msgstr ""
+
+#: .\ngo\views.py:1009
+msgid "Études d’impact, technologies durables, plans de résilience."
+msgstr ""
+
+#: .\ngo\views.py:1010
+msgid "Audit externe, suivi digital IGIA, normes ISO 37001."
+msgstr ""
+
+#: .\ngo\views.py:1026
+msgid "1. Protection des données personnelles"
+msgstr ""
+
+#: .\ngo\views.py:1028
+msgid ""
+"IGIA respecte la législation en matière de protection des données (loi "
+"Informatique et Libertés du 6 janvier 1978). Le site est déclaré auprès du "
+"Department of Constitutional Affairs and Legislation (DCAL) sous le numéro "
+"1807840. Les données collectées ne sont jamais utilisées à des fins "
+"publicitaires. Les utilisateurs disposent de droits d’accès, de "
+"rectification et d’opposition (articles 26, 34 à 38 et 36). Ces droits "
+"peuvent être exercés via le compte IGIA ou à l’adresse : contact@igia.com."
+msgstr ""
+
+#: .\ngo\views.py:1036
+msgid "2. Sécurité et confidentialité des comptes"
+msgstr ""
+
+#: .\ngo\views.py:1038
+msgid ""
+"IGIA ne demandera jamais de mot de passe par téléphone ou e-mail. "
+"L’utilisateur doit se déconnecter après chaque session, en particulier sur "
+"un poste partagé. Les informations relatives aux projets financiers sont "
+"strictement confidentielles et ne doivent pas être divulguées. L’utilisateur "
+"s’engage à ne pas les utiliser à d’autres fins que l’étude des projets."
+msgstr ""
+
+#: .\ngo\views.py:1045
+msgid "3. Politique de cookies"
+msgstr ""
+
+#: .\ngo\views.py:1047
+msgid ""
+"Le site IGIA utilise des cookies pour améliorer la navigation et collecter "
+"des statistiques d’utilisation. Les cookies ne contiennent aucune donnée "
+"personnelle et servent uniquement à identifier plus rapidement "
+"l’utilisateur. L’utilisateur peut désactiver les cookies via les paramètres "
+"de son navigateur, mais cela peut altérer certaines fonctionnalités."
+msgstr ""
+
+#: .\ngo\views.py:1072
+msgid "Dépôt d’une réclamation"
+msgstr ""
+
+#: .\ngo\views.py:1074
+msgid ""
+"La réclamation peut être envoyée par email, courrier ou via le modèle PDF "
+"disponible sur le site. IGIA accuse réception sous 10 jours ouvrables."
+msgstr ""
+
+#: .\ngo\views.py:1079
+#, fuzzy
+#| msgid "Type de paiement"
+msgid "Examen et traitement"
+msgstr "Payment type"
+
+#: .\ngo\views.py:1081
+msgid ""
+"IGIA évalue la clarté, la complétude et la recevabilité de la réclamation. "
+"Des informations complémentaires peuvent être demandées pour un traitement "
+"optimal."
+msgstr ""
+
+#: .\ngo\views.py:1086
+msgid "Décision et communication"
+msgstr ""
+
+#: .\ngo\views.py:1088
+msgid ""
+"Une réponse motivée est adressée dans un délai maximum de 30 jours ouvrés. "
+"Toute décision inclut les voies de recours possibles."
+msgstr ""
+
+#: .\ngo\views.py:1095
+msgid ""
+"En cas de désaccord, le réclamant peut saisir le Médiateur WTW : formulaire "
+"en ligne sur wtwco.com, téléphone +31 (0) 88 541 3000, ou courrier à "
+"l’Autorité des marchés financiers d’Amsterdam."
+msgstr ""
+
+#: .\ngo\views.py:1133
+msgid ""
+"Le document officiel des Conditions Générales d’Utilisation est "
+"temporairement indisponible dans votre langue. Veuillez réessayer "
+"ultérieurement ou contacter notre support à contact@igia.com."
+msgstr ""
+
+#: .\ngo\views.py:1153 .\ngo\views.py:1162
+msgid "Conditions Générales d’Utilisation"
+msgstr ""
+
+#: .\ngo\views.py:1155
+msgid ""
+"Découvrez les conditions générales d'utilisation de la plateforme IGIA : "
+"sécurité, transparence et conformité AMF."
+msgstr ""
+
+#: .\ngo\views.py:1160
+msgid "Applicables depuis le 9 novembre 2023"
+msgstr ""
+
+#: .\ngo\views.py:1163
+msgid "Sécurité, transparence et responsabilité pour chaque investisseur IGIA."
+msgstr ""
+
+#: .\ngo\views.py:1190
+msgid ""
+"La politique de protection des données personnelles est temporairement "
+"indisponible. Veuillez réessayer plus tard ou contacter notre équipe à "
+"contact@igia.com."
+msgstr ""
+
+#: .\ngo\views.py:1196
+msgid "Politique de protection des données personnelles"
+msgstr ""
+
+#: .\ngo\views.py:1198
+msgid ""
+"Découvrez comment IGIA protège vos données personnelles conformément au RGPD."
+msgstr ""
+
+#: .\ngo\views.py:1201
+msgid "Dernière mise à jour : 9 novembre 2023"
+msgstr ""
+
+#: .\ngo\views.py:1204
+msgid ""
+"Sécurité, transparence et confidentialité de vos informations avec IGIA."
+msgstr ""
+
+#: .\ngo\views.py:1221
+msgid "Restez informé des dernières actualités et projets d'IGIA."
+msgstr ""

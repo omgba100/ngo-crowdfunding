@@ -1,0 +1,502 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Accueil - Financement Participatif" %}{% endblock %}
+
+{% block content %}
+<div class="container my-2">
+
+  <!-- Hero / Bannière start -->
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <!-- Indicateurs -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="8"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="9"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'assets/img/slider/slide1.jpg' %}" class="d-block w-100" alt="slide1">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Bienvenue sur notre plateforme" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Un nouveau souffle pour vos projets" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide2.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Financement participatif" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Construisons l’avenir ensemble" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide3.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Des projets innovants" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Donnez vie à vos idées" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide4.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Petits Commerces" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Vous aussi êtes des entrepreneurs" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide5.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Presentez vos projets" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Suivit et Evaluation" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide6.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Collecte de fonds" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Organiser par des Campagnes" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide7.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Suivit des projets" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Par notre Communaute active" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide8.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Formation a la gestion" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Pour permettre l'autonomie" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide9.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Conseils et Astuces" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Pour reussir dans votre activité" %}</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/slider/slide10.jpg' %}" class="d-block w-100" alt="slide2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="animate__animated animate__fadeInDown">{% trans "Rejoignez la communauté" %}</h2>
+          <p class="animate__animated animate__fadeInUp">{% trans "Investissez dans l’avenir" %}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Hero / Bannière end -->
+  
+  <!-- tg-about-area-start -->
+  <section class="tg-about-area position-relative mt-4">
+
+    <!-- arrière-plan -->
+    <img class="tg-about-su-right-shape d-none d-xl-block" 
+         src="{% static 'assets/img/about/right-shape.png' %}" alt="">
+
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Colonne image -->
+        <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+          <div class="tg-about-su-thumb text-center">
+            <div class="tg-about-su-shape-2">
+              <img src="{% static 'assets/img/about/shape.png' %}" alt="">
+            </div>
+            <div class="tg-about-su-shape">
+              <img src="{% static 'assets/img/about/shape-2.png' %}" alt="">
+            </div>
+            <img src="{% static 'assets/img/about/thumb.png' %}" alt="Présentation">
+          </div>
+        </div>
+
+        <!-- Colonne contenu -->
+        <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+          <div class="tg-about-su-content-wrap ps-lg-5">
+            <div class="tg-location-section-title mb-4">
+              <h5 class="tg-section-su-subtitle mb-2">{% trans "Qui sommes-nous ?" %}</h5>
+              <h2 class="tg-section-su-title mb-3">
+                {% blocktrans %}Nous accordons une grande valeur aux petits métiers et à l’entrepreneuriat
+                par Un placement qui a du sens{% endblocktrans %}
+              </h2>
+              <p class="tg-section-su-para mb-4">
+                {% blocktrans %}Infinity Global Investment & Aid ( IGIA) est expert du financement participatif dédié 
+                et adaptés à l’écosystème Afrique, Asie, Europe et Amerique en valorisant les jeunes et en les accompagnant dans la mise en place de leur projet.{% endblocktrans %}
+              </p>
+            </div>
+
+            <!-- Funfacts -->
+            <div class="tg-about-su-funfact-wrap mb-4">
+              <div class="tg-about-su-funfact-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="tg-about-su-funfact-icon">
+                  <img src="{% static 'assets/img/about/fun-3.png' %}" alt="">
+                </div>
+                <div class="tg-about-su-funfact-text">
+                  <h3>9,000+</h3>
+                  <span>{% trans "projets financés" %}</span>
+                </div>
+              </div>
+
+              <div class="tg-about-su-funfact-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="tg-about-su-funfact-icon">
+                  <img src="{% static 'assets/img/about/fun-2.png' %}" alt="">
+                </div>
+                <div class="tg-about-su-funfact-text">
+                  <h3>100 %</h3>
+                  <span>{% trans "collectes réussies" %}</span>
+                </div>
+              </div>
+              
+              <div class="tg-about-su-funfact-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="tg-about-su-funfact-icon">
+                  <img src="{% static 'assets/img/about/fun-1.png' %}" alt="">
+                </div>
+                <div class="tg-about-su-funfact-text">
+                  <h3>396 M € </h3>
+                  <span>{% trans "Montant investi" %}</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <a class="tg-btn" href="{% url 'about_us' %}">{% trans "En savoir plus" %}</a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- tg-about-area-end --> 
+
+  <!-- Derniers projets -->
+  <section class="py-5" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5" style="color: var(--text-title);" data-aos="fade-up">{% trans "Projets Récents" %}</h2>
+      <div class="row g-4">
+        {% for project in projects %}
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'50' }}">
+            <div class="project-card-tilt shadow-lg rounded-4 overflow-hidden position-relative">
+              <a href="{% url 'project_detail' project.slug %}" class="text-decoration-none">
+                {% if project.image %}
+                  <div class="project-img" style="background-image: url('{{ project.image.url }}');"></div>
+                {% else %}
+                  <div class="project-img" style="background-image: url('{% static 'assets/img/projects/default.jpg' %}');"></div>
+                {% endif %}
+              <div class="project-body p-3">
+                <h5 class="fw-bold text-dark">{{ project.title }}</h5>
+                <p class="text-muted small mb-2">{{ project.short_description|truncatechars:70 }}</p>
+                <!-- Progress bar -->
+                <div class="progress mb-2" style="height: 8px; border-radius: 8px; background-color: #e0e0e0;">
+                  <div class="progress-bar" role="progressbar" style="width: {{ project.progress_percentage }}%; background-color: var(--accent);" aria-valuenow="{{ project.progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small class="text-muted">{{ project.progress_percentage }}% {% trans "collecté" %}</small>
+              </div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Campagnes actives -->
+  <section class="campaigns-section py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 text-uppercase" style="color: var(--bg-tertiary);">
+        {% trans "Campagnes Actives" %}
+      </h2>
+      <p class="text-muted mb-5">{% trans "Découvrez les campagnes de financement en cours." %}</p>
+
+      <div class="row g-4 justify-content-center">
+        {% for campaign in campaigns %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="tilt-card campaign-card card border-0 rounded-4 overflow-hidden shadow-lg h-100"
+               data-tilt data-tilt-max="12" data-tilt-speed="500"
+               style="background: var(--bg-secondary); color: var(--text-white);">
+            
+            <!-- Image -->
+            {% if campaign.image %}
+              <img src="{{ campaign.image.url }}" class="card-img-top" alt="{{ campaign.title }}" style="height: 200px; object-fit: cover;">
+            {% else %}
+              <img src="{% static 'assets/img/placeholder-campaign.jpg' %}" class="card-img-top" alt="Placeholder" style="height: 200px; object-fit: cover;">
+            {% endif %}
+
+            <div class="card-body text-center p-4">
+              <h5 class="fw-bold mb-2 text-white">{{ campaign.title|truncatechars:50 }}</h5>
+              <p class="text-light small mb-3">{{ campaign.project.title|truncatechars:50 }}</p>
+
+              <!-- Progress bar -->
+              <div class="progress mb-3" style="height: 8px; background: rgba(255,255,255,0.2);">
+                <div class="progress-bar" role="progressbar"
+                     style="width: {{ campaign.progress_percentage }}%; background: var(--accent);"
+                     aria-valuenow="{{ campaign.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+
+              <p class="small mb-3">
+                <span class="fw-bold">{{ campaign.collected_amount }} / {{ campaign.goal_amount }} FCFA</span>
+              </p>
+
+              <a href="{% url 'campaign_detail' campaign.pk %}"
+                 class="btn btn-warning rounded-pill fw-semibold shadow-sm px-3 py-2"
+                 style="color: var(--text-title); background: var(--accent); border: none;">
+                 {% trans "Voir les détails" %}
+              </a>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+          <p class="text-muted">{% trans "Aucune campagne active pour le moment." %}</p>
+        {% endfor %}
+      </div>
+
+      <div class="mt-5">
+        <a href="{% url 'campaign_list' %}" class="btn btn-lg btn-primary rounded-pill shadow px-5 py-2">
+          🎯 {% trans "Voir toutes les campagnes" %}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✨ CATÉGORIES -->
+  <section class="categories-section py-5" style="background: var(--bg-secondary);">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 text-uppercase text-white">
+        {% trans "Catégories de Financement" %}
+      </h2>
+      <p class="text-light mb-5">{% trans "Explorez les domaines dans lesquels vous pouvez soutenir un projet." %}</p>
+
+      <div class="row g-4 justify-content-center">
+        {% for category in categories %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="tilt-card category-card rounded-4 shadow-lg overflow-hidden position-relative h-100"
+               data-tilt data-tilt-max="10" data-tilt-speed="400"
+               style="background: var(--bg-tertiary);">
+            
+            {% if category.image %}
+              <img src="{{ category.image.url }}" alt="{{ category.name }}" class="w-100"
+                   style="height: 180px; object-fit: cover; filter: brightness(0.75); transition: all 0.4s ease;">
+            {% else %}
+              <img src="{% static 'assets/img/placeholder-category.jpg' %}" alt="Image Catégorie"
+                   class="w-100" style="height: 180px; object-fit: cover; filter: brightness(0.75); transition: all 0.4s ease;">
+            {% endif %}
+
+            <div class="p-4 text-center position-absolute bottom-0 start-0 end-0"
+                 style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <h5 class="fw-bold text-white mb-3">{{ category.name }}</h5>
+              <a href="{% url 'category_detail' category.slug %}"
+                 class="btn btn-warning btn-sm rounded-pill px-3 py-1 fw-semibold"
+                 style="color: var(--text-title); background: var(--accent); border: none;">
+                 {% trans "Explorer" %}
+              </a>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+          <p class="text-light">{% trans "Aucune catégorie disponible pour le moment." %}</p>
+        {% endfor %}
+      </div>
+
+      <div class="mt-5">
+        <a href="{% url 'category_list' %}" class="btn btn-lg btn-light rounded-pill shadow px-5 py-2">
+          🌐 {% trans "Voir toutes les catégories" %}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partenaires -->
+  <section class="partner-carousel mb-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4" style="color: var(--text-title);">Nos Partenaires</h2>
+
+      <!-- Bande défilante -->
+      <div class="partner-track">
+        {% for partner in partners %}
+          <div class="partner-card">
+            {% if partner.logo %}
+              <img src="{{ partner.logo.url }}" alt="{{ partner.name }}">
+            {% else %}
+              <i class="bi bi-people-fill" style="font-size:50px; color:var(--bg-secondary);"></i>
+            {% endif %}
+            <h6>{{ partner.name }}</h6>
+            <span>{{ partner.get_partner_type_display }}</span>
+          </div>
+        {% endfor %}
+
+        <!-- Répéter pour effet infini -->
+        {% for partner in partners %}
+          <div class="partner-card">
+            {% if partner.logo %}
+              <img src="{{ partner.logo.url }}" alt="{{ partner.name }}">
+            {% else %}
+              <i class="bi bi-people-fill" style="font-size:50px; color:var(--bg-secondary);"></i>
+            {% endif %}
+            <h6>{{ partner.name }}</h6>
+            <span>{{ partner.get_partner_type_display }}</span>
+          </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section class="team-section py-5" style="background: var(--bg-primary);">
+    <div class="container text-center">
+      <h2 class="fw-bold text-uppercase mb-4" style="color: var(--bg-tertiary);">
+        {% trans "Notre Équipe" %}
+      </h2>
+      <p class="text-muted mb-5">
+        {% trans "Découvrez les passionnés qui font vivre notre mission chaque jour." %}
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        {% for member in team %}
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="tilt-carde team-card position-relative overflow-hidden border-0 rounded-4 shadow-lg h-100"
+             data-tilt data-tilt-max="10" data-tilt-speed="400"
+             style="background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary)); color: var(--text-white); transition: all 0.4s ease;">
+               
+               <!-- Image -->
+               {% if member.photo %}
+                 <div class="team-photo position-relative">
+                   <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-100" 
+                   style="height: 250px; object-fit: cover; border-radius: 1rem 1rem 0 0; transition: all 0.5s ease;">
+                   <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+                   style="background: rgba(0,0,0,0.5); opacity: 0; transition: all 0.4s ease;">
+                     <a href="#" class="btn btn-sm btn-warning fw-semibold rounded-pill px-3 py-2 shadow"
+                   style="color: var(--text-title); background: var(--accent); border: none;">
+                     {% trans "Voir Profil" %}
+                   </a>
+                   </div>
+                 </div>
+               {% endif %}
+
+               <!-- Contenu -->
+               <div class="card-body p-4">
+                 <h5 class="fw-bold mb-1 text-white">{{ member.name }}</h5>
+                 <p class="text-warning mb-2 small text-uppercase">{{ member.role }}</p>
+                 <p class="text-light small mb-3">{{ member.bio|truncatechars:80 }}</p>
+
+                 <!-- Icônes sociales (optionnelles si disponibles) -->
+                 <div class="sociale-links d-flex justify-content-center gap-3">
+                   {% if member.facebook %}
+                     <a href="#" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+                   {% endif %}
+                   {% if member.linkedin %}
+                     <a href="{{ member.linkedin }}" target="_blank" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
+                   {% endif %}
+                   {% if member.twitter %}
+                     <a href="{{ member.twitter }}" target="_blank" class="text-light fs-5"><i class="bi bi-twitter-x"></i></a>
+                   {% endif %}
+                 </div>
+
+               </div>
+
+             </div>
+          </div>
+        {% empty %}
+          <p class="text-muted">{% trans "L’équipe sera bientôt présentée." %}</p>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial-section py-5" style="background: var(--bg-tertiary);">
+      <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold text-uppercase text-white">
+              💬 {% trans "Témoignages" %}
+            </h2>
+            <p class="text-light small">
+              {% trans "Ils partagent leur expérience avec notre plateforme de financement participatif." %}
+            </p>
+          </div>
+
+          <!-- ✅ Nouveau ID : testimonialCarouselHome -->
+          <div id="testimonialCarouselHome" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              {% for testimonial in testimonials %}
+              <div class="carousel-item {% if forloop.first %}active{% endif %}">      
+                <div class="row justify-content-center">
+                  <div class="col-md-8 col-lg-6">
+                    <div class="testimonial-card p-4 rounded-4 shadow-lg text-center position-relative overflow-hidden mx-auto"
+                   style="background: var(--bg-secondary); color: var(--text-white);">
+                
+                      {% if testimonial.photo %}
+                        <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="rounded-circle mb-3"
+                       style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--accent);">
+                      {% else %}
+                        <img src="{% static 'assets/img/placeholder-user.png' %}" alt="{% trans 'Utilisateur' %}"
+                       class="rounded-circle mb-3" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--accent);">
+                      {% endif %}
+
+                      <blockquote class="fst-italic mb-3" style="color: var(--text-white); font-size: 1rem;">
+                        “{{ testimonial.message|truncatechars:220 }}”
+                      </blockquote>
+                
+                      <h5 class="fw-bold text-warning">{{ testimonial.name }}</h5>
+
+                      {% if testimonial.project %}
+                      <p class="small mt-2 mb-0">
+                        <a href="{% url 'project_detail' testimonial.project.id %}"
+                     class="text-decoration-none" style="color: var(--accent);">
+                          🌟 {% trans "Voir le projet lié" %}
+                        </a>
+                      </p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% empty %}
+              <p class="text-center text-light">{% trans "Aucun témoignage pour le moment." %}</p>
+              {% endfor %}
+            </div>
+
+            <!-- ✅ Nouveaux contrôles liés à testimonialCarouselHome -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarouselHome" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">{% trans "Précédent" %}</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarouselHome" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">{% trans "Suivant" %}</span>
+            </button>
+          </div>
+      </div>
+  </section>
+
+</div>
+{% endblock %}

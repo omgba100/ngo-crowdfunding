@@ -1,0 +1,67 @@
+{% extends "base_entrepreneur.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{{ _("Mettre à jour le profil") }}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="card border-0 shadow-lg rounded-4">
+        <div class="card-header bg-gradient bg-primary text-white text-center py-3">
+          <h4 class="fw-bold mb-0">
+            <i class="bi bi-person-circle"></i> {% trans "Mes informations personnelles" %}
+          </h4>
+        </div>
+        <div class="card-body p-4">
+          <form method="post" enctype="multipart/form-data" id="updateProfileForm">
+            {% csrf_token %}
+            {% crispy form %}
+            <button type="submit" class="btn btn-success w-100 py-2 mt-3">
+              <i class="bi bi-check-circle-fill"></i> {% trans "Enregistrer les modifications" %}
+            </button>
+          </form>
+
+          {% if request.user.profile_image %}
+            <div class="mt-4 text-center">
+              <img src="{{ request.user.profile_image.url }}" alt="Photo de profil" class="rounded-circle shadow" style="width: 130px; height: 130px; object-fit: cover;">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Gestion automatique des messages Django -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  {% if messages %}
+    {% for message in messages %}
+      Swal.fire({
+        icon: "{% if 'error' in message.tags %}error{% elif 'success' in message.tags %}success{% else %}info{% endif %}",
+        title: "{% if 'error' in message.tags %}Oops...{% elif 'success' in message.tags %}Super !{% else %}Info{% endif %}",
+        text: "{{ message|escapejs }}",
+        confirmButtonColor: "#3085d6",
+        background: "#f9f9f9",
+        customClass: { popup: 'rounded-4 shadow-lg' }
+      });
+    {% endfor %}
+  {% endif %}
+});
+</script>
+
+<style>
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+</style>
+{% endblock base_entrepreneur %}

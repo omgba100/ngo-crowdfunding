@@ -1,0 +1,97 @@
+{% extends "base_intermediaire.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Désactivation de votre compte" %}{% endblock %}
+
+{% block extra_head %}
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-9">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-warning text-dark rounded-top-4 d-flex align-items-center">
+          <i class="mdi mdi-account-off-outline fs-3 me-2"></i>
+          <h5 class="mb-0 fw-bold">{% trans "Désactivation de votre compte" %}</h5>
+        </div>
+
+        <div class="card-body p-4">
+          <div class="alert alert-warning border-0 rounded-3 shadow-sm mb-4">
+            <i class="mdi mdi-alert-outline fs-4 me-2"></i>
+            {% trans "Si vous désactivez votre compte, vous ne pourrez plus vous connecter tant qu’un administrateur ne l’aura pas réactivé. Vos données seront conservées." %}
+          </div>
+
+          <form id="deactivate-account-form" method="post">
+            {% csrf_token %}
+            {% crispy form %}
+
+            <div class="d-flex justify-content-between mt-4">
+              <a href="{% url 'intermediaire_dashboard' %}" class="btn btn-light border rounded-pill px-4">
+                <i class="mdi mdi-arrow-left"></i> {% trans "Annuler" %}
+              </a>
+              <button type="button" id="deactivate-btn" class="btn btn-warning text-dark rounded-pill px-4">
+                <i class="mdi mdi-pause-circle-outline"></i> {% trans "Désactiver mon compte" %}
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer text-center bg-light rounded-bottom-4">
+          <small class="text-muted">
+            {% trans "Vous pourrez demander la réactivation de votre compte à tout moment auprès de l’équipe d’administration." %}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 confirmation -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const deactivateBtn = document.getElementById("deactivate-btn");
+  const form = document.getElementById("deactivate-account-form");
+
+  deactivateBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    Swal.fire({
+      title: "{% trans 'Confirmer la désactivation ?' %}",
+      text: "{% trans 'Votre compte sera temporairement désactivé. Vous pourrez le réactiver plus tard via un administrateur.' %}",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#e0a800",
+      cancelButtonColor: "#6c757d",
+      confirmButtonText: "{% trans 'Oui, désactiver mon compte' %}",
+      cancelButtonText: "{% trans 'Annuler' %}",
+      reverseButtons: true,
+      customClass: {
+        popup: 'rounded-4 shadow-lg',
+        confirmButton: 'rounded-pill px-4 py-2',
+        cancelButton: 'rounded-pill px-4 py-2'
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "{% trans 'Désactivation en cours…' %}",
+          text: "{% trans 'Veuillez patienter pendant le traitement.' %}",
+          icon: "info",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+            form.submit();
+          }
+        });
+      }
+    });
+  });
+});
+</script>
+{% endblock base_intermediaire %}
+

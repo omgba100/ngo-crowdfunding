@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Financement IGIA" %}{% endblock %}
+
+{% block content %}
+
+<!-- Styles personnalisés -->
+<link rel="stylesheet" href="{% static 'assets/css/financement.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<section class="container my-5">
+
+  <!-- En-tête -->
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold animate__animated animate__fadeInDown" style="color:var(--text-title)">
+      {% trans "Financer une idée quand on n’a pas d’argent" %}
+    </h1>
+    <p class="lead text-muted animate__animated animate__fadeInDown animate__delay-1s">
+      {% trans "Des solutions simples et concrètes pour les auto-entrepreneurs, jeunes porteurs d’idées et travailleurs informels." %}
+    </p>
+    <a href="#" class="btn btn-lg fw-semibold animate__animated animate__fadeInUp animate__delay-2s"
+       style="background:var(--accent); color:var(--link-color); border-radius:2rem;">
+      {% trans "Soumettre mon idée" %}
+    </a>
+  </div>
+
+  <!-- Devise IGIA -->
+  <div class="text-center mb-5 p-4 rounded-4 shadow-sm" style="background:var(--bg-tertiary); color:var(--text-white);" data-aos="fade-up">
+    <h3 class="fw-bold mb-3">{% trans "Notre devise" %}</h3>
+    <p class="fs-5">
+      {% blocktrans %}IGIA combine mobilisation collective et financement solidaire (Crowdlending) et financement participatif (Crowdfunding) pour que chaque idée, qu’elle vienne d’un entrepreneur avec ou sans capital, ait une chance de devenir réalité.{% endblocktrans %} 
+    </p>
+  </div>
+
+  <!-- Problème principal -->
+  <div class="row g-4 mb-5">
+    <div class="col-lg-6">
+      <div class="p-4 rounded-4 shadow-sm" style="background:#fff; border:1px solid rgba(0,0,0,0.03);">
+        <h4 class="fw-semibold" style="color:var(--text-title)">{% trans "Le défi" %}</h4>
+        <ul class="mb-0 mt-3">
+          <li>{% trans "Pas d'accès au crédit bancaire (pas de garanties ni d’historique)." %}</li>
+          <li>{% trans "Trop petits ou trop risqués pour les investisseurs classiques." %}</li>
+          <li>{% trans "Pas (ou peu) d’épargne personnelle pour démarrer." %}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="p-4 rounded-4 shadow-sm" style="background:var(--bg-secondary); color:var(--text-white);">
+        <h4 class="fw-semibold">{% trans "Ce qu’ils ont malgré tout" %}</h4>
+        <ul class="mb-0 mt-3">
+          <li>{% trans "Une idée utile et un savoir-faire." %}</li>
+          <li>{% trans "Une forte motivation." %}</li>
+          <li>{% trans "Souvent un réseau local (famille, amis, diaspora)." %}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Présentation globale -->
+  <div class="row g-4 mb-5">
+
+    <!-- Financement participatif -->
+    <div class="col-lg-6" data-aos="fade-right">
+      <div class="p-4 rounded-4 shadow-sm" style="background:var(--bg-primary);">
+        <h3 class="fw-bold" style="color:var(--bg-secondary)">{% trans "Qu’est-ce que le financement participatif ?" %}</h3>
+        <p>{% trans "Le financement participatif (crowdfunding) permet à tout le monde de contribuer à un projet. Les contributeurs peuvent être des particuliers ou des investisseurs qui croient au projet." %}</p>
+        <ul>
+          <li>{% trans "Collecte de fonds auprès du grand public" %}</li>
+          <li>{% trans "Suivi et transparence du projet" %}</li>
+          <li>{% trans "Possibilité de dons, récompenses ou parts dans le projet" %}</li>
+        </ul>
+        <img src="{% static 'assets/img/lever/crowdfunding.png' %}" class="img-fluid rounded mt-3" alt="Crowdfunding">
+      </div>
+    </div>
+
+    <!-- Financement inclusif -->
+    <div class="col-lg-6" data-aos="fade-left">
+      <div class="p-4 rounded-4 shadow-sm" style="background:var(--bg-secondary); color:var(--text-white);">
+        <h3 class="fw-bold">{% trans "Qu’est-ce que le financement inclusif ?" %}</h3>
+        <p>{% trans "Le financement inclusif (crowdlending ou micro-prêts solidaires) cible ceux qui n’ont pas accès aux banques ou investisseurs classiques. Il combine financement, mentorat et accompagnement." %}</p>
+        <ul>
+          <li>{% trans "Micro-prêts solidaires pour démarrer des projets" %}</li>
+          <li>{% trans "Accompagnement et suivi personnalisé" %}</li>
+          <li>{% trans "Garanties communautaires ou symboliques" %}</li>
+        </ul>
+        <img src="{% static 'assets/img/lever/inclusive.png' %}" class="img-fluid rounded mt-3" alt="Financement inclusif">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modèles de financement inclusif -->
+  <h2 class="fw-bold text-center mb-4" data-aos="fade-up">{% trans "Modèles de financement inclusif IGIA" %}</h2>
+  <div class="row g-4 mb-5">
+    {% for model in models %}
+    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:'1' }}00">
+      <div class="card card-custom shadow-sm h-100">
+        <img src="{% static model.image %}" class="card-img-top" alt="{{ model.title }}">
+        <div class="card-body">
+          <h5 class="fw-bold">{{ model.title }}</h5>
+          <p class="mb-0">{{ model.desc }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Avantages -->
+  <h2 class="fw-bold text-center mb-4" data-aos="fade-up">{% trans "Avantages pour les porteurs de projet" %}</h2>
+  <div class="row g-4">
+    {% for item in avantages %}
+    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'1' }}00">
+      <div class="card card-custom gradient-bg p-3 h-100 text-center">
+        <h5 class="fw-bold">{{ item.title }}</h5>
+        <p>{{ item.desc }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="container my-5 mt-4 mb-4">
+    <!-- Titre centré au-dessus de l'image -->
+    <h2 class="text-center mb-3">Nos Références</h2>
+
+    <!-- Image pleine largeur -->
+    <img src="{% static 'assets/img/lever/references.png' %}" alt="references" class="img-fluid w-100">
+  </div>
+
+</section>
+
+<!-- Scripts d'animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+{% endblock %}

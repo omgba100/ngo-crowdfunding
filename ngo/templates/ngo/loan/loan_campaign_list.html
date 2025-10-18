@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Campagnes de prêt participatif" %}{% endblock %}
+
+{% block content %}
+
+<!-- ======================= -->
+<!-- HERO / HEADER -->
+<!-- ======================= -->
+<header class="bg-dark text-white position-relative" style="height: 300px; background: url('{% static "assets/img/about/hero-bg.jpg" %}') no-repeat center center/cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-4 fw-bold" data-aos="fade-down">{% trans "Campagnes de prêt participatif" %}</h1>
+        <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">{% trans "Découvrez nos campagnes actives et soutenez des projets concrets." %}</p>
+    </div>
+</header>
+
+<!-- ======================= -->
+<!-- CAMPAIGNS GRID -->
+<!-- ======================= -->
+<section class="campaigns-section py-5" style="background: var(--bg-secondary);">
+    <div class="container">
+        <div class="row g-4">
+            {% for item in campaigns_data %}
+            {% with campaign=item.campaign %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card campaign-card shadow-lg rounded-4 overflow-hidden h-100 position-relative" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:"100" }}">
+                    
+                    <!-- Image de couverture -->
+                    {% if campaign.image %}
+                    <img src="{{ campaign.image.url }}" class="card-img-top" alt="{{ campaign.title }}" style="height:200px; object-fit:cover; transition: transform 0.4s ease;">
+                    {% else %}
+                    <img src="{% static 'assets/img/placeholder-campaign.jpg' %}" class="card-img-top" alt="Image campagne" style="height:200px; object-fit:cover;">
+                    {% endif %}
+
+                    <!-- Overlay info -->
+                    <div class="card-body position-relative d-flex flex-column justify-content-between" style="padding-bottom: 1.5rem;">
+                        <h5 class="card-title fw-bold">{{ campaign.title }}</h5>
+                        <p class="card-text text-truncate mb-2">{{ campaign.project.title }}</p>
+                        
+                        <!-- Progress bar -->
+                        <div class="progress mb-2" style="height:6px; border-radius:4px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: {{ item.progress_percent }}%" aria-valuenow="{{ campaign.collected_amount }}" aria-valuemin="0" aria-valuemax="{{ campaign.goal_amount }}"></div>
+                        </div>
+                        <small class="text-muted">{{ campaign.collected_amount|floatformat:2 }} / {{ campaign.goal_amount|floatformat:2 }} XAF</small>
+                        
+                        {% if item.remaining_days %}
+                        <small class="d-block">{{ item.remaining_days }} {% trans "jours restants" %}</small>
+                        {% endif %}
+
+                        <a href="{% url 'loan_campaign_detail' campaign.pk %}" class="btn btn-warning btn-sm rounded-pill mt-3 shadow-sm fw-semibold">{% trans "Voir la campagne" %}</a>
+                    </div>
+                </div>
+            </div>
+            {% endwith %}
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-light fs-5">{% trans "Aucune campagne active pour le moment." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ======================= -->
+<!-- STYLES SUPPLÉMENTAIRES -->
+<!-- ======================= -->
+<style>
+.campaign-card:hover img {
+    transform: scale(1.05);
+}
+.campaign-card .card-body {
+    transition: all 0.3s ease;
+}
+.campaign-card:hover .card-body {
+    background: rgba(255,255,255,0.05);
+}
+</style>
+
+<!-- ======================= -->
+<!-- AOS INIT -->
+<!-- ======================= -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+{% endblock %}

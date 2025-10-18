@@ -1,0 +1,59 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Envoyer un message" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<section class="card shadow-sm messages-card" style="max-width: 700px; margin: 30px auto;">
+    <div class="card-header bg-decorax text-white">
+        <h5 class="mb-0">{% trans "Nouveau message" %}</h5>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="d-flex justify-content-end mt-3">
+                <a href="{% url 'inbox' %}" class="btn btn-secondary me-2">{% trans "Annuler" %}</a>
+                <button type="submit" class="btn btn-primary">{% trans "Envoyer" %}</button>
+            </div>
+        </form>
+    </div>
+</section>
+<style>
+/*==============================
+  Nouveau Message - style Gmail
+===============================*/
+.messages-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.messages-card .card-header {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.messages-card .card-body {
+    padding: 20px;
+}
+
+.messages-card .btn {
+    min-width: 100px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .messages-card {
+        margin: 20px 10px;
+    }
+    .messages-card .card-header, .messages-card .card-body {
+        padding: 15px;
+    }
+}
+
+</style>
+{% endblock base_entrepreneur %}

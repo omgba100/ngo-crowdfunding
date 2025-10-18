@@ -1,0 +1,67 @@
+{% load static %}
+{% load i18n %}
+<footer class="footer">
+   <div class="container">
+   	 <div class="row gy-4">
+
+   	 	<!-- Colonne 1: Logo et contact -->
+   	 	<div class="col-12 col-md-3">
+   	 	   <div class="logo mb-2">
+   	 	   	<a href="{% url 'home' %}"> <img src="{% static 'assets/img/logo/logo3.png' %}" alt="logo" class="dozo"></a>
+   	 	   </div>
+   	 	   <ul class="list-unstyled">
+   	 	   	<li class="mb-1"><strong>{% trans "Contact" %}</strong></li>
+   	 	   	<li><a href="{% url 'contact' %}">{% trans "Contactez-nous" %}</a></li>
+   	 	   </ul>
+   	 	   
+   	 	</div>
+
+   	 	<!-- Colonne 2: Découvrir -->
+   	 	<div class="col-6 col-md-3">
+   	 	  <h6>{% trans "Découvrez IGIA" %}</h6>
+   	 	  <ul class="list-unstyled">
+   	 	  	<li class="mb-1"><a href="{% url 'team_list' %}">{% trans "Notre Equipe" %}</a></li>
+   	 	  	<li class="mb-1"><a href="{% url 'about_us' %}">{% trans "Qui sommes-nous ?" %}</a>
+            </li>
+            <li class="mb-1"><a href="{% url 'partner_list' %}">{% trans "Nos Partenaire" %}</a></li>
+            <li class="mb-1"><a href="{% url 'testimonial_list' %}">{% trans "Temoignages" %}</a></li>
+   	 	  </ul>
+   	 	</div>
+
+   	 	<!-- Colonne 3: Aide & Ressources -->
+   	 	<div class="col-6 col-md-3">
+   	 	  <h6>{% trans "Projets & Campagnes" %}</h6>
+   	 	  <ul class="list-unstyled">
+   	 	  	<li class="mb-1"><a href="{% url 'category_list' %}">{% trans "Categorie" %}</a></li>
+   	 	  	<li class="mb-1"><a href="{% url 'project_list' %}">{% trans "Projets" %}</a></li>
+   	 	  	<li class="mb-1"><a href="{% url 'campaign_list' %}">{% trans "Campagnes Crowdfunding" %}</a></li>
+   	 	  	<li><a href="{% url 'campaign_liste' %}">{% trans "Campagnes Crowdlending" %}</a></li>
+   	 	  </ul>
+   	 	</div>
+
+   	 	<!-- Colonne 4: Informations légales -->
+   	 	<div class="col-6 col-md-3">
+   	 	  <h6>{% trans "Informations légales" %}</h6>
+   	 	  <ul class="list-unstyled">
+   	 	  	<li class="mb-1"><a href="{% url 'mentions_legales' %}">{% trans "Mentions légales" %}</a></li>
+   	 	  	<li class="mb-1"><a href="{% url 'confidentialite' %}">{% trans "Confidentialité" %}</a></li>
+            <li><a href="{% url 'reclamations' %}">{% trans "Réclamations" %}</a></li>
+            <li><a href="{% url 'conditions_generales_utilisation' %}">{% trans "Conditions générales d'utilisation" %}</a></li>
+            <li><a href="{% url 'donnees_personnelles' %}">{% trans "Données personnelles" %}</a></li>
+   	 	  </ul>
+   	 	</div>
+
+   	 	<!-- Légales/mentions en bas -->
+   	 	<hr class="border-light opacity-25 my-4">
+   	 	<div class="row">
+   	 	  <div class="col-12 text-center small" style="color:#cbd5e1;">
+   	 	  	© 2012 IGIA · {% trans "Tous droits réservés." %}
+   	 	  	<br>
+   	 	  	{% blocktrans %}La plateforme active et participative pour rechercher des financements : adhésion, dons, crowdfunding,crowdlending, boutique en ligne, billetterie… Lancez-vous !{% endblocktrans %}
+   	 	  </div>
+   	 	</div>
+
+
+   	 </div>
+   </div>
+</footer>

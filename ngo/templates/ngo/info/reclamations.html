@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Réclamations - IGIA" %}{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="position-relative text-white" 
+         style="background: url('{% static "assets/img/about/hero-bg.jpg" %}') center/cover no-repeat; height: 320px;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.6);"></div>
+  <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="fw-bold display-5" data-aos="fade-down">{% trans "Réclamations" %}</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Procédure transparente pour le traitement équitable des réclamations IGIA." %}
+      </p>
+  </div>
+</section>
+
+<main class="container my-5" data-aos="fade-up">
+  <div class="card shadow-sm border-0 mb-4">
+    <div class="card-body">
+      <h3 class="fw-bold text-primary mb-3">{% trans "1. Dépôt et réception de la réclamation" %}</h3>
+      <p>{% trans "Les réclamations peuvent être déposées par email, courrier ou via le modèle PDF disponible sur le site. Un accusé de réception est envoyé sous 10 jours ouvrables." %}</p>
+      <ul class="list-unstyled mt-3">
+        <li><strong>{% trans "Email :" %}</strong> {{ contact.email }}</li>
+        <li><strong>{% trans "Adresse :" %}</strong> {{ contact.address }}</li>
+        <li><strong>{% trans "Téléphone :" %}</strong> {{ contact.phone }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Procédure -->
+  <div class="row g-4">
+    {% for step in procedure %}
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:100 }}">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="fw-bold text-primary">{{ step.title }}</h5>
+            <p>{{ step.details }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Médiation -->
+  <div class="card shadow-sm border-0 mt-5" data-aos="fade-up">
+    <div class="card-body">
+      <h3 class="fw-bold text-primary mb-3">{% trans "Médiation" %}</h3>
+      <p>{% trans "En cas d’insatisfaction, vous pouvez contacter le médiateur agréé :" %}</p>
+      <ul class="list-unstyled">
+        <li><strong>{{ mediator.name }}</strong></li>
+        <li><a href="{{ mediator.website }}" target="_blank">{{ mediator.website }}</a></li>
+        <li><strong>{% trans "Téléphone :" %}</strong> {{ mediator.phone }}</li>
+        <li><strong>{% trans "Adresse :" %}</strong> {{ mediator.address }}</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<!-- Animation AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+  });
+</script>
+{% endblock %}

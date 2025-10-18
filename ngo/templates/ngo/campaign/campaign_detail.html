@@ -1,0 +1,315 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ campaign.title }} — {% trans "Détails de la campagne" %}{% endblock %}
+
+{% block content %}
+<style>
+/* ==================== VARIABLES ==================== */
+:root {
+  --bg-primary: #FFFAF0;
+  --bg-secondary: #17478E;
+  --bg-tertiary: #303C82;
+  --link-color:#090f1f;
+  --text-title:#131445;
+  --text-white:#fff;
+  --text-color:#5E5E61;
+  --accent:#EFD807;
+}
+
+/* ==================== SECTION DETAIL ==================== */
+.campaign-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  padding: 80px 0;
+  color: var(--text-white);
+  overflow: hidden;
+}
+
+.campaign-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(239, 216, 7, 0.2), transparent 70%);
+  animation: rotateGlow 18s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.campaign-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.campaign-header h1 {
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.campaign-header p {
+  color: #dcdcdc;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ==================== CARD PRINCIPALE ==================== */
+.campaign-detail-card {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.campaign-detail-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.campaign-detail-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent);
+}
+
+/* ==================== CONTENU ==================== */
+.detail-body {
+  padding: 2rem;
+  color: var(--text-white);
+}
+
+.detail-body h3 {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.detail-body p {
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0.15);
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), #fff176);
+  animation: growProgress 1.3s ease-out;
+}
+
+@keyframes growProgress {
+  from { width: 0; }
+  to { width: var(--progress); }
+}
+
+.detail-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: .95rem;
+  opacity: .9;
+}
+
+.detail-stats span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ==================== BOUTONS ==================== */
+.btn-contribuer {
+  background: var(--accent);
+  color: var(--text-title);
+  font-weight: 700;
+  border-radius: 50px;
+  padding: .7rem 1.5rem;
+  transition: all .3s ease;
+}
+
+.btn-contribuer:hover {
+  background: var(--text-white);
+  color: var(--bg-tertiary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(239,216,7,.4);
+}
+
+/* ==================== SECTIONS SUPPLÉMENTAIRES ==================== */
+.section-sub {
+  background-color: var(--bg-primary);
+  padding: 60px 0;
+  color: var(--text-color);
+}
+
+.update-card, .reward-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all .3s ease;
+  height: 100%;
+}
+
+.update-card:hover, .reward-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.update-card .card-body, .reward-card .card-body {
+  padding: 1.5rem;
+}
+
+.reward-card h5 {
+  color: var(--bg-tertiary);
+  font-weight: 700;
+}
+</style>
+
+<!-- ==================== HERO ==================== -->
+<section class="campaign-hero">
+  <div class="container">
+    <div class="campaign-header">
+      <h1>{{ campaign.title }}</h1>
+      <p>{{ campaign.description|truncatewords:40 }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DETAILS ==================== -->
+<section class="py-5">
+  <div class="container">
+    <div class="campaign-detail-card" data-tilt>
+      {% if campaign.image %}
+        <img src="{{ campaign.image.url }}" alt="{{ campaign.title }}">
+      {% else %}
+        <img src="{% static 'assets/img/placeholder-campaign.jpg' %}" alt="Image campagne">
+      {% endif %}
+      <div class="detail-body">
+        <h3>🎯 {% trans "Objectif" %}: {{ campaign.goal_amount }} FCFA</h3>
+
+        <div class="progress my-3">
+          <div class="progress-bar" role="progressbar"
+               style="--progress: {{ campaign.progress_percentage }}%; width: {{ campaign.progress_percentage }}%;"
+               aria-valuenow="{{ campaign.progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="detail-stats">
+          <p>💰 <span>{{ campaign.collected_amount }}</span> / {{ campaign.goal_amount }} FCFA</p>
+          {% if campaign.remaining_days %}
+            <p>⏳ <span>{{ campaign.remaining_days }}</span> {% trans "jours restants" %}</p>
+          {% else %}
+            <p>♾️ {% trans "Durée illimitée" %}</p>
+          {% endif %}
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="{% url 'login_investisseur' %}" class="btn btn-contribuer btn-lg shadow-lg">
+            🤝 {% trans "Contribuer maintenant" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== UPDATES ==================== -->
+{% if updates %}
+<section class="section-sub">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-title">{% trans "Mises à jour de la campagne" %}</h2>
+    <div class="row g-4">
+      {% for update in updates %}
+        <div class="col-md-6 col-lg-4">
+          <div class="update-card">
+            <div class="card-body">
+              <h5 class="fw-bold">{{ update.title }}</h5>
+              <p class="small text-muted">{{ update.created_at|date:"d M Y" }}</p>
+              <p>{{ update.content|truncatewords:25 }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ==================== RECOMPENSES ==================== -->
+{% if rewards %}
+<section class="section-sub">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-title">{% trans "Récompenses" %}</h2>
+    <div class="row g-4">
+      {% for reward in rewards %}
+        <div class="col-md-6 col-lg-4">
+          <div class="reward-card">
+            <div class="card-body text-center">
+              <h5>{{ reward.title }}</h5>
+              <p class="text-muted">{{ reward.description|truncatewords:20 }}</p>
+              <p><strong>{{ reward.amount }} FCFA</strong></p>
+              <button class="btn btn-contribuer">{% trans "Choisir cette récompense" %}</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ==================== CONTRIBUTEURS ==================== -->
+{% if contributions %}
+<section class="section-sub">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-title">{% trans "Dernières contributions" %}</h2>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle text-center">
+        <thead class="table-light">
+          <tr>
+            <th>{% trans "Contributeur" %}</th>
+            <th>{% trans "Montant" %}</th>
+            <th>{% trans "Date" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for contribution in contributions %}
+            <tr>
+              <td>{{ contribution.user.username }}</td>
+              <td>{{ contribution.amount }} FCFA</td>
+              <td>{{ contribution.created_at|date:"d M Y" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+<script>
+VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+  max: 10,
+  speed: 600,
+  glare: true,
+  "max-glare": 0.25,
+});
+</script>
+
+{% endblock %}

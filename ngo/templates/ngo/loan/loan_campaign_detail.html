@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{{ loan_campaign.title }}{% endblock %}
+
+{% block content %}
+
+<!-- ======================= -->
+<!-- HERO / HEADER -->
+<!-- ======================= -->
+<header class="bg-dark text-white position-relative" style="height: 300px; background: url('{% static "assets/img/about/hero-bg.jpg" %}') no-repeat center center/cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-4 fw-bold" data-aos="fade-down">{% trans "Campagnes de prêt participatif" %}</h1>
+        <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">{% trans "Découvrez nos campagnes actives et soutenez des projets concrets." %}</p>
+    </div>
+</header>
+
+<!-- ======================= -->
+<!-- CAMPAIGN DETAIL -->
+<!-- ======================= -->
+<section class="campaign-detail py-5" style="background: var(--bg-secondary);">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- IMAGE DE COUVERTURE -->
+            {% if loan_campaign.image %}
+            <div class="col-12">
+                <img src="{{ loan_campaign.image.url }}" alt="{{ loan_campaign.title }}" class="img-fluid rounded-4 shadow-lg mb-4" style="width:100%; max-height:400px; object-fit:cover;" data-aos="fade-up">
+            </div>
+            {% endif %}
+
+            <!-- INFO DE LA CAMPAGNE -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-lg rounded-4 p-4 bg-dark text-white">
+                    <h2 class="fw-bold">{{ loan_campaign.title }}</h2>
+                    <p class="mb-1"><strong>{% trans "Projet:" %}</strong> {{ loan_campaign.project.title }}</p>
+                    <p class="mb-1"><strong>{% trans "Taux d'intérêt:" %}</strong> {{ loan_campaign.interest_rate }}%</p>
+                    <p class="mb-1"><strong>{% trans "Durée:" %}</strong> {{ loan_campaign.repayment_duration }} {% trans "mois" %}</p>
+                    <p class="mb-1"><strong>{% trans "Statut:" %}</strong> {{ loan_campaign.status|capfirst }}</p>
+                    {% if remaining_days %}
+                    <p class="mb-1"><strong>{% trans "Jours restants:" %}</strong> {{ remaining_days }}</p>
+                    {% endif %}
+
+                    <!-- BARRE DE PROGRESSION -->
+                    <div class="progress mt-3 mb-2" style="height:10px; border-radius:8px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: {{ progress_percent }}%" aria-valuenow="{{ loan_campaign.collected_amount }}" aria-valuemin="0" aria-valuemax="{{ loan_campaign.goal_amount }}"></div>
+                    </div>
+                    <small class="text-light">{{ loan_campaign.collected_amount|floatformat:2 }} / {{ loan_campaign.goal_amount|floatformat:2 }} XAF collectés ({{ progress_percent }}%)</small>
+                </div>
+            </div>
+
+            <!-- CONTRIBUTIONS -->
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="card shadow-lg rounded-4 p-4 bg-dark text-white">
+                    <h3 class="fw-bold mb-3">{% trans "Contributions" %}</h3>
+                    <ul class="list-group list-group-flush">
+                        {% for contrib in contributions %}
+                        <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+                            <span>{{ contrib.investor_name }}</span>
+                            <span>{{ contrib.amount }} XAF - {{ contrib.payment_status|capfirst }}</span>
+                        </li>
+                        {% empty %}
+                        <li class="list-group-item bg-dark text-white">{% trans "Aucune contribution pour le moment." %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======================= -->
+<!-- STYLES ET ANIMATIONS -->
+<!-- ======================= -->
+<style>
+.card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+.card ul li:hover {
+    background: rgba(255, 255, 0, 0.1);
+    transition: all 0.3s ease;
+}
+</style>
+
+<!-- AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 800,
+    once: true
+});
+</script>
+
+{% endblock %}

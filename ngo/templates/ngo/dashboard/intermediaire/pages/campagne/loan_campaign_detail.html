@@ -1,0 +1,114 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Détails de la campagne de prêt" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+/* Style des cartes et stats */
+.campaign-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-bank-transfer-outline me-2"></i> {{ loan_campaign.project.title }}
+            </h2>
+            <p class="text-muted mb-0">
+                {% trans "Campagne de prêt pour l’entrepreneur" %} <strong>{{ entrepreneur.full_name }}</strong>
+            </p>
+        </div>
+        <a href="{% url 'intermediaire_projects' %}" class="btn btn-outline-primary rounded-pill">
+            <i class="mdi mdi-arrow-left-circle-outline me-1"></i> {% trans "Retour aux projets" %}
+        </a>
+    </div>
+
+    <div class="card campaign-card shadow-sm border-0 rounded-4 p-4 mb-4" data-aos="fade-up">
+        <h4 class="fw-bold mb-3">{% trans "Résumé de la campagne de prêt" %}</h4>
+
+        <div class="row mb-3">
+            <div class="col-md-6 mb-3">
+                <div class="fw-bold text-muted">{% trans "Montant collecté" %}</div>
+                <div class="h5">{{ total_collected }} {{ loan_campaign.currency|default:"XAF" }}</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="fw-bold text-muted">{% trans "Objectif" %}</div>
+                <div class="h5">{{ goal_amount }} {{ loan_campaign.currency|default:"XAF" }}</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="fw-bold text-muted">{% trans "Taux de complétion" %}: {{ completion_rate }}%</div>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: {{ completion_rate }}%" aria-valuenow="{{ completion_rate }}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="fw-bold text-muted">{% trans "Durée de la campagne" %}</div>
+            <div>{{ loan_campaign.start_date|date:"d M Y" }} - {{ loan_campaign.end_date|date:"d M Y" }}</div>
+        </div>
+
+        <div class="mb-3">
+            <div class="fw-bold text-muted">{% trans "Description" %}</div>
+            <p>{{ loan_campaign.description|default:_("Aucune description fournie") }}</p>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-sm btn-outline-danger rounded-pill delete-btn" data-id="{{ loan_campaign.id }}">
+                <i class="mdi mdi-trash-can-outline me-1"></i> {% trans "Supprimer la campagne" %}
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour confirmation de suppression -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const loanCampaignId = this.getAttribute('data-id');
+            Swal.fire({
+                title: '{% trans "Confirmer la suppression ?" %}',
+                text: '{% trans "Cette action est irréversible et supprimera la campagne de prêt." %}',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: '{% trans "Oui, supprimer !" %}',
+                cancelButtonText: '{% trans "Annuler" %}'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirection vers l’URL de suppression
+                    window.location.href = "/dashboard/intermediaire/remove-loan-campaign/" + loanCampaignId + "/";
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock base_intermediaire %}

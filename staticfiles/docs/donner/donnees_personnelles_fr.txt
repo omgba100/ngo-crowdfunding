@@ -1,0 +1,94 @@
+DONNÉES PERSONNELLES
+
+POLITIQUE D'UTILISATION DES DONNÉES PERsOnnelles 
+
+IGIA est une plateforme de financement participatif (crowdfunding) et inclusif (crowdlending), 
+elle est soumise au secret professionnel. IGIA assure la sécurité et la confidentialité des informations 
+qui lui sont confiées. La présente politique de protection des données à caractère personnel (ci-après la "Politique") 
+décrit les engagements mis en œuvre par IGIA, en tant que responsable de traitement, afin de veiller au respect 
+de vos données personnelles. La Politique fait partie intégrante des Conditions Générales d’Utilisation (CGU), 
+les termes portant une majuscule ayant une définition identique à celles des CGU. 
+Chaque fois que des informations personnelles sont collectées, IGIA s’efforce d’inclure un lien conduisant 
+à la présente Politique. Nous sommes susceptibles de modifier la présente Politique. 
+La version en vigueur est disponible sur le site www.igia.com et nous vous informerons de tout changement 
+par le biais du site ou par tout autre moyen.
+
+Découvrez également ici notre politique d'utilisation des cookies.
+
+
+1. Traitement des données collectées
+
+IGIA collecte plusieurs types de données par le biais de ses différents services en ligne :
+
+- Données d’identification (prénom, nom de famille, date et lieu de naissance, etc.)
+- Coordonnées (numéro de téléphone, adresses postale et électronique, etc.) ;
+- Données de transactions (offres, virements, paiements CB, liés aux crédits et débits de votre compte IGIA par exemple) ; 
+- Données spécifiques aux Investissements ou toute autre demande relative à l’offre de IGIA ;
+- Données fiscales (pays de résidence fiscale, attestation de dispense) ;
+- Données issues de vos échanges avec IGIA ;
+- Données obtenues avec votre consentement et/ou recueillies conformément à ce que la réglementation permet ou exige.
+
+Toutes ces données sont généralement obtenues directement auprès de vous, que ce soit par téléphone, email ou Internet. 
+IGIA peut toutefois être amenée à traiter des données obtenues d’organismes tiers, afin notamment de satisfaire 
+ses obligations règlementaires ou avec votre consentement dans le cadre de l’utilisation de certains services.
+
+La communication et le traitement des données demandées par IGIA est indispensable à la fourniture des produits 
+et services de IGIA et/ou au respect des exigences légales et règlementaires auxquelles IGIA est soumise. 
+En dehors de ces cas, nous ne collectons aucune donnée sans votre accord préalable.
+
+Enfin, nous collectons automatiquement certaines informations sur votre type de navigateur et le matériel de connexion 
+utilisé (ordinateur, appareil mobile) à des fins d’administration de nos systèmes, de lutte contre la fraude, de maintien 
+de la qualité des services et de fourniture des statistiques générales concernant leur utilisation.
+
+2. Finalités de traitement de ces données
+
+Les traitements réalisés par IGIA répondent à une finalité qui se base sur le respect d’une obligation légale ou réglementaire, 
+une exécution de contrat, le consentement pour les services permettant la synchronisation de documents externes ou encore l’intérêt 
+légitime pour la prospection commerciale.
+
+- Gestion de la relation client
+- Fourniture des produits et services souscrits
+- Fourniture des services utilisant la synchronisation de données
+- Gestion, étude et octroi de financements
+- Respect des obligations légales et réglementaires
+- Lutte contre la fraude
+- Sécurité des réseaux informatiques et des transactions
+- Établissement des preuves des transactions et des conventions
+- Recouvrement et cession de créances, gestion des incidents de paiement
+- Offres personnalisées et propositions commerciales
+
+
+3. Les destinataires de vos données
+
+IGIA peut être tenue de fournir certaines données vous concernant aux autorités publiques lorsqu’elles en font la demande, 
+ou dans le cadre de ses obligations réglementaires ou légales. 
+IGIA est susceptible de communiquer vos données personnelles à ses prestataires techniques, partenaires et émetteurs.
+
+
+4. Sécurisation de vos données
+
+Nous utilisons les technologies SSL afin d’assurer la confidentialité des données transitant sur les réseaux.
+
+
+5. Délai et conservation de vos données
+
+Pour assurer le bon traitement des transactions financières, vos données personnelles doivent être conservées 
+et mises à jour régulièrement pendant toute la durée où vous êtes engagés dans un Investissement.
+
+Afin de répondre à des obligations légales et/ou réglementaires et/ou pour répondre à des demandes des autorités 
+autorisées à en faire la demande, vos données personnelles seront conservées au-delà de la date de dernière 
+activité pour une durée de 5 ans. Enfin, certaines données pourront être conservées et anonymisées pour être 
+utilisées à des fins statistiques.
+
+
+6. Vos droits
+
+Conformément au Règlement Général sur la Protection des Données, vous disposez d’un droit d’accès, de rectification, 
+d’effacement, de limitation du traitement, à la portabilité de vos données et de définir le sort de vos données après votre décès. 
+Ces droits peuvent être exercés dans les conditions et les limites visées par la règlementation en vigueur.
+
+Vous pouvez exercer vos autres droits ainsi que contacter IGIA en vous adressant par courrier électronique à l’adresse 
+suivante : contact@igia.com
+
+Vous avez le droit d’introduire une réclamation auprès de l'AFM is committed to promoting fair and transparent financial markets, 
+autorité de contrôle en charge du respect des obligations en matière de données à caractère personnel.

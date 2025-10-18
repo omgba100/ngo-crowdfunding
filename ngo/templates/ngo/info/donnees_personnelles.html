@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section position-relative text-white" style="background: url('{% static hero.background %}') center/cover no-repeat; min-height: 300px;">
+  <div class="container text-center py-5">
+    <h1 class="fw-bold display-5">{{ hero.title }}</h1>
+    <p class="lead mt-3">{{ hero.subtitle }}</p>
+  </div>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.45);"></div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="card shadow-lg border-0 rounded-4 p-4" style="background-color: #fff;">
+          <div class="card-body">
+            <h2 class="text-center mb-4 text-primary fw-bold">
+              {% trans "Politique de Protection des Données Personnelles" %}
+            </h2>
+
+            <p class="text-muted text-center mb-5">
+              {{ last_update }}
+            </p>
+
+            <!-- Contenu principal du texte RGPD -->
+            <div class="cgu-content">
+              {{ rgpd_text|linebreaks }}
+            </div>
+
+            <!-- Boutons d'action -->
+            <div class="text-center mt-5">
+              <a href="{% url 'conditions_generales_utilisation' %}" class="btn btn-outline-primary me-2">
+                {% trans "Consulter les Conditions Générales d’Utilisation" %}
+              </a>
+              <a href="{% url 'contact' %}" class="btn btn-primary">
+                {% trans "Contacter IGIA" %}
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans "Mes Paiements" %}{% endblock %}
+
+{% block extra_head %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5" data-aos="fade-up">
+
+  <!-- 🔹 Formulaire de paiement -->
+  <div class="card shadow-lg border-0 rounded-4 mb-5" data-aos="zoom-in" data-aos-duration="900">
+    <div class="card-body p-5">
+      <div class="text-center mb-4">
+        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3">
+          <i class="mdi mdi-credit-card-outline mdi-36px"></i>
+        </div>
+        <h3 class="fw-bold text-dark mb-1">{% trans "Soumettre votre paiement" %}</h3>
+        <p class="text-muted">{% trans "Merci de fournir les informations de votre paiement ci-dessous." %}</p>
+      </div>
+
+      <form id="paymentForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% crispy form %}
+
+        <div class="mb-3">
+          <label for="id_proof" class="form-label fw-semibold text-dark">
+            <i class="mdi mdi-upload-outline me-1 text-primary"></i>
+            {% trans "Télécharger le screenshot du paiement" %}
+          </label>
+          {{ form.proof }}
+          {% if form.proof.errors %}
+            <div class="text-danger mt-1">{{ form.proof.errors }}</div>
+          {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-3 shadow-sm mt-3">
+          <i class="mdi mdi-send-outline me-1"></i> {% trans "Envoyer la preuve de paiement" %}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🔹 Liste des paiements existants -->
+  <div class="card shadow-lg border-0 rounded-4" data-aos="fade-up">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h4 class="mb-0"><i class="mdi mdi-cash-multiple me-2"></i>{% trans "Mes Paiements" %}</h4>
+    </div>
+    <div class="card-body p-4">
+      {% if payments %}
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>{% trans "Montant" %}</th>
+              <th>{% trans "Statut" %}</th>
+              <th>{% trans "Date" %}</th>
+              <th>{% trans "Actions" %}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for payment in payments %}
+            <tr>
+              <td>{{ payment.amount }} {{ payment.currency }}</td>
+              <td>
+                {% if payment.status == "success" %}
+                  <span class="badge bg-success">{% trans "Réussi" %}</span>
+                {% elif payment.status == "pending" %}
+                  <span class="badge bg-warning">{% trans "En attente" %}</span>
+                {% else %}
+                  <span class="badge bg-danger">{% trans "Échoué" %}</span>
+                {% endif %}
+              </td>
+              <td>{{ payment.created_at|date:"d/m/Y H:i" }}</td>
+              <td>
+                {% if payment.status == "pending" %}
+                  <form method="post" action="{% url 'intermediaire_payment_delete' payment.pk %}" class="delete-payment-form d-inline">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-danger btn-sm delete-btn">
+                      <i class="mdi mdi-cancel"></i> {% trans "Annuler" %}
+                    </button>
+                  </form>
+                {% else %}
+                  <span class="text-muted">{% trans "Aucune action" %}</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <p class="text-muted text-center mb-0">{% trans "Aucun paiement effectué pour le moment." %}</p>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const deleteButtons = document.querySelectorAll('.delete-btn');
+  deleteButtons.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      const form = this.closest('.delete-payment-form');
+      Swal.fire({
+        title: '{% trans "Confirmer l’annulation ?" %}',
+        text: '{% trans "Voulez-vous vraiment annuler ce paiement en attente ?" %}',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#dc3545',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '{% trans "Oui, annuler !" %}',
+        cancelButtonText: '{% trans "Annuler" %}',
+        backdrop: `rgba(0,0,0,0.4)`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          form.submit();
+        }
+      });
+    });
+  });
+});
+</script>
+{% endblock base_intermediaire %}

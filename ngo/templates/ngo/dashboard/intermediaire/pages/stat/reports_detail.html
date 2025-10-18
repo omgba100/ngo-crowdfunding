@@ -1,0 +1,168 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}Rapport détaillé du projet{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+.card-report, .project-img, .campaign-img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-report:hover, .project-img:hover, .campaign-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.stat-badge {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+.project-img, .campaign-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.action-btn {
+    margin-left: 5px;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-file-chart-outline me-2"></i> {{ project.name }}
+            </h2>
+            <p class="text-muted mb-0">{% trans "Rapport détaillé du projet et de ses campagnes." %}</p>
+        </div>
+        <div>
+            <a href="{% url 'intermediaire_reports' %}" class="btn btn-outline-secondary rounded-pill">
+                <i class="mdi mdi-arrow-left me-1"></i> {% trans "Retour aux rapports" %}
+            </a>
+            <button class="btn btn-outline-success rounded-pill action-btn" onclick="confirmAction('{% url 'intermediaire_project_complete' project.id %}', '{% trans "Marquer comme terminé ?" %}', '{% trans "Toutes les campagnes actives seront marquées comme terminées." %}')">
+                <i class="mdi mdi-check-circle-outline me-1"></i> {% trans "Terminer projet" %}
+            </button>
+            <button class="btn btn-outline-danger rounded-pill action-btn" onclick="confirmAction('{% url 'intermediaire_project_delete' project.id %}', '{% trans "Supprimer le projet ?" %}', '{% trans "Cette action supprimera le projet et toutes ses campagnes." %}')">
+                <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer projet" %}
+            </button>
+        </div>
+    </div>
+
+    <!-- Statistiques globales -->
+    <div class="row g-4 mb-4" data-aos="fade-up">
+        <div class="col-md-3">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3 text-center">
+                <h5 class="fw-bold">{{ stats.total_campaigns }}</h5>
+                <small class="text-muted">{% trans "Campagnes totales" %}</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3 text-center">
+                <h5 class="fw-bold">{{ stats.loan_campaigns }}</h5>
+                <small class="text-muted">{% trans "Campagnes de prêt" %}</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3 text-center">
+                <h5 class="fw-bold">{{ stats.total_collected }} / {{ stats.total_goal }}</h5>
+                <small class="text-muted">{% trans "Montant collecté / Objectif" %}</small>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3 text-center">
+                <h5 class="fw-bold">{{ stats.completion_rate }}%</h5>
+                <small class="text-muted">{% trans "Taux de complétion" %}</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Détails des campagnes -->
+    <h4 class="mt-5 mb-3" data-aos="fade-right">{% trans "Campagnes associées" %}</h4>
+    <div class="row g-4" data-aos="fade-up">
+        {% for campaign in campaigns %}
+        <div class="col-md-6">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3">
+                {% if campaign.image_url %}
+                    <img src="{{ campaign.image_url }}" alt="{{ campaign.title }}" class="campaign-img">
+                {% endif %}
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="fw-bold">{{ campaign.title }}</h5>
+                    <span class="badge bg-primary stat-badge">{{ campaign.status|capfirst }}</span>
+                </div>
+                <p class="text-muted mb-1">{{ campaign.description|truncatewords:25 }}</p>
+                <small class="text-secondary">
+                    {% trans "Collecté:" %} {{ campaign.collected_amount }} / {% trans "Objectif:" %} {{ campaign.goal_amount }}
+                </small>
+                <div class="mt-2 text-end">
+                    <a href="{% url 'intermediaire_campaigns_detail' campaign.id %}" class="btn btn-sm btn-outline-primary rounded-pill">
+                        <i class="mdi mdi-eye-outline me-1"></i> {% trans "Voir campagne" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Détails des campagnes de prêt -->
+    <h4 class="mt-5 mb-3" data-aos="fade-right">{% trans "Campagnes de prêt associées" %}</h4>
+    <div class="row g-4" data-aos="fade-up">
+        {% for loan_campaign in loan_campaigns %}
+        <div class="col-md-6">
+            <div class="card card-report shadow-sm border-0 rounded-4 p-3">
+                {% if loan_campaign.image_url %}
+                    <img src="{{ loan_campaign.image_url }}" alt="{{ loan_campaign.title }}" class="campaign-img">
+                {% endif %}
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="fw-bold">{{ loan_campaign.title }}</h5>
+                    <span class="badge bg-success stat-badge">{{ loan_campaign.status|capfirst }}</span>
+                </div>
+                <p class="text-muted mb-1">{{ loan_campaign.description|truncatewords:25 }}</p>
+                <small class="text-secondary">
+                    {% trans "Collecté:" %} {{ loan_campaign.collected_amount }} / {% trans "Objectif:" %} {{ loan_campaign.goal_amount }}
+                </small>
+                <div class="mt-2 text-end">
+                    <a href="{% url 'intermediaire_loan_campaigns_detail' loan_campaign.id %}" class="btn btn-sm btn-outline-success rounded-pill">
+                        <i class="mdi mdi-eye-outline me-1"></i> {% trans "Voir campagne de prêt" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour actions projet -->
+<script>
+function confirmAction(url, title="{% trans 'Confirmer ?' %}", text="{% trans 'Êtes-vous sûr de vouloir continuer ?' %}") {
+    Swal.fire({
+        title: title,
+        text: text,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '{% trans "Oui" %}',
+        cancelButtonText: '{% trans "Annuler" %}'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = url;
+        }
+    });
+}
+</script>
+{% endblock base_intermediaire %}

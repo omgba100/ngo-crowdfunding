@@ -1,0 +1,229 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans "Mes Paiements" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Styles pour miniatures -->
+<style>
+.payment-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.payment-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+  <!-- 🔹 Formulaire de soumission de paiement -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-6 col-md-8" data-aos="zoom-in" data-aos-duration="900">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5 text-center">
+          <div class="mb-4">
+            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3">
+              <i class="mdi mdi-credit-card-plus mdi-36px"></i>
+            </div>
+            <h3 class="fw-bold text-dark mb-1">{% trans "Envoyer une preuve de paiement" %}</h3>
+            <p class="text-muted">{% trans "Remplissez le formulaire pour soumettre votre paiement." %}</p>
+          </div>
+
+          <form id="paymentUploadForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% crispy form %}
+
+            <div class="mb-3">
+              <label for="amount" class="form-label fw-semibold text-dark">
+                <i class="mdi mdi-cash-multiple me-1 text-primary"></i>
+                {% trans "Montant" %}
+              </label>
+              <input type="number" step="0.01" name="amount" id="amount" class="form-control" placeholder="{% trans 'Entrez le montant' %}" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="currency_id" class="form-label fw-semibold text-dark">
+                <i class="mdi mdi-currency-usd me-1 text-primary"></i>
+                {% trans "Devise" %}
+              </label>
+              <select name="currency_id" id="currency_id" class="form-select" required>
+                <option value="">{% trans "Sélectionner une devise" %}</option>
+                {% for currency in currencies %}
+                  <option value="{{ currency.id }}">{{ currency.code }} - {{ currency.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="proof" class="form-label fw-semibold text-dark">
+                <i class="mdi mdi-upload-outline me-1 text-primary"></i>
+                {% trans "Télécharger le screenshot du paiement" %}
+              </label>
+              <input type="file" name="proof" id="proof" class="form-control" accept="image/*" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-3 shadow-sm mt-3">
+              <i class="mdi mdi-send-outline me-1"></i> {% trans "Soumettre la preuve" %}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Liste des paiements -->
+  <div class="row justify-content-center">
+    <div class="col-12" data-aos="fade-up" data-aos-duration="900">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h4 class="mb-0"><i class="mdi mdi-cash-multiple me-2"></i>{% trans "Mes Paiements" %}</h4>
+        </div>
+        <div class="card-body p-4">
+          {% if payments %}
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>{% trans "Montant" %}</th>
+                  <th>{% trans "Statut" %}</th>
+                  <th>{% trans "Date" %}</th>
+                  <th>{% trans "Preuve" %}</th>
+                  <th>{% trans "Actions" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for payment in payments %}
+                <tr>
+                  <td>{{ payment.amount }} {{ payment.currency.code }}</td>
+                  <td>
+                    {% if payment.status == "success" %}
+                      <span class="badge bg-success">{% trans "Réussi" %}</span>
+                    {% elif payment.status == "pending" %}
+                      <span class="badge bg-warning">{% trans "En attente" %}</span>
+                    {% else %}
+                      <span class="badge bg-danger">{% trans "Échoué" %}</span>
+                    {% endif %}
+                  </td>
+                  <td>{{ payment.created_at|date:"d/m/Y H:i" }}</td>
+                  <td>
+                    {% if payment.proof %}
+                      <img src="{{ payment.proof.url }}" alt="Preuve paiement" class="payment-thumb" data-proof="{{ payment.proof.url }}">
+                    {% else %}
+                      <span class="text-muted">{% trans "Aucune" %}</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if payment.status == "pending" %}
+                    <form method="post" action="{% url 'intermediaire_payment_delete' payment.pk %}" class="delete-payment-form d-inline">
+                      {% csrf_token %}
+                      <button type="button" class="btn btn-danger btn-sm delete-btn">
+                        <i class="mdi mdi-cancel"></i> {% trans "Annuler" %}
+                      </button>
+                    </form>
+                    {% else %}
+                      <span class="text-muted">{% trans "Aucune action" %}</span>
+                    {% endif %}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% else %}
+            <p class="text-muted text-center mb-0">{% trans "Aucun paiement effectué pour le moment." %}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 🔹 Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Confirmation soumission paiement
+  const uploadForm = document.getElementById('paymentUploadForm');
+  if(uploadForm){
+    uploadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: '{% trans "Confirmer l’envoi ?" %}',
+        text: '{% trans "Voulez-vous vraiment soumettre cette preuve de paiement ?" %}',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#007bff',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '{% trans "Oui, envoyer !" %}',
+        cancelButtonText: '{% trans "Annuler" %}',
+        backdrop: `rgba(0,0,0,0.4)`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          uploadForm.submit();
+        }
+      });
+    });
+  }
+
+  // Confirmation annulation paiement
+  const deleteButtons = document.querySelectorAll('.delete-btn');
+  deleteButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const form = this.closest('.delete-payment-form');
+      Swal.fire({
+        title: '{% trans "Confirmer l’annulation ?" %}',
+        text: '{% trans "Cette action annulera votre paiement en attente." %}',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#dc3545',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '{% trans "Oui, annuler !" %}',
+        cancelButtonText: '{% trans "Annuler" %}',
+        backdrop: `rgba(0,0,0,0.4)`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          form.submit();
+        }
+      });
+    });
+  });
+
+  // Affichage image paiement en grand
+  const thumbs = document.querySelectorAll('.payment-thumb');
+  thumbs.forEach(function(img) {
+    img.addEventListener('click', function() {
+      Swal.fire({
+        title: '{% trans "Preuve de paiement" %}',
+        imageUrl: img.dataset.proof,
+        imageAlt: '{% trans "Preuve de paiement" %}',
+        showCloseButton: true,
+        showConfirmButton: false,
+        backdrop: `rgba(0,0,0,0.4)`
+      });
+    });
+  });
+
+});
+</script>
+{% endblock base_intermediaire %}

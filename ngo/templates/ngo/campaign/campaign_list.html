@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Liste des Campagnes de Collecte de Fonds" %}{% endblock %}
+
+{% block content %}
+<style>
+/* ==================== STYLES GLOBAUX ==================== */
+:root {
+  --bg-primary: #FFFAF0;
+  --bg-secondary: #17478E;
+  --bg-tertiary: #303C82;
+  --link-color: #090f1f;
+  --text-title: #131445;
+  --text-white: #fff;
+  --text-color: #5E5E61;
+  --accent: #EFD807;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+/* ==================== SECTION PRINCIPALE ==================== */
+.section-campaigns {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  color: var(--text-white);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-campaigns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(239, 216, 7, 0.2), transparent 70%);
+  animation: rotateGlow 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.section-campaigns h1 {
+  color: var(--accent);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+
+/* ==================== CARD ==================== */
+.campaign-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+}
+
+.campaign-card:hover {
+  transform: rotateY(8deg) rotateX(5deg) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.campaign-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.campaign-card:hover img {
+  transform: scale(1.1);
+}
+
+.campaign-body {
+  padding: 1.5rem;
+  color: var(--text-white);
+}
+
+.campaign-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.campaign-desc {
+  color: #dcdcdc;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress {
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent), #fff176);
+  animation: growProgress 1.5s ease-out;
+}
+
+@keyframes growProgress {
+  from { width: 0; }
+  to { width: var(--progress); }
+}
+
+.remaining-days {
+  font-size: 0.85rem;
+  color: var(--text-white);
+  opacity: 0.8;
+}
+
+/* ==================== BOUTON ==================== */
+.btn-details {
+  background: var(--accent);
+  color: var(--text-title);
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 0.6rem 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.btn-details:hover {
+  background: var(--text-white);
+  color: var(--bg-tertiary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(239, 216, 7, 0.4);
+}
+</style>
+
+<!-- ==================== SECTION DES CAMPAGNES ==================== -->
+<section class="section-campaigns">
+  <div class="container position-relative" style="z-index: 2;">
+    <h1>{% trans "Campagnes Actives" %}</h1>
+    <div class="row g-4 justify-content-center">
+      {% for campaign in campaigns %}
+        <div class="col-md-6 col-lg-4">
+          <div class="campaign-card">
+            {% if campaign.image %}
+              <img src="{{ campaign.image.url }}" alt="{{ campaign.title }}">
+            {% else %}
+              <img src="{% static 'assets/img/placeholder-campaign.jpg' %}" alt="Image de la campagne">
+            {% endif %}
+            <div class="campaign-body">
+              <h5 class="campaign-title">{{ campaign.title }}</h5>
+              <p class="campaign-desc">{{ campaign.description|truncatewords:20 }}</p>
+
+              <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar"
+                     style="--progress: {{ campaign.progress_percentage }}%; width: {{ campaign.progress_percentage }}%;"
+                     aria-valuenow="{{ campaign.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+              <p class="remaining-days">
+                💰 {{ campaign.collected_amount }} / {{ campaign.goal_amount }} FCFA —
+                {% if campaign.remaining_days %}⏳ {{ campaign.remaining_days }} {% trans "jours restants" %}{% else %}{% trans "Illimitée" %}{% endif %}
+              </p>
+
+              <div class="text-center mt-3">
+                <a href="{% url 'campaign_detail' campaign.id %}" class="btn btn-details">
+                  🔍 {% trans "Voir détails" %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center text-white">{% trans "Aucune campagne active pour le moment." %}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EFFETS SUPPLÉMENTAIRES ==================== -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".campaign-card"), {
+    max: 15,
+    speed: 600,
+    glare: true,
+    "max-glare": 0.3,
+  });
+</script>
+{% endblock %}

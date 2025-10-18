@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ country.name }} – {% trans "Catégories financées" %}{% endblock %}
+
+{% block content %}
+
+<!-- ============================= HERO SECTION ============================= -->
+<section class="hero-country d-flex align-items-center justify-content-center text-center position-relative" 
+  style="background: linear-gradient(rgba(23,71,142,0.8), rgba(19,20,69,0.85)), url('{% static 'assets/img/about/hero-bg.jpg' %}') center/cover no-repeat; min-height: 50vh;">
+  <div data-aos="zoom-in" data-aos-duration="1200">
+    <img src="{{ country.flag.url }}" alt="{{ country.name }}" class="mb-3 rounded-circle shadow-lg" style="width: 80px; height: 80px; object-fit: cover;">
+    <h1 class="fw-bold text-white display-5">{{ country.name }}</h1>
+    <p class="lead text-white-50">{% trans "Découvrez les catégories de projets financés dans ce pays." %}</p>
+  </div>
+</section>
+
+<!-- ============================= CATEGORY CARDS ============================= -->
+<section class="py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-uppercase" style="color: var(--text-title);" data-aos="fade-up">{% trans "Catégories financées" %}</h2>
+      <div class="divider mx-auto my-3" style="width: 80px; height: 4px; background-color: var(--accent);" data-aos="zoom-in"></div>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="150">
+        {% trans "Les secteurs suivants bénéficient d’un soutien financier grâce à nos investisseurs et partenaires." %}
+      </p>
+    </div>
+
+    <div class="row g-4">
+      {% for category in categories %}
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'100' }}">
+        <div class="category-card shadow-lg border-0 rounded-4 overflow-hidden position-relative" data-tilt data-tilt-max="8">
+          <div class="category-img position-relative">
+            {% if category.image %}
+              <img src="{{ category.image.url }}" alt="{{ category.name }}" class="w-100" style="height: 220px; object-fit: cover;">
+            {% else %}
+              <img src="{% static 'assets/img/projects/default.jpg' %}" alt="placeholder" class="w-100" style="height: 220px; object-fit: cover;">
+            {% endif %}
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-center">
+              <h5 class="fw-bold text-white text-uppercase">{{ category.name }}</h5>
+            </div>
+          </div>
+          <div class="p-4 bg-white">
+            {% if category.description %}
+              <p class="text-muted small mb-3">{{ category.description|truncatechars:120 }}</p>
+            {% else %}
+              <p class="text-muted small mb-3">{% trans "Aucune description disponible." %}</p>
+            {% endif %}
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div class="text-start">
+                <span class="fw-bold" style="color: var(--bg-tertiary);">
+                  {% trans "Total financé" %}:
+                </span><br>
+                <span class="fw-semibold text-success">{{ category.total_collected|floatformat:0 }} {{ country.currency.code }}</span>
+              </div>
+              <a href="{% url 'ngo:projects_by_category' country.slug category.slug %}" 
+                 class="btn btn-sm fw-bold" 
+                 style="background-color: var(--bg-secondary); color: var(--text-white); border-radius: 50px;">
+                 {% trans "Voir les projets" %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <p class="text-muted fs-5">{% trans "Aucune catégorie financée trouvée pour ce pays." %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STYLES & SCRIPTS ============================= -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+
+<script>
+  AOS.init({ duration: 900, offset: 120, once: true });
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+</script>
+
+<style>
+  .category-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: linear-gradient(135deg, #fff, var(--bg-primary));
+  }
+  .category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .overlay {
+    background: rgba(23,71,142,0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .category-card:hover .overlay {
+    opacity: 1;
+  }
+  .divider {
+    border-radius: 10px;
+  }
+</style>
+
+{% endblock %}

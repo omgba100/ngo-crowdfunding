@@ -1,0 +1,143 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Détails du Projet" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+/* Carte projet */
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.avatar-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.section-title {
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <!-- En-tête projet -->
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-folder-outline me-2"></i> {{ project.title }}
+            </h2>
+            <p class="text-muted mb-0">{{ project.short_description }}</p>
+        </div>
+        <div>
+            <a href="{% url 'intermediaire_entrepreneur_detail' project.entrepreneur.id %}" class="btn btn-outline-primary rounded-pill">
+                <i class="mdi mdi-arrow-left-circle-outline me-1"></i> {% trans "Retour à l’entrepreneur" %}
+            </a>
+        </div>
+    </div>
+
+    <!-- Informations principales -->
+    <div class="card project-card shadow-sm border-0 rounded-4 p-4 mb-4" data-aos="fade-up">
+        <h5 class="section-title">{% trans "Informations sur le projet" %}</h5>
+        <p><strong>{% trans "Titre:" %}</strong> {{ project.title }}</p>
+        <p><strong>{% trans "Description:" %}</strong> {{ project.description }}</p>
+        <p><strong>{% trans "Budget cible:" %}</strong> {{ project.budget|default:"N/A" }} {{ project.currency|default:"XAF" }}</p>
+        <p><strong>{% trans "Date de création:" %}</strong> {{ project.created_at|date:"d M Y" }}</p>
+    </div>
+
+    <!-- Campagnes -->
+    <div class="card project-card shadow-sm border-0 rounded-4 p-4 mb-4" data-aos="fade-up">
+        <h5 class="section-title">{% trans "Campagnes du projet" %}</h5>
+        {% if campaigns %}
+            <ul class="list-group list-group-flush">
+                {% for campaign in campaigns %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ campaign.title }}</strong>
+                        <small class="text-muted d-block">{{ campaign.start_date|date:"d M Y" }} - {{ campaign.end_date|date:"d M Y" }}</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill remove-campaign-btn" data-id="{{ campaign.id }}">
+                        <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer" %}
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-muted">{% trans "Aucune campagne disponible pour ce projet." %}</p>
+        {% endif %}
+    </div>
+
+    <!-- Campagnes de prêt -->
+    <div class="card project-card shadow-sm border-0 rounded-4 p-4 mb-4" data-aos="fade-up">
+        <h5 class="section-title">{% trans "Campagnes de prêt" %}</h5>
+        {% if loan_campaigns %}
+            <ul class="list-group list-group-flush">
+                {% for loan in loan_campaigns %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ loan.title }}</strong>
+                        <small class="text-muted d-block">{{ loan.start_date|date:"d M Y" }} - {{ loan.end_date|date:"d M Y" }}</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill remove-loan-btn" data-id="{{ loan.id }}">
+                        <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer" %}
+                    </button>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-muted">{% trans "Aucune campagne de prêt pour ce projet." %}</p>
+        {% endif %}
+    </div>
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour suppression des campagnes -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    function handleDeleteButtons(selector, urlPrefix) {
+        const buttons = document.querySelectorAll(selector);
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const id = this.getAttribute('data-id');
+                Swal.fire({
+                    title: '{% trans "Confirmer la suppression ?" %}',
+                    text: '{% trans "Cette action est irréversible." %}',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: '{% trans "Oui, supprimer !" %}',
+                    cancelButtonText: '{% trans "Annuler" %}'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = urlPrefix + id + '/';
+                    }
+                });
+            });
+        });
+    }
+
+    handleDeleteButtons('.remove-campaign-btn', '/dashboard/intermediaire/remove-campaign/');
+    handleDeleteButtons('.remove-loan-btn', '/dashboard/intermediaire/remove-loan/');
+});
+</script>
+{% endblock base_intermediaire %}

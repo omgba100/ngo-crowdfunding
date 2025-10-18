@@ -1,0 +1,153 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ project.title }} - {% trans "Détails du projet" %}{% endblock %}
+
+{% block base_investisseur %}
+<div class="container mt-5 mb-5">
+
+  <!-- En-tête -->
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 animate__animated animate__fadeInDown">
+    <div>
+      <h2 class="fw-bold text-dark mb-1">
+        <i class="bi bi-layers text-primary"></i> {{ project.title }}
+      </h2>
+      <p class="text-muted mb-0">
+        <i class="bi bi-tag"></i> {{ project.category.name }}
+      </p>
+    </div>
+    <a href="{% url 'projects_available_investisseur' %}" class="btn btn-outline-primary rounded-pill shadow-sm">
+      <i class="bi bi-arrow-left"></i> {% trans "Retour aux projets" %}
+    </a>
+  </div>
+
+  <!-- Carte principale -->
+  <div class="card border-0 shadow-lg rounded-4 overflow-hidden animate__animated animate__fadeInUp">
+    {% if project.image %}
+      <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}" style="height: 350px; object-fit: cover;">
+    {% else %}
+      <img src="{% static 'images/default-project.jpg' %}" class="card-img-top" alt="Default" style="height: 350px; object-fit: cover;">
+    {% endif %}
+
+    <div class="card-body p-4">
+      <p class="card-text text-secondary fs-6 mb-4">{{ project.description|linebreaks }}</p>
+
+      <!-- Montants -->
+      <div class="row text-center mb-4">
+        <div class="col-md-6">
+          <div class="border rounded-4 py-3 shadow-sm bg-light">
+            <h6 class="text-muted mb-1">{% trans "Montant cible" %}</h6>
+            <h4 class="fw-bold text-dark">{{ project.target_amount|floatformat:0 }} XAF</h4>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border rounded-4 py-3 shadow-sm bg-light">
+            <h6 class="text-muted mb-1">{% trans "Collecté" %}</h6>
+            <h4 class="fw-bold text-success">{{ project.collected_amount|floatformat:0 }} XAF</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barre de progression -->
+      <div class="progress mb-2" style="height: 12px; border-radius: 10px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-gradient"
+             style="width: {{ project.progress_percentage }}%; background: linear-gradient(90deg, #0d6efd, #6610f2);"
+             aria-valuenow="{{ project.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+      <p class="text-muted small text-center mb-4">
+        {% trans "Progression" %} : <strong>{{ project.progress_percentage }}%</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Campagnes associées -->
+  <div class="row mt-5">
+
+    <!-- Campagnes classiques -->
+    <div class="col-md-6 mb-4">
+      <h4 class="fw-semibold mb-3 text-primary">
+        <i class="bi bi-bullseye"></i> {% trans "Campagnes en cours" %}
+      </h4>
+
+      {% for campaign in campaigns %}
+      <div class="card border-0 shadow-sm rounded-4 mb-3 hover-shadow transition-all animate__animated animate__fadeInUp">
+        <div class="card-body">
+          <h5 class="fw-bold text-dark">{{ campaign.title }}</h5>
+          <p class="text-muted small mb-2">{{ campaign.description|truncatechars:130 }}</p>
+
+          <div class="d-flex justify-content-between small">
+            <span><i class="bi bi-target"></i> {% trans "Objectif" %}: {{ campaign.target_amount|floatformat:0 }} XAF</span>
+            <span class="text-success"><i class="bi bi-cash-stack"></i> {{ campaign.collected_amount|floatformat:0 }} XAF</span>
+          </div>
+
+          <div class="progress mt-2" style="height: 8px;">
+            <div class="progress-bar bg-primary" style="width: {{ campaign.progress_percentage }}%;">
+            </div>
+          </div>
+
+          <a href="{% url 'campaign_detail' campaign.id %}" 
+             class="btn btn-primary w-100 mt-3 rounded-pill shadow-sm fw-semibold">
+            <i class="bi bi-graph-up"></i> {% trans "Participer à cette campagne" %}
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="alert alert-light border text-center">
+        <i class="bi bi-exclamation-circle text-muted"></i> {% trans "Aucune campagne active." %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Campagnes de prêt -->
+    <div class="col-md-6 mb-4">
+      <h4 class="fw-semibold mb-3 text-info">
+        <i class="bi bi-cash-coin"></i> {% trans "Campagnes de prêt actives" %}
+      </h4>
+
+      {% for loan in loan_campaigns %}
+      <div class="card border-0 shadow-sm rounded-4 mb-3 hover-shadow animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="card-body">
+          <h5 class="fw-bold text-dark">{{ loan.title }}</h5>
+          <p class="text-muted small">{{ loan.description|truncatechars:130 }}</p>
+          <div class="d-flex justify-content-between small mb-2">
+            <span><i class="bi bi-percent"></i> {{ loan.interest_rate }}%</span>
+            <span><i class="bi bi-clock"></i> {{ loan.repayment_duration }} {% trans "mois" %}</span>
+          </div>
+
+          <div class="progress mt-2" style="height: 8px;">
+            <div class="progress-bar bg-info" style="width: {{ loan.progress_percentage }}%;"></div>
+          </div>
+
+          <a href="{% url 'loan_campaign_detail_investisseur' loan.id %}" 
+             class="btn btn-info text-white w-100 mt-3 rounded-pill shadow-sm fw-semibold">
+            <i class="bi bi-currency-exchange"></i> {% trans "Financer ce prêt" %}
+          </a>
+        </div>
+      </div>
+      {% empty %}
+      <div class="alert alert-light border text-center">
+        <i class="bi bi-exclamation-circle text-muted"></i> {% trans "Aucune campagne de prêt active." %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Animation CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+.bg-gradient {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+}
+</style>
+{% endblock base_investisseur %}

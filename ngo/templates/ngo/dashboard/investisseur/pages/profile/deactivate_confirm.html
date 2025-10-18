@@ -1,0 +1,116 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Désactivation du compte" %}{% endblock %}
+
+{% block base_investisseur %}
+<style>
+body {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* --- Animation d'apparition fluide --- */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.deactivate-card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 50px 40px;
+  animation: fadeInScale 0.6s ease-in-out;
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deactivate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.deactivate-icon {
+  font-size: 4rem;
+  color: #ffc107;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn-modern {
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+}
+
+.btn-warning-modern {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+}
+.btn-warning-modern:hover {
+  background: #e0a800;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+}
+
+.btn-secondary-modern {
+  background: #6c757d;
+  color: white;
+  border: none;
+}
+.btn-secondary-modern:hover {
+  background: #5a6268;
+  box-shadow: 0 0 15px rgba(108, 117, 125, 0.5);
+}
+</style>
+
+<div class="container">
+  <div class="deactivate-card">
+    <div class="deactivate-icon">⚠️</div>
+    <h3 class="fw-bold text-warning mb-3">{% trans "Désactivation du compte" %}</h3>
+    <p class="text-muted mb-4">
+      {% trans "Êtes-vous sûr de vouloir désactiver temporairement votre compte ? Vous pourrez le réactiver ultérieurement en vous reconnectant." %}
+    </p>
+
+    <form method="post" class="mt-4">
+      {% csrf_token %}
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button type="submit" class="btn btn-warning-modern btn-modern">
+          💤 {% trans "Désactiver mon compte" %}
+        </button>
+        <a href="{% url 'profile_investisseur' %}" class="btn btn-secondary-modern btn-modern">
+          🔙 {% trans "Annuler" %}
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock base_investisseur %}
+

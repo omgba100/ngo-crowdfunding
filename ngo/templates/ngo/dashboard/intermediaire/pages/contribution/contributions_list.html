@@ -1,0 +1,126 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}Contributions liées aux campagnes et campagnes de prêt des entrepreneurs{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+.card-contribution {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+.card-contribution:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.status-badge {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-cash-multiple me-2"></i> {% trans "Mes Contributions" %}
+            </h2>
+            <p class="text-muted mb-0">{% trans "Toutes les contributions récentes de vos projets." %}</p>
+        </div>
+    </div>
+
+    {% if contributions %}
+    <div class="row g-4" data-aos="fade-up" data-aos-duration="900">
+        {% for contribution in contributions %}
+        <div class="col-md-6">
+            <div class="card card-contribution shadow-sm border-0 rounded-4 p-3 d-flex justify-content-between align-items-start"
+                 data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+
+                <!-- Images projet & campagne -->
+                {% if contribution.project.image %}
+                <img src="{{ contribution.project.image.url }}" alt="{{ contribution.project.name }}" class="card-img-top mb-2">
+                {% endif %}
+                {% if contribution.campaign and contribution.campaign.image %}
+                <img src="{{ contribution.campaign.image.url }}" alt="{{ contribution.campaign.title }}" class="card-img-top mb-2">
+                {% elif contribution.loan_campaign and contribution.loan_campaign.image %}
+                <img src="{{ contribution.loan_campaign.image.url }}" alt="{{ contribution.loan_campaign.title }}" class="card-img-top mb-2">
+                {% endif %}
+
+                <div class="flex-grow-1">
+                    <a href="{% url 'intermediaire_contribution_detail' contribution.id %}" class="text-decoration-none">
+                        <h5 class="mb-1 fw-bold">
+                            {{ contribution.project.name }}
+                        </h5>
+                        <p class="mb-0 text-muted">
+                            {% if contribution.campaign %}
+                                {% trans "Campagne:" %} {{ contribution.campaign.title }}
+                            {% elif contribution.loan_campaign %}
+                                {% trans "Campagne de prêt:" %} {{ contribution.loan_campaign.title }}
+                            {% endif %}
+                        </p>
+                        <p class="mb-0 text-muted">{% trans "Investisseur:" %} {{ contribution.investor.get_full_name }}</p>
+                        <small class="text-muted">{{ contribution.created_at|date:"d M Y, H:i" }}</small>
+                        <p class="fw-bold mt-2">{% trans "Montant:" %} {{ contribution.amount }}</p>
+                    </a>
+                </div>
+
+                <button class="btn btn-sm btn-outline-danger rounded-pill delete-btn mt-2" data-id="{{ contribution.id }}">
+                    <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer" %}
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-5" data-aos="fade-up">
+        <i class="mdi mdi-cash-off-outline mdi-48px mb-3"></i>
+        <p class="text-muted">{% trans "Aucune contribution pour le moment." %}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour confirmation de suppression -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const contributionId = this.getAttribute('data-id');
+            Swal.fire({
+                title: '{% trans "Confirmer la suppression ?" %}',
+                text: '{% trans "Cette contribution sera supprimée définitivement." %}',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: '{% trans "Oui, supprimer !" %}',
+                cancelButtonText: '{% trans "Annuler" %}'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/dashboard/intermediaire/contributions/" + contributionId + "/delete/";
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock base_intermediaire %}

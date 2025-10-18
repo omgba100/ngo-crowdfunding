@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Infinity Global Investment & Aid ( IGIA) - Financement Participatif" %}{% endblock %}
+
+{% block content %}
+<div class="country-page-bg" style="background: url('{% static "assets/img/map/map.png" %}') no-repeat center center fixed; background-size: cover;">
+    <div class="country-overlay d-flex align-items-center">
+        <div class="container py-5">
+            <h1 class="text-center mb-5 text-white fw-bold display-5 fade-in-up">
+                🌍 {% trans "Liste des pays dans auxquels IGIA participe au financement participatif" %}
+            </h1>
+
+            <div class="row g-4 justify-content-center">
+                {% for country in countries %}
+                    <div class="col-10 col-sm-6 col-md-4 col-lg-3 fade-in-card">
+                        <div class="country-card tilt p-4 text-center position-relative">
+                            <div class="glow"></div>
+
+                            <div class="flag-container mb-3">
+                                {% if country.flag %}
+                                    <img src="{{ country.flag.url }}" alt="{{ country.name }} flag" class="country-flag shadow">
+                                {% else %}
+                                    <img src="{% static 'assets/img/map/nederland.png' %}" alt="Pas de drapeau" class="country-flag shadow">
+                                {% endif %}
+                            </div>
+
+                            <h5 class="fw-bold text-white mb-2">{{ country.name }}</h5>
+                            <p class="text-light small mb-2">
+                                {% trans "Code ISO" %} : <span class="fw-semibold text-white-50">{{ country.code }}</span>
+                            </p>
+
+                            {% if country.active %}
+                                <span class="badge bg-success px-3 py-2 rounded-pill mb-3">
+                                    ✅ {% trans "Actif" %}
+                                </span>
+                            {% else %}
+                                <span class="badge bg-secondary px-3 py-2 rounded-pill mb-3">
+                                    ⚪ {% trans "Inactif" %}
+                                </span>
+                            {% endif %}
+
+                            <a href="{% url 'funded_categories_for_country' country.slug %}" class="btn btn-outline-light rounded-pill px-4 py-2 hover-zoom mt-2">
+                                🚀 {% trans "Explorer" %}
+                            </a>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p class="text-center text-white">{% trans "Aucun pays disponible pour le moment." %}</p>
+                {% endfor %}
+            </div>
+
+            <div class="country-contact-card text-center mt-5 p-5 fade-in-up">
+                <h3 class="fw-bold text-white mb-3">{% trans "Votre pays ne figure pas dans la liste ?" %}</h3>
+                <p class="text-light mb-4">{% trans "Contactez-nous pour que nous puissions étudier votre demande et vous accompagner." %}</p>
+                <a href="{% url 'contact' %}" class="btn btn-lg btn-primary shadow-lg rounded-pill px-4 py-2 hover-glow">
+                    📩 {% trans "Nous Contacter" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== Animation & Styles Modernes ========== -->
+<style>
+/* ======== Arrière-plan & ambiance ======== */
+.country-page-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.country-overlay {
+  background: linear-gradient(135deg, rgba(23, 71, 142, 0.85), rgba(48, 60, 130, 0.85));
+  backdrop-filter: blur(8px);
+}
+
+/* ======== Cards pays ======== */
+.country-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.country-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Effet halo lumineux */
+.country-card .glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.country-card:hover .glow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Drapeaux */
+.flag-container {
+  z-index: 1;
+  position: relative;
+}
+
+.country-flag {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.7);
+}
+
+/* Boutons */
+.btn.hover-zoom {
+  transition: all 0.3s ease;
+}
+.btn.hover-zoom:hover {
+  transform: scale(1.05);
+  background: var(--bg-secondary);
+  color: #fff;
+}
+
+.btn.hover-glow {
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  transition: all 0.3s ease;
+}
+.btn.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+/* ======== Animations d’apparition ======== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-in-card {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInCard 0.6s ease forwards;
+}
+
+.fade-in-card:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-card:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-card:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInCard {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .country-card { padding: 2rem 1rem; }
+  .country-flag { width: 70px; height: 50px; }
+}
+</style>
+
+<!-- Optionnel : script pour effet 3D tilt -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3
+  });
+});
+</script>
+{% endblock %}

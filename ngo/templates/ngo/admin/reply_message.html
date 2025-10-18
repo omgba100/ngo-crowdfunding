@@ -1,0 +1,51 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Administration') }}{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans 'Accueil' %}</a>
+  › <a href="{% url 'admin:ngo_message_changelist' %}">{% trans 'Messages' %}</a>
+  › {{ title }}
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main" class="module">
+  <h1 style="margin-bottom: 1em;">💬 {{ title }}</h1>
+
+  <div class="card" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0;">📨 {% trans "Message original" %}</h3>
+    <p><strong>{% trans "De" %} :</strong> {{ original.sender }}</p>
+    <p><strong>{% trans "Objet" %} :</strong> {{ original.subject }}</p>
+    <p><strong>{% trans "Contenu" %} :</strong></p>
+    <div style="background:#f9f9f9; border:1px solid #ddd; padding:10px; border-radius:5px; margin-bottom:20px;">
+      {{ original.body|linebreaks }}
+    </div>
+
+    <h3>🖊️ {% trans "Votre réponse" %}</h3>
+    <form method="post" novalidate>
+      {% csrf_token %}
+      <div class="form-row">
+        {{ form.subject.errors }}
+        <label for="{{ form.subject.id_for_label }}">{{ form.subject.label }}:</label><br>
+        {{ form.subject }}
+      </div>
+      <div class="form-row" style="margin-top: 10px;">
+        {{ form.body.errors }}
+        <label for="{{ form.body.id_for_label }}">{{ form.body.label }}:</label><br>
+        {{ form.body }}
+      </div>
+      <div class="form-row" style="margin-top: 20px;">
+        <button type="submit" class="button default" style="background-color:#007bff; color:white; border:none; padding:8px 20px; border-radius:5px;">
+          {% trans "Envoyer la réponse" %}
+        </button>
+        <a href="{% url 'admin:ngo_message_changelist' %}" class="button cancel-link" style="margin-left:10px;">
+          {% trans "Annuler" %}
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

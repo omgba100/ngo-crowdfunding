@@ -1,0 +1,89 @@
+PERSONAL DATA USE POLICY
+
+IGIA is a crowdfunding and inclusive crowdlending platform.
+It is subject to professional secrecy. IGIA ensures the security and confidentiality of the information
+entrusted to it. This personal data protection policy (hereinafter the "Policy")
+describes the commitments implemented by IGIA, as data controller, to ensure the protection
+of your personal data. The Policy is an integral part of the General Terms of Use (GTU),
+capitalized terms having the same definition as those in the GTU.
+Whenever personal information is collected, IGIA strives to include a link
+to this Policy. We may modify this Policy.
+The current version is available on the website www.igia.com, and we will notify you of any changes
+through the website or by any other means.
+
+Also discover our cookie policy here.
+
+
+1. Processing of Collected Data
+
+IGIA collects several types of data through its various online services:
+
+- Identification data (first name, last name, date and place of birth, etc.)
+- Contact information (telephone number, postal and email addresses, etc.);
+- Transaction data (offers, transfers, credit card payments, related to credits and debits from your IGIA account, for example);
+- Data specific to Investments or any other requests relating to IGIA's offerings;
+- Tax data (country of tax residence, exemption certificate);
+- Data from your interactions with IGIA;
+- Data obtained with your consent and/or collected in accordance with regulations permitted or required.
+
+All of this data is generally obtained directly from you, whether by telephone, email, or online.
+IGIA may, however, process data obtained from third-party organizations, in particular to meet its regulatory obligations or with your 
+consent in connection with the use of certain services.
+
+The communication and processing of data requested by IGIA is essential to the provision of IGIA's 
+products and services and/or to comply 
+with the legal and regulatory requirements to which IGIA is subject.
+Apart from these cases, we do not collect any data without your prior consent.
+
+Finally, we automatically collect certain information about your browser type and the connection 
+equipment used (computer, mobile device) for the purposes of administering our systems, combating fraud, 
+maintaining the quality of our services, and providing general statistics regarding their use.
+
+2. Purposes of Data Processing
+
+The processing carried out by IGIA is based on compliance with a legal or regulatory obligation,
+contract execution, consent for services enabling the synchronization of external documents, or a legitimate
+interest in commercial prospecting.
+
+- Customer relationship management
+- Provision of subscribed products and services
+- Provision of services using data synchronization
+- Management, review, and granting of financing
+- Compliance with legal and regulatory obligations
+- Fight against fraud
+- Security of computer networks and transactions
+- Establishment of proof of transactions and agreements
+- Collection and assignment of debts, management of payment incidents
+- Personalized offers and commercial proposals
+
+3. Recipients of Your Data
+
+IGIA may be required to provide certain data about you to public authorities upon request,
+or as part of its regulatory or legal obligations.
+IGIA may share your personal data with its technical service providers, partners, and issuers.
+
+4. Security of Your Data
+
+We use SSL technology to ensure the confidentiality of data transmitted over networks.
+
+5. Timeframe and Retention of Your Data
+
+To ensure the proper processing of financial transactions, your personal data must be retained
+and regularly updated for the entire duration you are engaged in an Investment.
+
+In order to meet legal and/or regulatory obligations and/or to respond to requests from authorities
+authorized to make such requests, your personal data will be retained beyond the date of last
+activity for a period of 5 years. Finally, some data may be stored and anonymized for use
+for statistical purposes.
+
+6. Your Rights
+
+In accordance with the General Data Protection Regulation, you have the right to access, rectify, erase, 
+restrict processing, and request the portability of your data, as well as to determine the fate of your data after your death.
+
+These rights may be exercised under the conditions and within the limits set out in the regulations in force.
+
+You may exercise your other rights and contact IGIA by emailing the following address: contact@igia.com
+
+You have the right to file a complaint with the AFM, which is committed to promoting fair and transparent financial markets, 
+the supervisory authority responsible for ensuring compliance with personal data obligations.

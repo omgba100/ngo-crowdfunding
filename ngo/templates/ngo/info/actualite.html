@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Actualités" %}{% endblock %}
+
+{% block content %}
+
+<!-- Header avec image -->
+<header class="bg-dark text-white position-relative" style="height: 300px; background: url('{% static "assets/img/about/hero-bg.jpg" %}') no-repeat center center/cover;">
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-4 fw-bold">{% trans "Actualités IGIA" %}</h1>
+        <p class="lead mt-3">{% trans "Restez informé sur nos dernières actions et projets." %}</p>
+    </div>
+</header>
+
+<!-- ============================= ACTUALITES ============================= -->
+<section class="py-5" style="background-color: var(--bg-primary);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-uppercase" style="color: var(--text-title);" data-aos="fade-up">{% trans "Dernières Actualités" %}</h2>
+            <div class="divider mx-auto my-3" style="width: 80px; height: 4px; background-color: var(--accent);" data-aos="zoom-in"></div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Carte Actualité 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 rounded-4 shadow-lg overflow-hidden h-100">
+                    <img src="{% static 'assets/img/news/news1.jpg' %}" class="card-img-top" alt="Actualité 1" style="height: 220px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{% trans "Lancement de notre nouvelle campagne de financement" %}</h5>
+                        <p class="card-text text-muted" style="min-height: 60px;">
+                            {% trans "IGIA a lancé une campagne de financement participatif pour soutenir les entrepreneurs locaux et renforcer les projets solidaires." %}
+                        </p>
+                        <a href="#" class="btn btn-sm fw-bold" style="background-color: var(--bg-tertiary); color: var(--text-white); border-radius: 50px;">
+                            {% trans "Lire plus" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Actualité 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 rounded-4 shadow-lg overflow-hidden h-100">
+                    <img src="{% static 'assets/img/news/news2.jpeg' %}" class="card-img-top" alt="Actualité 2" style="height: 220px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{% trans "Partenariat avec des institutions locales" %}</h5>
+                        <p class="card-text text-muted" style="min-height: 60px;">
+                            {% blocktrans %}IGIA collabore désormais avec plusieurs institutions locales pour améliorer l'accès aux micro-prêts et soutenir les initiatives solidaires.{% endblocktrans %},
+                        </p>
+                        <a href="#" class="btn btn-sm fw-bold" style="background-color: var(--bg-tertiary); color: var(--text-white); border-radius: 50px;">
+                            {% trans "Lire plus" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Actualité 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 rounded-4 shadow-lg overflow-hidden h-100">
+                    <img src="{% static 'assets/img/news/news3.jpg' %}" class="card-img-top" alt="Actualité 3" style="height: 220px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{% trans "Rapport annuel IGIA 2025" %}</h5>
+                        <p class="card-text text-muted" style="min-height: 60px;">
+                            {% trans "Découvrez notre rapport annuel présentant l'impact de nos actions et la progression de nos projets financés." %}
+                        </p>
+                        <a href="#" class="btn btn-sm fw-bold" style="background-color: var(--bg-tertiary); color: var(--text-white); border-radius: 50px;">
+                            {% trans "Lire plus" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================= SCRIPTS ============================= -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, offset: 120, once: true });
+</script>
+
+<style>
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+.divider {
+    border-radius: 10px;
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Détail de la contribution" %}{% endblock %}
+
+{% block base_investisseur %}
+<style>
+  /* --- Animations et styles modernes --- */
+  .card-hover {
+    transition: all 0.4s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  .progress {
+    height: 12px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+  }
+  .progress-bar {
+    transition: width 1s ease-in-out;
+  }
+  .detail-icon {
+    font-size: 2rem;
+    color: #0d6efd;
+    animation: fadeInDown 1s ease;
+  }
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+    border-radius: 1rem;
+  }
+  .data-label {
+    font-weight: 600;
+    color: #495057;
+  }
+  .data-value {
+    font-weight: 500;
+    color: #212529;
+  }
+</style>
+
+<div class="container mt-5 mb-5">
+
+  <!-- HEADER -->
+  <div class="d-flex justify-content-between align-items-center mb-4 animate__animated animate__fadeInDown">
+    <h2 class="fw-bold text-dark d-flex align-items-center">
+      <i class="bi bi-wallet2 detail-icon me-2"></i>
+      {% trans "Détail de la contribution" %}
+    </h2>
+    <a href="{% url 'contributions_list_investisseur' %}" class="btn btn-outline-primary rounded-pill shadow-sm">
+      <i class="bi bi-arrow-left"></i> {% trans "Retour" %}
+    </a>
+  </div>
+
+  <!-- CARTE PRINCIPALE -->
+  <div class="card border-0 shadow-lg rounded-4 overflow-hidden card-hover animate__animated animate__fadeInUp">
+    <div class="card-body p-4">
+
+      <!-- TITRE DU PROJET -->
+      <h4 class="fw-bold mb-4 text-primary border-bottom pb-2">
+        {{ campaign.title|default:contribution.campaign.title }}
+      </h4>
+
+      <div class="row g-4">
+        <!-- Colonne gauche -->
+        <div class="col-md-6">
+          <p><span class="data-label">{% trans "Montant investi :" %}</span> <span class="data-value text-primary">{{ contribution.amount|floatformat:0 }} XAF</span></p>
+          <p><span class="data-label">{% trans "Date :" %}</span> <span class="data-value">{{ contribution.created_at|date:"d M Y H:i" }}</span></p>
+          <p><span class="data-label">{% trans "Statut du paiement :" %}</span>
+            {% if contribution.payment_status == "completed" %}
+              <span class="badge bg-success"><i class="bi bi-check-circle"></i> {% trans "Terminé" %}</span>
+            {% elif contribution.payment_status == "pending" %}
+              <span class="badge bg-warning text-dark"><i class="bi bi-hourglass-split"></i> {% trans "En attente" %}</span>
+            {% else %}
+              <span class="badge bg-danger"><i class="bi bi-x-circle"></i> {% trans "Échoué" %}</span>
+            {% endif %}
+          </p>
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="col-md-6">
+          {% if campaign.interest_rate %}
+            <p><span class="data-label">{% trans "Taux d'intérêt :" %}</span> <span class="data-value">{{ campaign.interest_rate }}%</span></p>
+          {% endif %}
+          {% if estimated_return %}
+            <p><span class="data-label">{% trans "Rendement estimé :" %}</span> <span class="data-value text-success">{{ estimated_return|floatformat:0 }} XAF</span></p>
+          {% endif %}
+          {% if campaign.duration %}
+            <p><span class="data-label">{% trans "Durée de la campagne :" %}</span> <span class="data-value">{{ campaign.duration }} {% trans "mois" %}</span></p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- BARRE DE PROGRESSION -->
+      <div class="mt-4">
+        <div class="progress mb-2">
+          <div class="progress-bar bg-gradient"
+               style="width: {{ campaign.progress|default_if_none:0 }}%; background: linear-gradient(90deg, #007bff, #00c4ff);"
+               role="progressbar"
+               aria-valuenow="{{ campaign.progress|default_if_none:0 }}"
+               aria-valuemin="0"
+               aria-valuemax="100"></div>
+        </div>
+        <div class="d-flex justify-content-between small">
+          <span class="fw-semibold text-primary">
+            {{ campaign.collected_amount|default_if_none:0|floatformat:0 }} XAF {% trans "collectés" %}
+          </span>
+          <span class="text-muted">{% trans "Objectif :" %} {{ campaign.target_amount|default_if_none:0|floatformat:0 }} XAF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Animation CSS externe -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock base_investisseur %}

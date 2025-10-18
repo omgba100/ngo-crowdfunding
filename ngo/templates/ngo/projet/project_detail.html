@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ project.title }} | IGIA{% endblock %}
+
+{% block content %}
+<!-- ============================= HERO ============================= -->
+<section class="project-hero position-relative" style="background: linear-gradient(rgba(23,71,142,0.7), rgba(23,71,142,0.7)), url('{% if project.image %}{{ project.image.url }}{% else %}{% static 'assets/img/projects/default.jpg' %}{% endif %}') center/cover no-repeat; height: 450px;">
+  <div class="container h-100 d-flex flex-column justify-content-end pb-4">
+    <h1 class="display-4 fw-bold text-white" data-aos="fade-up">{{ project.title }}</h1>
+    <p class="text-white lead" data-aos="fade-up" data-aos-delay="200">{{ project.short_description }}</p>
+    <div class="progress mt-3" style="height: 12px; border-radius: 12px;" data-aos="fade-up" data-aos-delay="400">
+      <div class="progress-bar" role="progressbar" style="width: 0%; background-color: var(--accent);" aria-valuenow="{{ project.progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="text-white mt-1" data-aos="fade-up" data-aos-delay="500">{{ project.progress_percentage }}% {% trans "collecté" %}</small>
+  </div>
+</section>
+
+<!-- ============================= DETAILS ============================= -->
+<section class="py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Project info -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h3 class="fw-bold mb-3" style="color: var(--text-title);">{% trans "Détails du projet" %}</h3>
+        <p class="text-muted">{{ project.description|linebreaks }}</p>
+        <ul class="list-unstyled mt-4">
+          <li><strong>{% trans "Entrepreneur" %}:</strong> {{ project.entrepreneur.get_full_name }}</li>
+          <li><strong>{% trans "Pays" %}:</strong> {{ project.country.name }}</li>
+          <li><strong>{% trans "Catégories" %}:</strong> 
+            {% for cat in project.categories.all %}
+              {{ cat.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </li>
+          <li><strong>{% trans "Montant cible" %}:</strong> {{ project.target_amount }} USD</li>
+          <li><strong>{% trans "Montant collecté" %}:</strong> {{ project.collected_amount }} USD</li>
+          {% if project.deadline %}
+          <li><strong>{% trans "Date limite" %}:</strong> {{ project.deadline|date:"d M Y" }}</li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <!-- Carousel multi-photos -->
+      <div class="col-lg-6" data-aos="fade-left">
+        {% if project.photos.all %}
+        <div id="projectCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            {% for photo in project.photos.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <div class="project-photo-card shadow rounded-4 overflow-hidden mx-auto" style="max-width: 100%;" data-tilt data-tilt-max="15" data-tilt-speed="400">
+                <img src="{{ photo.image.url }}" class="d-block w-100" alt="{{ photo.caption }}">
+                {% if photo.caption %}
+                <div class="caption bg-dark bg-opacity-50 text-white px-2 py-1 position-absolute bottom-0 start-0 w-100 text-center">{{ photo.caption }}</div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Précédent" %}</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Suivant" %}</span>
+          </button>
+        </div>
+        {% else %}
+        <img src="{% static 'assets/img/projects/default.jpg' %}" class="w-100 rounded-4 shadow" alt="Default Project">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SCRIPTS ============================= -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+<script>
+  AOS.init({ duration: 800, offset: 150, once: true });
+
+  // Progress bar animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.querySelector('.progress-bar');
+    progressBar.style.width = '{{ project.progress_percentage }}%';
+  });
+
+  // Tilt hover effect
+  VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+  });
+</script>
+
+<style>
+.project-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 2rem;
+}
+.project-hero h1 { font-size: 3rem; }
+.project-hero p { font-size: 1.1rem; }
+
+.project-photo-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.caption {
+  font-size: 0.85rem;
+  bottom: 0;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+</style>
+{% endblock %}

@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Catégories de Projets" %}{% endblock %}
+
+{% block content %}
+<style>
+/* ==================== VARIABLES ==================== */
+:root {
+  --bg-primary: #FFFAF0;
+  --bg-secondary: #17478E;
+  --bg-tertiary: #303C82;
+  --link-color:#090f1f;
+  --text-title:#131445;
+  --text-white:#fff;
+  --text-color:#5E5E61;
+  --accent:#EFD807; /* jaune doré */
+}
+
+/* ==================== SECTION HERO ==================== */
+.category-hero {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  color: var(--text-white);
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-hero::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at 30% 40%, rgba(239,216,7,0.15), transparent 70%);
+  animation: rotateGlow 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.category-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.category-hero p {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  margin: auto;
+  color: #e6e6e6;
+}
+
+/* ==================== GRILLE DE CATÉGORIES ==================== */
+.category-section {
+  background: var(--bg-primary);
+  padding: 80px 0;
+}
+
+.category-card {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.category-card[data-tilt] {
+  transform: perspective(1000px);
+}
+
+.category-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+.category-body {
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.category-body h5 {
+  font-weight: 700;
+  color: var(--bg-tertiary);
+  margin-bottom: 0.8rem;
+}
+
+.category-body p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  height: 60px;
+  overflow: hidden;
+}
+
+.category-body a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text-title);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.category-body a:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(239,216,7,0.4);
+}
+
+/* ==================== EFFETS ==================== */
+[data-tilt] {
+  will-change: transform;
+}
+
+</style>
+
+<!-- ==================== HERO ==================== -->
+<section class="category-hero">
+  <div class="container">
+    <h1>{% trans "Catégories de Projets" %}</h1>
+    <p>{% trans "Découvrez les différentes catégories de projets disponibles pour le financement participatif en Afrique." %}</p>
+  </div>
+</section>
+
+<!-- ==================== LISTE DES CATÉGORIES ==================== -->
+<section class="category-section">
+  <div class="container">
+    <div class="row g-4">
+      {% for category in categories %}
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card" data-tilt>
+            {% if category.image %}
+              <img src="{{ category.image.url }}" alt="{{ category.name }}">
+            {% else %}
+              <img src="{% static 'assets/img/placeholder-category.jpg' %}" alt="Image catégorie">
+            {% endif %}
+            <div class="category-body">
+              <h5>{{ category.name }}</h5>
+              <p>{{ category.description|truncatewords:20 }}</p>
+              <a href="{% url 'category_detail' category.slug %}">
+                {% trans "Voir les projets" %}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-12 text-center">
+          <p class="text-muted fs-5">{% trans "Aucune catégorie disponible pour le moment." %}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="py-5 text-center" style="background: var(--bg-tertiary); color: var(--text-white);">
+  <div class="container">
+    <h3 class="fw-bold mb-3">{% trans "Vous souhaitez proposer une nouvelle catégorie ?" %}</h3>
+    <p class="mb-4">{% trans "Contactez-nous pour suggérer une catégorie de projet à ajouter à la plateforme." %}</p>
+    <a href="{% url 'contact' %}" class="btn btn-lg btn-warning rounded-pill fw-bold px-4 py-2 shadow-lg">
+      ✉️ {% trans "Nous Contacter" %}
+    </a>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+<script>
+VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+  max: 12,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.25,
+});
+</script>
+{% endblock %}

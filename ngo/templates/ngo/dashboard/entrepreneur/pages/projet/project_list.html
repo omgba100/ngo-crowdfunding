@@ -1,0 +1,141 @@
+{% extends "base_entrepreneur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Mes Projets" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container py-4">
+  <!-- En-tête + bouton -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <h3 class="fw-bold text-primary mb-0">
+      <i class="bi bi-folder2-open"></i> {% trans "Mes Projets" %}
+    </h3>
+
+    {% if total_projects < max_projects %}
+      <a href="{% url 'project_create' %}" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> {% trans "Nouveau projet" %}
+      </a>
+    {% else %}
+      <button class="btn btn-secondary" disabled>
+        <i class="bi bi-lock"></i> {% trans "Limite de 5 projets atteinte" %}
+      </button>
+    {% endif %}
+  </div>
+
+  <!-- 📊 Résumé par statut -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-2 col-6">
+      <div class="card text-center shadow-sm border-0 py-3 bg-primary text-white">
+        <h5 class="fw-bold mb-1">{{ counts.approved|default:0 }}</h5>
+        <small><i class="bi bi-check-circle"></i> {% trans "Validés" %}</small>
+      </div>
+    </div>
+    <div class="col-md-2 col-6">
+      <div class="card text-center shadow-sm border-0 py-3 bg-warning text-dark">
+        <h5 class="fw-bold mb-1">{{ counts.pending_review|default:0 }}</h5>
+        <small><i class="bi bi-hourglass-split"></i> {% trans "En révision" %}</small>
+      </div>
+    </div>
+    <div class="col-md-2 col-6">
+      <div class="card text-center shadow-sm border-0 py-3 bg-info text-dark">
+        <h5 class="fw-bold mb-1">{{ counts.pending_payment|default:0 }}</h5>
+        <small><i class="bi bi-cash-coin"></i> {% trans "En paiement" %}</small>
+      </div>
+    </div>
+    <div class="col-md-2 col-6">
+      <div class="card text-center shadow-sm border-0 py-3 bg-secondary text-white">
+        <h5 class="fw-bold mb-1">{{ counts.completed|default:0 }}</h5>
+        <small><i class="bi bi-flag"></i> {% trans "Terminés" %}</small>
+      </div>
+    </div>
+    <div class="col-md-2 col-6">
+      <div class="card text-center shadow-sm border-0 py-3 bg-danger text-white">
+        <h5 class="fw-bold mb-1">{{ counts.rejected|default:0 }}</h5>
+        <small><i class="bi bi-x-circle"></i> {% trans "Rejetés" %}</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎯 Filtre -->
+  <form method="get" class="mb-4">
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+        <label for="status" class="col-form-label fw-bold">
+          <i class="bi bi-funnel"></i> {% trans "Filtrer par statut :" %}
+        </label>
+      </div>
+      <div class="col-md-4">
+        <select name="status" id="status" class="form-select" onchange="this.form.submit()">
+          {% for value, label in status_choices %}
+          <option value="{{ value }}" {% if value == status_filter %}selected{% endif %}>
+            {{ label }}
+          </option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </form>
+
+  <!-- 🗂️ Liste des projets -->
+  {% if projects %}
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card shadow-sm border-0 h-100 hover-shadow">
+        {% if project.image %}
+          <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+        {% else %}
+          <img src="{% static 'assets/img/default_project.jpg' %}" class="card-img-top" alt="Default">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ project.title }}</h5>
+          <p class="text-muted small mb-2">
+            <i class="bi bi-geo-alt"></i> {{ project.country.name }}
+          </p>
+          <p class="card-text text-truncate">{{ project.short_description }}</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="badge 
+              {% if project.status == 'approved' %}bg-success
+              {% elif project.status == 'pending_review' %}bg-warning text-dark
+              {% elif project.status == 'rejected' %}bg-danger
+              {% elif project.status == 'completed' %}bg-info text-dark
+              {% else %}bg-secondary{% endif %}">
+              {{ project.get_status_display }}
+            </span>
+            <small class="text-muted">
+              <i class="bi bi-clock"></i> {{ project.created_at|date:"d/m/Y" }}
+            </small>
+          </div>
+        </div>
+        <div class="card-footer bg-light border-0 d-flex justify-content-between">
+          <a href="{{ project.get_absolute_url }}" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-eye"></i> {% trans "Voir" %}
+          </a>
+          <a href="{% url 'project_update' project.slug %}" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-pencil-square"></i> {% trans "Modifier" %}
+          </a>
+          <a href="{% url 'project_delete' project.slug %}" class="btn btn-outline-danger btn-sm">
+            <i class="bi bi-trash"></i> {% trans "Supprimer" %}
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-info text-center py-4">
+    <i class="bi bi-folder-x fs-3"></i>
+    <p class="mt-2 mb-0">{% trans "Aucun projet ne correspond à ce filtre." %}</p>
+  </div>
+  {% endif %}
+</div>
+
+<style>
+.hover-shadow:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+</style>
+{% endblock base_entrepreneur %}

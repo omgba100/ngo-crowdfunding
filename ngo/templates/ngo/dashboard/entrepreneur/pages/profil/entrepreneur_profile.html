@@ -1,0 +1,144 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Profil Entrepreneur" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<style>
+/* ---- Animation & modern style ---- */
+.profile-container {
+  animation: fadeInUp 0.9s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #0d6efd, #004aad);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.profile-avatar {
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.action-btn {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.action-btn i {
+  margin-right: 6px;
+}
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.update-btn {
+  background-color: #0d6efd;
+  color: white;
+}
+.update-btn:hover {
+  background-color: #004aad;
+}
+
+.deactivate-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+.deactivate-btn:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+</style>
+
+<div class="container py-5 profile-container">
+  <div class="profile-card">
+    <!-- Header du profil -->
+    <div class="profile-header text-center">
+      {% if user.profile_image %}
+        <img src="{{ user.profile_image.url }}" alt="{{ user.full_name }}" class="profile-avatar mb-3">
+      {% else %}
+        <img src="{% static 'assets/img/default-user.png' %}" alt="Default" class="profile-avatar mb-3">
+      {% endif %}
+      <h3 class="fw-bold mb-1">{{ user.display_name }}</h3>
+      <p class="mb-2">{{ user.email }}</p>
+      <p class="mb-0"><i class="bi bi-telephone"></i> {{ user.phone|default:"Non renseigné" }}</p>
+      <p><i class="bi bi-geo-alt"></i> {{ user.city|default:"-" }}, {{ user.country|default:"-" }}</p>
+    </div>
+
+    <!-- Corps du profil -->
+    <div class="p-4">
+      <h5 class="text-uppercase text-secondary fw-bold mb-3">
+        <i class="bi bi-person-badge"></i> {% trans "Profil Entrepreneur" %}
+      </h5>
+      <hr>
+
+      <div class="mb-3">
+        <strong>{% trans "Entreprise :" %}</strong>
+        <p class="mb-0">{{ profile.company_name|default:"Non renseignée" }}</p>
+      </div>
+
+      <div class="mb-3">
+        <strong>{% trans "Expérience :" %}</strong>
+        <p class="mb-0">{{ profile.experience|default:"Aucune expérience renseignée" }}</p>
+      </div>
+
+      {% if user.bio %}
+      <div class="mb-3">
+        <strong>{% trans "Bio :" %}</strong>
+        <p>{{ user.bio }}</p>
+      </div>
+      {% endif %}
+
+      <div class="d-flex flex-wrap gap-2 mt-4">
+        <a href="{% url 'update_entrepreneur_profile' %}" class="btn action-btn update-btn">
+          <i class="bi bi-pencil-square"></i> {% trans "Mettre à jour" %}
+        </a>
+        <a href="{% url 'ent_deactivate_account' %}" class="btn action-btn deactivate-btn">
+          <i class="bi bi-pause-circle"></i> {% trans "Désactiver le compte" %}
+        </a>
+        <a href="{% url 'ent_delete_account' %}" class="btn action-btn delete-btn">
+          <i class="bi bi-trash"></i> {% trans "Supprimer le compte" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock base_entrepreneur %}

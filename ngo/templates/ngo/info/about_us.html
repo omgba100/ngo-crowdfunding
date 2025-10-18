@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "À propos de nous" %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="section-about">
+
+<!-- HERO PARALLAX -->
+<div class="parallax">
+  <div class="toko-overlay"></div>
+  <div class="content text-center">
+    <h1 class="fw-bold display-4 text-warning typewriter-text" data-text="{% trans '🌍 IGIA — L’expert du financement participatif' %}">
+    </h1>
+    <p class="lead mt-3 text-white-50 animate__animated animate__fadeInUp">
+      {% trans "Dédiée à la valorisation des jeunes et au développement local depuis 2012" %}
+    </p>
+  </div>
+</div>
+
+<!-- INTRODUCTION -->
+<div class="container py-5">
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-lg-10 animate__animated animate__fadeInUp">
+      <p class="fs-5">
+          <strong>IGIA</strong> {% blocktrans %}est une plateforme de financement participatif dédiée à la 
+          <strong>valorisation des jeunes et au développement local </strong>.  
+          Depuis 2012, elle permet d’investir dans des projets <strong> rigoureusement sélectionnés </strong> 
+          pour leur solidité économique, leurs bénéfices concrets et leur ancrage territorial.{% endblocktrans %}
+      </p>
+      <p class="fs-5">
+        {% blocktrans %}Grâce à IGIA, les investisseurs peuvent  <strong> orienter et verdir directement leurs investissements</strong> 
+         tout en constituant un  <strong> portefeuille diversifié et stable{% endblocktrans %}</strong>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- PRÉSENCE INTERNATIONALE -->
+<div class="text-center bg-light p-5 rounded-4 shadow-sm mb-5 animate__animated animate__fadeInUp">
+  <h2 class="text-warning fw-bold">🌐 {% trans "Présence internationale" %}</h2>
+  <p class="mt-3 mb-0 text-dark fs-5">
+    {% blocktrans %}IGIA est aujourd’hui présent sur <strong>3 continents</strong> et couvre <strong>54 pays</strong>, 
+        soutenant les initiatives locales partout où les jeunes veulent entreprendre.{% endblocktrans %}
+  </p>
+</div>
+
+<!-- MISSION -->
+<div class="row align-items-center mb-5">
+  <div class="col-md-6 animate__animated animate__fadeInLeft">
+    <h2 class="fw-bold text-warning mb-3">💡 {% trans "Notre mission" %}</h2>
+    <p class="fs-5">
+      {% blocktrans %}Forts de notre expérience, nous offrons aux jeunes des <strong>solutions financières fiables et accessibles</strong> 
+          en alternative au circuit bancaire traditionnel.{% endblocktrans %}
+    </p>
+    <p class="fs-5">
+      {% blocktrans %}Notre approche simplifie les procédures et supprime les barrières liées aux 
+          <strong>garanties ou hypothèques</strong>, souvent inaccessibles pour les jeunes entrepreneurs.{% endblocktrans %}
+    </p>
+  </div>
+  <div class="col-md-6 text-center animate__animated animate__fadeInRight">
+    <img src="{% static 'assets/img/about/teamwork.jpg' %}" 
+             alt="Notre mission" 
+             class="img-fluid rounded-4 shadow-lg">
+  </div>
+</div>
+
+<!-- APPROCHE DE PROXIMITÉ -->
+<div class="bg-white p-5 rounded-4 shadow-sm mb-5 animate__animated animate__fadeInUp">
+  <h2 class="text-warning fw-bold mb-4 text-center">🤝 {% trans "Notre approche de proximité" %}</h2>
+  <p class="fs-5 text-center">
+    {% blocktrans %}Nous croyons en une approche <strong>humaine et décentralisée</strong>, fondée sur la 
+        <strong>proximité avec les populations locales</strong>.  
+        Cette stratégie nous permet de proposer une <strong>gamme variée de services</strong> adaptés à chaque écosystème.{% endblocktrans %}
+  </p>
+
+  <div class="row mt-4 text-center">
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rounded-3 shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-2">🔹 {% trans "Petits emplois" %}</h5>
+        <p>Cafés, restaurants, bars, call-box, salons de coiffure, taxis, mototaxis, etc.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rou{% trans "nded-3 shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-2">🔹 {% trans "Emplois intermédiaires" %}</h5>
+        <p>{% trans "PME et commerces agricoles, de gros et de détail." %}</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 bg-light rounded-3 shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-2">🔹 {% trans "Agriculture & Élevage" %}</h5>
+        <p>{% trans "Accompagnement vers une modernisation durable." %}</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 mx-auto">
+      <div class="p-4 bg-light rounded-3 shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-2">🔹 {% trans "Agro-industrie & Startups"%}</h5>
+        <p>{% trans "Financement de projets innovants dans la transformation et les technologies." %}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ENGAGEMENT -->
+<div class="text-center p-5 bg-primary text-white rounded-4 shadow-lg animate__animated animate__zoomIn">
+  <h2 class="fw-bold mb-3">🚀 {% trans "Notre engagement" %}</h2>
+  <p class="fs-5">
+    {% blocktrans %}IGIA s’engage à rendre le financement accessible à tous, à stimuler la création d’emplois 
+        et à favoriser un développement inclusif et durable.  
+        Chaque projet soutenu est une <strong>opportunité de transformation économique et sociale{% endblocktrans %}</strong>.
+  </p>
+</div>
+</section>
+
+<!-- SECTION VISION (Parallaxe) -->
+<section class="section-vision py-5 text-center text-white">
+  <div class="container animate__animated animate__fadeInUp">
+    <h2 class="fw-bold mb-4">{% trans "Notre Vision & Nos Objectifs" %}</h2>
+    <div class="col-lg-8 mx-auto">
+      <p class="fs-5">
+        {% blocktrans %}Nous croyons en un monde fort, innovant et solidaire.  
+        Notre mission est de soutenir les jeunes entrepreneurs, artisans et porteurs de projets 
+        grâce au financement participatif, à la formation et à la mise en réseau.{% endblocktrans %}
+      </p>
+      <p class="fs-5">
+        {% blocktrans %}Nous favorisons l’autonomie économique et valorisons les talents à travers le monde.{% endblocktrans %}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Engagement Section -->
+<section class="engagement">
+  <div class="container text-center">
+    <h2 class="text-white mb-5 animate__animated animate__fadeInDown">{% trans "Nos Engagements" %}</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp">
+        <div class="engagement-card">
+          <img src="{% static 'assets/img/about/fun-4.png' %}" alt="Engagement 1">
+          <h4 class="fw-bold">{% trans "Transparence" %}</h4>
+          <p>{% trans "Chaque projet est suivi avec rigueur pour garantir la confiance entre contributeurs et bénéficiaires." %}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp">
+        <div class="engagement-card">
+          <img src="{% static 'assets/img/about/fun-5.png' %}" alt="Engagement 2">
+          <h4 class="fw-bold">{% trans "Innovation Sociale" %}</h4>
+          <p>{% trans "Nous misons sur des solutions modernes et inclusives pour favoriser le développement communautaire." %}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp">
+        <div class="engagement-card">
+          <img src="{% static 'assets/img/about/fun-6.png' %}" alt="Engagement 3">
+          <h4 class="fw-bold">{% trans "Impact Durable" %}</h4>
+          <p>{% trans "Nos actions contribuent à un changement réel et mesurable dans les communautés africaines." %}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="{% url 'contact' %}" class="btn btn-accent-tolio">{% trans "Nous Contacter" %}</a>
+    </div>
+  </div>
+</section>
+
+<!-- TYPEWRITER EFFECT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const typewriter = document.querySelector(".typewriter-text");
+  const text = typewriter.dataset.text; // on récupère le texte traduit
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      typewriter.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, 70);
+    }
+  }
+  typing();
+});
+</script>
+{% endblock %}

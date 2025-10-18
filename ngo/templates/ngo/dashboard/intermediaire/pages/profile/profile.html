@@ -1,0 +1,138 @@
+{% extends "base_intermediaire.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Profil de l'intermédiaire" %}{% endblock %}
+
+{% block base_intermediaire %}
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<div class="container py-5" data-aos="fade-up">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <!-- ======= Profile Card ======= -->
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="card-header bg-gradient-primary text-white text-center py-4">
+          <img src="{{ avatar }}" alt="Avatar" class="rounded-circle shadow mb-3" width="130" height="130">
+          <h3 class="mb-0">{{ full_name }}</h3>
+          <p class="mb-0">
+            <i class="mdi mdi-briefcase-outline me-1"></i>
+            {% trans "Intermédiaire" %}
+          </p>
+        </div>
+
+        <div class="card-body bg-light p-4">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <h6 class="text-muted text-uppercase">{% trans "Informations personnelles" %}</h6>
+              <ul class="list-unstyled mt-2">
+                <li><i class="mdi mdi-email-outline text-primary me-2"></i> <strong>{% trans "Email :" %}</strong> {{ profile.user.email }}</li>
+                <li><i class="mdi mdi-phone-outline text-primary me-2"></i> <strong>{% trans "Téléphone :" %}</strong> {{ profile.user.phone|default:_("Non renseigné") }}</li>
+                <li><i class="mdi mdi-map-marker-outline text-primary me-2"></i> <strong>{% trans "Pays :" %}</strong> {{ profile.user.country.name|default:_("Non spécifié") }}</li>
+                <li><i class="mdi mdi-city text-primary me-2"></i> <strong>{% trans "Ville :" %}</strong> {{ profile.user.city|default:_("Non spécifiée") }}</li>
+              </ul>
+            </div>
+
+            <div class="col-md-6">
+              <h6 class="text-muted text-uppercase">{% trans "Informations professionnelles" %}</h6>
+              <ul class="list-unstyled mt-2">
+                <li><i class="mdi mdi-domain text-primary me-2"></i> <strong>{% trans "Organisation :" %}</strong> {{ profile.organization|default:_("Aucune") }}</li>
+                <li><i class="mdi mdi-check-decagram text-primary me-2"></i> <strong>{% trans "Vérifié :" %}</strong> 
+                  {% if profile.verified %}
+                    <span class="badge bg-success">{% trans "Oui" %}</span>
+                  {% else %}
+                    <span class="badge bg-secondary">{% trans "Non" %}</span>
+                  {% endif %}
+                </li>
+                <li><i class="mdi mdi-credit-card-check text-primary me-2"></i> <strong>{% trans "Abonnement payé :" %}</strong>
+                  {% if profile.subscription_paid %}
+                    <span class="badge bg-success">{% trans "Oui" %}</span>
+                  {% else %}
+                    <span class="badge bg-danger">{% trans "Non" %}</span>
+                  {% endif %}
+                </li>
+                <li><i class="mdi mdi-calendar text-primary me-2"></i> <strong>{% trans "Date d'abonnement :" %}</strong> 
+                  {{ profile.subscription_date|date:"d M Y"|default:_("Non disponible") }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="mb-3">
+            <h6 class="text-muted text-uppercase">{% trans "Biographie" %}</h6>
+            <p class="text-dark mt-2">{{ profile.user.bio|default:_("Aucune biographie disponible") }}</p>
+          </div>
+
+          <div>
+            <h6 class="text-muted text-uppercase">{% trans "Entrepreneurs représentés" %}</h6>
+            {% if profile.get_entrepreneurs %}
+              <ul class="list-group mt-2">
+                {% for e in profile.get_entrepreneurs %}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ e.full_name|default:e.email }}
+                    <span class="badge bg-info text-dark">{% trans "Entrepreneur" %}</span>
+                  </li>
+                {% empty %}
+                  <p class="text-muted fst-italic">{% trans "Aucun entrepreneur représenté actuellement." %}</p>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="card-footer bg-white text-center py-4">
+          <a href="{% url 'edit_intermediaire_profile' %}" class="btn btn-outline-primary me-2" data-aos="zoom-in">
+            <i class="mdi mdi-pencil"></i> {% trans "Modifier le profil" %}
+          </a>
+          <button class="btn btn-outline-warning me-2" onclick="confirmDisable()" data-aos="zoom-in">
+            <i class="mdi mdi-account-off"></i> {% trans "Désactiver le compte" %}
+          </button>
+          <button class="btn btn-outline-danger" onclick="confirmDelete()" data-aos="zoom-in">
+            <i class="mdi mdi-delete"></i> {% trans "Supprimer définitivement" %}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert confirm actions -->
+<script>
+function confirmDisable() {
+  Swal.fire({
+    title: "{% trans 'Voulez-vous désactiver votre compte ?' %}",
+    text: "{% trans 'Vous pourrez le réactiver en contactant l’administration.' %}",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "{% trans 'Oui, désactiver' %}",
+    cancelButtonText: "{% trans 'Annuler' %}",
+    confirmButtonColor: "#f39c12",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "{% url 'desactiver_compte_intermediaire' %}";
+    }
+  });
+}
+
+function confirmDelete() {
+  Swal.fire({
+    title: "{% trans 'Supprimer le compte ?' %}",
+    text: "{% trans 'Cette action est irréversible !' %}",
+    icon: "error",
+    showCancelButton: true,
+    confirmButtonText: "{% trans 'Oui, supprimer' %}",
+    cancelButtonText: "{% trans 'Annuler' %}",
+    confirmButtonColor: "#d33",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "{% url 'supprimer_compte_intermediaire' %}";
+    }
+  });
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+{% endblock base_intermediaire %}

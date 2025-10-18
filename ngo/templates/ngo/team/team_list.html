@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}Notre Équipe{% endblock %}
+
+{% block content %}
+<section class="team-section py-5" style="background-color: var(--bg-primary);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: var(--text-title);">{% trans "Notre Équipe" %}</h2>
+      <p class="text-muted">{% trans "Rencontrez les talents qui font battre le cœur de notre organisation" %}</p>
+      <div class="underline mx-auto"></div>
+    </div>
+
+    <div class="row justify-content-center">
+      {% for member in team %}
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4 animate__animated animate__fadeInUp">
+        <div class="team-card position-relative overflow-hidden shadow-lg border-0 rounded-4 bg-white">
+          
+          <!-- Photo -->
+          <div class="team-image position-relative">
+            {% if member.photo %}
+              <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="img-fluid w-100 rounded-top-4">
+            {% else %}
+              <img src="{% static 'assets/img/team/default.png' %}" alt="{{ member.name }}" class="img-fluid w-100 rounded-top-4">
+            {% endif %}
+            <div class="team-overlay d-flex justify-content-center align-items-center">
+              <div class="social-links">
+                {% if member.facebook %}
+                  <a href="{{ member.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                {% endif %}
+                {% if member.twitter %}
+                  <a href="{{ member.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                {% endif %}
+                {% if member.linkedin %}
+                  <a href="{{ member.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <!-- Infos -->
+          <div class="p-3 text-center">
+            <h5 class="fw-bold mb-1" style="color: var(--text-title);">{{ member.name }}</h5>
+            <p class="text-uppercase mb-2" style="color: var(--accent); font-weight: 500;">{{ member.role }}</p>
+            <p class="small text-muted">{{ member.bio|truncatewords:15 }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}Tableau des statistiques et rapports de performance{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+.stat-card, .project-card, .campaign-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.stat-card:hover, .project-card:hover, .campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.project-img, .campaign-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-chart-bar me-2"></i> {% trans "Tableau des statistiques" %}
+            </h2>
+            <p class="text-muted mb-0">{% trans "Vue d’ensemble des projets et campagnes de vos entrepreneurs représentés." %}</p>
+        </div>
+    </div>
+
+    <!-- Statistiques principales -->
+    <div class="row g-4 mb-5" data-aos="fade-up" data-aos-duration="900">
+        <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm border-0 rounded-4 p-4 text-center">
+                <i class="mdi mdi-folder-outline mdi-36px text-primary mb-2"></i>
+                <h5 class="fw-bold">{{ stats.total_projects }}</h5>
+                <p class="text-muted mb-0">{% trans "Projets totaux" %}</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card stat-card shadow-sm border-0 rounded-4 p-4 text-center">
+                <i class="mdi mdi-cash-multiple mdi-36px text-success mb-2"></i>
+                <h5 class="fw-bold">{{ stats.total_collected|floatformat:2 }} $</h5>
+                <p class="text-muted mb-0">{% trans "Montant collecté" %}</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-2">
+            <div class="card stat-card shadow-sm border-0 rounded-4 p-4 text-center">
+                <i class="mdi mdi-play-circle-outline mdi-36px text-warning mb-2"></i>
+                <h5 class="fw-bold">{{ stats.active_campaigns }}</h5>
+                <p class="text-muted mb-0">{% trans "Campagnes actives" %}</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-2">
+            <div class="card stat-card shadow-sm border-0 rounded-4 p-4 text-center">
+                <i class="mdi mdi-check-circle-outline mdi-36px text-success mb-2"></i>
+                <h5 class="fw-bold">{{ stats.completed_campaigns }}</h5>
+                <p class="text-muted mb-0">{% trans "Campagnes terminées" %}</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-2">
+            <div class="card stat-card shadow-sm border-0 rounded-4 p-4 text-center">
+                <i class="mdi mdi-close-circle-outline mdi-36px text-danger mb-2"></i>
+                <h5 class="fw-bold">{{ stats.failed_campaigns }}</h5>
+                <p class="text-muted mb-0">{% trans "Campagnes échouées" %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projets avec images -->
+    <h4 class="fw-bold text-primary mb-3" data-aos="fade-right">{% trans "Projets représentés" %}</h4>
+    <div class="row g-4 mb-5" data-aos="fade-up">
+        {% for project in projects %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card shadow-sm border-0 rounded-4">
+                {% if project.image_url %}
+                    <img src="{{ project.image_url }}" alt="{{ project.name }}" class="project-img">
+                {% else %}
+                    <img src="{% static 'images/default_project.png' %}" alt="{{ project.name }}" class="project-img">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="fw-bold">{{ project.name }}</h5>
+                    <p class="text-muted mb-2">{{ project.description|truncatewords:15 }}</p>
+                    <a href="{% url 'intermediaire_reports_detail' project.id %}" class="btn btn-sm btn-outline-primary rounded-pill">
+                        <i class="mdi mdi-eye-outline me-1"></i> {% trans "Voir détails" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Campagnes avec images -->
+    <h4 class="fw-bold text-primary mb-3" data-aos="fade-right">{% trans "Campagnes associées" %}</h4>
+    <div class="row g-4" data-aos="fade-up">
+        {% for project in projects %}
+            {% for campaign in project.campaign_set.all %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card campaign-card shadow-sm border-0 rounded-4">
+                    {% if campaign.image_url %}
+                        <img src="{{ campaign.image_url }}" alt="{{ campaign.title }}" class="campaign-img">
+                    {% else %}
+                        <img src="{% static 'images/default_campaign.png' %}" alt="{{ campaign.title }}" class="campaign-img">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="fw-bold">{{ campaign.title }}</h5>
+                        <p class="text-muted mb-2">{{ campaign.description|truncatewords:15 }}</p>
+                        <small class="text-muted">{{ campaign.collected_amount|floatformat:2 }} $ / {{ campaign.goal_amount|floatformat:2 }} $</small>
+                        <a href="{% url 'intermediaire_project_detail' project.slug %}" class="btn btn-sm btn-outline-primary rounded-pill mt-2">
+                            <i class="mdi mdi-eye-outline me-1"></i> {% trans "Voir projet" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour messages flash -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    {% if messages %}
+        {% for message in messages %}
+            Swal.fire({
+                icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
+                title: "{{ message }}",
+                timer: 2500,
+                showConfirmButton: false,
+                position: 'top-end',
+                toast: true
+            });
+        {% endfor %}
+    {% endif %}
+});
+</script>
+{% endblock base_intermediaire %}

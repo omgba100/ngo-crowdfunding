@@ -1,0 +1,109 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans "Preuve de Paiement" %}{% endblock %}
+
+{% block base_entrepreneur %}
+<div class="container py-5">
+
+    <!-- Barre de progression -->
+    <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="fw-bold text-primary">{% trans "Étape 2 sur 3 : Vérification du paiement" %}</span>
+            <span class="text-muted small">{% trans "Progrès : 65%" %}</span>
+        </div>
+        <div class="progress" style="height: 10px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                 role="progressbar" 
+                 style="width: 65%;" 
+                 aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+
+    <!-- En-tête -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">
+            <i class="bi bi-credit-card me-2"></i>{% trans "Soumettre la preuve de paiement" %}
+        </h2>
+        <p class="text-muted">{% trans "Téléversez la capture ou le reçu de votre paiement pour permettre la validation de votre projet." %}</p>
+    </div>
+
+    <!-- Carte principale -->
+    <div class="card shadow-lg border-0 rounded-4 mx-auto" style="max-width: 700px;">
+        <div class="card-body p-5">
+
+            <!-- Informations projet -->
+            <div class="alert alert-light border-start border-3 border-success mb-4">
+                <h5 class="fw-bold text-success mb-1">
+                    <i class="bi bi-folder-check me-2"></i>{{ project.title }}
+                </h5>
+                <p class="mb-0 text-muted small">
+                    {% blocktrans %}Projet soumis par {{ project.entrepreneur.display_name }}{% endblocktrans %}
+                </p>
+            </div>
+
+            <!-- Formulaire -->
+            <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                {% csrf_token %}
+
+                <div class="mb-4">
+                    <h6 class="fw-bold text-secondary mb-3">
+                        <i class="bi bi-cloud-arrow-up me-2"></i>{% trans "Joindre la preuve de paiement" %}
+                    </h6>
+                    {{ form|crispy }}
+                </div>
+
+                <!-- Boutons -->
+                <div class="d-flex justify-content-between align-items-center mt-5">
+                    <a href="{% url 'dashboard_entrepreneur' %}" class="btn btn-outline-secondary rounded-pill px-4">
+                        <i class="bi bi-arrow-left me-2"></i>{% trans "Retour au tableau de bord" %}
+                    </a>
+                    <button type="submit" class="btn btn-success rounded-pill px-5 py-2 shadow-sm">
+                        <i class="bi bi-check-circle me-2"></i>{% trans "Soumettre la preuve" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Étape suivante -->
+    <div class="text-center mt-5">
+        <p class="text-muted small">
+            {% trans "Une fois le paiement validé par un administrateur, votre projet passera à l’étape suivante : publication et collecte." %}
+        </p>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    .card {
+        transition: all 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+    .progress {
+        background-color: #e9ecef;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .btn-success {
+        background: linear-gradient(90deg, #198754, #20c997);
+        border: none;
+    }
+    .btn-success:hover {
+        background: linear-gradient(90deg, #157347, #1dbb8b);
+    }
+</style>
+
+<!-- Animation douce -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const bar = document.querySelector('.progress-bar');
+    setTimeout(() => { bar.style.width = "65%"; }, 200);
+});
+</script>
+
+{% endblock base_entrepreneur %}

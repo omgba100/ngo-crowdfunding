@@ -1,0 +1,3435 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-09 13:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\crowdfunding\settings.py:133
+msgid "Français"
+msgstr "Frans"
+
+#: .\crowdfunding\settings.py:134
+msgid "English"
+msgstr "Engels"
+
+#: .\crowdfunding\settings.py:135
+msgid "Nederlands"
+msgstr "Nederlands"
+
+#: .\crowdfunding\settings.py:136
+msgid "Español"
+msgstr "Spaans"
+
+#: .\ngo\admin.py:31
+msgid "Informations personnelles"
+msgstr "Persoonlijke gegevens"
+
+#: .\ngo\admin.py:37
+msgid "Rôle et permissions"
+msgstr "Rol en machtigingen"
+
+#: .\ngo\admin.py:40
+msgid "Dates importantes"
+msgstr "Belangrijke data"
+
+# ---------- Payment model ----------
+#: .\ngo\models.py:92 .\ngo\models.py:119 .\ngo\models.py:148
+#: .\ngo\models.py:264 .\ngo\templates\ngo\index.html:461
+msgid "Utilisateur"
+msgstr "Gebruiker"
+
+# ---------- EntrepreneurProfile model ----------
+#: .\ngo\models.py:97
+msgid "Nom de l'entreprise"
+msgstr "Bedrijfsnaam"
+
+#: .\ngo\models.py:103
+msgid "Expérience"
+msgstr "Ervaring"
+
+#: .\ngo\models.py:109
+msgid "Profil entrepreneur"
+msgstr "Ondernemersprofiel"
+
+#: .\ngo\models.py:110
+msgid "Profils entrepreneurs"
+msgstr "Ondernemersprofielen"
+
+#: .\ngo\models.py:113
+msgid "Profil entrepreneur de"
+msgstr "Ondernemersprofiel van"
+
+# ---------- InvestisseurProfile model ----------
+#: .\ngo\models.py:124
+msgid "Entreprise"
+msgstr "Bedrijf"
+
+#: .\ngo\models.py:130
+msgid "Capital disponible"
+msgstr "Beschikbaar Kapitaal"
+
+#: .\ngo\models.py:138
+msgid "Profil investisseur"
+msgstr "Investeerdersprofiel"
+
+#: .\ngo\models.py:139
+msgid "Profils investisseurs"
+msgstr "Investeerdersprofielen"
+
+#: .\ngo\models.py:142
+msgid "Profil investisseur de"
+msgstr "Investeerdersprofiel van"
+
+# ---------- IntermediaireProfile model ----------
+#: .\ngo\models.py:153
+msgid "Organisation"
+msgstr "Organisatie"
+
+#: .\ngo\models.py:158
+msgid "Vérifié"
+msgstr "Geverifieerd"
+
+#: .\ngo\models.py:159
+msgid "Abonnement payé"
+msgstr "Betaald abonnement"
+
+#: .\ngo\models.py:160
+msgid "Date d'abonnement"
+msgstr "Abonnementsdatum"
+
+#: .\ngo\models.py:163
+msgid "Profil intermédiaire"
+msgstr "Intermediair Profiel"
+
+#: .\ngo\models.py:164
+msgid "Profils intermédiaires"
+msgstr "Intermediaire Profielen"
+
+#: .\ngo\models.py:167
+msgid "Profil intermédiaire de"
+msgstr "Intermediair Profiel van"
+
+# ---------- Country model ----------
+#: .\ngo\models.py:174 .\ngo\models.py:223
+msgid "Code"
+msgstr "Code"
+
+# ---------- Region model ----------
+#: .\ngo\models.py:175 .\ngo\models.py:193 .\ngo\models.py:222
+#: .\ngo\models.py:288 .\ngo\models.py:569 .\ngo\models.py:622
+#: .\ngo\models.py:753 .\ngo\models.py:773
+msgid "Nom"
+msgstr "Naam"
+
+#: .\ngo\models.py:176
+msgid "Symbole"
+msgstr "Symbool"
+
+#: .\ngo\models.py:177
+msgid "Taux de change USD"
+msgstr "USD wisselkoers"
+
+#: .\ngo\models.py:178 .\ngo\models.py:195 .\ngo\models.py:226
+#: .\ngo\models.py:577 .\ngo\templates\ngo\country\country_list.html:36
+msgid "Actif"
+msgstr "Actief"
+
+#: .\ngo\models.py:181 .\ngo\models.py:815
+msgid "Devise"
+msgstr "Valuta"
+
+#: .\ngo\models.py:182
+msgid "Devises"
+msgstr "Valuta's"
+
+#: .\ngo\models.py:194 .\ngo\models.py:225 .\ngo\models.py:291
+#: .\ngo\models.py:328 .\ngo\models.py:570 .\ngo\models.py:774
+msgid "Slug"
+msgstr "Slug"
+
+#: .\ngo\models.py:198 .\ngo\models.py:220
+msgid "Région"
+msgstr "Regio"
+
+#: .\ngo\models.py:199
+msgid "Régions"
+msgstr "Regio's"
+
+#: .\ngo\models.py:224
+msgid "Drapeau"
+msgstr "Vlag"
+
+#: .\ngo\models.py:231 .\ngo\models.py:267
+msgid "Monnaie"
+msgstr "Valuta"
+
+#: .\ngo\models.py:233
+msgid "Frais de soumission de projet"
+msgstr "Projectindieningskosten"
+
+#: .\ngo\models.py:234
+msgid "Frais intermédiaire"
+msgstr "Tussenpersoon kosten"
+
+#: .\ngo\models.py:235
+msgid "Taux de commission"
+msgstr "Commissietarief"
+
+#: .\ngo\models.py:238 .\ngo\models.py:239 .\ngo\models.py:268
+#: .\ngo\models.py:331 .\ngo\templates\ngo\projet\project_detail.html:30
+msgid "Pays"
+msgstr "Land"
+
+#: .\ngo\models.py:255
+msgid "Soumission de projet"
+msgstr "Projectindiening"
+
+#: .\ngo\models.py:256
+msgid "Abonnement intermédiaire"
+msgstr "Tussenpersoon abonnement"
+
+#: .\ngo\models.py:259
+msgid "Mobile Money"
+msgstr "Mobile Money"
+
+#: .\ngo\models.py:260 .\ngo\models.py:472
+msgid "Stripe"
+msgstr "Stripe"
+
+#: .\ngo\models.py:261 .\ngo\models.py:473
+msgid "PayPal"
+msgstr "PayPal"
+
+#: .\ngo\models.py:265 .\ngo\models.py:350 .\ngo\models.py:386
+#: .\ngo\models.py:417 .\ngo\models.py:633 .\ngo\models.py:698
+msgid "Projet"
+msgstr "Project"
+
+#: .\ngo\models.py:266 .\ngo\models.py:512 .\ngo\models.py:812
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:286
+msgid "Montant"
+msgstr "Bedrag"
+
+#: .\ngo\models.py:269
+msgid "Type de paiement"
+msgstr "Betaaltype"
+
+#: .\ngo\models.py:270 .\ngo\models.py:514
+msgid "Méthode de paiement"
+msgstr "Betaalmethode"
+
+#: .\ngo\models.py:271
+msgid "Code de transaction"
+msgstr "Transactiecode"
+
+#: .\ngo\models.py:272
+msgid "Preuve de paiement"
+msgstr "Betalingsbewijs"
+
+#: .\ngo\models.py:273
+msgid "Réussi"
+msgstr "Geslaagd"
+
+#: .\ngo\models.py:274 .\ngo\models.py:337 .\ngo\models.py:392
+#: .\ngo\models.py:437 .\ngo\models.py:517 .\ngo\models.py:578
+#: .\ngo\models.py:607 .\ngo\models.py:640 .\ngo\models.py:719
+#: .\ngo\models.py:758 .\ngo\models.py:831
+msgid "Créé le"
+msgstr "Gemaakt op"
+
+#: .\ngo\models.py:277
+msgid "Paiement"
+msgstr "Betaling"
+
+#: .\ngo\models.py:278
+msgid "Paiements"
+msgstr "Betalingen"
+
+# ---------- Category model ----------
+#: .\ngo\models.py:289 .\ngo\models.py:330 .\ngo\models.py:430
+#: .\ngo\models.py:576 .\ngo\models.py:661 .\ngo\models.py:710
+msgid "Description"
+msgstr "Beschrijving"
+
+#: .\ngo\models.py:290 .\ngo\models.py:339 .\ngo\models.py:390
+#: .\ngo\models.py:436 .\ngo\models.py:606 .\ngo\models.py:664
+#: .\ngo\models.py:718
+msgid "Image"
+msgstr "Afbeelding"
+
+#: .\ngo\models.py:294
+msgid "Catégorie"
+msgstr "Categorie"
+
+#: .\ngo\models.py:295 .\ngo\models.py:332
+#: .\ngo\templates\ngo\projet\project_detail.html:31
+msgid "Catégories"
+msgstr "Categorieën"
+
+#: .\ngo\models.py:311
+msgid "En attente de validation"
+msgstr "In afwachting van goedkeuring"
+
+#: .\ngo\models.py:312 .\ngo\models.py:639
+msgid "Approuvé"
+msgstr "Goedgekeurd"
+
+#: .\ngo\models.py:313
+msgid "Rejeté"
+msgstr "Afgewezen"
+
+#: .\ngo\models.py:314
+msgid "Clôturé"
+msgstr "Gesloten"
+
+#: .\ngo\models.py:319 .\ngo\templates\ngo\partials\navigation.html:131
+#: .\ngo\templates\ngo\projet\project_detail.html:29 .\ngo\views.py:874
+msgid "Entrepreneur"
+msgstr "Ondernemer"
+
+# ---------- Project model ----------
+#: .\ngo\models.py:327 .\ngo\models.py:429 .\ngo\models.py:604
+#: .\ngo\models.py:660 .\ngo\models.py:709
+msgid "Titre"
+msgstr "Titel"
+
+#: .\ngo\models.py:329
+msgid "Description courte"
+msgstr "Korte beschrijving"
+
+#: .\ngo\models.py:334 .\ngo\models.py:711
+#: .\ngo\templates\ngo\projet\project_detail.html:36
+msgid "Montant cible"
+msgstr "Doelbedrag"
+
+#: .\ngo\models.py:335 .\ngo\models.py:432 .\ngo\models.py:712
+#: .\ngo\templates\ngo\projet\project_detail.html:37
+msgid "Montant collecté"
+msgstr "Verzameld bedrag"
+
+#: .\ngo\models.py:336 .\ngo\models.py:433 .\ngo\models.py:715
+#: .\ngo\models.py:826
+msgid "Statut"
+msgstr "Status"
+
+#: .\ngo\models.py:338 .\ngo\templates\ngo\projet\project_detail.html:39
+msgid "Date limite"
+msgstr "Deadline"
+
+#: .\ngo\models.py:342
+msgid "Soumis par"
+msgstr "Ingediend door"
+
+#: .\ngo\models.py:351 .\ngo\templates\ngo\partials\footer.html:36
+#: .\ngo\templates\ngo\partials\navigation.html:72
+msgid "Projets"
+msgstr "Projecten"
+
+# ---------- ProjectPhoto model ----------
+#: .\ngo\models.py:391
+msgid "Légende"
+msgstr "Bijschrift"
+
+#: .\ngo\models.py:395
+msgid "Photo de projet"
+msgstr "Projectfoto"
+
+#: .\ngo\models.py:396
+msgid "Photos de projet"
+msgstr "Projectfoto's"
+
+#: .\ngo\models.py:400 .\ngo\models.py:624 .\ngo\models.py:777
+msgid "Photo"
+msgstr "Foto"
+
+#: .\ngo\models.py:408 .\ngo\models.py:689
+msgid "Brouillon"
+msgstr "Concept"
+
+#: .\ngo\models.py:409 .\ngo\models.py:690
+msgid "Active"
+msgstr "Actief"
+
+#: .\ngo\models.py:410 .\ngo\models.py:691
+msgid "En pause"
+msgstr "Pauze"
+
+#: .\ngo\models.py:411 .\ngo\models.py:692
+msgid "Terminée"
+msgstr "Voltooid"
+
+#: .\ngo\models.py:412 .\ngo\models.py:693
+msgid "Échouée"
+msgstr "Mislukt"
+
+# ---------- Campaign model ----------
+#: .\ngo\models.py:423 .\ngo\models.py:704
+msgid "Créé par"
+msgstr "Gemaakt door"
+
+#: .\ngo\models.py:431
+msgid "Objectif financier"
+msgstr "Financieel doel"
+
+#: .\ngo\models.py:434 .\ngo\models.py:716
+msgid "Date de début"
+msgstr "Startdatum"
+
+#: .\ngo\models.py:435 .\ngo\models.py:717
+msgid "Date de fin"
+msgstr "Einddatum"
+
+#: .\ngo\models.py:440 .\ngo\models.py:445 .\ngo\models.py:495
+#: .\ngo\models.py:600 .\ngo\models.py:656
+msgid "Campagne"
+msgstr "Campagne"
+
+#: .\ngo\models.py:441 .\ngo\templates\ngo\partials\navigation.html:96
+msgid "Campagnes"
+msgstr "Campagnes"
+
+#: .\ngo\models.py:445 .\ngo\models.py:527
+msgid "pour"
+msgstr "voor"
+
+#: .\ngo\models.py:468
+msgid "Don"
+msgstr "Donatie"
+
+#: .\ngo\models.py:469 .\ngo\models.py:727
+msgid "Prêt"
+msgstr "Leningen"
+
+#: .\ngo\models.py:474
+msgid "MTN Mobile Money"
+msgstr "MTN Mobile Money"
+
+#: .\ngo\models.py:475
+msgid "Orange Mobile Money"
+msgstr "Orange Mobile Money"
+
+#: .\ngo\models.py:476 .\ngo\models.py:566
+#: .\ngo\templates\ngo\partner\partner_list.html:45
+msgid "Autre"
+msgstr "Ander"
+
+#: .\ngo\models.py:479 .\ngo\models.py:802
+msgid "En attente"
+msgstr "In afwachting"
+
+#: .\ngo\models.py:480
+msgid "Complété"
+msgstr "Voltooid"
+
+#: .\ngo\models.py:481
+msgid "Échoué"
+msgstr "Mislukt"
+
+# ---------- Contribution model ----------
+#: .\ngo\models.py:486 .\ngo\templates\ngo\partials\navigation.html:139
+#: .\ngo\views.py:894
+msgid "Investisseur"
+msgstr "Investeerder"
+
+#: .\ngo\models.py:503 .\ngo\models.py:722
+msgid "Campagne de prêt"
+msgstr "Leningcampagne"
+
+#: .\ngo\models.py:510
+msgid "Nom du contributeur"
+msgstr "Naam van bijdrager"
+
+#: .\ngo\models.py:511
+msgid "Email du contributeur"
+msgstr "E-mailadres van bijdrager"
+
+#: .\ngo\models.py:513
+msgid "Type de contribution"
+msgstr "Type bijdrage"
+
+#: .\ngo\models.py:515
+msgid "ID de transaction"
+msgstr "Transactie-ID"
+
+#: .\ngo\models.py:516
+msgid "Statut du paiement"
+msgstr "Betalingsstatus"
+
+#: .\ngo\models.py:520
+msgid "Contribution"
+msgstr "Bijdrage"
+
+#: .\ngo\models.py:521
+msgid "Contributions"
+msgstr "Bijdragen"
+
+#: .\ngo\models.py:525
+msgid "Anonyme"
+msgstr "Anoniem"
+
+#: .\ngo\models.py:526
+msgid "Aucune campagne"
+msgstr "Geen campagne"
+
+#: .\ngo\models.py:531
+msgid ""
+"Une contribution ne peut pas être liée à la fois à une campagne de don et à "
+"une campagne de prêt."
+msgstr ""
+"Een bijdrage kan niet zowel aan een donatiecampagne als een leningcampagne "
+"worden gekoppeld."
+
+#: .\ngo\models.py:533
+msgid "Une contribution doit être liée à une campagne (don ou prêt)."
+msgstr "Een bijdrage moet gekoppeld zijn aan een campagne (donatie of lening)."
+
+#: .\ngo\models.py:535
+msgid ""
+"Les contributions à une campagne de don doivent avoir le type 'donation'."
+msgstr "Bijdragen aan een donatiecampagne moeten het type 'donatie' hebben."
+
+#: .\ngo\models.py:537
+msgid "Les contributions à une campagne de prêt doivent avoir le type 'loan'."
+msgstr "Bijdragen aan een leningcampagne moeten het type 'lening' hebben."
+
+#: .\ngo\models.py:562 .\ngo\templates\ngo\partner\partner_list.html:41
+msgid "ONG / Association"
+msgstr "NGO / Vereniging"
+
+#: .\ngo\models.py:563 .\ngo\templates\ngo\partner\partner_list.html:42
+msgid "Entreprise privée"
+msgstr "Privébedrijf"
+
+#: .\ngo\models.py:564 .\ngo\templates\ngo\partner\partner_list.html:43
+msgid "Institution publique"
+msgstr "Publieke instelling"
+
+#: .\ngo\models.py:565 .\ngo\templates\ngo\partner\partner_list.html:44
+msgid "Partenaire individuel"
+msgstr "Individuele partner"
+
+# ---------- Partner model ----------
+#: .\ngo\models.py:571
+msgid "Type de partenaire"
+msgstr "Partner type"
+
+#: .\ngo\models.py:572
+msgid "Logo"
+msgstr "Logo"
+
+#: .\ngo\models.py:573 .\ngo\templates\ngo\contact\contact.html:33
+msgid "Site web"
+msgstr "Website"
+
+#: .\ngo\models.py:574 .\ngo\models.py:754 .\ngo\models.py:778
+#: .\ngo\templates\ngo\contact\contact.html:31
+msgid "Email"
+msgstr "E-mail"
+
+#: .\ngo\models.py:575 .\ngo\templates\ngo\contact\contact.html:30
+msgid "Téléphone"
+msgstr "Telefoon"
+
+#: .\ngo\models.py:581
+msgid "Partenaire"
+msgstr "Partner"
+
+#: .\ngo\models.py:582
+msgid "Partenaires"
+msgstr "Partners"
+
+#: .\ngo\models.py:605
+msgid "Contenu"
+msgstr "Inhoud"
+
+#: .\ngo\models.py:610 .\ngo\models.py:615
+msgid "Mise à jour"
+msgstr "Update"
+
+#: .\ngo\models.py:611
+msgid "Mises à jour"
+msgstr "Updates"
+
+# ---------- Testimonial model ----------
+#: .\ngo\models.py:628
+msgid "Photo du contributeur ou de la personne donnant le témoignage"
+msgstr "Foto van de bijdrager of persoon die de getuigenis geeft"
+
+#: .\ngo\models.py:630 .\ngo\models.py:756
+msgid "Message"
+msgstr "Bericht"
+
+#: .\ngo\models.py:643
+msgid "Témoignage"
+msgstr "Getuigenis"
+
+#: .\ngo\models.py:644 .\ngo\templates\ngo\index.html:440
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:5
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:15
+msgid "Témoignages"
+msgstr "Getuigenissen"
+
+#: .\ngo\models.py:648
+msgid "Témoignage de"
+msgstr "Getuigenis van"
+
+# ---------- Reward model ----------
+#: .\ngo\models.py:662
+msgid "Montant minimum"
+msgstr "Minimale bedrag"
+
+#: .\ngo\models.py:668
+msgid "Image représentative de la récompense (facultative)"
+msgstr "Representatieve afbeelding van de beloning (optioneel)"
+
+#: .\ngo\models.py:672
+msgid "Récompense"
+msgstr "Beloning"
+
+#: .\ngo\models.py:673 .\ngo\templates\ngo\campaign\campaign_detail.html:257
+msgid "Récompenses"
+msgstr "Beloningen"
+
+#: .\ngo\models.py:677
+msgid "min"
+msgstr "min"
+
+# ---------- LoanCampaign model ----------
+#: .\ngo\models.py:713
+msgid "Taux d'intérêt (%)"
+msgstr "Rentepercentage (%)"
+
+#: .\ngo\models.py:714
+msgid "Durée de remboursement (mois)"
+msgstr "Terugbetalingsduur (maanden)"
+
+#: .\ngo\models.py:714
+msgid "Durée du remboursement en mois"
+msgstr "Terugbetalingsduur in maanden"
+
+#: .\ngo\models.py:723
+msgid "Campagnes de prêt"
+msgstr "Leningscampagnes"
+
+#: .\ngo\models.py:755
+msgid "Sujet"
+msgstr "Onderwerp"
+
+#: .\ngo\models.py:757
+msgid "Lu"
+msgstr "Gelezen"
+
+#: .\ngo\models.py:761
+msgid "Message de contact"
+msgstr "Contactbericht"
+
+#: .\ngo\models.py:762
+msgid "Messages de contact"
+msgstr "Contactberichten"
+
+#: .\ngo\models.py:766
+msgid "Message de"
+msgstr "Bericht van"
+
+# ---------- TeamMember model ----------
+#: .\ngo\models.py:775
+msgid "Rôle"
+msgstr "Rol"
+
+#: .\ngo\models.py:776
+msgid "Biographie"
+msgstr "Biografie"
+
+#: .\ngo\models.py:779
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: .\ngo\models.py:780
+msgid "Twitter"
+msgstr "Twitter"
+
+#: .\ngo\models.py:781
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\ngo\models.py:782
+msgid "Ordre"
+msgstr "Volgorde"
+
+#: .\ngo\models.py:786
+msgid "Membre de l'équipe"
+msgstr "Teamlid"
+
+#: .\ngo\models.py:787
+msgid "Membres de l'équipe"
+msgstr "Teamleden"
+
+# ---------- IntermediairePayment model ----------
+#: .\ngo\models.py:803
+msgid "Validé"
+msgstr "Gevalideerd"
+
+#: .\ngo\models.py:808 .\ngo\views.py:917
+msgid "Intermédiaire"
+msgstr "Tussenpersoon"
+
+#: .\ngo\models.py:820
+msgid "Preuve"
+msgstr "Bewijs"
+
+#: .\ngo\models.py:834
+msgid "Paiement intermédiaire"
+msgstr "Tussenbetaling"
+
+#: .\ngo\models.py:835
+msgid "Paiements intermédiaires"
+msgstr "Tussenbetalingen"
+
+#: .\ngo\templates\base.html:9
+msgid "Financement Participatif"
+msgstr "Crowdfunding"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:5
+msgid "Détails de la campagne"
+msgstr "Campagnedetails"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:204
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Objectif"
+msgstr "Financieel doel"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:215
+#: .\ngo\templates\ngo\campaign\campaign_list.html:177
+msgid "jours restants"
+msgstr "resterende dagen"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:217
+#, fuzzy
+#| msgid "Date limite"
+msgid "Durée illimitée"
+msgstr "Deadline"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:223
+#, fuzzy
+#| msgid "Contribution"
+msgid "Contribuer maintenant"
+msgstr "Bijdrage"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:235
+#, fuzzy
+#| msgid "Mises à jour"
+msgid "Mises à jour de la campagne"
+msgstr "Updates"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:266
+msgid "Choisir cette récompense"
+msgstr "Kies deze beloning"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:280
+#, fuzzy
+#| msgid "Type de contribution"
+msgid "Dernières contributions"
+msgstr "Type bijdrage"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:285
+#, fuzzy
+#| msgid "Contribution"
+msgid "Contributeur"
+msgstr "Bijdrage"
+
+#: .\ngo\templates\ngo\campaign\campaign_detail.html:287
+msgid "Date"
+msgstr "Datum"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:5
+msgid "Liste des Campagnes de Collecte de Fonds"
+msgstr "Lijst met fondsenwervende campagnes"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:155
+#: .\ngo\templates\ngo\index.html:233
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes Actives"
+msgstr "Campagnes"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:177
+msgid "Illimitée"
+msgstr "Onbeperkt"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:182
+msgid "Voir détails"
+msgstr "Bekijk details"
+
+#: .\ngo\templates\ngo\campaign\campaign_list.html:189
+#: .\ngo\templates\ngo\index.html:276
+msgid "Aucune campagne active pour le moment."
+msgstr "Er zijn momenteel geen actieve campagnes."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:5
+#, fuzzy
+#| msgid "Catégorie"
+msgid "Détails Catégorie"
+msgstr "Categorie"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:175
+msgid "Découvrez les projets et informations liés à cette catégorie."
+msgstr "Ontdek projecten en informatie die verband houden met deze categorie."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:192
+msgid "Aucune description disponible pour cette catégorie."
+msgstr "Er is geen beschrijving beschikbaar voor deze categorie."
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:195
+#, fuzzy
+#| msgid "Catégories"
+msgid "Retour aux catégories"
+msgstr "Categorieën"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:197
+msgid "Voir les projets financés"
+msgstr "Bekijk gefinancierde projecten"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:208
+msgid "Projets associés à cette catégorie"
+msgstr "Projecten die verband houden met deze categorie"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:222
+msgid "Voir la campagne"
+msgstr "Bekijk de campagne"
+
+#: .\ngo\templates\ngo\categorie\categorie_detail.html:228
+msgid "Aucun projet n’est actuellement associé à cette catégorie."
+msgstr "Er zijn momenteel geen projecten gekoppeld aan deze categorie."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:5
+#: .\ngo\templates\ngo\categorie\categorie_list.html:149
+#, fuzzy
+#| msgid "Catégories"
+msgid "Catégories de Projets"
+msgstr "Categorieën"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:150
+msgid ""
+"Découvrez les différentes catégories de projets disponibles pour le "
+"financement participatif en Afrique."
+msgstr ""
+"Ontdek de verschillende projectcategorieën die beschikbaar zijn voor "
+"crowdfunding en crowdlending in Afrika."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:170
+#: .\ngo\templates\ngo\country\funded_categories.html:61
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Voir les projets"
+msgstr "Projectfoto"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:177
+#: .\ngo\templates\ngo\index.html:323
+msgid "Aucune catégorie disponible pour le moment."
+msgstr "Er zijn momenteel geen categorieën beschikbaar."
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:187
+msgid "Vous souhaitez proposer une nouvelle catégorie ?"
+msgstr "Wilt u een nieuwe categorie voorstellen?"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:188
+msgid ""
+"Contactez-nous pour suggérer une catégorie de projet à ajouter à la "
+"plateforme."
+msgstr ""
+"Neem contact met ons op om een projectcategorie voor te stellen die u aan "
+"het platform wilt toevoegen"
+
+#: .\ngo\templates\ngo\categorie\categorie_list.html:190
+#: .\ngo\templates\ngo\country\country_list.html:58
+#: .\ngo\templates\ngo\info\about_us.html:165
+msgid "Nous Contacter"
+msgstr "Neem contact met ons op"
+
+#: .\ngo\templates\ngo\contact\contact.html:13
+#: .\ngo\templates\ngo\partials\footer.html:14
+#, fuzzy
+#| msgid "Contenu"
+msgid "Contactez-nous"
+msgstr "Neem contact met ons op"
+
+#: .\ngo\templates\ngo\contact\contact.html:14
+msgid "Une question ? Un projet ? Nous serons ravis d’échanger avec vous."
+msgstr "Heb je een vraag? Een project? We praten graag met je."
+
+#: .\ngo\templates\ngo\contact\contact.html:25
+msgid "Nos coordonnées"
+msgstr "Onze contactgegevens"
+
+#: .\ngo\templates\ngo\contact\contact.html:27
+msgid ""
+"Notre équipe est disponible pour répondre à toutes vos questions sur nos "
+"services, nos programmes et nos projets."
+msgstr ""
+"Ons team staat klaar om al uw vragen over onze diensten, "
+"programma's en projecten te beantwoorden."
+
+#: .\ngo\templates\ngo\contact\contact.html:32
+msgid "Adresse"
+msgstr "Adres"
+
+#: .\ngo\templates\ngo\contact\contact.html:44
+msgid "Envoyez-nous un message"
+msgstr "Stuur ons een bericht"
+
+#: .\ngo\templates\ngo\contact\contact.html:45
+msgid ""
+"Remplissez le formulaire ci-dessous, et nous vous répondrons dans les plus "
+"brefs délais."
+msgstr ""
+"Vul onderstaand formulier in, dan nemen wij zo spoedig mogelijk "
+"contact met u op."
+
+#: .\ngo\templates\ngo\country\country_list.html:5
+msgid "Infinity Global Investment & Aid ( IGIA) - Financement Participatif"
+msgstr "Infinity Global Investment & Aid (IGIA) - Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\country\country_list.html:12
+msgid "Liste des pays dans auxquels IGIA participe au financement participatif"
+msgstr "Lijst van landen waar IGIA deelneemt aan crowdfunding & Crowdlending"
+
+# ---------- Country model ----------
+#: .\ngo\templates\ngo\country\country_list.html:31
+#, fuzzy
+#| msgid "Code"
+msgid "Code ISO"
+msgstr "Code"
+
+#: .\ngo\templates\ngo\country\country_list.html:40
+#, fuzzy
+#| msgid "Actif"
+msgid "Inactif"
+msgstr "Actief"
+
+#: .\ngo\templates\ngo\country\country_list.html:45
+#: .\ngo\templates\ngo\index.html:317
+msgid "Explorer"
+msgstr "Ontdekken"
+
+#: .\ngo\templates\ngo\country\country_list.html:50
+msgid "Aucun pays disponible pour le moment."
+msgstr "Er zijn momenteel geen landen beschikbaar."
+
+#: .\ngo\templates\ngo\country\country_list.html:55
+msgid "Votre pays ne figure pas dans la liste ?"
+msgstr "Staat uw land er niet bij?"
+
+#: .\ngo\templates\ngo\country\country_list.html:56
+msgid ""
+"Contactez-nous pour que nous puissions étudier votre demande et vous "
+"accompagner."
+msgstr ""
+"Neem contact met ons op, zodat wij uw aanvraag kunnen bestuderen en u kunnen "
+"helpen."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:5
+#: .\ngo\templates\ngo\country\funded_categories.html:23
+#, fuzzy
+#| msgid "Catégories"
+msgid "Catégories financées"
+msgstr "Categorieën"
+
+#: .\ngo\templates\ngo\country\funded_categories.html:15
+msgid "Découvrez les catégories de projets financés dans ce pays."
+msgstr ""
+"Ontdek de categorieën van projecten die in dit land worden gefinancierd."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:26
+msgid ""
+"Les secteurs suivants bénéficient d’un soutien financier grâce à nos "
+"investisseurs et partenaires."
+msgstr ""
+"De volgende sectoren ontvangen financiële steun van onze investeerders en "
+"partners."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:48
+msgid "Aucune description disponible."
+msgstr "Geen beschrijving beschikbaar."
+
+#: .\ngo\templates\ngo\country\funded_categories.html:54
+msgid "Total financé"
+msgstr "Totaal gefinancierd"
+
+#: .\ngo\templates\ngo\country\funded_categories.html:69
+msgid "Aucune catégorie financée trouvée pour ce pays."
+msgstr "Er zijn geen gefinancierde categorieën gevonden voor dit land."
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:5
+#: .\ngo\templates\ngo\country\projects_by_category.html:23
+msgid "Projets financés"
+msgstr "Gefinancierde projecten"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:14
+msgid "Projets financés dans la catégorie"
+msgstr "Projecten gefinancierd in de categorie"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:59
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Voir le projet"
+msgstr "Projectfoto"
+
+#: .\ngo\templates\ngo\country\projects_by_category.html:66
+msgid "Aucun projet financé trouvé dans cette catégorie pour ce pays."
+msgstr ""
+"Er zijn geen gefinancierde projecten gevonden in deze categorie voor dit "
+"land."
+
+#: .\ngo\templates\ngo\index.html:5
+msgid "Accueil - Financement Participatif"
+msgstr "Home - Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\index.html:32
+msgid "Bienvenue sur notre plateforme"
+msgstr "Welkom op ons platform"
+
+#: .\ngo\templates\ngo\index.html:33
+msgid "Un nouveau souffle pour vos projets"
+msgstr "Een nieuw leven voor uw projecten"
+
+#: .\ngo\templates\ngo\index.html:40
+msgid "Financement participatif"
+msgstr "Crowdfunding & Crowdlending"
+
+#: .\ngo\templates\ngo\index.html:41
+msgid "Construisons l’avenir ensemble"
+msgstr "Laten we samen de toekomst bouwen"
+
+#: .\ngo\templates\ngo\index.html:48
+msgid "Des projets innovants"
+msgstr "Innovatieve projecten"
+
+#: .\ngo\templates\ngo\index.html:49
+msgid "Donnez vie à vos idées"
+msgstr "Breng uw ideeën tot leven"
+
+#: .\ngo\templates\ngo\index.html:56
+msgid "Petits Commerces"
+msgstr "Kleine bedrijven"
+
+#: .\ngo\templates\ngo\index.html:57
+#, fuzzy
+#| msgid "Profils entrepreneurs"
+msgid "Vous aussi êtes des entrepreneurs"
+msgstr "Ondernemersprofielen"
+
+#: .\ngo\templates\ngo\index.html:64
+msgid "Presentez vos projets"
+msgstr "Presenteer uw projecten"
+
+#: .\ngo\templates\ngo\index.html:65
+msgid "Suivit et Evaluation"
+msgstr "Monitoring en evaluatie"
+
+#: .\ngo\templates\ngo\index.html:72
+msgid "Collecte de fonds"
+msgstr "Fondsenwerving"
+
+#: .\ngo\templates\ngo\index.html:73
+msgid "Organiser par des Campagnes"
+msgstr "Organiseren op campagnes"
+
+#: .\ngo\templates\ngo\index.html:80
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Suivit des projets"
+msgstr "Projectindiening"
+
+#: .\ngo\templates\ngo\index.html:81
+msgid "Par notre Communaute active"
+msgstr "Door onze actieve gemeenschap"
+
+#: .\ngo\templates\ngo\index.html:88
+msgid "Formation a la gestion"
+msgstr "Managementtraining"
+
+#: .\ngo\templates\ngo\index.html:89
+msgid "Pour permettre l'autonomie"
+msgstr "Om autonomie mogelijk te maken"
+
+#: .\ngo\templates\ngo\index.html:96
+msgid "Conseils et Astuces"
+msgstr "Tips en trucs"
+
+#: .\ngo\templates\ngo\index.html:97
+msgid "Pour reussir dans votre activité"
+msgstr "Om succesvol te zijn in uw bedrijf"
+
+#: .\ngo\templates\ngo\index.html:104
+msgid "Rejoignez la communauté"
+msgstr "Sluit je aan bij de community"
+
+#: .\ngo\templates\ngo\index.html:105
+msgid "Investissez dans l’avenir"
+msgstr "Investeer in de toekomst"
+
+#: .\ngo\templates\ngo\index.html:141
+#: .\ngo\templates\ngo\partials\footer.html:24
+msgid "Qui sommes-nous ?"
+msgstr "Wie zijn wij?"
+
+#: .\ngo\templates\ngo\index.html:143
+msgid ""
+"Nous accordons une grande valeur aux petits métiers et à l’entrepreneuriat\n"
+"                par Un placement qui a du sens"
+msgstr ""
+"Wij hechten veel waarde aan kleine bedrijven en ondernemerschap\n"
+"                door Een investering die zinvol is"
+
+#: .\ngo\templates\ngo\index.html:147
+msgid ""
+"Infinity Global Investment & Aid ( IGIA) est expert du financement "
+"participatif dédié \n"
+"                et adaptés à l’écosystème Afrique, Asie, Europe et Amerique "
+"en valorisant les jeunes et en les accompagnant dans la mise en place de "
+"leur projet."
+msgstr ""
+"Infinity Global Investment & Aid (IGIA) is een expert in crowdfunding en "
+"crowdlending toegewijd \n"
+"                en aangepast aan het ecosysteem van Afrika, Azië, Europa en "
+"Amerika door jongeren te promoten en hen te ondersteunen bij de uitvoering "
+"van hun project."
+
+#: .\ngo\templates\ngo\index.html:160
+msgid "projets financés"
+msgstr "gefinancierde projecten"
+
+#: .\ngo\templates\ngo\index.html:170
+msgid "collectes réussies"
+msgstr "succesvolle collecties"
+
+# ---------- Reward model ----------
+#: .\ngo\templates\ngo\index.html:180
+#, fuzzy
+#| msgid "Montant minimum"
+msgid "Montant investi"
+msgstr "Minimale bedrag"
+
+#: .\ngo\templates\ngo\index.html:187
+msgid "En savoir plus"
+msgstr "Meer informatie"
+
+#: .\ngo\templates\ngo\index.html:201
+#: .\ngo\templates\ngo\projet\project_list.html:11
+#, fuzzy
+#| msgid "Projets"
+msgid "Projets Récents"
+msgstr "Projecten"
+
+#: .\ngo\templates\ngo\index.html:219
+#: .\ngo\templates\ngo\projet\project_detail.html:16
+#, fuzzy
+#| msgid "Montant collecté"
+msgid "collecté"
+msgstr "Verzameld bedrag"
+
+#: .\ngo\templates\ngo\index.html:235
+msgid "Découvrez les campagnes de financement en cours."
+msgstr "Ontdek huidige fondsenwervende campagnes."
+
+#: .\ngo\templates\ngo\index.html:270
+msgid "Voir les détails"
+msgstr "Bekijk details"
+
+#: .\ngo\templates\ngo\index.html:282
+msgid "Voir toutes les campagnes"
+msgstr "Bekijk alle campagnes"
+
+#: .\ngo\templates\ngo\index.html:292
+#, fuzzy
+#| msgid "Méthode de paiement"
+msgid "Catégories de Financement"
+msgstr "Betaalmethode"
+
+#: .\ngo\templates\ngo\index.html:294
+msgid "Explorez les domaines dans lesquels vous pouvez soutenir un projet."
+msgstr "Ontdek gebieden waar u een project kunt ondersteunen."
+
+#: .\ngo\templates\ngo\index.html:329
+msgid "Voir toutes les catégories"
+msgstr "Bekijk alle categorieën"
+
+#: .\ngo\templates\ngo\index.html:376
+#: .\ngo\templates\ngo\team\team_list.html:11
+msgid "Notre Équipe"
+msgstr "Ons team"
+
+#: .\ngo\templates\ngo\index.html:379
+msgid "Découvrez les passionnés qui font vivre notre mission chaque jour."
+msgstr ""
+"Ontdek de gepassioneerde mensen die onze missie elke dag tot leven brengen."
+
+#: .\ngo\templates\ngo\index.html:398
+msgid "Voir Profil"
+msgstr "Bekijk profiel"
+
+#: .\ngo\templates\ngo\index.html:428
+msgid "L’équipe sera bientôt présentée."
+msgstr "Het team wordt binnenkort voorgesteld."
+
+#: .\ngo\templates\ngo\index.html:443
+msgid ""
+"Ils partagent leur expérience avec notre plateforme de financement "
+"participatif."
+msgstr ""
+"Zij delen hun ervaring met ons crowdfundingplatformZij delen hun ervaring "
+"met ons crowdfundingplatform crowdfunding en crowdlending."
+
+#: .\ngo\templates\ngo\index.html:475
+msgid "Voir le projet lié"
+msgstr "Bekijk het gerelateerde project"
+
+#: .\ngo\templates\ngo\index.html:484
+msgid "Aucun témoignage pour le moment."
+msgstr "Nog geen getuigenissen."
+
+#: .\ngo\templates\ngo\index.html:491
+#: .\ngo\templates\ngo\projet\project_detail.html:62
+msgid "Précédent"
+msgstr "Vorig"
+
+#: .\ngo\templates\ngo\index.html:495
+#: .\ngo\templates\ngo\projet\project_detail.html:66
+msgid "Suivant"
+msgstr "Volgend"
+
+#: .\ngo\templates\ngo\info\about_us.html:5
+msgid "À propos de nous"
+msgstr "Over ons"
+
+#: .\ngo\templates\ngo\info\about_us.html:15
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "🌍 IGIA — L’expert du financement participatif"
+msgstr "🌍 IGIA — De crowdfunding-expert"
+
+#: .\ngo\templates\ngo\info\about_us.html:18
+msgid ""
+"Dédiée à la valorisation des jeunes et au développement local depuis 2012"
+msgstr ""
+"Sinds 2012 toegewijd aan de ontwikkeling van jongeren en lokale ontwikkeling"
+
+#: .\ngo\templates\ngo\info\about_us.html:28
+msgid ""
+"est une plateforme de financement participatif dédiée à la \n"
+"          <strong>valorisation des jeunes et au développement local </"
+"strong>.  \n"
+"          Depuis 2012, elle permet d’investir dans des projets <strong> "
+"rigoureusement sélectionnés </strong> \n"
+"          pour leur solidité économique, leurs bénéfices concrets et leur "
+"ancrage territorial."
+msgstr ""
+"is een crowdfunding en crowdlending platform dat zich richt op de \n"
+"          <strong>promotie van jongeren en lokale ontwikkeling </strong>.  \n"
+"          Sinds 2012 is het mogelijk om te investeren in projecten <strong> "
+"streng geselecteerd </strong> \n"
+"          vanwege hun economische soliditeit, hun concrete voordelen en hun "
+"territoriale verankering."
+
+#: .\ngo\templates\ngo\info\about_us.html:34
+msgid ""
+"Grâce à IGIA, les investisseurs peuvent  <strong> orienter et verdir "
+"directement leurs investissements</strong> \n"
+"         tout en constituant un  <strong> portefeuille diversifié et stable"
+msgstr ""
+"Via IGIA kunnen investeerders  <strong> oriënteren en groen rechtstreeks hun "
+"investeringen</strong> \n"
+"         terwijl het een  <strong> gediversifieerde en stabiele portefeuille"
+
+#: .\ngo\templates\ngo\info\about_us.html:43
+msgid "Présence internationale"
+msgstr "Internationale aanwezigheid"
+
+#: .\ngo\templates\ngo\info\about_us.html:45
+msgid ""
+"IGIA est aujourd’hui présent sur <strong>3 continents</strong> et couvre "
+"<strong>54 pays</strong>, \n"
+"        soutenant les initiatives locales partout où les jeunes veulent "
+"entreprendre."
+msgstr ""
+"IGIA is nu aanwezig op <strong>3 continenten</strong> en bestrijkt "
+"<strong>54 landen</strong>, \n"
+"        het ondersteunen van lokale initiatieven waar jongeren maar willen "
+"ondernemen."
+
+#: .\ngo\templates\ngo\info\about_us.html:53
+msgid "Notre mission"
+msgstr "Onze missie"
+
+#: .\ngo\templates\ngo\info\about_us.html:55
+msgid ""
+"Forts de notre expérience, nous offrons aux jeunes des <strong>solutions "
+"financières fiables et accessibles</strong> \n"
+"          en alternative au circuit bancaire traditionnel."
+msgstr ""
+"Dankzij onze ervaring bieden wij jongeren betrouwbare <strong>en toegankelijke  "
+"financiële oplossingen</strong> \n"
+"          als alternatief voor traditioneel bankieren."
+
+#: .\ngo\templates\ngo\info\about_us.html:59
+msgid ""
+"Notre approche simplifie les procédures et supprime les barrières liées "
+"aux \n"
+"          <strong>garanties ou hypothèques</strong>, souvent inaccessibles "
+"pour les jeunes entrepreneurs."
+msgstr ""
+"Onze aanpak vereenvoudigt procedures en neemt belemmeringen weg die verband "
+"houden met \n"
+"          <strong>  garanties of hypotheken,</strong>, die vaak ontoegankelijk zijn "
+"voor jonge ondernemers."
+
+#: .\ngo\templates\ngo\info\about_us.html:72
+msgid "Notre approche de proximité"
+msgstr "Onze lokale aanpak"
+
+#: .\ngo\templates\ngo\info\about_us.html:74
+msgid ""
+"Nous croyons en une approche <strong>humaine et décentralisée</strong>, "
+"fondée sur la \n"
+"        <strong>proximité avec les populations locales</strong>.  \n"
+"        Cette stratégie nous permet de proposer une <strong>gamme variée de "
+"services</strong> adaptés à chaque écosystème."
+msgstr ""
+"Wij geloven in een aanpak <strong>menselijk en gedecentraliseerd</strong>, "
+"fondée sur la \n"
+"        <strong>nabijheid van lokale bevolkingsgroepen</strong>.  \n"
+"        Deze strategie stelt ons in staat om een <strong>gevarieerd aanbod "
+"van diensten</strong> aangepast aan elk ecosysteem."
+
+#: .\ngo\templates\ngo\info\about_us.html:82
+msgid "Petits emplois"
+msgstr "Kleine klusjes"
+
+#: .\ngo\templates\ngo\info\about_us.html:88
+#, fuzzy
+#| msgid "Profils intermédiaires"
+msgid "Emplois intermédiaires"
+msgstr "Intermediaire Profielen"
+
+#: .\ngo\templates\ngo\info\about_us.html:89
+msgid "PME et commerces agricoles, de gros et de détail."
+msgstr "MKB en agrarische, groothandels- en detailhandelsbedrijven."
+
+#: .\ngo\templates\ngo\info\about_us.html:94
+msgid "Agriculture & Élevage"
+msgstr "Landbouw en veeteelt"
+
+#: .\ngo\templates\ngo\info\about_us.html:95
+msgid "Accompagnement vers une modernisation durable."
+msgstr "Ondersteuning voor duurzame modernisering"
+
+#: .\ngo\templates\ngo\info\about_us.html:100
+msgid "Agro-industrie & Startups"
+msgstr "Agro-industrie & Startups"
+
+#: .\ngo\templates\ngo\info\about_us.html:101
+msgid ""
+"Financement de projets innovants dans la transformation et les technologies."
+msgstr ""
+"Financiering van innovatieve projecten op het gebied van transformatie en "
+"technologie."
+
+#: .\ngo\templates\ngo\info\about_us.html:110
+msgid "Notre engagement"
+msgstr "Onze inzet"
+
+#: .\ngo\templates\ngo\info\about_us.html:112
+msgid ""
+"IGIA s’engage à rendre le financement accessible à tous, à stimuler la "
+"création d’emplois \n"
+"        et à favoriser un développement inclusif et durable.  \n"
+"        Chaque projet soutenu est une <strong>opportunité de transformation "
+"économique et sociale"
+msgstr ""
+"IGIA zet zich in om financiering voor iedereen toegankelijk te maken en de "
+"werkgelegenheid creëren \n"
+"        en om inclusieve en duurzame ontwikkeling te bevorderen.  \n"
+"        Elk ondersteund project is een <strong>transformatiemogelijkheid "
+"economisch en sociaal"
+
+#: .\ngo\templates\ngo\info\about_us.html:122
+msgid "Notre Vision & Nos Objectifs"
+msgstr "Onze visie en onze doelstellingen"
+
+#: .\ngo\templates\ngo\info\about_us.html:125
+msgid ""
+"Nous croyons en un monde fort, innovant et solidaire.  \n"
+"        Notre mission est de soutenir les jeunes entrepreneurs, artisans et "
+"porteurs de projets \n"
+"        grâce au financement participatif, à la formation et à la mise en "
+"réseau."
+msgstr ""
+"Wij geloven in een sterke, innovatieve en verenigde wereld.  \n"
+"        Onze missie is om jonge ondernemers, ambachtslieden en "
+"projectleiders \n"
+"        door middel van crowdfunding, training en implementatie netwerk."
+
+#: .\ngo\templates\ngo\info\about_us.html:130
+msgid ""
+"Nous favorisons l’autonomie économique et valorisons les talents à travers "
+"le monde."
+msgstr ""
+"Wij bevorderen economische autonomie en waarderen talenten door de wereld."
+
+#: .\ngo\templates\ngo\info\about_us.html:139
+msgid "Nos Engagements"
+msgstr "Onze beloften"
+
+#: .\ngo\templates\ngo\info\about_us.html:144 .\ngo\views.py:844
+msgid "Transparence"
+msgstr "Transparantie"
+
+#: .\ngo\templates\ngo\info\about_us.html:145
+msgid ""
+"Chaque projet est suivi avec rigueur pour garantir la confiance entre "
+"contributeurs et bénéficiaires."
+msgstr ""
+"Elk project wordt streng gecontroleerd om het vertrouwen tussen bijdragers "
+"en begunstigden te waarborgen."
+
+#: .\ngo\templates\ngo\info\about_us.html:151
+msgid "Innovation Sociale"
+msgstr "Sociale innovatie"
+
+#: .\ngo\templates\ngo\info\about_us.html:152
+msgid ""
+"Nous misons sur des solutions modernes et inclusives pour favoriser le "
+"développement communautaire."
+msgstr ""
+"Wij maken gebruik van moderne en inclusieve oplossingen om de ontwikkeling "
+"van de gemeenschap te bevorderen."
+
+#: .\ngo\templates\ngo\info\about_us.html:158
+msgid "Impact Durable"
+msgstr "Duurzame impact"
+
+#: .\ngo\templates\ngo\info\about_us.html:159
+msgid ""
+"Nos actions contribuent à un changement réel et mesurable dans les "
+"communautés africaines."
+msgstr ""
+"Onze acties dragen bij aan echte en meetbare verandering in Afrikaanse "
+"gemeenschappen."
+
+#: .\ngo\templates\ngo\info\actualite.html:5
+msgid "Actualités"
+msgstr "Nieuws"
+
+#: .\ngo\templates\ngo\info\actualite.html:13 .\ngo\views.py:1220
+msgid "Actualités IGIA"
+msgstr "IGIA Nieuws"
+
+#: .\ngo\templates\ngo\info\actualite.html:14
+msgid "Restez informé sur nos dernières actions et projets."
+msgstr "Blijf op de hoogte van onze laatste acties en projecten."
+
+#: .\ngo\templates\ngo\info\actualite.html:22
+#, fuzzy
+#| msgid "Type de contribution"
+msgid "Dernières Actualités"
+msgstr "Type bijdrage"
+
+#: .\ngo\templates\ngo\info\actualite.html:32
+#, fuzzy
+#| msgid "Découvrez les campagnes de financement en cours."
+msgid "Lancement de notre nouvelle campagne de financement"
+msgstr "Ontdek huidige fondsenwervende campagnes."
+
+#: .\ngo\templates\ngo\info\actualite.html:34
+msgid ""
+"IGIA a lancé une campagne de financement participatif pour soutenir les "
+"entrepreneurs locaux et renforcer les projets solidaires."
+msgstr ""
+"IGIA is een crowdfundingcampagne gestart om lokale ondernemers "
+"te ondersteunen en solidariteitsprojecten te versterken."
+
+#: .\ngo\templates\ngo\info\actualite.html:37
+#: .\ngo\templates\ngo\info\actualite.html:53
+#: .\ngo\templates\ngo\info\actualite.html:69
+#, fuzzy
+#| msgid "Voir plus"
+msgid "Lire plus"
+msgstr "Bekijk meer"
+
+#: .\ngo\templates\ngo\info\actualite.html:48
+msgid "Partenariat avec des institutions locales"
+msgstr "Partnerschap met lokale instellingen"
+
+#: .\ngo\templates\ngo\info\actualite.html:50
+msgid ""
+"IGIA collabore désormais avec plusieurs institutions locales pour améliorer "
+"l'accès aux micro-prêts et soutenir les initiatives solidaires."
+msgstr ""
+"IGIA werkt nu samen met verschillende lokale instellingen om de toegang "
+"tot microkredieten te verbeteren en solidariteitsinitiatieven te ondersteunen."
+
+#: .\ngo\templates\ngo\info\actualite.html:64
+msgid "Rapport annuel IGIA 2025"
+msgstr "IGIA Jaarverslag 2025"
+
+#: .\ngo\templates\ngo\info\actualite.html:66
+msgid ""
+"Découvrez notre rapport annuel présentant l'impact de nos actions et la "
+"progression de nos projets financés."
+msgstr ""
+"Ontdek ons jaarverslag waarin de impact van onze acties en de voortgang "
+"van onze gefinancierde projecten worden gepresenteerd."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:5
+msgid "Agrément et Sécurité - IGIA"
+msgstr "Goedkeuring en veiligheid - IGIA"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:14
+msgid "Agrément et Sécurité"
+msgstr "Goedkeuring en veiligheid"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:17
+msgid ""
+"IGIA garantit la transparence, la sécurité et la conformité pour tous vos "
+"investissements."
+msgstr ""
+"IGIA garandeert transparantie, veiligheid en naleving voor "
+"al uw investeringen."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:21
+msgid "Découvrir IGIA"
+msgstr "Ontdek IGIA"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:30
+msgid "Confiance, sécurité et transparence"
+msgstr "Vertrouwen, veiligheid en transparantie"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:31
+msgid ""
+"Les fondements d’un environnement fiable pour les utilisateurs de notre "
+"plateforme."
+msgstr ""
+"De basis voor een betrouwbare omgeving voor gebruikers "
+"van ons platform."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:41
+msgid "IGIA, plateforme agréée De Nederlandsche Bank"
+msgstr "IGIA, een geautoriseerd platform van de Nederlandsche Bank"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:43
+msgid ""
+"IGIA opère en conformité avec la réglementation financière en vigueur et est "
+"enregistrée auprès des autorités compétentes."
+msgstr ""
+"IGIA handelt volgens de geldende financiële regelgeving en is geregistreerd "
+"bij de bevoegde autoriteiten."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:44
+msgid ""
+"La plateforme est agréée par l’Autorité des Marchés Financiers comme "
+"Prestataire de Services de Financement Participatif, sous le numéro FP "
+"2012-22."
+msgstr ""
+"Het platform is door de Autoriteit Financiële Markten goedgekeurd "
+"als Participatieve Financieringsdienstverlener, onder nummer FP "
+"2012-22."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:55
+#, fuzzy
+#| msgid "Accueil - Financement Participatif"
+msgid "Label Financement Participatif pour la Croissance Verte"
+msgstr "Participatief Financieringslabel voor Groene Groei"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:57
+msgid ""
+"IGIA est labellisée depuis 2012, en reconnaissance de son engagement envers "
+"la durabilité et la transparence des financements proposés."
+msgstr ""
+"Sinds 2012 is IGIA gecertificeerd, als erkenning voor haar inzet voor duurzaamheid "
+"en transparantie van de aangeboden financiering."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:58
+msgid ""
+"Ce label, créé par le ministère de la Transition Écologique et la FPP, "
+"distingue les projets à impact environnemental positif."
+msgstr ""
+"Dit label, in het leven geroepen door het Ministerie van Ecologische Transitie en de FPP,  "
+"onderscheidt projecten met een positieve impact op het milieu."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:64
+msgid "Sécurité des données"
+msgstr "Gegevensbeveiliging"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:65
+msgid ""
+"La sécurité de vos données personnelles et financières est une priorité "
+"absolue pour IGIA."
+msgstr ""
+"De veiligheid van uw persoonlijke en financiële gegevens "
+"is voor IGIA een topprioriteit."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:72 .\ngo\views.py:707
+msgid "Environnement sécurisé"
+msgstr "Veilige omgeving"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:73
+msgid ""
+"Le site IGIA est entièrement protégé via un protocole HTTPS, garantissant la "
+"confidentialité de vos données."
+msgstr ""
+"De website van IGIA is volledig beveiligd via het HTTPS-protocol, waardoor de "
+"vertrouwelijkheid van uw gegevens gegarandeerd is."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:81 .\ngo\views.py:709
+msgid "Transactions sécurisées"
+msgstr "Veilige transacties"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:82
+msgid ""
+"Toutes les opérations bancaires sont protégées par des protocoles de "
+"paiement semi-automatiques contre le piratage."
+msgstr ""
+"Alle banktransacties worden door semi-automatische betalingsprotocollen "
+"beschermd tegen hacking."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:90 .\ngo\views.py:711
+msgid "Accès crypté"
+msgstr "Gecodeerde toegang"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:91
+msgid ""
+"Vos mots de passe sont strictement personnels et vos données ne sont jamais "
+"partagées par IGIA."
+msgstr ""
+"Uw wachtwoorden zijn strikt persoonlijk en uw gegevens worden  "
+"nooit gedeeld met IGIA."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:104 .\ngo\views.py:713
+#, fuzzy
+#| msgid "Code de transaction"
+msgid "Protection des transactions"
+msgstr "Transactiebescherming"
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:106
+msgid ""
+"IGIA collabore avec ses partenaires bancaires et opérateurs de paiement "
+"agréés pour assurer la sécurité des transactions dans le monde entier."
+msgstr ""
+"IGIA werkt samen met haar bankpartners en geautoriseerde betalingsoperatoren "
+"om de veiligheid van transacties wereldwijd te garanderen."
+
+#: .\ngo\templates\ngo\info\agrement_securite.html:107
+msgid ""
+"Les fonds sont gérés par ABN AMRO, sous la supervision de l’ACPRB, "
+"garantissant la conformité et la fiabilité des opérations."
+msgstr ""
+"De fondsen worden beheerd door ABN AMRO, onder toezicht van de ACPRB,waardoor de "
+"naleving van de regelgeving en de betrouwbaarheid van de activiteiten worden gewaarborgd."
+
+#: .\ngo\templates\ngo\info\conditions_generales_utilisation.html:24
+msgid "Conditions Générales d’Utilisation du site IGIA"
+msgstr "Algemene gebruiksvoorwaarden van de IGIA-website"
+
+#: .\ngo\templates\ngo\info\conditions_generales_utilisation.html:36
+msgid "Pour toute question, contactez-nous à"
+msgstr "Voor vragen kunt u contact met ons opnemen via"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:5
+msgid "Politique de Confidentialité - IGIA"
+msgstr "Privacybeleid - IGIA"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:13
+msgid "Politique de Confidentialité"
+msgstr "Privacybeleid"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:15
+msgid ""
+"Protection des données et respect de votre vie privée sur la plateforme IGIA."
+msgstr ""
+"Gegevensbescherming en respect voor uw privacy op het IGIA-platform."
+
+#: .\ngo\templates\ngo\info\confidentialite.html:42
+#: .\ngo\templates\ngo\partials\footer.html:13
+#, fuzzy
+#| msgid "Montant"
+msgid "Contact"
+msgstr "Bedrag"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:44
+msgid ""
+"Pour toute demande relative à la confidentialité ou à la gestion de vos "
+"données :"
+msgstr ""
+"Voor elk verzoek met betrekking tot vertrouwelijkheid of het beheer van "
+"uw gegevens :"
+
+#: .\ngo\templates\ngo\info\confidentialite.html:58
+msgid ""
+"IGIA s’engage à respecter la vie privée de ses investisseurs, partenaires et "
+"porteurs de projets conformément aux lois internationales de protection des "
+"données."
+msgstr ""
+"IGIA respecteert de privacy van haar investeerders, partners en projectleiders  "
+"conform de internationale wetgeving inzake "
+"gegevensbescherming."
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:27
+msgid "Politique de Protection des Données Personnelles"
+msgstr "Beleid inzake de bescherming van persoonsgegevens"
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:42
+msgid "Consulter les Conditions Générales d’Utilisation"
+msgstr "Raadpleeg de Algemene Gebruiksvoorwaarden"
+
+#: .\ngo\templates\ngo\info\donnees_personnelles.html:45
+#, fuzzy
+#| msgid "Nous Contacter"
+msgid "Contacter IGIA"
+msgstr "Neem contact op met IGIA"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:5
+#: .\ngo\templates\ngo\partials\navigation.html:56
+#, fuzzy
+#| msgid "Financement de startups"
+msgid "Financement IGIA"
+msgstr "IGIA-financiering"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:19
+msgid "Financer une idée quand on n’a pas d’argent"
+msgstr "Een idee financieren als je geen geld hebt"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:22
+msgid ""
+"Des solutions simples et concrètes pour les auto-entrepreneurs, jeunes "
+"porteurs d’idées et travailleurs informels."
+msgstr ""
+"Eenvoudige en concrete oplossingen voor zelfstandigen, jongeren "
+"met ideeën en informele werkers."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:26
+msgid "Soumettre mon idée"
+msgstr "Dien mijn idee in"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:32
+#, fuzzy
+#| msgid "Notre Vision"
+msgid "Notre devise"
+msgstr "Onze visie"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:34 .\ngo\views.py:852
+msgid ""
+"IGIA combine mobilisation collective et financement solidaire (Crowdlending) "
+"et financement participatif (Crowdfunding) pour que chaque idée, qu’elle "
+"vienne d’un entrepreneur avec ou sans capital, ait une chance de devenir "
+"réalité."
+msgstr ""
+"IGIA combineert collectieve mobilisatie en solidariteitsfinanciering (Crowdlending) "
+"met participatieve financiering (Crowdfunding) zodat elk idee, "
+"of het nu van een ondernemer met of zonder kapitaal komt, een kans heeft om werkelijkheid "
+"te worden."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:42
+msgid "Le défi"
+msgstr "De uitdaging"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:44
+msgid "Pas d'accès au crédit bancaire (pas de garanties ni d’historique)."
+msgstr "Geen toegang tot bankkrediet (geen garanties of geschiedenis)."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:45
+msgid "Trop petits ou trop risqués pour les investisseurs classiques."
+msgstr "Te klein of te riskant voor traditionele investeerders."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:46
+msgid "Pas (ou peu) d’épargne personnelle pour démarrer."
+msgstr "Geen (of weinig) persoonlijke spaargelden om mee te beginnen."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:52
+msgid "Ce qu’ils ont malgré tout"
+msgstr "Wat ze ondanks alles hebben"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:54
+msgid "Une idée utile et un savoir-faire."
+msgstr "Een nuttig idee en knowhow."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:55
+msgid "Une forte motivation."
+msgstr "Een sterke motivatie."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:56
+msgid "Souvent un réseau local (famille, amis, diaspora)."
+msgstr "Vaak een lokaal netwerk (familie, vrienden, diaspora)."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:68
+#, fuzzy
+#| msgid "Accueil - Financement Participatif"
+msgid "Qu’est-ce que le financement participatif ?"
+msgstr "Wat is crowdfunding en inclusieve financiering?"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:69
+msgid ""
+"Le financement participatif (crowdfunding) permet à tout le monde de "
+"contribuer à un projet. Les contributeurs peuvent être des particuliers ou "
+"des investisseurs qui croient au projet."
+msgstr ""
+"Crowdfunding maakt het voor iedereen mogelijk "
+"bijdragen aan een project. Bijdragers kunnen individuen zijn of "
+"investeerders die in het project geloven."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:71
+msgid "Collecte de fonds auprès du grand public"
+msgstr "Fondsenwerving bij het grote publiek"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:72
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Suivi et transparence du projet"
+msgstr "Projectindiening"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:73
+msgid "Possibilité de dons, récompenses ou parts dans le projet"
+msgstr "Mogelijkheid tot donaties, beloningen of aandelen in het project"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:82
+msgid "Qu’est-ce que le financement inclusif ?"
+msgstr "Wat is inclusieve financiering?"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:83
+msgid ""
+"Le financement inclusif (crowdlending ou micro-prêts solidaires) cible ceux "
+"qui n’ont pas accès aux banques ou investisseurs classiques. Il combine "
+"financement, mentorat et accompagnement."
+msgstr ""
+"Inclusieve financiering (crowdlending of solidariteitsmicrokredieten) is gericht op degenen "
+"die geen toegang hebben tot traditionele banken of investeerders. Het combineert "
+"financiering, mentoring en ondersteuning."
+
+#: .\ngo\templates\ngo\info\financement_igia.html:85
+msgid "Micro-prêts solidaires pour démarrer des projets"
+msgstr "Solidariteitsmicrokredieten om projecten te starten"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:86
+#, fuzzy
+#| msgid "Accompagnement vers une modernisation durable."
+msgid "Accompagnement et suivi personnalisé"
+msgstr "Ondersteuning voor duurzame modernisering"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:87
+#, fuzzy
+#| msgid "Centres communautaires"
+msgid "Garanties communautaires ou symboliques"
+msgstr "Gemeenschapscentra"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:96
+msgid "Modèles de financement inclusif IGIA"
+msgstr "IGIA Inclusieve Financieringsmodellen"
+
+#: .\ngo\templates\ngo\info\financement_igia.html:112
+msgid "Avantages pour les porteurs de projet"
+msgstr "Voordelen voor projectleiders"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:5
+#: .\ngo\templates\ngo\partials\navigation.html:88
+msgid "Guide d'utilisation"
+msgstr "Gebruikershandleiding"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:12
+msgid "Guide d'utilisation IGIA"
+msgstr "IGIA-gebruikershandleiding"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:13
+msgid "Découvrez comment utiliser la plateforme selon votre profil."
+msgstr "Ontdek hoe u het platform kunt gebruiken op basis van uw profiel"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:20
+#, fuzzy
+#| msgid "Cybersécurité"
+msgid "Note de sécurité :"
+msgstr "Cyberbeveiliging"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:34
+msgid "Étapes à suivre :"
+msgstr "Te volgen stappen"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:43
+#, fuzzy
+#| msgid "Dates importantes"
+msgid "Notes importantes :"
+msgstr "Belangrijke data :"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:54
+msgid "Avertissements :"
+msgstr "Waarschuwingen:"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:65
+msgid "Pourquoi :"
+msgstr "Waarvoor:"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:79
+msgid "Contactez IGIA"
+msgstr "Neem contact op met IGIA"
+
+#: .\ngo\templates\ngo\info\guide_utilisation.html:82
+msgid "Notre équipe vous accompagne à chaque étape."
+msgstr "Ons team ondersteunt u bij elke stap"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:5
+#, fuzzy
+#| msgid "Projets réalisés | IGIA"
+msgid "Mentions légales - IGIA"
+msgstr "Afgeronde projecten | IGIA"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:13
+#: .\ngo\templates\ngo\partials\footer.html:46
+msgid "Mentions légales"
+msgstr "Juridische mededelingen"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:14
+msgid "Transparence, sécurité et confiance dans chaque projet IGIA."
+msgstr "Transparantie, veiligheid en vertrouwen in elk IGIA-project."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:22
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "1️. Informations générales"
+msgstr "Persoonlijke gegevens"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:23
+msgid "Société anonyme au capital de"
+msgstr "Naamloze vennootschap met een kapitaal van"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:24
+msgid "immatriculée au RCS de Utrecht (n° KVB 805 168 860)."
+msgstr "ingeschreven bij de KvK te Utrecht (nr. KVB 805 168 860)."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:26
+msgid "Siège social :"
+msgstr "Hoofdkantoor:"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:27
+#: .\ngo\templates\ngo\info\reclamations.html:28
+#: .\ngo\templates\ngo\info\reclamations.html:55
+#, fuzzy
+#| msgid "Téléphone"
+msgid "Téléphone :"
+msgstr "Telefoon"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:28
+#: .\ngo\templates\ngo\info\reclamations.html:26
+#, fuzzy
+#| msgid "Email"
+msgid "Email :"
+msgstr "E-mail"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:29
+msgid "Directeur :"
+msgstr "Regisseur:"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:31
+msgid "IGIA est agréée par l’AMF (PSFP n°2012-22)."
+msgstr "IGIA is goedgekeurd door de AMF (PSFP nr. 2012-22)."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:38
+#, fuzzy
+#| msgid "Preuve de paiement"
+msgid "2️. Prestataire de paiement"
+msgstr "Betalingsbewijs"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:39
+msgid "Société au capital de 2 418 772,22 €, immatriculée au RCS d’Amsterdam."
+msgstr "Vennootschap met een kapitaal van € 2.418.772,22, ingeschreven in het Handelsregister te Amsterdam."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:41
+#: .\ngo\templates\ngo\info\reclamations.html:27
+#: .\ngo\templates\ngo\info\reclamations.html:56
+msgid "Adresse :"
+msgstr "Adres :"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:42
+msgid "Agrément ACPR :"
+msgstr "Goedkeuring van de ACPR:"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:42
+msgid "depuis le 1er avril 2018"
+msgstr "sinds 1 april 2018"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:43
+#, fuzzy
+#| msgid "Montant"
+msgid "Contact :"
+msgstr "Bedrag"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:51
+msgid "3️. Hébergement"
+msgstr "3️. Accommodatie"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:52
+msgid "650 7th Street, San Francisco, CA 94103"
+msgstr "650 7th Street, San Francisco, CA 94103"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:54
+msgid "Politique de sécurité"
+msgstr "Beveiligingsbeleid"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:61
+msgid "4️. Réclamations"
+msgstr "4️. Klachten"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:62
+msgid ""
+"IGIA veille à la satisfaction de ses investisseurs. En cas de problème, "
+"contactez-nous :"
+msgstr ""
+"IGIA zorgt voor de tevredenheid van haar investeerders. In geval van een probleem, "
+"Neem contact met ons op :"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:63
+msgid "Accéder au formulaire de contact"
+msgstr "Toegang tot het contactformulier"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:70
+#, fuzzy
+#| msgid "Comité d’investissement"
+msgid "5️. Risques liés à l’investissement"
+msgstr "5. Investeringscommissie"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:71
+msgid ""
+"Tout investissement comporte un risque de perte partielle ou totale. Ces "
+"placements ne bénéficient pas d'une garantie de l’État ni des dispositifs "
+"européens d’indemnisation."
+msgstr ""
+"Elke belegging brengt het risico van gedeeltelijk of volledig verlies met zich mee. "
+"investeringen profiteren niet van een staatsgarantie of van de systemen "
+"Europese compensatie."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:73
+msgid "Conseil :"
+msgstr "Advies :"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:73
+#, python-format
+msgid ""
+"Ne pas investir plus de 10 %% de votre patrimoine dans des projets "
+"participatifs."
+msgstr ""
+"Investeer niet meer dan 10%% van uw vermogen in projecten "
+"participatief."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:81
+msgid "6️. Gestion internationale des risques"
+msgstr "6️. Internationaal risicomanagement"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:82
+msgid ""
+"Depuis plus de 15 ans, IGIA opère en Asie, Amérique du Sud et Afrique, avec "
+"une approche proactive de gestion des risques."
+msgstr ""
+"IGIA is al meer dan 15 jaar actief in Azië, Zuid-Amerika en Afrika, met "
+"een proactieve aanpak van risicomanagement."
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:99 .\ngo\views.py:1005
+msgid "Politique & Juridique"
+msgstr "Politiek en recht"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:102 .\ngo\views.py:1006
+msgid "Économique & Monétaire"
+msgstr "Economisch en monetair"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:105 .\ngo\views.py:1007
+msgid "Infrastructures & Logistique"
+msgstr "Infrastructuur & Logistiek"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:108 .\ngo\views.py:1008
+msgid "Social & Culturel"
+msgstr "Sociaal & Cultureel"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:111 .\ngo\views.py:1009
+msgid "Environnement & Climat"
+msgstr "Milieu & Klimaat"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:114 .\ngo\views.py:1010
+#, fuzzy
+#| msgid "Transparence"
+msgid "Gouvernance & Transparence"
+msgstr "Transparantie"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:125
+msgid ""
+"« L’investissement dans le tiers monde n’est pas une aventure risquée, mais "
+"une opportunité maîtrisée et durable. »"
+msgstr ""
+"« Investeren in de derde wereld is geen risicovolle onderneming, maar "
+"een gecontroleerde en duurzame kans. »"
+
+#: .\ngo\templates\ngo\info\mentions_legales.html:128
+msgid "IGIA, le partenaire de la finance inclusive et responsable."
+msgstr "IGIA, de partner van inclusieve en verantwoorde financiering."
+
+#: .\ngo\templates\ngo\info\reclamations.html:5
+msgid "Réclamations - IGIA"
+msgstr "Klachten - IGIA"
+
+#: .\ngo\templates\ngo\info\reclamations.html:13
+#: .\ngo\templates\ngo\partials\footer.html:48
+#, fuzzy
+#| msgid "Régions"
+msgid "Réclamations"
+msgstr "Regio's"
+
+#: .\ngo\templates\ngo\info\reclamations.html:15
+msgid ""
+"Procédure transparente pour le traitement équitable des réclamations IGIA."
+msgstr ""
+"Transparante procedure voor de eerlijke afhandeling van klachten bij de IGIA."
+
+#: .\ngo\templates\ngo\info\reclamations.html:23
+msgid "1. Dépôt et réception de la réclamation"
+msgstr "1. Indiening en ontvangst van de claim"
+
+#: .\ngo\templates\ngo\info\reclamations.html:24
+msgid ""
+"Les réclamations peuvent être déposées par email, courrier ou via le modèle "
+"PDF disponible sur le site. Un accusé de réception est envoyé sous 10 jours "
+"ouvrables."
+msgstr ""
+"Klachten kunnen worden ingediend per e-mail, per post of via het sjabloon "
+"PDF beschikbaar op de website. Een ontvangstbevestiging wordt binnen 10 werkdagen "
+"verzonden."
+
+#: .\ngo\templates\ngo\info\reclamations.html:50 .\ngo\views.py:1093
+msgid "Médiation"
+msgstr "Bemiddeling"
+
+#: .\ngo\templates\ngo\info\reclamations.html:51
+msgid "En cas d’insatisfaction, vous pouvez contacter le médiateur agréé :"
+msgstr "Indien u niet tevreden bent, kunt u contact opnemen met de erkende bemiddelaar:"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:5
+msgid "Que faisons-nous ? | IGIA"
+msgstr "Wat doen wij? | IGIA"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:11
+msgid "Que faisons-nous ?"
+msgstr "Wat doen wij?"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:13
+msgid ""
+"Découvrez comment IGIA transforme les idées en projets concrets grâce à un "
+"accompagnement structuré et des domaines d’intervention variés."
+msgstr ""
+"Ontdek hoe IGIA ideeën omzet in concrete projecten dankzij gestructureerde "
+"ondersteuning en uiteenlopende interventiegebieden."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:21
+msgid "Étapes de Validation d’un Projet"
+msgstr "Fasen van projectvalidatie"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:23
+msgid ""
+"Chaque projet suit un parcours rigoureux pour garantir sa faisabilité, sa "
+"conformité et son impact."
+msgstr ""
+"Elk project doorloopt een rigoureus proces om de haalbaarheid, naleving en "
+"impact ervan te garanderen."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:34
+msgid "Acteurs"
+msgstr "Acteurs"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:37
+msgid "Étape"
+msgstr "Fase"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:47
+msgid "Nos Domaines d’Intervention"
+msgstr "Onze interventiegebieden"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:49
+msgid ""
+"Nous intervenons dans des secteurs stratégiques pour promouvoir "
+"l’entrepreneuriat, l’innovation et le développement durable."
+msgstr ""
+"Wij zijn actief in strategische sectoren om ondernemerschap, innovatie en "
+"duurzame ontwikkeling te bevorderen."
+
+#: .\ngo\templates\ngo\info\what_we_do.html:76
+msgid "Notre Vision"
+msgstr "Onze visie"
+
+#: .\ngo\templates\ngo\info\what_we_do.html:78
+msgid ""
+"Accompagner, financer et propulser les porteurs de projets vers un succès "
+"durable,\n"
+"      au service du développement local et de la jeunesse."
+msgstr ""
+"Ondersteun, financier en stuw projectleiders naar succes duurzaam,\n"
+"      ten dienste van lokale ontwikkeling en jeugd."
+
+#: .\ngo\templates\ngo\partials\footer.html:21
+msgid "Découvrez IGIA"
+msgstr "Ontdek IGIA"
+
+#: .\ngo\templates\ngo\partials\footer.html:23
+#, fuzzy
+#| msgid "Notre Équipe"
+msgid "Notre Equipe"
+msgstr "Ons team"
+
+#: .\ngo\templates\ngo\partials\footer.html:26
+#, fuzzy
+#| msgid "Partenaire"
+msgid "Nos Partenaire"
+msgstr "Partner"
+
+#: .\ngo\templates\ngo\partials\footer.html:27
+#, fuzzy
+#| msgid "Témoignages"
+msgid "Temoignages"
+msgstr "Getuigenissen"
+
+#: .\ngo\templates\ngo\partials\footer.html:33
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Projets & Campagnes"
+msgstr "Campagnes"
+
+#: .\ngo\templates\ngo\partials\footer.html:35
+#, fuzzy
+#| msgid "Catégorie"
+msgid "Categorie"
+msgstr "Categorie"
+
+#: .\ngo\templates\ngo\partials\footer.html:37
+msgid "Campagnes Crowdfunding"
+msgstr "Crowdfundingcampagnes"
+
+#: .\ngo\templates\ngo\partials\footer.html:38
+#, fuzzy
+#| msgid "Campagnes de prêt"
+msgid "Campagnes Crowdlending"
+msgstr "Leningscampagnes"
+
+#: .\ngo\templates\ngo\partials\footer.html:44
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "Informations légales"
+msgstr "Persoonlijke gegevens"
+
+#: .\ngo\templates\ngo\partials\footer.html:47
+msgid "Confidentialité"
+msgstr "Vertrouwelijkheid"
+
+#: .\ngo\templates\ngo\partials\footer.html:49
+msgid "Conditions générales d'utilisation"
+msgstr "Algemene gebruiksvoorwaarden"
+
+#: .\ngo\templates\ngo\partials\footer.html:50 .\ngo\views.py:1203
+#, fuzzy
+#| msgid "Informations personnelles"
+msgid "Données personnelles"
+msgstr "Persoonlijke gegevens"
+
+#: .\ngo\templates\ngo\partials\footer.html:58
+msgid "Tous droits réservés."
+msgstr "Alle rechten voorbehouden."
+
+#: .\ngo\templates\ngo\partials\footer.html:60
+msgid ""
+"La plateforme active et participative pour rechercher des financements : "
+"adhésion, dons, crowdfunding,crowdlending, boutique en ligne, billetterie… "
+"Lancez-vous !"
+msgstr ""
+"Het actieve en participatieve platform voor het zoeken naar financiering: "
+"lidmaatschap, donaties, crowdfunding, crowdlending, online winkel, ticketing… "
+"Aan de slag !"
+
+#: .\ngo\templates\ngo\partials\navigation.html:21
+msgid "Accueil"
+msgstr "Welkom"
+
+#: .\ngo\templates\ngo\partials\navigation.html:24
+msgid "Découvrir"
+msgstr "Ontdekken"
+
+#: .\ngo\templates\ngo\partials\navigation.html:32
+#, fuzzy
+#| msgid "Qui sommes-nous ?"
+msgid "Qui sommes-nous?"
+msgstr "Wie zijn wij?"
+
+#: .\ngo\templates\ngo\partials\navigation.html:40
+#, fuzzy
+#| msgid "Que faisons-nous ?"
+msgid "Que faisons-nous?"
+msgstr "Wat doen wij?"
+
+#: .\ngo\templates\ngo\partials\navigation.html:48
+msgid "Agreement et Securite"
+msgstr "Overeenkomst en beveiliging"
+
+#: .\ngo\templates\ngo\partials\navigation.html:64
+msgid "Actualité"
+msgstr "Nieuws"
+
+#: .\ngo\templates\ngo\partials\navigation.html:80
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Liste des projets"
+msgstr "Projectindiening"
+
+#: .\ngo\templates\ngo\partials\navigation.html:104
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes paticipatives"
+msgstr "Participatieve campagnes"
+
+#: .\ngo\templates\ngo\partials\navigation.html:112
+#, fuzzy
+#| msgid "Campagnes"
+msgid "Campagnes inclusives"
+msgstr "Inclusieve campagnes"
+
+#: .\ngo\templates\ngo\partials\navigation.html:119
+msgid "Représentativité"
+msgstr "Representativiteit"
+
+#: .\ngo\templates\ngo\partials\navigation.html:123
+msgid "Connexion"
+msgstr "Login"
+
+#: .\ngo\templates\ngo\partials\navigation.html:147
+#, fuzzy
+#| msgid "Intermédiaire"
+msgid "Intermediaire"
+msgstr "Tussenpersoon"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:5
+#: .\ngo\templates\ngo\partner\partner_list.html:16
+#, fuzzy
+#| msgid "Partenaires"
+msgid "Nos Partenaires"
+msgstr "Onze partners"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:18
+msgid ""
+"Découvrez les organisations qui collaborent avec IGIA pour un impact global."
+msgstr ""
+"Ontdek de organisaties die samenwerken met IGIA voor wereldwijde impact."
+
+#: .\ngo\templates\ngo\partner\partner_list.html:31
+#, fuzzy
+#| msgid "Partenaires"
+msgid "Nos partenaires actifs"
+msgstr "Onze actieve partners"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:33
+msgid ""
+"Filtrez les partenaires selon leur type et découvrez la diversité de notre "
+"réseau."
+msgstr ""
+"Filter partners op type en ontdek de diversiteit van ons "
+"netwerk."
+
+#: .\ngo\templates\ngo\partner\partner_list.html:40
+msgid "Tous"
+msgstr "Alle"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:73
+msgid "Visiter le site"
+msgstr "Bezoek de site"
+
+#: .\ngo\templates\ngo\partner\partner_list.html:90
+#, fuzzy
+#| msgid "Aucune campagne active pour le moment."
+msgid "Aucun partenaire actif pour le moment."
+msgstr "Er zijn momenteel geen actieve campagnes."
+
+#: .\ngo\templates\ngo\projet\project_detail.html:26
+#, fuzzy
+#| msgid "Photos de projet"
+msgid "Détails du projet"
+msgstr "Projectfoto's"
+
+#: .\ngo\templates\ngo\projet\project_list.html:5
+msgid "Projets réalisés | IGIA"
+msgstr "Afgeronde projecten | IGIA"
+
+#: .\ngo\templates\ngo\projet\project_list.html:27
+#: .\ngo\templates\ngo\projet\project_list.html:88
+msgid "Voir plus"
+msgstr "Bekijk meer"
+
+#: .\ngo\templates\ngo\projet\project_list.html:48
+msgid "Tous les pays"
+msgstr "Alle landen"
+
+#: .\ngo\templates\ngo\projet\project_list.html:56
+#, fuzzy
+#| msgid "Catégories"
+msgid "Toutes les catégories"
+msgstr "Categorieën"
+
+#: .\ngo\templates\ngo\projet\project_list.html:63
+msgid "Filtrer"
+msgstr "Filter"
+
+#: .\ngo\templates\ngo\projet\project_list.html:72
+#, fuzzy
+#| msgid "Photos de projet"
+msgid "Tous les projets"
+msgstr "Projectfoto's"
+
+#: .\ngo\templates\ngo\projet\project_list.html:94
+msgid "Aucun projet trouvé."
+msgstr "Geen projecten gevonden."
+
+#: .\ngo\templates\ngo\team\team_list.html:12
+msgid "Rencontrez les talents qui font battre le cœur de notre organisation"
+msgstr "Maak kennis met de talenten die het hart van onze organisatie sneller doen kloppen"
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:16
+msgid "Découvrez des entrepreneurs qui nous disent leur gratitude."
+msgstr "Ontdek ondernemers die ons hun dankbaarheid betuigen."
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:27
+#, fuzzy
+#| msgid "Profils entrepreneurs"
+msgid "Ce que disent nos entrepreneurs"
+msgstr "Ondernemersprofielen"
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:28
+msgid "Chaque témoignage raconte une expérience unique avec IGIA."
+msgstr "Elk getuigenis vertelt over een unieke ervaring met IGIA."
+
+#: .\ngo\templates\ngo\testimonial\testimonial_list.html:61
+#, fuzzy
+#| msgid "Aucune catégorie disponible pour le moment."
+msgid "Aucun témoignage disponible pour le moment."
+msgstr "Er zijn momenteel geen categorieën beschikbaar."
+
+#: .\ngo\views.py:623
+msgid "Dépôt du dossier de projet"
+msgstr "Indiening van het projectdossier"
+
+#: .\ngo\views.py:624
+#, fuzzy
+#| msgid "Photo de projet"
+msgid "Porteur de projet"
+msgstr "Projectfoto"
+
+#: .\ngo\views.py:625
+msgid ""
+"Soumission du projet avec business plan, besoin de financement et pièces "
+"administratives."
+msgstr ""
+"Indienen van het project met businessplan, financieringsvereisten en "
+"administratieve documenten"
+
+#: .\ngo\views.py:627
+msgid "Étude de recevabilité"
+msgstr "Toelaatbaarheidsonderzoek"
+
+#: .\ngo\views.py:628
+msgid "Cabinet d’accompagnement"
+msgstr "Ondersteuningskantoor"
+
+#: .\ngo\views.py:629
+msgid "Analyse de la complétude et cohérence du dossier avant instruction."
+msgstr ""
+"Analyse van de volledigheid en consistentie van het bestand vóór instructie."
+
+#: .\ngo\views.py:631
+msgid "Analyse technique et économique"
+msgstr "Technische en economische analyse"
+
+#: .\ngo\views.py:632
+msgid "Experts IGIA"
+msgstr "IGIA-experts"
+
+#: .\ngo\views.py:633
+msgid "Étude du modèle économique et de la faisabilité du projet."
+msgstr ""
+"Onderzoek naar het economische model en de haalbaarheid van het project."
+
+#: .\ngo\views.py:635
+msgid "Contrôle de conformité légale"
+msgstr "Controle op wettelijke naleving"
+
+#: .\ngo\views.py:636
+msgid "Cabinet juridique"
+msgstr "advocatenkantoor"
+
+#: .\ngo\views.py:637
+msgid "Vérification de la conformité réglementaire et administrative."
+msgstr "Controle op naleving van regelgeving en administratie."
+
+#: .\ngo\views.py:639
+msgid "Validation financière"
+msgstr "Financiële validatie"
+
+#: .\ngo\views.py:640
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Comité financier"
+msgstr "Financieel doel"
+
+#: .\ngo\views.py:641
+msgid "Évaluation financière et recommandation du mode de financement."
+msgstr "Financiële beoordeling en aanbeveling van financieringsmethode."
+
+#: .\ngo\views.py:643
+msgid "Comité d’agrément"
+msgstr "Goedkeuringscommissie"
+
+#: .\ngo\views.py:644
+msgid "Comité d’investissement"
+msgstr "Investeringscommissie"
+
+#: .\ngo\views.py:645
+msgid "Décision finale sur le financement du projet."
+msgstr "Eindbeslissing over projectfinanciering."
+
+#: .\ngo\views.py:647
+msgid "Mise en ligne sur IGIA"
+msgstr "Geüpload naar IGIA"
+
+#: .\ngo\views.py:648
+msgid "Équipe IT & Com"
+msgstr "IT & Com-team"
+
+#: .\ngo\views.py:649
+msgid "Publication du projet sur la plateforme pour levée de fonds."
+msgstr "Publicatie van het project op het platform voor fondsenwerving."
+
+#: .\ngo\views.py:651
+msgid "Suivi post-validation"
+msgstr "Post-validatie monitoring"
+
+#: .\ngo\views.py:652
+msgid "Cabinet de suivi"
+msgstr "Monitoringkantoor"
+
+#: .\ngo\views.py:653
+msgid "Accompagnement et évaluation trimestrielle du projet."
+msgstr "Ondersteuning en kwartaalevaluatie van het project."
+
+#: .\ngo\views.py:658
+#, fuzzy
+#| msgid "Entrepreneur"
+msgid "Entrepreneuriat & Innovation"
+msgstr "Ondernemer"
+
+#: .\ngo\views.py:659
+msgid "Soutenir les jeunes et startups à fort potentiel."
+msgstr "Ondersteuning van jongeren en startups met veel potentieel."
+
+#: .\ngo\views.py:661
+msgid "Financement de startups"
+msgstr "Startfinanciering"
+
+#: .\ngo\views.py:661
+#, fuzzy
+#| msgid "Soumission de projet"
+msgid "Incubation de projets"
+msgstr "Projectindiening"
+
+#: .\ngo\views.py:661
+msgid "Création de TPE/PME"
+msgstr "Oprichting van een MKB/KMO"
+
+#: .\ngo\views.py:661
+msgid "Innovation sociale"
+msgstr "Sociale innovatie"
+
+#: .\ngo\views.py:662
+msgid "Agriculture & Développement rural"
+msgstr "Landbouw en plattelandsontwikkeling"
+
+#: .\ngo\views.py:663
+msgid "Appuyer la sécurité alimentaire et l’économie verte."
+msgstr "Ondersteun voedselzekerheid en de groene economie."
+
+#: .\ngo\views.py:665
+msgid "Agriculture durable"
+msgstr "Duurzame landbouw"
+
+#: .\ngo\views.py:665
+msgid "Élevage et pisciculture"
+msgstr "Veeteelt en viskwekerij"
+
+#: .\ngo\views.py:665
+msgid "Transformation agroalimentaire"
+msgstr "Voedselverwerking"
+
+#: .\ngo\views.py:666
+msgid "Technologie & Numérique"
+msgstr "Technologie & Digitaal"
+
+#: .\ngo\views.py:667
+msgid "Encourager l’innovation technologique."
+msgstr "Stimuleer technologische innovatie."
+
+#: .\ngo\views.py:669
+msgid "Startups tech"
+msgstr "Tech-startups"
+
+#: .\ngo\views.py:669
+msgid "Solutions fintech"
+msgstr "Fintech-oplossingen"
+
+#: .\ngo\views.py:669
+msgid "Cybersécurité"
+msgstr "Cyberbeveiliging"
+
+#: .\ngo\views.py:669
+msgid "E-learning"
+msgstr "E-leren"
+
+#: .\ngo\views.py:670
+msgid "Éducation & Emploi"
+msgstr "Onderwijs en werkgelegenheid"
+
+#: .\ngo\views.py:671
+msgid "Former et insérer les jeunes."
+msgstr "Jongeren opleiden en integreren."
+
+#: .\ngo\views.py:673
+msgid "Formation professionnelle"
+msgstr "Beroepsopleiding"
+
+#: .\ngo\views.py:673
+#, fuzzy
+#| msgid "Objectif financier"
+msgid "Éducation financière"
+msgstr "Financieel doel"
+
+#: .\ngo\views.py:673
+msgid "Mentorat"
+msgstr "Mentorschap"
+
+#: .\ngo\views.py:674
+msgid "Énergie & Environnement"
+msgstr "Energie & Milieu"
+
+#: .\ngo\views.py:675
+msgid "Favoriser la transition écologique."
+msgstr "Bevorder de ecologische transitie."
+
+#: .\ngo\views.py:677
+msgid "Énergies renouvelables"
+msgstr "Hernieuwbare energieën"
+
+#: .\ngo\views.py:677
+msgid "Recyclage"
+msgstr "Recycling"
+
+#: .\ngo\views.py:677
+#, fuzzy
+#| msgid "Paiement"
+msgid "Reboisement"
+msgstr "Betaling"
+
+#: .\ngo\views.py:678
+msgid "Santé & Bien-être"
+msgstr "Gezondheid en welzijn"
+
+#: .\ngo\views.py:679
+msgid "Promouvoir l’accès équitable à la santé."
+msgstr "Bevorder gelijke toegang tot gezondheidszorg."
+
+#: .\ngo\views.py:681
+msgid "Centres communautaires"
+msgstr "Gemeenschapscentra"
+
+#: .\ngo\views.py:681
+msgid "Télé-médecine"
+msgstr "Telegeneeskunde"
+
+#: .\ngo\views.py:681
+#, fuzzy
+#| msgid "Contribution"
+msgid "Nutrition"
+msgstr "Bijdrage"
+
+#: .\ngo\views.py:682
+msgid "Transport & Petits Métiers"
+msgstr "Transport & Kleine Handel"
+
+#: .\ngo\views.py:683
+msgid "Soutenir les acteurs du quotidien et les petits entrepreneurs."
+msgstr "Steun gewone acteurs en kleine ondernemers."
+
+#: .\ngo\views.py:685
+msgid "Moto-taxi, taxi, transport local"
+msgstr "Motortaxi, taxi, lokaal vervoer"
+
+#: .\ngo\views.py:685
+msgid "Call-box et salons de coiffure"
+msgstr "Telefooncellen en kapsalons"
+
+#: .\ngo\views.py:685
+msgid "Bars, cafés et petits commerces"
+msgstr "Bars, cafés en kleine winkeltjes"
+
+#: .\ngo\views.py:685
+msgid "Artisanat et ateliers mécaniques"
+msgstr "Ambachtelijke en mechanische werkplaatsen"
+
+#: .\ngo\views.py:695
+msgid "Plateforme agréée DNB"
+msgstr "Door DNB goedgekeurd platform"
+
+#: .\ngo\views.py:696
+msgid ""
+"IGIA est enregistrée auprès des autorités financières et agréée par "
+"l’Autorité des Marchés Financiers."
+msgstr ""
+"IGIA is geregistreerd bij de financiële autoriteiten en goedgekeurd door "
+"de Autoriteit Financiële Markten."
+
+#: .\ngo\views.py:698
+msgid "Label Croissance Verte"
+msgstr "Groen Groei Label"
+
+#: .\ngo\views.py:699
+msgid ""
+"IGIA est reconnue pour son engagement envers la durabilité et la "
+"transparence des financements."
+msgstr ""
+"IGIA staat bekend om haar inzet voor duurzaamheid en "
+"transparantie in financiering."
+
+#: .\ngo\views.py:701
+msgid "Confiance et transparence"
+msgstr "Vertrouwen en transparantie"
+
+#: .\ngo\views.py:702
+msgid ""
+"Nous veillons à ce que chaque projet respecte les exigences éthiques et "
+"environnementales."
+msgstr ""
+"Wij zorgen ervoor dat elk project voldoet aan ethische "
+"en milieu-eisen."
+
+#: .\ngo\views.py:708
+msgid ""
+"L’ensemble du site IGIA est protégé par le protocole HTTPS pour garantir la "
+"sécurité des échanges."
+msgstr ""
+"De gehele IGIA-site wordt beschermd door het HTTPS-protocol om de veiligheid van de "
+"uitwisselingen te garanderen."
+
+#: .\ngo\views.py:710
+msgid ""
+"Les opérations sont gérées via des protocoles de paiement semi-automatiques "
+"pour éviter tout risque de fraude."
+msgstr ""
+"Transacties worden beheerd via semi-automatische betalingsprotocollen om elk risico "
+"op fraude te voorkomen.."
+
+#: .\ngo\views.py:712
+msgid ""
+"Votre mot de passe reste confidentiel et vos données ne sont jamais "
+"partagées avec des tiers."
+msgstr ""
+"Uw wachtwoord blijft vertrouwelijk en uw gegevens worden nooit "
+"met derden gedeeld."
+
+#: .\ngo\views.py:714
+msgid ""
+"Nos partenaires bancaires et opérateurs assurent la continuité et la "
+"sécurité des opérations même en cas d’incident."
+msgstr ""
+"Onze bankpartners en operators zorgen voor de continuïteit en veiligheid van de bedrijfsvoering, "
+"ook in het geval van een incident."
+
+#: .\ngo\views.py:735
+msgid "Financement Corporate / Bridge / Mezzanine"
+msgstr "Financiën Corporate / Bridge / Mezzanine"
+
+#: .\ngo\views.py:737
+msgid ""
+"IGIA structure des financements participatifs allant jusqu'à 10 M€, en "
+"associant notre plateforme et nos partenaires financiers. Nous adaptons les "
+"solutions corporate, bridge ou mezzanine selon le stade de développement des "
+"projets."
+msgstr ""
+"IGIA structureert crowdfunding tot € 10 miljoen, in "
+"door ons platform en onze financiële partners te combineren. Wij passen bedrijfs-,  "
+"brug- of mezzanineoplossingen aan, afhankelijk van de ontwikkelingsfase van "
+"de projecten."
+
+#: .\ngo\views.py:744
+msgid "Financements à vocation territoriale"
+msgstr "Financiering met een territoriale roeping"
+
+#: .\ngo\views.py:746
+msgid ""
+"IGIA favorise l’adhésion des citoyens dès la phase de développement des "
+"projets. Nous proposons des modalités sur-mesure et une communication "
+"spécifique pour les territoires et riverains."
+msgstr ""
+"IGIA stimuleert burgerondersteuning vanaf de  "
+"projectontwikkelingsfase. Wij bieden maatwerkmethoden en specifieke communicatie  "
+"voor gebieden en lokale bewoners.."
+
+#: .\ngo\views.py:752
+msgid "Financements liés aux AO / AMI"
+msgstr "Financiering gekoppeld aan AO/AMI"
+
+#: .\ngo\views.py:754
+msgid ""
+"Pour les appels d’offres nationaux et territoriaux, IGIA accompagne les "
+"projets afin d’optimiser leur sélection grâce à l’expertise en financement "
+"participatif et à la structuration de dossiers complets."
+msgstr ""
+"Bij nationale en territoriale aanbestedingen begeleidt IGIA de projecten om hun "
+"selectie te optimaliseren dankzij haar expertise in participatieve "
+"financiering en de structurering van volledige dossiers."
+
+#: .\ngo\views.py:762
+msgid "Analyse financière complète du projet"
+msgstr "Volledige financiële analyse van het project"
+
+#: .\ngo\views.py:763
+msgid "Rédaction et vérification de la documentation contractuelle"
+msgstr "Opstellen en verifiëren van contractuele documentatie"
+
+#: .\ngo\views.py:764
+msgid "Présentation du projet à notre communauté d'investisseurs"
+msgstr "Presentatie van het project aan onze gemeenschap van investeerders"
+
+#: .\ngo\views.py:765
+msgid "Communication adaptée avant, pendant et après la collecte"
+msgstr "Aangepaste communicatie voor, tijdens en na de verzameling"
+
+#: .\ngo\views.py:766
+msgid "Suivi des souscriptions et clôture de l’opération"
+msgstr "Monitoring van de inschrijvingen en afsluiting van de operatie"
+
+#: .\ngo\views.py:767
+msgid "Suivi des transactions et reporting aux investisseurs"
+msgstr "Transactiemonitoring en rapportage aan investeerders"
+
+#: .\ngo\views.py:771
+msgid "IGIA ne prélève aucun frais aux investisseurs."
+msgstr "IGIA brengt geen kosten in rekening aan beleggers."
+
+#: .\ngo\views.py:772
+#, python-format
+msgid ""
+"Pour chaque levée de fonds réussie, un pourcentage compris entre 2 %% et 6 "
+"%% du montant collecté est facturé au porteur de projet."
+msgstr ""
+"Voor elke succesvolle fondsenwerving wordt een percentage tussen de 2% "
+"en 6% van het opgehaalde bedrag in rekening gebracht bij de projectleider."
+
+#: .\ngo\views.py:773
+msgid "Frais de mise en ligne détaillés par devis selon le projet."
+msgstr "Gedetailleerde online kosten per offerte, afhankelijk van het project."
+
+#: .\ngo\views.py:774
+msgid "Frais de communication éventuels, également détaillés par devis."
+msgstr "Eventuele communicatiekosten worden ook in de offerte vermeld."
+
+#: .\ngo\views.py:779
+msgid "Opérations à enjeu local"
+msgstr "Operaties met lokale belangen"
+
+#: .\ngo\views.py:781
+#, python-format
+msgid ""
+"IGIA associe les citoyens et riverains au financement des projets, créant "
+"une appropriation locale et favorisant le développement territorial. Nous "
+"atteignons jusqu'à 100%% des objectifs de collecte grâce aux investisseurs "
+"locaux."
+msgstr ""
+"IGIA betrekt burgers en omwonenden bij de projectfinanciering, creëert "
+"lokaal eigenaarschap en bevordert de territoriale ontwikkeling "
+"Dankzij lokale investeerders behalen we tot 100% van onze "
+"fondsenwervingsdoelen."
+
+#: .\ngo\views.py:788
+msgid "Opérations d’envergure jusqu’à 10 M€"
+msgstr "Grootschalige operaties tot € 10 miljoen"
+
+#: .\ngo\views.py:790
+msgid ""
+"Avec notre communauté d’investisseurs et nos partenaires financiers, IGIA "
+"structure des financements jusqu'à 10 M€. Nous accompagnons chaque projet "
+"dans la structuration, la documentation contractuelle et la visibilité de "
+"l’opération."
+msgstr ""
+"Samen met onze community van investeerders en financiële partners structureert "
+"IGIA financieringen tot € 10 miljoen. We ondersteunen elk project "
+"bij de structurering, contractuele documentatie en zichtbaarheid "
+"van de transactie."
+
+#: .\ngo\views.py:802
+msgid "Financement d’Amorçage Solidaire"
+msgstr "Solidariteitszaadfinanciering"
+
+#: .\ngo\views.py:804
+msgid ""
+"Ce modèle s’adresse aux porteurs d’idées ou micro-projets à fort impact "
+"local. Il permet de recevoir un micro-capital (0 à 2 000 €) grâce à des dons "
+"ou micro-investissements, débloqués progressivement selon l’avancement du "
+"projet. L’entrepreneur bénéficie d’un accompagnement obligatoire par un "
+"mentor IGIA."
+msgstr ""
+"Dit model is bedoeld voor mensen met ideeën of microprojecten met een sterke lokale impact. "
+"Het stelt u in staat om microkapitaal (0 tot € 2.000) te ontvangen via donaties "
+"of micro-investeringen, die geleidelijk worden vrijgegeven, afhankelijk van de voortgang "
+"van het project. De ondernemer profiteert van de verplichte ondersteuning "
+"van een IGIA-mentor."
+
+#: .\ngo\views.py:812
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "Financement Communautaire Garanti"
+msgstr "Gegarandeerde gemeenschapsfinanciering"
+
+#: .\ngo\views.py:814
+msgid ""
+"Le porteur de projet mobilise son entourage ou sa communauté (amis, famille, "
+"diaspora) pour garantir symboliquement son projet. Une fois un seuil "
+"atteint, IGIA ou un partenaire complète le montant restant. C’est un modèle "
+"de solidarité encadrée, où la réussite du projet profite à tous."
+msgstr ""
+"De projectleider mobiliseert zijn of haar omgeving of gemeenschap (vrienden, familie, "
+"diaspora) om symbolisch garant te staan voor hun project. Zodra een "
+"drempel is bereikt, vult IGIA of een partner het resterende bedrag aan. Het is een model "
+"van begeleide solidariteit, waarbij het succes van het project iedereen ten goede komt."
+
+#: .\ngo\views.py:822
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "Financement par Mise à Disposition d’Actif"
+msgstr "Financiering door middel van activavoorziening"
+
+#: .\ngo\views.py:824
+msgid ""
+"IGIA ou un investisseur achète un bien productif (voiture, moto, fauteuil, "
+"matériel). Le bénéficiaire l’utilise via une location avec option d’achat ou "
+"un micro-crédit souple. Les revenus générés servent à rembourser l’actif, "
+"menant à une autonomie complète en 12 à 36 mois."
+msgstr ""
+"IGIA of een investeerder koopt een productiemiddel (auto, motor, "
+"rolstoel, apparatuur). De begunstigde gebruikt het via een lease-to-own-regeling "
+"of een flexibel microkrediet. De gegenereerde inkomsten worden gebruikt om "
+"het product af te lossen, wat binnen 12 tot 36 maanden leidt tot volledige autonomie."
+
+#: .\ngo\views.py:831
+#, fuzzy
+#| msgid "Financement participatif"
+msgid "Financement par Tiers de Confiance"
+msgstr "Betrouwbare financiering door derden"
+
+#: .\ngo\views.py:833
+msgid ""
+"IGIA collabore avec des intermédiaires locaux agréés (ONG, incubateurs, "
+"coopératives). Ces partenaires reçoivent les fonds et accompagnent les "
+"porteurs de projets sur le terrain. Ce modèle réduit les risques et garantit "
+"un suivi éthique et durable."
+msgstr ""
+"IGIA werkt samen met erkende lokale intermediairs (ngo's, incubators, coöperaties)."
+"Deze partners ontvangen financiering en ondersteunen projectleiders ter plaatse. "
+"Dit model vermindert de risico's en garandeert ethische en "
+"duurzame monitoring."
+
+#: .\ngo\views.py:842
+msgid "Accessibilité"
+msgstr "Toegankelijkheid"
+
+#: .\ngo\views.py:842
+msgid "Ouvert à tous les porteurs d’idées, même sans capital initial."
+msgstr "Open voor alle idee-initiatieven, zelfs zonder startkapitaal."
+
+#: .\ngo\views.py:843
+#, fuzzy
+#| msgid "Paiement"
+msgid "Encadrement"
+msgstr "Beheer"
+
+#: .\ngo\views.py:843
+msgid ""
+"Chaque bénéficiaire est accompagné par un mentor ou un partenaire agréé."
+msgstr ""
+"Elke begunstigde wordt begeleid door een mentor of een erkende partner."
+
+#: .\ngo\views.py:844
+msgid "Les fonds sont débloqués étape par étape, selon les résultats concrets."
+msgstr "De financiële middelen worden stapsgewijs vrijgegeven, op basis van concrete resultaten."
+
+# ---------- IntermediaireProfile model ----------
+#: .\ngo\views.py:845
+#, fuzzy
+#| msgid "Organisation"
+msgid "Autonomisation"
+msgstr "Machtiging"
+
+#: .\ngo\views.py:845
+msgid ""
+"Les modèles visent à créer de véritables propriétaires et entrepreneurs."
+msgstr ""
+"De modellen zijn erop gericht om echte eigenaren en ondernemers te creëren."
+
+#: .\ngo\views.py:876 .\ngo\views.py:896 .\ngo\views.py:919
+msgid "Connectez-vous au Dashboard."
+msgstr "Meld u aan bij het Dashboard."
+
+#: .\ngo\views.py:877
+msgid "Cliquez sur 'Créer un projet'."
+msgstr "Klik op 'Een project maken'."
+
+#: .\ngo\views.py:878
+msgid ""
+"Remplissez le formulaire : titre, description, montant, durée, type de "
+"financement (crowdfunding/crowdlending), contreparties."
+msgstr ""
+"Vul het formulier in: titel, omschrijving, bedrag, looptijd, type  "
+"financiering (crowdfunding/crowdlending), tegenpartijen."
+
+#: .\ngo\views.py:879
+msgid "Acquittez-vous des frais de soumission."
+msgstr "Betaal de inschrijfkosten."
+
+#: .\ngo\views.py:880
+msgid "Après approbation, votre projet sera visible sur la plateforme."
+msgstr "Na goedkeuring is uw project zichtbaar op het platform."
+
+#: .\ngo\views.py:883
+msgid ""
+"Facilités de paiement disponibles selon votre région et votre pays de "
+"résidence."
+msgstr ""
+"De beschikbare betalingsmogelijkheden zijn afhankelijk van uw regio en "
+"land van verblijf."
+
+#: .\ngo\views.py:884
+msgid "Crowdfunding : contrepartie ou produit."
+msgstr "Crowdfunding: tegenprestatie of product."
+
+#: .\ngo\views.py:885
+msgid "Crowdlending : remboursement avec intérêts."
+msgstr "Crowdlending: terugbetalen met rente."
+
+#: .\ngo\views.py:888
+msgid ""
+"Projets visibles uniquement après validation : tous les projets doivent être "
+"soumis et validés par IGIA avant de pouvoir recevoir des fonds."
+msgstr ""
+"Projecten zijn pas zichtbaar na validatie: alle projecten moeten worden ingediend en "
+"gevalideerd door IGIA voordat ze financiering kunnen ontvangen."
+
+#: .\ngo\views.py:889
+msgid ""
+"Recevoir des fonds directement d’investisseurs en dehors de la plateforme "
+"peut entraîner la suspension du projet et l'exclusion définitive."
+msgstr ""
+"Het rechtstreeks ontvangen van geld van investeerders buiten het platform "
+"kan leiden tot opschorting van het project en permanente uitsluiting."
+
+#: .\ngo\views.py:890
+msgid ""
+"La plateforme ne pourra pas gérer les remboursements ni calculer les "
+"intérêts si c’est fait en dehors du site."
+msgstr ""
+"Het platform kan geen terugbetalingen verwerken of rente  "
+"berekenen als dit buiten de site gebeurt."
+
+#: .\ngo\views.py:897
+msgid "Cliquez sur 'Explorer les projets'."
+msgstr "Klik op 'Projecten verkennen'."
+
+#: .\ngo\views.py:898
+msgid ""
+"Filtrez selon vos critères : montant minimal, type de financement, durée, "
+"secteur."
+msgstr ""
+"Filter volgens uw criteria: minimumbedrag, type financiering, looptijd, "
+"sector."
+
+#: .\ngo\views.py:899
+msgid ""
+"Consultez la page détaillée : taux, durée, montant minimum, risques, "
+"modalités de remboursement."
+msgstr ""
+"Raadpleeg de gedetailleerde pagina: tarieven, looptijd, minimumbedrag, risico's, "
+"terugbetalingsvoorwaarden."
+
+#: .\ngo\views.py:900
+msgid ""
+"Cliquez sur 'Investir maintenant', choisissez le montant et confirmez le "
+"paiement."
+msgstr ""
+"Klik op 'Investeer nu', kies het bedrag en bevestig "
+"de betaling."
+
+#: .\ngo\views.py:903
+msgid "Crowdfunding : soutien et contrepartie."
+msgstr "Crowdfunding: ondersteuning en compensatie"
+
+#: .\ngo\views.py:904
+msgid "Crowdlending : prêt avec intérêts."
+msgstr "Crowdlending: lening met rente"
+
+#: .\ngo\views.py:907
+msgid ""
+"Toujours passer par la plateforme IGIA : les investissements doivent être "
+"effectués via le site."
+msgstr ""
+"Ga altijd via het IGIA-platform: investeringen moeten "
+"via de site worden gedaan."
+
+#: .\ngo\views.py:908
+msgid ""
+"Ne jamais verser directement de l’argent à l’entrepreneur sans passer par la "
+"plateforme."
+msgstr ""
+"Betaal nooit geld rechtstreeks aan de ondernemer zonder via "
+"het platform te gaan."
+
+#: .\ngo\views.py:911
+#, fuzzy
+#| msgid "Code de transaction"
+msgid "Sécurisation des transactions."
+msgstr "Het beveiligen van transacties"
+
+#: .\ngo\views.py:912
+msgid "Suivi des remboursements et intérêts dans le cadre du crowdlending."
+msgstr "Monitoring van terugbetalingen en rente bij crowdlending."
+
+#: .\ngo\views.py:913
+msgid "Garantie de conformité aux conditions de financement."
+msgstr "Garantie voor naleving van de financieringsvoorwaarden."
+
+#: .\ngo\views.py:920
+#, fuzzy
+#| msgid "Paiements intermédiaires"
+msgid "Cliquez sur 'Mes Intermédiaires'."
+msgstr "Klik op 'Mijn tussenpersonen'."
+
+#: .\ngo\views.py:921
+msgid ""
+"Ajoutez les projets que vous représentez et les entrepreneurs que vous "
+"accompagnez."
+msgstr ""
+"Voeg de projecten toe die u vertegenwoordigt en de ondernemers die "
+"u ondersteunt."
+
+#: .\ngo\views.py:922
+msgid "Soumettez les projets pour le compte de l’entrepreneur si nécessaire."
+msgstr "Indien nodig, projecten namens de aannemer indienen."
+
+#: .\ngo\views.py:923
+msgid ""
+"Suivez l’avancement des investissements et recevez vos commissions "
+"automatiquement."
+msgstr ""
+"Volg de voortgang van uw investering en ontvang automatisch "
+"uw commissies."
+
+#: .\ngo\views.py:926
+msgid ""
+"Facilite la collecte de fonds et simplifie le processus pour les "
+"entrepreneurs et investisseurs."
+msgstr ""
+"Maakt fondsenwerving gemakkelijker en vereenvoudigt het proces voor "
+"ondernemers en investeerders."
+
+#: .\ngo\views.py:929
+msgid ""
+"Respect strict du processus IGIA : les intermédiaires ne doivent pas "
+"contourner la plateforme."
+msgstr ""
+"Strikte naleving van het IGIA-proces: tussenpersonen mogen het "
+"platform niet omzeilen."
+
+#: .\ngo\views.py:930
+msgid "Toutes les transactions doivent passer par IGIA."
+msgstr "Alle transacties moeten via IGIA verlopen."
+
+#: .\ngo\views.py:931
+msgid ""
+"Les commissions sont calculées uniquement sur les investissements effectués "
+"via la plateforme."
+msgstr ""
+"Commissies worden alleen berekend over investeringen die via het "
+"platform worden gedaan."
+
+#: .\ngo\views.py:938
+msgid "Protection contre les emails frauduleux"
+msgstr "Bescherming tegen frauduleuze e-mails"
+
+#: .\ngo\views.py:940
+msgid "Tous les emails officiels IGIA proviennent du domaine @igia.com."
+msgstr "Alle officiële IGIA-e-mails komen van het domein @igia.com."
+
+#: .\ngo\views.py:941
+msgid ""
+"Tout email venant d’une adresse différente doit être considéré comme suspect."
+msgstr ""
+"E-mails die van een ander adres afkomstig zijn, moeten als verdacht worden beschouwd."
+
+#: .\ngo\views.py:942
+msgid ""
+"IGIA ne demande jamais de transférer de l’argent en dehors de la plateforme "
+"ni vos identifiants de compte par email."
+msgstr ""
+"IGIA vraagt nooit om geldtransfers buiten het platform of om uw "
+"accountgegevens per e-mail."
+
+#: .\ngo\views.py:943
+msgid ""
+"Suivant chaque région et pays IGIA ne fait des transactions qu'avec ses "
+"partenaires agréés et ses partenaires sont communiqués lors des paiements."
+msgstr ""
+"Afhankelijk van de regio en het land voert IGIA alleen transacties uit met haar  "
+"geautoriseerde partners. Tijdens de betalingen wordt met haar partners gecommuniceerd."
+
+#: .\ngo\views.py:944
+msgid ""
+"Vérifiez toujours le Dashboard IGIA pour confirmer toute demande "
+"d’investissement ou transaction."
+msgstr ""
+"Controleer altijd het IGIA-dashboard om een investeringsverzoek "
+"of transactie te bevestigen."
+
+#: .\ngo\views.py:945
+msgid ""
+"Ne transférez jamais d’argent ni ne communiquez vos identifiants en dehors "
+"de la plateforme."
+msgstr ""
+"Maak nooit geld over en deel uw inloggegevens nooit buiten "
+"het platform."
+
+#: .\ngo\views.py:946
+msgid ""
+"Ne cliquez jamais sur des liens ou téléchargez des fichiers provenant de "
+"sources inconnues."
+msgstr ""
+"Klik nooit op links en download nooit bestanden "
+"van onbekende bronnen."
+
+#: .\ngo\views.py:947
+msgid "En cas de suspicion, signalez immédiatement l'email à contact@igia.com."
+msgstr "Als u een vermoeden heeft, meldt u de e-mail dan onmiddellijk via contact@igia.com."
+
+#: .\ngo\views.py:948
+msgid ""
+"Vérifiez toujours votre Dashboard IGIA avant de confirmer toute transaction."
+msgstr ""
+"Controleer altijd uw IGIA-dashboard voordat u een transactie bevestigt."
+
+#: .\ngo\views.py:1005
+msgid "Assurances MIGA, arbitrage international, partenaires certifiés."
+msgstr "MIGA verzekeringen, internationale arbitrage, gecertificeerde partners."
+
+#: .\ngo\views.py:1006
+msgid "Couverture de change, diversification, devises fortes."
+msgstr "Valuta-afdekking, diversificatie, sterke valuta."
+
+#: .\ngo\views.py:1007
+msgid "Plan logistique, zones viabilisées, technologie verte."
+msgstr "Logistiek plan, servicegebieden, groene technologie."
+
+#: .\ngo\views.py:1008
+msgid "Dialogue communautaire, emploi local, RSE."
+msgstr "Gemeenschapsdialoog, lokale werkgelegenheid, MVO."
+
+#: .\ngo\views.py:1009
+msgid "Études d’impact, technologies durables, plans de résilience."
+msgstr "Impactstudies, duurzame technologieën, veerkrachtplannen."
+
+#: .\ngo\views.py:1010
+msgid "Audit externe, suivi digital IGIA, normes ISO 37001."
+msgstr "Externe audit, IGIA digitaal toezicht, ISO 37001-normen."
+
+#: .\ngo\views.py:1026
+msgid "1. Protection des données personnelles"
+msgstr "1. Bescherming van persoonsgegevens"
+
+#: .\ngo\views.py:1028
+msgid ""
+"IGIA respecte la législation en matière de protection des données (loi "
+"Informatique et Libertés du 6 janvier 1978). Le site est déclaré auprès du "
+"Department of Constitutional Affairs and Legislation (DCAL) sous le numéro "
+"1807840. Les données collectées ne sont jamais utilisées à des fins "
+"publicitaires. Les utilisateurs disposent de droits d’accès, de "
+"rectification et d’opposition (articles 26, 34 à 38 et 36). Ces droits "
+"peuvent être exercés via le compte IGIA ou à l’adresse : contact@igia.com."
+msgstr ""
+"IGIA voldoet aan de wetgeving inzake gegevensbescherming (de Franse "
+"wet op de gegevensbescherming van 6 januari 1978). De website is "
+"geregistreerd bij het Department of Constitutional Affairs and Legislation (DCAL) onder  "
+"nummer 1807840. De verzamelde gegevens worden nooit gebruikt voor reclamedoeleinden. "
+"Gebruikers hebben recht op toegang tot, rectificatie van en bezwaar tegen deze gegevens "
+"(artikelen 26, 34 tot en met 38 en 36). Deze rechten kunnen "
+"worden uitgeoefend via het IGIA-account of via contact@igia.com."
+
+#: .\ngo\views.py:1036
+msgid "2. Sécurité et confidentialité des comptes"
+msgstr "2. Accountbeveiliging en privacy"
+
+#: .\ngo\views.py:1038
+msgid ""
+"IGIA ne demandera jamais de mot de passe par téléphone ou e-mail. "
+"L’utilisateur doit se déconnecter après chaque session, en particulier sur "
+"un poste partagé. Les informations relatives aux projets financiers sont "
+"strictement confidentielles et ne doivent pas être divulguées. L’utilisateur "
+"s’engage à ne pas les utiliser à d’autres fins que l’étude des projets."
+msgstr ""
+"IGIA zal nooit per telefoon of e-mail om een wachtwoord vragen. "
+"De gebruiker moet na elke sessie uitloggen, met name op een gedeelde werkplek. Informatie "
+"met betrekking tot financiële projecten is strikt vertrouwelijk en mag "
+"niet openbaar worden gemaakt. De gebruiker stemt ermee in deze informatie "
+"niet te gebruiken voor andere doeleinden dan het bestuderen van de projecten."
+
+#: .\ngo\views.py:1045
+msgid "3. Politique de cookies"
+msgstr "3. Cookiebeleid"
+
+#: .\ngo\views.py:1047
+msgid ""
+"Le site IGIA utilise des cookies pour améliorer la navigation et collecter "
+"des statistiques d’utilisation. Les cookies ne contiennent aucune donnée "
+"personnelle et servent uniquement à identifier plus rapidement "
+"l’utilisateur. L’utilisateur peut désactiver les cookies via les paramètres "
+"de son navigateur, mais cela peut altérer certaines fonctionnalités."
+msgstr ""
+"De IGIA-website maakt gebruik van cookies om de navigatie te verbeteren en "
+"gebruiksstatistieken te verzamelen. Cookies bevatten geen persoonsgegevens en  "
+"worden alleen gebruikt om de gebruiker sneller te identificeren. De gebruiker "
+"kan cookies uitschakelen via de browserinstellingen, maar"
+"dit kan bepaalde functies wijzigen."
+
+#: .\ngo\views.py:1072
+msgid "Dépôt d’une réclamation"
+msgstr "Een klacht indienen"
+
+#: .\ngo\views.py:1074
+msgid ""
+"La réclamation peut être envoyée par email, courrier ou via le modèle PDF "
+"disponible sur le site. IGIA accuse réception sous 10 jours ouvrables."
+msgstr ""
+"De klacht kan per e-mail, per post of via het PDF-sjabloon op de website worden "
+"ingediend. IGIA bevestigt de ontvangst binnen 10 werkdagen."
+
+#: .\ngo\views.py:1079
+#, fuzzy
+#| msgid "Type de paiement"
+msgid "Examen et traitement"
+msgstr "Onderzoek en behandeling"
+
+#: .\ngo\views.py:1081
+msgid ""
+"IGIA évalue la clarté, la complétude et la recevabilité de la réclamation. "
+"Des informations complémentaires peuvent être demandées pour un traitement "
+"optimal."
+msgstr ""
+"IGIA beoordeelt de duidelijkheid, volledigheid en ontvankelijkheid van de klacht. "
+"Voor een optimale behandeling kan aanvullende informatie worden "
+"opgevraagd."
+
+#: .\ngo\views.py:1086
+msgid "Décision et communication"
+msgstr "Besluitvorming en communicatie"
+
+#: .\ngo\views.py:1088
+msgid ""
+"Une réponse motivée est adressée dans un délai maximum de 30 jours ouvrés. "
+"Toute décision inclut les voies de recours possibles."
+msgstr ""
+"U ontvangt binnen maximaal 30 werkdagen een gemotiveerd antwoord. "
+"Elke beslissing bevat mogelijke beroepsmogelijkheden."
+
+#: .\ngo\views.py:1095
+msgid ""
+"En cas de désaccord, le réclamant peut saisir le Médiateur WTW : formulaire "
+"en ligne sur wtwco.com, téléphone +31 (0) 88 541 3000, ou courrier à "
+"l’Autorité des marchés financiers d’Amsterdam."
+msgstr ""
+"Indien er onenigheid ontstaat, kan de klager contact opnemen met de WTW-bemiddelaar:  "
+"online formulier op wtwco.com, telefoon +31 (0) 88 541 3000 "
+"of brief aan de Autoriteit Financiële Markten Amsterdam."
+
+#: .\ngo\views.py:1133
+msgid ""
+"Le document officiel des Conditions Générales d’Utilisation est "
+"temporairement indisponible dans votre langue. Veuillez réessayer "
+"ultérieurement ou contacter notre support à contact@igia.com."
+msgstr ""
+"De officiële Servicevoorwaarden zijn tijdelijk niet beschikbaar in uw taal "
+"Probeer het later opnieuw of neem contact op met onze support "
+"via contact@igia.com."
+
+#: .\ngo\views.py:1153 .\ngo\views.py:1162
+msgid "Conditions Générales d’Utilisation"
+msgstr "Algemene gebruiksvoorwaarden"
+
+#: .\ngo\views.py:1155
+msgid ""
+"Découvrez les conditions générales d'utilisation de la plateforme IGIA : "
+"sécurité, transparence et conformité AMF."
+msgstr ""
+"Ontdek de algemene gebruiksvoorwaarden van het IGIA-platform: "
+"veiligheid, transparantie en AMF-conformiteit."
+
+#: .\ngo\views.py:1160
+msgid "Applicables depuis le 9 novembre 2023"
+msgstr "Van toepassing vanaf 9 november 2023"
+
+#: .\ngo\views.py:1163
+msgid "Sécurité, transparence et responsabilité pour chaque investisseur IGIA."
+msgstr "Veiligheid, transparantie en verantwoording voor elke IGIA-investeerder."
+
+#: .\ngo\views.py:1190
+msgid ""
+"La politique de protection des données personnelles est temporairement "
+"indisponible. Veuillez réessayer plus tard ou contacter notre équipe à "
+"contact@igia.com."
+msgstr ""
+"Het privacybeleid is tijdelijk niet beschikbaar. Probeer het later "
+"opnieuw of neem contact op met ons team via "
+"contact@igia.com."
+
+#: .\ngo\views.py:1196
+msgid "Politique de protection des données personnelles"
+msgstr "Beleid inzake de bescherming van persoonsgegevens"
+
+#: .\ngo\views.py:1198
+msgid ""
+"Découvrez comment IGIA protège vos données personnelles conformément au RGPD."
+msgstr ""
+"Ontdek hoe IGIA uw persoonsgegevens beschermt in overeenstemming met de AVG."
+
+#: .\ngo\views.py:1201
+msgid "Dernière mise à jour : 9 novembre 2023"
+msgstr "Laatst bijgewerkt: 9 november 2023"
+
+#: .\ngo\views.py:1204
+msgid ""
+"Sécurité, transparence et confidentialité de vos informations avec IGIA."
+msgstr ""
+"Veiligheid, transparantie en vertrouwelijkheid van uw gegevens bij IGIA."
+
+#: .\ngo\views.py:1221
+msgid "Restez informé des dernières actualités et projets d'IGIA."
+msgstr "Blijf op de hoogte van het laatste IGIA-nieuws en -projecten."

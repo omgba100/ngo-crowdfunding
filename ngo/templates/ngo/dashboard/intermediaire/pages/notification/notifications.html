@@ -1,0 +1,107 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Mes Notifications" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+.notification-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.notification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.unread-badge {
+    width: 10px;
+    height: 10px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+        <div>
+            <h2 class="fw-bold text-primary mb-1">
+                <i class="mdi mdi-bell-outline me-2"></i> {% trans "Mes Notifications" %}
+            </h2>
+            <p class="text-muted mb-0">{% trans "Toutes vos notifications récentes." %}</p>
+        </div>
+    </div>
+
+    {% if notifications %}
+    <div class="row g-4" data-aos="fade-up" data-aos-duration="900">
+        {% for notification in notifications %}
+        <div class="col-12">
+            <div class="card notification-card shadow-sm border-0 rounded-4 p-3 d-flex justify-content-between align-items-center"
+                 data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+                <div>
+                    <a href="{% url 'intermediaire_notifications_detail' notification.pk %}" class="text-decoration-none">
+                        <h5 class="mb-1 fw-bold">
+                            {{ notification.title }}
+                            {% if not notification.is_read %}
+                                <span class="unread-badge"></span>
+                            {% endif %}
+                        </h5>
+                        <p class="mb-0 text-muted">{{ notification.message|truncatewords:20 }}</p>
+                        <small class="text-muted">{{ notification.created_at|date:"d M Y, H:i" }}</small>
+                    </a>
+                </div>
+                <button class="btn btn-sm btn-outline-danger rounded-pill delete-btn" data-id="{{ notification.pk }}">
+                    <i class="mdi mdi-delete-outline me-1"></i> {% trans "Supprimer" %}
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-5" data-aos="fade-up">
+        <i class="mdi mdi-bell-off-outline mdi-48px mb-3"></i>
+        <p class="text-muted">{% trans "Vous n’avez aucune notification pour le moment." %}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 pour confirmation de suppression -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const notificationId = this.getAttribute('data-id');
+            Swal.fire({
+                title: '{% trans "Confirmer la suppression ?" %}',
+                text: '{% trans "Cette notification sera supprimée définitivement." %}',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: '{% trans "Oui, supprimer !" %}',
+                cancelButtonText: '{% trans "Annuler" %}'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirection vers la vue de suppression
+                    window.location.href = "/dashboard/intermediaire/notifications/" + notificationId + "/delete/";
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock base_intermediaire %}

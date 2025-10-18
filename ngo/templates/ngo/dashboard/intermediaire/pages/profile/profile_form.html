@@ -1,0 +1,98 @@
+{% extends "base_intermediaire.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Modifier mon profil intermédiaire" %}{% endblock %}
+
+{% block extra_head %}
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+        
+        <!-- En-tête du profil -->
+        <div class="card-header bg-gradient bg-primary text-white py-4 text-center position-relative">
+          <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: url('{% static 'assets/img/projects/default.jpg' %}') center/cover;"></div>
+          <div class="position-relative">
+            <img src="{{ avatar }}" alt="Avatar" class="rounded-circle border border-3 border-light shadow-sm mb-3" width="110" height="110">
+            <h4 class="fw-bold mb-0">{{ full_name }}</h4>
+            <p class="small mb-0 opacity-75">{% trans "Profil Intermédiaire" %}</p>
+          </div>
+        </div>
+
+        <!-- Corps du formulaire -->
+        <div class="card-body bg-light p-4">
+          <form id="edit-profile-form" method="post" enctype="multipart/form-data" class="needs-validation">
+            {% csrf_token %}
+            {% crispy form %}
+
+            <div class="d-flex justify-content-between mt-4">
+              <a href="{% url 'dashboard_intermediaire' %}" class="btn btn-outline-secondary rounded-pill px-4">
+                <i class="mdi mdi-arrow-left"></i> {% trans "Retour" %}
+              </a>
+              <button type="button" id="save-btn" class="btn btn-primary rounded-pill px-4">
+                <i class="mdi mdi-content-save-outline"></i> {% trans "Enregistrer les modifications" %}
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Pied de carte -->
+        <div class="card-footer bg-white text-center">
+          <small class="text-muted">{% trans "Assurez-vous que toutes les informations sont exactes avant d’enregistrer." %}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SweetAlert2 Confirmation -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const saveBtn = document.getElementById("save-btn");
+  const form = document.getElementById("edit-profile-form");
+
+  saveBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    Swal.fire({
+      title: "{% trans 'Confirmer les modifications ?' %}",
+      text: "{% trans 'Souhaitez-vous enregistrer les changements apportés à votre profil ?' %}",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#0d6efd",
+      cancelButtonColor: "#6c757d",
+      confirmButtonText: "{% trans 'Oui, enregistrer' %}",
+      cancelButtonText: "{% trans 'Annuler' %}",
+      reverseButtons: true,
+      customClass: {
+        popup: 'rounded-4 shadow-lg',
+        confirmButton: 'rounded-pill px-4 py-2',
+        cancelButton: 'rounded-pill px-4 py-2'
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "{% trans 'Mise à jour en cours…' %}",
+          text: "{% trans 'Veuillez patienter pendant l’enregistrement de votre profil.' %}",
+          icon: "info",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+            form.submit();
+          }
+        });
+      }
+    });
+  });
+});
+</script>
+{% endblock base_intermediaire %}
+

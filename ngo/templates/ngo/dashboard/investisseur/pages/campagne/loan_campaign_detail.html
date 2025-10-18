@@ -1,0 +1,214 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}💼 {% trans "Détails de la Campagne" %}{% endblock %}
+
+{% block base_investisseur %}
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+  /* --- Effets visuels et animation --- */
+  .campaign-header {
+    background: linear-gradient(135deg, #007bff 0%, #00c4ff 100%);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .campaign-header::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .campaign-header::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    left: -80px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .card {
+    border: none;
+    border-radius: 1rem;
+  }
+
+  .card img {
+    object-fit: cover;
+    height: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+  }
+
+  .progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+  }
+
+  .progress-bar {
+    background: linear-gradient(90deg, #007bff, #00c4ff);
+    transition: width 1s ease-in-out;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, #007bff 0%, #00c4ff 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0062ff 0%, #0099ff 100%);
+  }
+
+  .stat-card {
+    background: #fff;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+</style>
+
+<div class="container mt-5 mb-5">
+
+  <!-- Header -->
+  <div class="campaign-header shadow-lg mb-5" data-aos="fade-down" data-aos-duration="1000">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="fw-bold mb-0">
+        <i class="bi bi-graph-up"></i> {{ loan_campaign.title }}
+      </h2>
+      <a href="{% url 'loan_campaigns_list_investisseur' %}" class="btn btn-light rounded-pill shadow-sm">
+        <i class="bi bi-arrow-left"></i> {% trans "Retour" %}
+      </a>
+    </div>
+    <p class="fs-5 text-light mb-1">
+      <i class="bi bi-building"></i> {{ loan_campaign.project.title }}
+    </p>
+    <p class="mb-0 text-white-50">{{ loan_campaign.description|truncatewords:30 }}</p>
+  </div>
+
+  <!-- Détails -->
+  <div class="card shadow-sm rounded-4 overflow-hidden mb-5" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="row g-0">
+      <div class="col-md-5">
+        {% if loan_campaign.project.image %}
+          <img src="{{ loan_campaign.project.image.url }}" class="w-100 h-100" alt="{{ loan_campaign.title }}">
+        {% else %}
+          <img src="{% static 'images/default_project.jpg' %}" class="w-100 h-100" alt="Default image">
+        {% endif %}
+      </div>
+      <div class="col-md-7">
+        <div class="card-body p-4">
+          <h4 class="fw-bold mb-3">{{ loan_campaign.title }}</h4>
+          <p class="text-muted mb-3">{{ loan_campaign.description }}</p>
+
+          <div class="progress mb-3">
+            <div class="progress-bar" style="width: {{ progress }}%;"></div>
+          </div>
+
+          <div class="d-flex justify-content-between mb-4">
+            <span class="fw-bold text-primary fs-5">{{ total_contributed|floatformat:0 }} XAF</span>
+            <span class="text-muted">{% trans "sur" %} {{ loan_campaign.target_amount|floatformat:0 }} XAF</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            {% if loan_campaign.interest_rate %}
+              <span class="badge bg-success p-2">
+                <i class="bi bi-percent"></i> {{ loan_campaign.interest_rate }}%
+              </span>
+            {% endif %}
+            <span class="badge bg-info text-dark p-2">
+              <i class="bi bi-calendar"></i> {% trans "Fin" %} : {{ loan_campaign.end_date|date:"d M Y" }}
+            </span>
+            <span class="badge bg-light text-dark p-2 shadow-sm">
+              <i class="bi bi-people"></i> {{ contributions.count }} {% trans "investisseurs" %}
+            </span>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between mt-4">
+            <h5 class="fw-bold mb-0">{% trans "Durée" %} :
+              <span class="text-muted">{{ loan_campaign.duration }} {% trans "mois" %}</span>
+            </h5>
+            <a href="#" class="btn btn-gradient rounded-pill px-4 shadow">
+              <i class="bi bi-cash-stack"></i> {% trans "Investir maintenant" %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section statistiques et contributions -->
+  <div class="row">
+    <!-- Détails financiers -->
+    <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+      <div class="stat-card shadow-sm p-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-bar-chart-line"></i> {% trans "Détails Financiers" %}</h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><strong>{% trans "Taux d'intérêt" %} :</strong> {{ loan_campaign.interest_rate }}%</li>
+          <li class="mb-2"><strong>{% trans "Montant cible" %} :</strong> {{ loan_campaign.target_amount|floatformat:0 }} XAF</li>
+          <li class="mb-2"><strong>{% trans "Montant collecté" %} :</strong> {{ total_contributed|floatformat:0 }} XAF</li>
+          <li class="mb-2"><strong>{% trans "Durée" %} :</strong> {{ loan_campaign.duration }} {% trans "mois" %}</li>
+          <li><strong>{% trans "Date de fin" %} :</strong> {{ loan_campaign.end_date|date:"d M Y" }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contributions récentes -->
+    <div class="col-lg-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+      <div class="stat-card shadow-sm p-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-people-fill"></i> {% trans "Contributions Récentes" %}</h5>
+        {% if contributions %}
+          <ul class="list-group list-group-flush">
+            {% for c in contributions|slice:":5" %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div>
+                <strong>{{ c.investor.username }}</strong>
+                <br><small class="text-muted">{{ c.created_at|date:"d M Y" }}</small>
+              </div>
+              <span class="fw-semibold text-primary">{{ c.amount|floatformat:0 }} XAF</span>
+            </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-muted mb-0">{% trans "Aucune contribution enregistrée." %}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{% endblock base_investisseur %}

@@ -1,0 +1,70 @@
+{% extends "base_entrepreneur.html" %}
+{% load static i18n %}
+
+{% block base_entrepreneur %}
+<div class="container py-4">
+    <div class="card shadow-sm animate__animated animate__fadeInUp">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">{{ notification.title }}</h5>
+            <small class="text-muted">{{ notification.created_at|date:"d M Y H:i" }}</small>
+        </div>
+        <div class="card-body">
+            {% if notification.icon %}
+            <div class="mb-3">
+                <i class="mdi {{ notification.icon }} fs-3 text-primary"></i>
+            </div>
+            {% endif %}
+
+            <p>{{ notification.message }}</p>
+
+            <!-- Liens contextuels -->
+            {% if notification.related_project %}
+            <a href="{{ notification.related_project.get_absolute_url }}" class="btn btn-outline-primary mt-2 me-2">
+                {% trans "Voir le projet lié" %}
+            </a>
+            {% endif %}
+
+            {% if notification.related_campaign %}
+            <a href="{{ notification.related_campaign.get_absolute_url }}" class="btn btn-outline-success mt-2 me-2">
+                {% trans "Voir la campagne liée" %}
+            </a>
+            {% endif %}
+
+            {% if notification.related_loan %}
+            <a href="{{ notification.related_loan.get_absolute_url }}" class="btn btn-outline-warning mt-2 me-2">
+                {% trans "Voir le prêt lié" %}
+            </a>
+            {% endif %}
+
+            {% if notification.related_reward %}
+            <a href="{{ notification.related_reward.get_absolute_url }}" class="btn btn-outline-info mt-2 me-2">
+                {% trans "Voir la récompense liée" %}
+            </a>
+            {% endif %}
+
+            {% if notification.related_update %}
+            <a href="{{ notification.related_update.get_absolute_url }}" class="btn btn-outline-secondary mt-2 me-2">
+                {% trans "Voir la mise à jour liée" %}
+            </a>
+            {% endif %}
+
+            {% if notification.related_contribution %}
+            <a href="{{ notification.related_contribution.get_absolute_url }}" class="btn btn-outline-dark mt-2 me-2">
+                {% trans "Voir la contribution liée" %}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Animation library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+</style>
+{% endblock base_entrepreneur %}

@@ -1,0 +1,324 @@
+/*============================================
+   Theme Name: IGIA Dashboard Modern
+   Author: Andre Janvier Omgba
+   Version: 2.0
+==============================================*/
+/* Variables globales */
+:root {
+  --bg-primary: #FFFAF0;           /* Fond principal du contenu */
+  --decorax: #0b1d3a;              /* Sidebar, Navbar, Footer */
+  --text-white: #fff;              /* Texte sur les zones foncées */
+  --accent: #EFD807;               /* Couleur d’accent / hover */
+  --text-title: #131445;           /* Titres du contenu */
+  --text-color: #1a1a1a;           /* Texte normal du contenu */
+  --bg-white:#fff;
+  --blue: #5E50F9;
+  --indigo: #6610f2;
+  --purple: #6a008a;
+  --pink: #E91E63;
+  --red: #f96868;
+  --orange: #f2a654;
+  --yellow: #f6e84e;
+  --green: #46c35f;
+  --teal: #58d8a3;
+  --cyan: #57c7d4;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --gray-dark: #12151e;
+  --blue: #5E50F9;
+  --indigo: #6610f2;
+  --purple: #6a008a;
+  --pink: #E91E63;
+  --red: #f96868;
+  --orange: #f2a654;
+  --yellow: #f6e84e;
+  --green: #46c35f;
+  --teal: #58d8a3;
+  --cyan: #57c7d4;
+  --white: #ffffff;
+  --gray: #434a54;
+  --gray-light: #aab2bd;
+  --gray-lighter: #e8eff4;
+  --gray-lightest: #e6e9ed;
+  --black: #000000;
+  --primary: #0090e7;
+  --secondary: #e4eaec;
+  --success: #00d25b;
+  --info: #8f5fe8;
+  --warning: #ffab00;
+  --danger: #fc424a;
+  --light: #ffffff;
+  --dark: #0d0d0d;
+}
+
+/*============================================
+  Message style Gmail
+==============================================*/
+.bg-decorax { background-color: var(--decorax) !important; }
+.text-white { color: var(--text-white) !important; }
+
+/* Card principale des messages */
+.messages-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Corps de la card scrollable */
+.messages-card .card-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Items messages */
+.messages-card .message-item {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+/* Hover messages */
+.messages-card .message-item:hover {
+    background-color: rgba(239, 216, 7, 0.1); /* surlignage doré */
+    box-shadow: inset 0 0 5px rgba(239,216,7,0.2);
+}
+
+/* Non lus */
+.messages-card .message-item.unread {
+    font-weight: 600;
+    background-color: rgba(239, 216, 7, 0.05);
+}
+
+/* Checkbox custom */
+.messages-card .form-check-input {
+    transform: scale(1.3);
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+/* Icônes actions (répondre / archiver / supprimer) */
+.messages-card .message-actions .action-icon {
+    display: none;
+    cursor: pointer;
+    color: var(--decorax);
+    transition: all 0.2s;
+}
+
+.messages-card .message-actions .action-icon:hover {
+    color: var(--accent);
+}
+
+/* Afficher icônes au hover du message */
+.messages-card .message-item:hover .message-actions .action-icon {
+    display: inline-block;
+}
+
+/* Badge Non lu */
+.messages-card .badge {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+}
+
+/* Card header Boîte de réception */
+.card-header.bg-decorax {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Boutons Nouveau message et icônes */
+.btn-outline-light {
+    border-color: var(--accent);
+    color: var(--accent);
+    transition: all 0.2s;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent);
+    color: var(--decorax);
+}
+
+/* Scrollbar custom pour la card messages */
+.messages-card .card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages-card .card-body::-webkit-scrollbar-thumb {
+    background-color: rgba(23, 23, 35, 0.3);
+    border-radius: 4px;
+}
+
+.messages-card .card-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(23, 23, 35, 0.6);
+}
+
+/* Texte */
+.messages-card strong {
+    color: var(--decorax);
+}
+
+.messages-card p {
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* Responsive card max-width */
+@media (max-width: 768px) {
+    .messages-card {
+        max-width: 95%;
+    }
+}
+
+/* Hover sur la ligne du message */
+.messages-card .message-item {
+    transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+.messages-card .message-item:hover {
+    background-color: rgba(239, 216, 7, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Icônes actions (reply, archive, delete) */
+.messages-card .message-actions .action-icon {
+    display: none;
+    cursor: pointer;
+    color: var(--decorax);
+    transition: color 0.2s ease, transform 0.2s ease, opacity 0.25s ease;
+    opacity: 0;
+}
+
+.messages-card .message-item:hover .message-actions .action-icon {
+    display: inline-block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation des icônes au hover individuel */
+.messages-card .message-actions .action-icon:hover {
+    color: var(--accent);
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* Bouton Nouveau message */
+.card-header .btn-outline-light {
+    transition: all 0.3s ease;
+}
+
+.card-header .btn-outline-light:hover {
+    background-color: var(--accent);
+    color: var(--decorax);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Dropdown Sélection */
+.dropdown-toggle {
+    transition: transform 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+    transform: rotate(15deg);
+}
+
+/* Scrollbar avec hover */
+.messages-card .card-body::-webkit-scrollbar-thumb {
+    transition: background-color 0.3s ease;
+}
+
+.messages-card .card-body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(23, 23, 35, 0.7);
+}
+
+/* Checkbox animation au hover */
+.messages-card .form-check-input:hover {
+    transform: scale(1.4);
+    transition: transform 0.2s ease, accent-color 0.2s ease;
+}
+
+/* Smooth fade-in pour le texte du message au hover (optionnel) */
+.messages-card .message-item div p {
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.messages-card .message-item:hover div p {
+    color: #000;
+    opacity: 0.85;
+}
+
+/*============================================
+ Demande de retrait par l'entrepreneur
+==============================================*/
+
+/* Animation d’apparition */
+.withdrawal-section { animation: fadeInUp 0.6s ease; }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Stat cards */
+.stat-card {
+    transition: all 0.3s ease;
+  }
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  /* Tableau */
+.badge {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+.badge:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
+.table-hover tbody tr:hover {
+    background-color: #f9fafc;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .table thead { display: none; }
+    .table tbody tr {
+      display: block;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border: none;
+    }
+    .table tbody td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #6c757d;
+    }
+  }
+
+.hover-shadow:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

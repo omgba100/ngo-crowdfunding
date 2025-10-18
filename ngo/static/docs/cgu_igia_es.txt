@@ -1,0 +1,234 @@
+Condiciones Generales de Uso
+
+CONDICIONES GENERALES DE USO DEL SITIO WEB WWW.IGIA.COM
+Vigentes desde el 9 de noviembre de 2023
+
+Documento que acompaña a las Condiciones Generales de Uso
+Las Condiciones Generales de Uso que aparecen en el sitio web www.igia.com constituyen un contrato celebrado entre el 
+Visitante/Cliente/Miembro/Inversor, por una parte, e IGIA, por otra, que rige el uso del Sitio Web y sus Servicios, 
+y define los derechos y obligaciones de las Partes. Es importante leer este contrato.
+Al hacer clic en "Certifico que he leído y aceptado expresamente estas Condiciones Generales de Uso" al registrarse, 
+el Cliente/Miembro/Inversor acepta y reconoce que está celebrando un contrato legalmente vinculante con IGIA y se compromete a cumplirlo.
+
+PREÁMBULO
+Las Condiciones Generales de Uso del sitio web www.igia.com se aplican al uso de dicho sitio web y a todos los servicios ofrecidos en el mismo por IGIA en su calidad de Proveedor de Servicios de Crowdfunding y Crowdlending Inclusivo (PSFP) para servicios relacionados con la intermediación de financiación y préstamos mediante bonos, obligaciones convertibles, préstamos y acciones con aportaciones a las cuentas corrientes de los accionistas, que constituyen los Servicios prestados por el Sitio Web.
+
+El proveedor de servicios es Infinity Global Investment & Aid (IGIA), con un capital de 300.000.000 €, inscrita en el Registro Mercantil de Utrecht con el número SIREN: KVB 805 168 860.
+Número de identificación fiscal intracomunitario a efectos del IVA: NE 09805178860.
+Domicilio social: 94 rue de la Victoria, 75009 Utrecht, Países Bajos.
+Correo electrónico: contact@igia.com.
+Teléfono: 01.82.83.97.52.
+IGIA está autorizada como PSFP por la AMF con el número PSFP 2012-22.
+
+DEFINICIONES
+Salvo que se indique lo contrario, los términos en mayúsculas de las Condiciones de Uso tienen los siguientes significados:
+
+"Acción": se refiere a las acciones definidas en los artículos 212-1 y siguientes del Código Monetario y Financiero francés.
+"Cancelación Prematura de la Oferta": se refiere a cualquier cancelación definitiva de una Oferta de Crowdfunding y Crowdlending Inclusivo antes de su finalización, que no esté exigida por una norma legal o reglamentaria.
+"Cliente": se refiere a cualquier persona que haya leído y aceptado expresamente las Condiciones Generales de Uso.
+"Financiación": se refiere a la operación de recaudación de los fondos necesarios para financiar un Proyecto a través del Sitio Web.
+«Cuenta Bancaria»: se refiere a cualquier tipo de cuenta (cuenta de depósito, cuenta corriente, etc.) abierta a nombre del Cliente/Miembro/Inversor en los libros de una entidad autorizada para la gestión de dichas cuentas y que permita, como mínimo, la prestación de los servicios bancarios básicos mencionados en los artículos L. 312-1 y D. 312-5 del Código Monetario y Financiero.
+"Cuenta de Pago": se refiere a la cuenta a nombre del Cliente/Miembro/Inversor/Propietario del Proyecto, abierta en los libros del Proveedor de Servicios de Pago, utilizada para ejecutar las transacciones de pago realizadas en el marco de los Servicios.
+"Condiciones Generales de Uso (CGU)": se refiere al presente acuerdo que rige, en particular, (i) el uso del Sitio y los Servicios, (ii) las relaciones entre IGIA, por un lado, y los Visitantes/Clientes/Miembros/Inversores/Propietarios del Proyecto, por otro, y (iii) las relaciones entre Clientes/Miembros/Inversores/Propietarios del Proyecto. "Contenido": se refiere a todo texto, gráficos, interfaces del Cliente, interfaces visuales, fotografías, marcas comerciales, logotipos, sonidos, música, ilustraciones y código informático, incluyendo el diseño, la estructura, la selección, la coordinación, la expresión, la apariencia, la presentación y la disposición que aparecen en el Sitio.
+"Solicitud": se refiere a la solicitud de financiación presentada por el Propietario del Proyecto a IGIA para su análisis con vistas a una Oferta de Crowdfunding.
+"Hoja de Información Clave de Inversión (KII)": se refiere a la hoja de información que se proporciona al Cliente/Miembro/Inversor antes de la suscripción y la presentación de cada Oferta de Crowdfunding, de acuerdo con el modelo de KII previsto en el Reglamento (UE) 2020/1503.
+"Espacio Personal": se refiere al área accesible desde el Sitio Web, personal para el Miembro/Inversor, a la que puede acceder con su nombre de usuario y contraseña.
+"Espacio del Propietario del Proyecto": se refiere al área accesible desde el Sitio Web, personal para el Propietario del Proyecto, a la que puede acceder con su nombre de usuario y contraseña. "Fuerza Mayor": significa cualquier incendio, inundación, fenómenos naturales u otros desastres naturales, cualquier declaración o progresión de hostilidades, guerra, disturbios o alteraciones del orden público, actos u omisiones del gobierno o de las autoridades competentes, averías, bloqueos, fallos o variaciones en las instalaciones o redes de telecomunicaciones, o cualquier otra causa, similar o no a las mencionadas anteriormente, ajena al control razonable de una de las partes de un contrato y que resulte en un incumplimiento o retraso en el cumplimiento de sus obligaciones contractuales.
+"Inversión": se refiere a cualquier Suscripción realizada por un Inversor en IGIA.
+"Inversor": se refiere a un Miembro registrado en el Sitio que ha realizado una inversión en IGIA.
+"Miembro": se refiere a un Cliente aceptado como tal por IGIA, registrado en el Sitio tras haber leído y aceptado expresamente las Condiciones Generales de Uso, seguido los procedimientos de acceso progresivo y de KYC, y proporcionado a IGIA la información que le permite acceder a las páginas de acceso restringido. Ningún Miembro será considerado una "Persona Estadounidense" según la definición de las autoridades fiscales estadounidenses.
+"Importe Deseado": se refiere al importe que el Propietario del Proyecto desea obtener a través del Sitio para financiar su Proyecto.
+Este importe puede modificarse durante el Periodo de Recaudación de Fondos.
+"Importe Recaudado": se refiere a la suma recaudada como parte de una Oferta de Crowdfunding. "Importe Suscrito": se refiere al importe invertido por un Inversor en una Oferta de Crowdfunding. «Bonos»: se refiere a los bonos definidos en el Artículo L.547-1 del Código Monetario y Financiero francés, es decir, bonos a tipo de interés fijo.
+«Bonos Convertibles»: se refiere a los bonos definidos en los Artículos L.225-161 y siguientes del Código de Comercio francés.
+«Oferta de Financiación Colectiva»: se refiere a la solicitud presentada por un Promotor de Proyecto en el Sitio Web, a través de la Página del Proyecto, para obtener fondos para financiar su Proyecto en el marco de los Servicios ofrecidos por IGIA, según las condiciones que, para algunas de ellas, (i) le son impuestas, ya sea por el Inversor o por IGIA, y para otras, (ii) pueden ser libremente determinadas por el Promotor del Proyecto. «Suscripción»: se refiere al compromiso asumido por el Inversor en el Sitio Web de invertir una suma de dinero como parte de una Oferta de Financiación Colectiva.
+"Transacción de Financiación": significa, para la financiación de un Proyecto determinado, los valores o préstamos (incluyendo bonos, obligaciones convertibles, acciones, préstamos) emitidos por el Propietario del Proyecto y suscritos por el/los Inversor(es) a través del Sitio Web, su ejecución y sus resultados posteriores.
+"Transacción de Recaudación de Fondos": significa las transacciones realizadas por el Propietario del Proyecto en el Sitio Web con el fin de promocionar su Proyecto, solicitar financiación a los Inversores y formalizar una Transacción de Financiación.
+"Página del Proyecto": significa la página web disponible en el sitio web www.igia.com relacionada con el Proyecto del Propietario del Proyecto.
+"Parte": significa, según el caso y el contexto lo requiera, IGIA y/o cualquier Cliente/Miembro/Inversor y/o cualquier Propietario del Proyecto.
+"Periodo de Recaudación de Fondos": significa el período de recaudación de fondos, incluyendo cualquier prórroga decidida por el Propietario del Proyecto e IGIA, durante el cual el Inversor puede presentar Suscripciones en el Sitio para una Oferta de Crowdfunding. "Propietario del Proyecto": se refiere a cualquier Cliente de IGIA cuyo Proyecto haya sido seleccionado por IGIA para una Operación de Financiación propuesta a los Miembros de IGIA a través del Sitio. "Proveedor de Servicios de Pago": se refiere a ABN AMRO BANK NV, una sociedad con un capital de 2.418.772,22 €, inscrita en el Registro Mercantil de Ámsterdam, con domicilio social en 94 Victoriastraat, 75009 Utrecht, Países Bajos, e inscrita en el Registro Mercantil de Utrecht con el número 500 486 915. ABN AMRO es una entidad de pago (código interbancario NL99 ABNA 0123 3457 89) autorizada el 24/12/2012 por la Autoridad de Supervisión y Resolución Prudencial ("ACPR", Países Bajos, sitio web https://www.abnamro.com/). La información se puede verificar en cualquier momento en el sitio web http://www.afm.nl introduciendo "ABN AMRO").
+"Préstamo": se refiere a cualquier Cantidad Suscrita por un Inversor para una Oferta de Crowdfunding en forma de préstamo.
+"Proyecto": se refiere al proyecto que un Propietario del Proyecto desea financiar mediante una Oferta de Crowdfunding.
+"Cuestionario de Riesgos": se refiere a la advertencia y preguntas estándar sobre los riesgos inherentes a las Ofertas de Crowdfunding.
+"Sitio": se refiere a la infraestructura desarrollada por IGIA utilizando formatos informáticos compatibles con internet, incluyendo Contenido, datos de diversos tipos, como textos, sonidos, imágenes fijas o animadas, vídeos y bases de datos,
+destinados a ser vistos por Visitantes o cualquier Cliente/Miembro/Inversor a través de la dirección principal "www.igia.com".
+El Sitio es propiedad de IGIA.
+"Empresa Financiada": se refiere a cualquier empresa que haya completado una Operación de Financiación. "Prueba de Conocimiento": se refiere al formulario o documento derivado de dicho formulario, completado por el Miembro tras la creación de su cuenta en IGIA, de conformidad con el Reglamento (UE) 2020/1503.
+"Valor": se refiere a los Bonos, Acciones y Bonos Convertibles ofrecidos en el Sitio.
+"Visitante": se refiere a cualquier persona que navegue, lea o consulte el Sitio, el Contenido o la información contenida en él antes de crear su cuenta.
+
+INTERPRETACIÓN
+Salvo que se indique lo contrario:
+Los términos y expresiones definidos en las Condiciones de Uso podrán utilizarse, según corresponda, en singular o plural.
+Cualquier referencia que se haga en las Condiciones Generales de Uso, en cualquier otro Contenido del Sitio o en cualquier otro documento accesible en el Sitio a una disposición legal, reglamentaria o de cualquier otro tipo legalmente vinculante, se interpretará como una referencia a dicha disposición, con sus modificaciones o sustituciones.
+
+ACUERDO SOBRE PRUEBAS
+Las disposiciones de este artículo constituyen una condición esencial para acceder a los Servicios del Sitio.
+
+El Cliente/Miembro/Inversor reconoce que la escritura electrónica tiene la misma fuerza probatoria que la escrita en papel.
+El Cliente/Miembro/Inversor reconoce y acepta expresamente que la prueba de las Inversiones realizadas en el Sitio puede proporcionarse mediante cualquier soporte duradero. El Cliente/Miembro/Inversor se compromete a reconocer como soporte duradero, en particular: papel, correos electrónicos almacenados o copiados por cualquier medio, documentos en formato PDF, así como cualquier otro instrumento que permita el almacenamiento de información de forma que permita una fácil consulta posterior durante un período de tiempo adecuado a los fines para los que se destina la información y que permita una reproducción idéntica de dicha información.
+
+En consecuencia, el Cliente/Miembro/Inversor reconoce y acepta expresamente que las Inversiones pueden realizarse y almacenarse en cualquier soporte duradero.
+
+El Cliente/Miembro/Inversor reconoce y acepta expresamente:
+
+la grabación de su navegación en el Sitio, y en particular de los clics del ratón u otros dispositivos, como prueba de las Inversiones realizadas a través del Sitio; que estas grabaciones tienen pleno valor probatorio a su respecto; Que al hacer clic en "Certifico que he leído y aceptado expresamente estas Condiciones Generales de Uso",
+celebra un contrato legalmente vinculante con IGIA;
+que validar una Oferta mediante un clic constituye una firma electrónica;
+que cualquier transacción realizada tras autenticarse con su contraseña en el Sitio se considera realizada por ellos;
+que cualquier documento firmado, aceptado o validado electrónicamente a través del Sitio o en el marco de los Servicios constituye prueba del contenido de dicho documento, la identidad del firmante y su consentimiento a las obligaciones derivadas del documento firmado electrónicamente.
+Las Partes acuerdan que la información y los documentos de soporte proporcionados por la infraestructura informática de IGIA son vinculantes entre ellas.
+
+REGISTRO PARA LOS SERVICIOS
+El acceso y uso de los Servicios implica la aceptación, sin restricciones ni reservas, de los Términos y Condiciones por parte de los Clientes/Miembros/Inversores.
+
+Los siguientes elementos están disponibles para todos los Visitantes:
+
+Las pestañas Invertir, Sobre Nosotros y Captación de Fondos, que comprenden las siguientes secciones: Cómo funciona, Nuestras ofertas, Impuestos y comisiones,
+Testimonios, Preguntas frecuentes; Contáctanos; El equipo; Revista de prensa; IGIA en cifras; Aprobaciones y seguridad; Nuestra visión;
+Condiciones generales de uso;
+En la parte inferior de la página, el usuario también tiene acceso a las pestañas Avisos legales, Quejas y Confidencialidad;
+Proyectos presentados como parte de los Servicios;
+La advertencia de riesgos;
+Las pestañas "Crea tu cuenta" e "Iniciar sesión".
+
+PRUEBA DE CONOCIMIENTOS
+
+De conformidad con el Reglamento (UE) 2020/1503, IGIA realizará, antes de la primera inversión del inversor, una Prueba de Conocimientos para verificar si los servicios de crowdfunding ofrecidos son adecuados para inversores potenciales sin experiencia. Si IGIA considera que las respuestas son insuficientes o incompletas, se le advertirá específicamente sobre el riesgo de pérdida total del capital invertido tras completar la Prueba de Conocimientos y antes de cada inversión.
+
+Las preguntas de la Prueba de Conocimientos se utilizan para evaluar la experiencia y los objetivos de inversión del Miembro, así como para definir su situación financiera. El Miembro podrá modificar sus respuestas, especialmente en caso de cambio de circunstancias. Tendrá acceso a una nueva Prueba de Conocimientos solicitándola por correo electrónico a IGIA (contact@igia.com) o a través de su cuenta personal, al menos cada dos años.
+
+Tras completar la Prueba de Conocimientos, se generará un resumen de las respuestas.
+El Miembro debe completar esta Prueba. Esta Prueba estará disponible en cualquier momento en su Espacio Personal.
+
+ACCESO A LOS SERVICIOS
+El Inversor tiene acceso a los Servicios. Cabe destacar que todos los Inversores deben ser Miembros.
+Para utilizar los Servicios, el Inversor debe (i) ser titular de una Cuenta Bancaria en Euros, (ii) tener un Espacio Personal, (iii) abrir una Cuenta de Pago con el Proveedor de Servicios de Pago y (iv) asegurarse de que el importe de la Suscripción esté abonado en su Cuenta de Pagos.
+Al acceder a los Servicios, el Inversor acepta expresamente suscribirse al boletín informativo de IGIA.
+Tiene derecho a darse de baja de este boletín.
+
+ACCESO A LOS SERVICIOS
+IGIA presta Servicios que consisten en (i) conectar, a través del Sitio, a los Propietarios de Proyectos e Inversores que financian Proyectos, (ii) definir y organizar los términos y condiciones de las Transacciones de Financiación de Proyectos,
+y (iii) definir y organizar los términos y condiciones para el seguimiento y la gestión de estas Transacciones de Financiación.
+
+IGIA no presta servicios de pago; estos son proporcionados íntegramente por el Proveedor de Servicios de Pago.
+
+El Miembro/Inversor tiene acceso a una presentación detallada de la Oferta de Crowdfunding para cada Propietario de Proyecto como parte de los Servicios, que incluye:
+
+Detalles de la Oferta de Crowdfunding (nombre del Propietario de Proyecto y una breve descripción de su negocio, importe solicitado, fecha de cierre de la suscripción, importe nominal, indicación del propósito de los importes prestados, etc.),
+Una descripción detallada del negocio del Propietario de Proyecto y sus perspectivas,
+Información sobre la situación financiera y legal del Propietario de Proyecto y sus perspectivas,
+Información sobre los directivos, directores y accionistas/socios del Propietario de Proyecto,
+Si corresponde, los Términos y Condiciones, el Memorándum, el Acuerdo de Accionistas o el Acuerdo de Préstamo de la Oferta de Crowdfunding,
+El FICI. Esta información es editada por cada Propietario de Proyecto bajo su propia responsabilidad. De conformidad con la normativa,
+IGIA verifica esta información para garantizar su coherencia, claridad (lenguaje claro y sin ambigüedades) y equilibrio.
+
+IGIA complementa esta información integrando los siguientes aspectos en el FICI:
+
+los procedimientos para la recopilación y transmisión de certificados de suscripción o registro,
+los riesgos inherentes a una Oferta de Crowdfunding para el Inversor.
+Toda la Documentación Regulatoria disponible en el Sitio Web será descargable, incluyendo los textos
+en una versión imprimible e inmodificable. Estos siempre corresponderán a la última versión validada por el Propietario del Proyecto.
+
+En cada Página del Proyecto, un documento titulado "FICI" permite al Miembro consultar y descargar
+el FICI relativo a la Oferta de Crowdfunding. El Cliente/Miembro/Inversor declara expresamente
+haber leído el FICI y aceptarlo plenamente antes de cualquier Oferta y cualquier Operación de Financiación. Si el Cliente/Miembro/Inversor no acepta plenamente las disposiciones del FICI,
+deberá abstenerse de realizar cualquier Oferta y participar en cualquier Operación de Financiación.
+
+FINALIZACIÓN DE LA SUSCRIPCIÓN POR PARTE DEL INVERSOR
+Las suscripciones están reservadas para Miembros/Inversores. El proceso, con algunas excepciones, es completamente digital y se supervisa en un entorno seguro.
+
+Los inversores pueden realizar suscripciones mediante un formulario en la Página del Proyecto, que les permite elegir la cantidad que desean invertir. Confirman esta cantidad haciendo clic en el botón "Confirmar".
+
+Si el saldo de su Cuenta de Pago es insuficiente, se les solicitará que realicen una transferencia o un abono con tarjeta de crédito para abonar en su Cuenta de Pago el importe correspondiente a la Suscripción. Los inversores solo pueden prestar las cantidades abonadas en su Cuenta de Pago.
+
+A continuación, el inversor será redirigido a una nueva página para confirmar su elección. Esta página resume la información esencial relacionada con su inversión, como se indica a continuación:
+
+Importe;
+Tasa de interés anual bruta (si corresponde);
+Plazo (si corresponde);
+Vencimiento (si corresponde);
+
+Tipo de oferta.
+
+Si la información proporcionada corresponde a la inversión que el Inversor desea realizar, debe hacer clic en el botón "Confirmar".
+
+Esta acción también implica la aceptación de las Condiciones Generales de Uso, la confirmación de que la información incluida en el Test de Conocimientos sigue siendo correcta y la confirmación por parte del Inversor de haber leído los términos y condiciones de FICI.
+
+Al hacer clic en "Confirmar mi inversión", el Inversor recibe por correo electrónico un documento con la información de su Suscripción. Este documento también está disponible en su Cuenta Personal.
+
+La Suscripción realizada por el Inversor es revocable durante un plazo de cuatro días (el "Periodo de Reflexión"). Transcurrido este plazo, el Inversor ya no podrá retirarse: se ha comprometido irrevocablemente a invertir según los términos establecidos en la Oferta. Solo la decisión de IGIA de cancelar la Oferta de Crowdfunding o la Oferta del Inversor podrá impedir la finalización de la Operación de Financiación.
+
+CAMBIOS EN LA DOCUMENTACIÓN REGLAMENTARIA DURANTE EL PERÍODO DE RECAUDACIÓN DE FONDOS
+
+El Propietario del Proyecto se compromete a notificar a IGIA cualquier cambio en la información
+
+para mantener la FICI constantemente actualizada durante toda la vigencia de la Oferta de Crowdfunding
+(el período de recaudación de fondos). IGIA informará inmediatamente a los inversores que se hayan suscrito o hayan expresado interés en la Oferta de Crowdfunding sobre cualquier cambio significativo
+en ​​la información contenida en la FICI que le haya sido notificada. Esta información
+se enviará por correo electrónico con el asunto: Cambios en la hoja de información clave sobre la inversión + identificación del proyecto en cuestión.
+
+MODIFICACIÓN EN CASO DE INEXACTITUD, OMISIÓN O ERROR DETECTADO POR IGIA
+
+Si IGIA detecta una omisión, error o inexactitud en el FICI que pudiera afectar significativamente la rentabilidad esperada de la inversión, notificará de inmediato al Propietario del Proyecto sobre dicha omisión, error o inexactitud, quien completará o corregirá la información en cuestión lo antes posible.
+
+Si dicha adición o corrección no se realiza con prontitud, IGIA suspenderá la Oferta de Financiamiento Colectivo hasta que el FICI se complete o corrija, en un plazo no superior a treinta días naturales.
+
+IGIA informará inmediatamente por correo electrónico a los inversores que hayan realizado una Suscripción o hayan expresado interés en la oferta de financiación colectiva sobre dichas irregularidades, las medidas adoptadas y que adoptará IGIA, y su derecho a retirar su oferta de inversión o manifestación de interés en la oferta de financiación colectiva y de préstamo colectivo inclusivo.
+
+Si, transcurridos treinta días naturales, el FICI no se ha completado o corregido para subsanar todas las irregularidades identificadas, la Oferta de Financiación Colectiva se cancelará.
+
+Si el inversor no solicita la cancelación en un plazo razonable, cualquier Suscripción se considerará confirmada.
+
+FIN DE LA RECAUDACIÓN DE FONDOS
+IGIA determina el Periodo de Recaudación de Fondos, estableciendo su inicio, fin y duración. Una vez alcanzado el Importe Deseado, IGIA registrará el importe total de Suscripciones válidas recibidas al final del Periodo de Recaudación.
+
+Los inversores recibirán confirmación del éxito de la Oferta de Crowdfunding y, por tanto, de la asignación de Valores o Préstamos en un plazo razonable, mediante un certificado accesible en su espacio personal.
+
+Al finalizar el Periodo de Recaudación de Fondos, si IGIA no decide extenderlo y no se alcanza el Importe Deseado, los Inversores recibirán un correo electrónico confirmando la cancelación de su Suscripción. El Proveedor de Servicios de Pago devolverá íntegramente los Importes Suscritos a la Cuenta de Pago de los Inversores en un plazo de 5 días hábiles, sin coste alguno.
+
+En caso de Terminación Prematura de la Oferta de Crowdfunding o cancelación de la misma por Fuerza Mayor, todas las Ofertas serán canceladas y, en un plazo de 5 días hábiles, IGIA enviará un correo electrónico informativo a todos los Inversores afectados. El Proveedor de Servicios de Pago transferirá íntegramente los Importes Suscritos a la Cuenta de Pago de los Inversores en un plazo de 5 días hábiles.
+
+Si se alcanza el Importe Deseado antes de que finalice el Periodo de Recaudación de Fondos, la suscripción en línea se interrumpirá. No se podrán realizar suscripciones adicionales (salvo error informático).
+
+IGIA registrará el importe total de las Suscripciones Válidas recibidas, así como el cierre anticipado del Periodo de Recaudación de Fondos. Los Inversores recibirán confirmación del éxito de la Oferta de Crowdfunding.
+
+IGIA está debidamente autorizada por el Inversor para liberar al Proveedor de Servicios de Pago de su obligación de retener el Importe Suscrito al final del Periodo de Cobro y para instruirle a pagar dicho importe de la siguiente manera:
+
+Si, al final del Periodo de Cobro, el importe de las Suscripciones y las sumas recibidas por el Proveedor de Servicios de Pago es igual al Importe Deseado, este (neto de cualquier comisión cobrada por el Proveedor de Servicios de Pago o por IGIA) se abonará al Titular del Proyecto tras proporcionar a IGIA un comprobante de la inscripción de los Valores en un registro mantenido por ella o tras validar la lista de Inversores. En caso de Terminación Prematura de la Oferta de Crowdfunding o si, al final del Periodo de Recaudación de Fondos, el importe total de las Suscripciones y las sumas recibidas por el Proveedor de Servicios de Pago es estrictamente inferior al Importe Deseado, el Proveedor de Servicios de Pago reembolsará al/los Inversor(es) el Importe Suscrito pagado por este último.
+
+DERECHO DE DESISTIMIENTO
+
+Cada Cliente/Miembro/Inversor dispone de un plazo de cuatro (4) días naturales a partir de la fecha de finalización de su Suscripción para ejercer su derecho de desistimiento, sin necesidad de justificar su decisión ni incurrir en ninguna penalización. Puede hacerlo directamente desde su cuenta personal.
+
+La información sobre el periodo de desistimiento se indica en la ventana emergente "Leer antes de invertir" de su Cuenta Personal, así como en la introducción del FICI. Los inversores reciben información sobre el inicio del periodo de desistimiento inmediatamente después de su Suscripción. Quienes hayan completado una Suscripción tendrán la opción de cancelarla desde su panel de control. Durante ese periodo de cuatro días naturales, tendrán acceso al enlace "Periodo de desistimiento: cancelar mi oferta" en la casilla dedicada al proyecto financiado. Al hacer clic en este botón, el inversor cancela inmediatamente su Suscripción y verá una ventana emergente informándole de que su Suscripción ha sido cancelada. Transcurridos 4 días naturales, el enlace dejará de estar visible.
+
+OBLIGACIONES DEL MIEMBRO E INVERSOR
+
+El Miembro/Inversor está obligado, en general, a (i) cumplir con las condiciones de acceso al Sitio, (ii) proporcionar información precisa y veraz sobre su estado civil y perfil, (iii) completar cualquier formulario y firmar cualquier acuerdo que se presente como obligatorio en el Sitio, a menos que esto implique el cierre inmediato de su Espacio Personal, (iv) comportarse de manera justa con IGIA y otros Miembros, Inversores o Clientes, (v) utilizar los Servicios de acuerdo con su finalidad, (vi) no asumir ningún compromiso por parte de terceros, y (vii) no interrumpir ni intentar interrumpir el funcionamiento del Sitio.
+
+En caso de incumplimiento de las normas anteriores o las que se establecen a continuación, IGIA se reserva el derecho de suspender el acceso del Cliente/Inversor/Miembro al Sitio Web, al Espacio Personal, a las páginas de acceso restringido o a los Servicios, o de rescindir estos Términos y Condiciones con efecto inmediato.
+
+COMPENSACIÓN DE IGIA
+
+La compensación de IGIA proviene de las comisiones cobradas a las Empresas Financiadas. Esta compensación se abona a IGIA tras la publicación del Proyecto en el Sitio Web y se paga al transferir los fondos a la cuenta bancaria de la Empresa Financiada.
+
+Los servicios prestados a cada Cliente/Miembro/Inversor son gratuitos. Sin embargo, IGIA se reserva el derecho de cobrar al Cliente/Miembro/Inversor una comisión por transacción en los siguientes casos: si un Cliente abona su Cuenta de Pago en IGIA y luego la debita sin invertir. En este caso, se podrá cobrar el 1% del importe debitado.
+
+DESCRIPCIÓN DEL PROCEDIMIENTO DE RECLAMACIONES DE LOS INVERSORES
+
+Descripción del procedimiento para la tramitación de las reclamaciones de los Miembros/Inversores, incluyendo el plazo de respuesta.
+
+IGIA cuenta con un procedimiento eficiente y transparente para la tramitación rápida, justa y coherente de las reclamaciones de los clientes.
+
+IGIA publica una descripción de este procedimiento en su sitio web, accesible directamente desde la página principal de la plataforma, en la pestaña "Quejas".
+
+Presentar una queja es gratuito.
+
+IGIA ofrece un modelo estándar de quejas en www.igia.com/infos/reclamation
+
+IGIA mantiene un registro de todas las quejas recibidas, así como de las medidas adoptadas en respuesta a cada una.
+
+IGIA conserva estos registros.
+
+Puede consultar una descripción del procedimiento en: https://www.igia.com/infos/reclamations

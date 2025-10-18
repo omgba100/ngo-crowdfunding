@@ -1,0 +1,180 @@
+{% extends "base_investisseur.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Mes Contributions{% endblock %}
+
+{% block base_investisseur %}
+<style>
+/* === Animations et styles modernes === */
+.table-hover tbody tr {
+  transition: all 0.3s ease;
+}
+.table-hover tbody tr:hover {
+  transform: scale(1.01);
+  background: rgba(13, 110, 253, 0.05);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+}
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4em 0.6em;
+  border-radius: 0.75rem;
+}
+.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.card-stats {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+.card-stats:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+}
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="container mt-5 fade-in">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <h2 class="fw-bold">
+      <i class="bi bi-wallet2 text-primary"></i> {% trans "Mes Contributions" %}
+    </h2>
+    <a href="{% url 'projects_available_investisseur' %}" class="btn btn-outline-primary rounded-pill px-4">
+      <i class="bi bi-plus-circle"></i> {% trans "Investir dans un nouveau projet" %}
+    </a>
+  </div>
+
+  <!-- Statistiques globales -->
+  <div class="row mb-5 text-center">
+    <div class="col-md-4 mb-3">
+      <div class="card-stats">
+        <h5 class="mb-1">{% trans "Total Investi" %}</h5>
+        <h3 class="fw-bold">{{ total_invested|floatformat:2 }} XAF</h3>
+        <i class="bi bi-graph-up fs-2 opacity-75"></i>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card-stats" style="background: linear-gradient(135deg, #198754, #20c997);">
+        <h5 class="mb-1">{% trans "Contributions Réussies" %}</h5>
+        <h3 class="fw-bold">{{ contributions|dictsort:"payment_status"|length }} ✅</h3>
+        <i class="bi bi-check-circle fs-2 opacity-75"></i>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card-stats" style="background: linear-gradient(135deg, #ffc107, #fd7e14);">
+        <h5 class="mb-1">{% trans "Campagnes Soutenues" %}</h5>
+        <h3 class="fw-bold">{{ contributions|length }}</h3>
+        <i class="bi bi-people fs-2 opacity-75"></i>
+      </div>
+    </div>
+  </div>
+
+  {% if contributions %}
+  <div class="table-responsive shadow-sm rounded-4">
+    <table class="table table-hover align-middle mb-0">
+      <thead class="table-primary text-white">
+        <tr>
+          <th scope="col">{% trans "Projet / Campagne" %}</th>
+          <th scope="col">{% trans "Type" %}</th>
+          <th scope="col">{% trans "Montant" %}</th>
+          <th scope="col">{% trans "Méthode" %}</th>
+          <th scope="col">{% trans "Statut" %}</th>
+          <th scope="col">{% trans "Date" %}</th>
+          <th scope="col" class="text-end">{% trans "Action" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in contributions %}
+        <tr>
+          <td>
+            {% if c.campaign %}
+              <a href="{% url 'project_detail_investisseur' c.campaign.project.slug %}" class="fw-semibold text-decoration-none text-dark">
+                {{ c.campaign.project.title }}
+              </a><br>
+              <span class="text-muted small">{{ c.campaign.title }}</span>
+            {% elif c.loan_campaign %}
+              <a href="{% url 'project_detail_investisseur' c.loan_campaign.project.slug %}" class="fw-semibold text-decoration-none text-dark">
+                {{ c.loan_campaign.project.title }}
+              </a><br>
+              <span class="text-muted small">{{ c.loan_campaign.title }}</span>
+            {% endif %}
+          </td>
+
+          <td>
+            {% if c.contribution_type == "donation" %}
+              <span class="badge bg-success">Don</span>
+            {% else %}
+              <span class="badge bg-info text-dark">Prêt</span>
+            {% endif %}
+          </td>
+
+          <td class="fw-semibold text-primary">
+            {{ c.amount|floatformat:0 }} XAF
+          </td>
+
+          <td>
+            {% if c.payment_method == "paypal" %}
+              <i class="bi bi-paypal text-primary"></i> PayPal
+            {% elif c.payment_method == "stripe" %}
+              <i class="bi bi-credit-card"></i> Stripe
+            {% elif c.payment_method == "mtn" %}
+              <i class="bi bi-phone text-warning"></i> MTN Money
+            {% elif c.payment_method == "orange" %}
+              <i class="bi bi-phone text-orange"></i> Orange Money
+            {% else %}
+              <i class="bi bi-cash"></i> Autre
+            {% endif %}
+          </td>
+
+          <td>
+            {% if c.payment_status == "completed" %}
+              <span class="badge bg-success">Complété</span>
+            {% elif c.payment_status == "pending" %}
+              <span class="badge bg-warning text-dark">En attente</span>
+            {% else %}
+              <span class="badge bg-danger">Échoué</span>
+            {% endif %}
+          </td>
+
+          <td>{{ c.created_at|date:"d M Y" }}</td>
+
+          <!-- Bouton animé de détails -->
+          <td class="text-end">
+            <a href="{% url 'contribution_detail_investisseur' c.id %}" 
+               class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1"
+               title="{% trans 'Voir le détail de la contribution' %}">
+              <i class="bi bi-eye"></i> {% trans "Détails" %}
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% else %}
+  <div class="alert alert-light border shadow-sm p-5 text-center fade-in">
+    <i class="bi bi-emoji-neutral fs-3 text-muted"></i>
+    <p class="mt-2 mb-0 fw-semibold">{% trans "Aucune contribution pour le moment." %}</p>
+    <a href="{% url 'projects_available_investisseur' %}" class="btn btn-primary mt-3 rounded-pill px-4">
+      {% trans "Découvrir les projets disponibles" %}
+    </a>
+  </div>
+  {% endif %}
+</div>
+{% endblock base_investisseur %}

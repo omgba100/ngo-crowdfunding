@@ -1,0 +1,157 @@
+{% extends "base_intermediaire.html" %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %}{% trans "Mes Paiements" %}{% endblock %}
+
+{% block extra_head %}
+<!-- AOS (animations au scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Material Design Icons -->
+<link href="https://cdn.materialdesignicons.com/7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Styles pour miniatures -->
+<style>
+.payment-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.payment-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+</style>
+{% endblock extra_head %}
+
+{% block base_intermediaire %}
+<div class="container py-5">
+
+  <!-- 🔹 En-tête et bouton Nouveau paiement -->
+  <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+    <div>
+      <h2 class="fw-bold text-primary mb-1">
+        <i class="mdi mdi-cash-multiple me-2"></i> {% trans "Mes Paiements" %}
+      </h2>
+      <p class="text-muted mb-0">{% trans "Historique de vos paiements effectués pour votre abonnement." %}</p>
+    </div>
+    <a href="{% url 'intermediaire_payment_submit' %}" class="btn btn-primary rounded-pill shadow-sm">
+      <i class="mdi mdi-plus-circle-outline me-1"></i> {% trans "Nouveau paiement" %}
+    </a>
+  </div>
+
+  <!-- 🔹 Liste des paiements -->
+  {% if payments %}
+  <div class="table-responsive" data-aos="fade-up" data-aos-duration="800">
+    <table class="table table-hover align-middle shadow-sm border rounded-4">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">{% trans "Date" %}</th>
+          <th scope="col">{% trans "Montant" %}</th>
+          <th scope="col">{% trans "Statut" %}</th>
+          <th scope="col">{% trans "Preuve" %}</th>
+          <th scope="col" class="text-end">{% trans "Actions" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for payment in payments %}
+        <tr data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+          <td>{{ payment.created_at|date:"d M Y, H:i" }}</td>
+          <td><strong>{{ payment.amount }} {{ payment.currency|default:"XAF" }}</strong></td>
+          <td>
+            {% if payment.status == "approved" %}
+              <span class="badge bg-success"><i class="mdi mdi-check-circle-outline me-1"></i> {% trans "Approuvé" %}</span>
+            {% elif payment.status == "pending" %}
+              <span class="badge bg-warning text-dark"><i class="mdi mdi-clock-outline me-1"></i> {% trans "En attente" %}</span>
+            {% else %}
+              <span class="badge bg-danger"><i class="mdi mdi-close-circle-outline me-1"></i> {% trans "Rejeté" %}</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if payment.proof %}
+              <img src="{{ payment.proof.url }}" alt="Preuve paiement" class="payment-thumb" data-proof="{{ payment.proof.url }}">
+            {% else %}
+              <span class="text-muted">{% trans "Aucune" %}</span>
+            {% endif %}
+          </td>
+          <td class="text-end">
+            {% if payment.status == "pending" %}
+            <form method="post" action="{% url 'intermediaire_payment_delete' payment.id %}" class="delete-payment-form d-inline">
+              {% csrf_token %}
+              <button type="button" class="btn btn-sm btn-outline-danger rounded-pill delete-btn">
+                <i class="mdi mdi-cancel me-1"></i> {% trans "Annuler" %}
+              </button>
+            </form>
+            {% else %}
+              <span class="text-muted">{% trans "Aucune action" %}</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="text-center text-muted py-5" data-aos="fade-up">
+    <i class="mdi mdi-cash-remove mdi-48px mb-3"></i>
+    <p>{% trans "Aucun paiement trouvé pour le moment." %}</p>
+    <a href="{% url 'intermediaire_payment_submit' %}" class="btn btn-outline-primary rounded-pill">
+      <i class="mdi mdi-plus-circle-outline me-1"></i> {% trans "Soumettre un paiement" %}
+    </a>
+  </div>
+  {% endif %}
+</div>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- SweetAlert2 -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 🔹 Affichage image paiement en grand
+  const thumbs = document.querySelectorAll('.payment-thumb');
+  thumbs.forEach(function(img) {
+    img.addEventListener('click', function() {
+      Swal.fire({
+        title: '{% trans "Preuve de paiement" %}',
+        imageUrl: img.dataset.proof,
+        imageAlt: '{% trans "Preuve de paiement" %}',
+        showCloseButton: true,
+        showConfirmButton: false,
+        backdrop: `rgba(0,0,0,0.4)`
+      });
+    });
+  });
+
+  // 🔹 Confirmation annulation paiement
+  const deleteButtons = document.querySelectorAll('.delete-btn');
+  deleteButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const form = this.closest('.delete-payment-form');
+      Swal.fire({
+        title: '{% trans "Confirmer l’annulation ?" %}',
+        text: '{% trans "Cette action annulera votre paiement en attente." %}',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#dc3545',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '{% trans "Oui, annuler !" %}',
+        cancelButtonText: '{% trans "Annuler" %}',
+        backdrop: `rgba(0,0,0,0.4)`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          form.submit();
+        }
+      });
+    });
+  });
+});
+</script>
+{% endblock base_intermediaire %}
