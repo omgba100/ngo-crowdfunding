@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="changeme-in-prod")
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
@@ -90,14 +90,25 @@ TEMPLATES = [
 WSGI_APPLICATION = 'crowdfunding.wsgi.application'
 
 
-# Database
-DATABASES = {
-    "default": dj_database_url.config(
-        default=f"postgresql://{config('DATABASE_USER','')}:{config('DATABASE_PASSWORD','')}@{config('DATABASE_HOST','localhost')}:{config('DATABASE_PORT','5432')}/{config('DATABASE_NAME','')}",
-        conn_max_age=600,
-        ssl_require=False,
-    )
-}
+# -----------------------------
+# DATABASES
+# -----------------------------
+DATABASE_URL = config("DATABASE_URL", default=None)
+
+if DATABASE_URL:
+    # Render ou prod : utilise DATABASE_URL
+    DATABASES = {
+        "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }
+else:
+    # Local (fallback)
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=f"postgresql://{config('DATABASE_USER','')}:{config('DATABASE_PASSWORD','')}@{config('DATABASE_HOST','localhost')}:{config('DATABASE_PORT','5432')}/{config('DATABASE_NAME','')}",
+            conn_max_age=600,
+            ssl_require=False,
+        )
+    }
 
 
 # Password validation
