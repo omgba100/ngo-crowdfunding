@@ -96,15 +96,15 @@ WSGI_APPLICATION = 'crowdfunding.wsgi.application'
 DATABASE_URL = config("DATABASE_URL", default=None)
 
 if DATABASE_URL:
-    # Render ou prod : utilise DATABASE_URL
+    # Production / Render
     DATABASES = {
-        "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
+        "default": dj_database_url.parse(DATABASE_URL, conn_max_age=600, ssl_require=True)
     }
 else:
-    # Local (fallback)
+    # Local fallback
     DATABASES = {
-        "default": dj_database_url.config(
-            default=f"postgresql://{config('DATABASE_USER','')}:{config('DATABASE_PASSWORD','')}@{config('DATABASE_HOST','localhost')}:{config('DATABASE_PORT','5432')}/{config('DATABASE_NAME','')}",
+        "default": dj_database_url.parse(
+            f"postgresql://{config('DATABASE_USER','')}:{config('DATABASE_PASSWORD','')}@{config('DATABASE_HOST','localhost')}:{config('DATABASE_PORT','5432')}/{config('DATABASE_NAME','')}",
             conn_max_age=600,
             ssl_require=False,
         )
