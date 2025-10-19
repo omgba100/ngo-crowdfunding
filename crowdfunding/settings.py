@@ -30,7 +30,7 @@ SECRET_KEY = config("SECRET_KEY", default="changeme-in-prod")
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # ✅ 1. Définis d’abord ALLOWED_HOSTS comme une liste vide
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = [host.strip() for host in config("ALLOWED_HOSTS", default="").split(",") if host.strip()]
 
 
 # ✅ 2. Ajoute la configuration Render
